@@ -13,7 +13,7 @@ public class RockPaperScissorsGame extends Game {
     }
 
     public String postmanMove(){
-        String postmanChoice = null;
+        String postmanChoice = "";
         Random random = new Random();
         int randomMove = random.nextInt(3) + 1;
 
