@@ -1,32 +1,40 @@
 package games;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hangman extends Game {
 
-    private List<String> mysteryWord;
+    private List<String> mysteryWords;
     private String guessedLetter;
     private List<String> previousGuesses;
     private int wrongGuesses = 0;
     private int rightGuesses = 0;
     private int playerLives = 5;
 
-    public Hangman(String playerMove, String postmanMove, List<String> mysteryWord, String guessedLetter, List<String> previousGuesses, int wrongGuesses, int rightGuesses, int playerLives) {
-        super(playerMove, postmanMove);
-        this.mysteryWord = mysteryWord;
+    public Hangman(List<String> mysteryWords, String guessedLetter, List<String> previousGuesses, int wrongGuesses, int rightGuesses, int playerLives) {
+        this.mysteryWords = mysteryWords;
         this.guessedLetter = guessedLetter;
         this.previousGuesses = previousGuesses;
         this.wrongGuesses = wrongGuesses;
         this.rightGuesses = rightGuesses;
         this.playerLives = playerLives;
+
+        initializeMysteryWords();
+    }
+    
+    public void initializeMysteryWords() {
+        this.mysteryWords = new ArrayList<>();
+        mysteryWords.add("WEASEL");
+        mysteryWords.add("BANANAS");
+        mysteryWords.add("CLOWN");
+        mysteryWords.add("HAMBURGER");
+        mysteryWords.add("PHANTOM");
+        mysteryWords.add("ANTELOPE");
     }
 
     public List<String> getMysteryWord() {
-        return mysteryWord;
-    }
-
-    public void setMysteryWord(List<String> mysteryWord) {
-        this.mysteryWord = mysteryWord;
+        return mysteryWords;
     }
 
     public String getGuessedLetter() {
