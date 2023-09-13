@@ -28,6 +28,13 @@ public class RockPaperScissorsGame extends Game {
         return postmanChoice;
     }
 
+//    public String postmanMove() {
+//        String[] moves = {"ROCK", "PAPER", "SCISSORS"};
+//        Random random = new Random();
+//        int randomIndex = random.nextInt(3);
+//        return moves[randomIndex];
+//    }
+
     public String getRock() {
         return rock;
     }

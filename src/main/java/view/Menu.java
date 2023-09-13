@@ -76,8 +76,8 @@ public class Menu {
     }
 
     public void postmanRockPaperScissorsMove() {
-        String postmanChoice = rpsGame.postmanMove();
-        if(postmanChoice.equals("ROCK")){
+        String postmanChoice = rpsGame.postmanMove().toUpperCase();
+        if (postmanChoice.equals("ROCK")){
             System.out.println("    The Postman chose: ROCK");
             System.out.println();
         } else if (postmanChoice.equals("SCISSORS")) {
