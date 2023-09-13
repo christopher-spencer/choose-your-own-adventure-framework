@@ -75,60 +75,34 @@ public class Menu {
         return in.nextLine();
     }
 
-    public void postmanRockPaperScissorsMove() {
-        String postmanChoice = rpsGame.postmanMove().toUpperCase();
-        if (postmanChoice.equals("ROCK")){
-            System.out.println("    The Postman chose: ROCK");
-            System.out.println();
-        } else if (postmanChoice.equals("SCISSORS")) {
-            System.out.println("    The Postman chose: SCISSORS");
-            System.out.println();
-        } else if (postmanChoice.equals("PAPER")) {
-            System.out.println("    The Postman chose: PAPER");
-            System.out.println();
-        }
-    }
-
     public void rockPaperScissorsGame() {
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
         String postmanChoice = rpsGame.postmanMove().toUpperCase();
-        System.out.println("    You have chosen: " + userChoice.toUpperCase());
-        postmanRockPaperScissorsMove();
+        System.out.println("You have chosen: " + userChoice);
+        System.out.println("The Postman chose: " + postmanChoice);
 
         if (userChoice.equals(postmanChoice)) {
             theGameIsATie();
-            rockPaperScissorsGame();
-        } else if (userChoice.equals("ROCK")) {
-            System.out.println(postmanChoice.equals("PAPER")? "    The Postman wins!" : "    You win!");
-            System.out.println();
-            System.out.println("    The Postman slaps a pie in your face.");
-            System.out.println();
-            System.out.println("    Once you have gathered your bearings, press ENTER to continue:");
-            in.nextLine();
-            andJustLikeThatHeIsGone();
-            theNextDayArrives();
-        } else if (userChoice.equals("PAPER")) {
-            System.out.println(postmanChoice.equals("SCISSORS")? "    The Postman wins!" : "    You win!");
-            System.out.println();
-            System.out.println("    The Postman catches your couch on fire.");
-            System.out.println();
-            System.out.println("    Once you have gather your bearings, press ENTER to continue:");
-            in.nextLine();
-            andJustLikeThatHeIsGone();
-            theNextDayArrives();
-        } else if (userChoice.equals("SCISSORS")) {
-            System.out.println(postmanChoice.equals("ROCK")? "    The Postman wins!" : "    You win!");
-            System.out.println();
             System.out.println("    The Postman pours pancake mix on your head.");
             System.out.println();
-            System.out.println("    Once you have gather your bearings, press ENTER to continue:");
-            in.nextLine();
-            andJustLikeThatHeIsGone();
-            theNextDayArrives();
-        } else {
-            tellUserInvalidSelection();
             rockPaperScissorsGame();
+        } else if ((userChoice.equals("ROCK") && postmanChoice.equals("SCISSORS")) ||
+                (userChoice.equals("PAPER") && postmanChoice.equals("ROCK")) ||
+                (userChoice.equals("SCISSORS") && postmanChoice.equals("PAPER"))) {
+            System.out.println("You win!");
+            System.out.println();
+            System.out.println("The Postman slaps a pie in your face.");
+        } else {
+            System.out.println("The Postman wins!");
+            System.out.println();
+            System.out.println("The Postman catches your couch on fire.");
         }
+
+        System.out.println();
+        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
+        in.nextLine();
+        andJustLikeThatHeIsGone();
+        theNextDayArrives();
     }
 
     public void theGameIsATie() {

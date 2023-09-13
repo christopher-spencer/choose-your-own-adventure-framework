@@ -15,25 +15,18 @@ public class RockPaperScissorsGame extends Game {
     public String postmanMove(){
         String postmanChoice = "";
         Random random = new Random();
-        int randomMove = random.nextInt(3) + 1;
+        int randomMove = random.nextInt(3);
 
-        if (randomMove == 1) {
+        if (randomMove == 0) {
             postmanChoice = "ROCK";
-        } else if (randomMove == 2) {
+        } else if (randomMove == 1) {
             postmanChoice = "PAPER";
 
-        } else if (randomMove == 3) {
+        } else if (randomMove == 2) {
             postmanChoice = "SCISSORS";
         }
         return postmanChoice;
     }
-
-//    public String postmanMove() {
-//        String[] moves = {"ROCK", "PAPER", "SCISSORS"};
-//        Random random = new Random();
-//        int randomIndex = random.nextInt(3);
-//        return moves[randomIndex];
-//    }
 
     public String getRock() {
         return rock;
