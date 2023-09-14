@@ -72,13 +72,23 @@ public class Menu {
     public void thePostmanWantsToPlayAGame() { //Todo split this in two to separate the name of the game in another method
         System.out.println("    The Postman wants to play a game!");
         System.out.println();
-        System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+        randomPostmanGame();
     }
 
     public void randomPostmanGame() {
         //Todo put in random logic here to insert random game opener into thePostmanWantsToPlayAGame()
-        System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-        System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+
+        Random random = new Random();
+        int randomNumber = random.nextInt(2);
+
+        if (randomNumber == 0) {
+            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+            rockPaperScissorsGame();
+        }
+        if (randomNumber == 1) {
+            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+            hangmanGame();
+        }
     }
 
     public String playerRockPaperScissorsMove() {
@@ -109,6 +119,8 @@ public class Menu {
             System.out.println("The Postman catches your couch on fire.");
         }
 
+        //Todo Make a single method for all of the below for each game instead of putting it in each game
+
         System.out.println();
         System.out.println("Once you have gathered your bearings, press ENTER to continue:");
         in.nextLine();
@@ -117,6 +129,11 @@ public class Menu {
     }
 
     public void hangmanGame() {
+
+        //Todo split up this method into smaller containable methods and put logic in Hangman Class instead of here
+
+        //Todo You win logic correct guesses = wordlength logic isn't accounting for same letters appearing more than once
+
         hangmanGame.initializeMysteryWords();
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int mysteryWordLength = mysteryWord.length();
@@ -126,10 +143,10 @@ public class Menu {
         List<Character> incorrectGuesses = new ArrayList<>();
         List<Character> allGuessesSoFar = new ArrayList<>();
 
-        System.out.println("Your mystery word is " + mysteryWordLength + "letters long!");
+        System.out.println("Your mystery word is " + mysteryWordLength + " letters long!\n");
 
         while(lives > 0 && !youWin ) {
-            System.out.println("You have " + lives + " lives left.");
+            System.out.println("You have " + lives + " lives left.\n");
 
             System.out.println("All Guesses So Far: ");
             for (char guess : allGuessesSoFar) {
@@ -142,9 +159,9 @@ public class Menu {
                 char wordChar = mysteryWord.charAt(i);
 
                 if (correctGuesses.contains(wordChar)) {
-                    System.out.println(wordChar);
+                    System.out.print(wordChar);
                 } else {
-                    System.out.println("_");
+                    System.out.print("_");
                 }
             }
             System.out.println();
@@ -156,19 +173,23 @@ public class Menu {
                 char letter = guessedLetter.charAt(0);
 
                 if (allGuessesSoFar.contains(letter) ) {
-                    System.out.println("You already guessed that letter.");
+                    System.out.println("You already guessed that letter.\n");
                     continue;
                 }
 
                 if (mysteryWord.contains(guessedLetter)) {
-                    System.out.println("Congrats! You've guessed a correct letter!");
+                    System.out.println("'Congrats! You've guessed a correct letter!' the Postman says.\n");
                     correctGuesses.add(letter);
                     allGuessesSoFar.add(letter);
 
                     youWin = correctGuesses.size() == mysteryWordLength;
 
+                    if (youWin) {
+                        break;
+                    }
+
                 } else {
-                    System.out.println("Wrong guess bucko!");
+                    System.out.println("'Wrong guess bucko!' the Postman says.\n");
                     incorrectGuesses.add(letter);
                     allGuessesSoFar.add(letter);
                     lives--;
@@ -181,9 +202,19 @@ public class Menu {
 
         if (youWin) {
             System.out.println("You win!! The word was: " + mysteryWord);
+            System.out.println();
+            System.out.println("The Postman cuts a 6 x 6 inch square out of the center of your living room carpet and eats it whole.\n");
         } else {
             System.out.println("You lose... The word was: " + mysteryWord);
+            System.out.println();
+            System.out.println("The Postman waters your plants with a liter of motor oil.\n");
         }
+
+        System.out.println();
+        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
+        in.nextLine();
+        andJustLikeThatHeIsGone();
+        theNextDayArrives();
 
     }
 
