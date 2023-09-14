@@ -3,6 +3,8 @@ package view;
 import games.Hangman;
 import games.RockPaperScissorsGame;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -118,12 +120,60 @@ public class Menu {
         hangmanGame.initializeMysteryWords();
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int mysteryWordLength = mysteryWord.length();
+        int lives = hangmanGame.getPlayerLives();
+        boolean youWin = false;
+        List<Character> correctGuesses = new ArrayList<>();
 
         System.out.println("Your mystery word is " + mysteryWordLength + "letters long!");
 
-        for(int i = 0; i < mysteryWordLength; i++) {
+        for (int i = 0; i < mysteryWordLength; i++) {
             System.out.print("_");
         }
+        System.out.println();
+
+        while(lives > 0 && !youWin ) {
+
+            System.out.println("You have " + lives + " lives left.");
+            System.out.println("What letter would you like to guess?:");
+            String guessedLetter = in.nextLine().toUpperCase();
+
+            if (guessedLetter.length() == 1 && guessedLetter.matches("[A-Z]")) {
+                char letter = guessedLetter.charAt(0);
+
+                if (mysteryWord.contains(guessedLetter)) {
+                    System.out.println("Congrats! You've guessed a correct letter!");
+
+                    correctGuesses.add(letter);
+
+                    for (int i = 0; i < mysteryWordLength; i++) {
+                        char wordChar = mysteryWord.charAt(i);
+
+                        if (correctGuesses.contains(wordChar)) {
+                            System.out.print(wordChar);
+                        } else {
+                            System.out.print("_");
+                        }
+                    }
+
+                    youWin = correctGuesses.size() == mysteryWordLength;
+
+                } else {
+                    System.out.println("Wrong guess bucko!");
+                    lives--;
+                }
+
+            } else {
+                tellUserInvalidSelection();
+                continue;
+            }
+        }
+
+        if (youWin) {
+            System.out.println("You win!!");
+        } else {
+            System.out.println("You lose...");
+        }
+
     }
 
     public void theGameIsATie() {
