@@ -2,6 +2,7 @@ package games;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Hangman extends Game {
 
@@ -22,7 +23,11 @@ public class Hangman extends Game {
 
         initializeMysteryWords();
     }
-    
+
+    public Hangman() {
+
+    }
+
     public void initializeMysteryWords() {
         this.mysteryWords = new ArrayList<>();
         mysteryWords.add("WEASEL");
@@ -33,7 +38,14 @@ public class Hangman extends Game {
         mysteryWords.add("ANTELOPE");
     }
 
-    public List<String> getMysteryWord() {
+    public String randomMysteryWord(List<String> mysteryWords) {
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(this.mysteryWords.size());
+        return mysteryWords.get(randomIndex);
+    }
+
+    public List<String> getMysteryWords() {
         return mysteryWords;
     }
 

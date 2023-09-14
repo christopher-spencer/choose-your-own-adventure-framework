@@ -5,9 +5,6 @@ import games.RockPaperScissorsGame;
 public class ApplicationCLI {
 
     private Menu menu;
-
-    RockPaperScissorsGame rockPaperScissors = new RockPaperScissorsGame();
-
     public ApplicationCLI(Menu menu) {
         this.menu = menu;
     }

@@ -1,5 +1,6 @@
 package view;
 
+import games.Hangman;
 import games.RockPaperScissorsGame;
 
 import java.util.Random;
@@ -11,6 +12,7 @@ public class Menu {
 
     private static final Scanner in = new Scanner(System.in);
     private RockPaperScissorsGame rpsGame = new RockPaperScissorsGame();
+    private Hangman hangmanGame = new Hangman();
 
     public void showWelcomeMessage() {
         System.out.println();
@@ -70,6 +72,13 @@ public class Menu {
         System.out.println();
         System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
     }
+
+    public void randomPostmanGame() {
+        //Todo put in random logic here to insert random game opener into thePostmanWantsToPlayAGame()
+        System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+        System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+    }
+
     public String playerRockPaperScissorsMove() {
         System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
         return in.nextLine();
@@ -103,6 +112,18 @@ public class Menu {
         in.nextLine();
         andJustLikeThatHeIsGone();
         theNextDayArrives();
+    }
+
+    public void hangmanGame() {
+        hangmanGame.initializeMysteryWords();
+        String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
+        int mysteryWordLength = mysteryWord.length();
+
+        System.out.println("Your mystery word is " + mysteryWordLength + "letters long!");
+
+        for(int i = 0; i < mysteryWordLength; i++) {
+            System.out.print("_");
+        }
     }
 
     public void theGameIsATie() {
