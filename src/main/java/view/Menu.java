@@ -123,55 +123,66 @@ public class Menu {
         int lives = hangmanGame.getPlayerLives();
         boolean youWin = false;
         List<Character> correctGuesses = new ArrayList<>();
+        List<Character> incorrectGuesses = new ArrayList<>();
+        List<Character> allGuessesSoFar = new ArrayList<>();
 
         System.out.println("Your mystery word is " + mysteryWordLength + "letters long!");
 
-        for (int i = 0; i < mysteryWordLength; i++) {
-            System.out.print("_");
-        }
-        System.out.println();
-
         while(lives > 0 && !youWin ) {
-
             System.out.println("You have " + lives + " lives left.");
+
+            System.out.println("All Guesses So Far: ");
+            for (char guess : allGuessesSoFar) {
+                System.out.print(guess + " ");
+            }
+            System.out.println();
+
+            System.out.println("Correct Guesses: ");
+            for (int i = 0; i < mysteryWordLength; i++) {
+                char wordChar = mysteryWord.charAt(i);
+
+                if (correctGuesses.contains(wordChar)) {
+                    System.out.println(wordChar);
+                } else {
+                    System.out.println("_");
+                }
+            }
+            System.out.println();
+
             System.out.println("What letter would you like to guess?:");
             String guessedLetter = in.nextLine().toUpperCase();
 
             if (guessedLetter.length() == 1 && guessedLetter.matches("[A-Z]")) {
                 char letter = guessedLetter.charAt(0);
 
+                if (allGuessesSoFar.contains(letter) ) {
+                    System.out.println("You already guessed that letter.");
+                    continue;
+                }
+
                 if (mysteryWord.contains(guessedLetter)) {
                     System.out.println("Congrats! You've guessed a correct letter!");
-
                     correctGuesses.add(letter);
-
-                    for (int i = 0; i < mysteryWordLength; i++) {
-                        char wordChar = mysteryWord.charAt(i);
-
-                        if (correctGuesses.contains(wordChar)) {
-                            System.out.print(wordChar);
-                        } else {
-                            System.out.print("_");
-                        }
-                    }
+                    allGuessesSoFar.add(letter);
 
                     youWin = correctGuesses.size() == mysteryWordLength;
 
                 } else {
                     System.out.println("Wrong guess bucko!");
+                    incorrectGuesses.add(letter);
+                    allGuessesSoFar.add(letter);
                     lives--;
                 }
 
             } else {
                 tellUserInvalidSelection();
-                continue;
             }
         }
 
         if (youWin) {
-            System.out.println("You win!!");
+            System.out.println("You win!! The word was: " + mysteryWord);
         } else {
-            System.out.println("You lose...");
+            System.out.println("You lose... The word was: " + mysteryWord);
         }
 
     }
