@@ -186,6 +186,8 @@ public class Menu {
                         youWin = true;
                     }
 
+                    //Todo put in a for loop letter counter to == to mystery word
+
                     if (youWin == true) {
                         break;
                     }
