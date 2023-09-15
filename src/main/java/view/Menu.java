@@ -145,7 +145,7 @@ public class Menu {
 
         System.out.println("Your mystery word is " + mysteryWordLength + " letters long!\n");
 
-        while(lives > 0 && !youWin ) {
+        while(lives > 0 && youWin == false) {
             System.out.println("You have " + lives + " lives left.\n");
 
             System.out.println("All Guesses So Far: ");
@@ -182,9 +182,11 @@ public class Menu {
                     correctGuesses.add(letter);
                     allGuessesSoFar.add(letter);
 
-                    youWin = correctGuesses.size() == mysteryWordLength;
+                    if (correctGuesses.size() == mysteryWordLength) {
+                        youWin = true;
+                    }
 
-                    if (youWin) {
+                    if (youWin == true) {
                         break;
                     }
 
