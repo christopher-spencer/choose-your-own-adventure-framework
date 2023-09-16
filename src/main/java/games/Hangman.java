@@ -8,24 +8,13 @@ public class Hangman extends Game {
 
     private List<String> mysteryWords;
     private String guessedLetter;
-    private List<String> previousGuesses;
-    private int wrongGuesses = 0;
-    private int rightGuesses = 0;
+    private List<Character> correctGuesses = new ArrayList<>();
+    private List<Character> previousGuesses = new ArrayList<>();
     private int playerLives = 5;
-
-    public Hangman(List<String> mysteryWords, String guessedLetter, List<String> previousGuesses, int wrongGuesses, int rightGuesses, int playerLives) {
-        this.mysteryWords = mysteryWords;
-        this.guessedLetter = guessedLetter;
-        this.previousGuesses = previousGuesses;
-        this.wrongGuesses = wrongGuesses;
-        this.rightGuesses = rightGuesses;
-        this.playerLives = playerLives;
-
-        initializeMysteryWords();
-    }
+    private boolean youWin = false;
 
     public Hangman() {
-
+        initializeMysteryWords();
     }
 
     public void initializeMysteryWords() {
@@ -49,6 +38,10 @@ public class Hangman extends Game {
         return mysteryWords;
     }
 
+    public int getPlayerLives() {
+        return playerLives;
+    }
+
     public String getGuessedLetter() {
         return guessedLetter;
     }
@@ -57,35 +50,24 @@ public class Hangman extends Game {
         this.guessedLetter = guessedLetter;
     }
 
-    public List<String> getPreviousGuesses() {
+    public List<Character> getCorrectGuesses() {
+        return correctGuesses;
+    }
+
+    public void setCorrectGuesses(List<Character> correctGuesses) {
+        this.correctGuesses = correctGuesses;
+    }
+
+    public List<Character> getPreviousGuesses() {
         return previousGuesses;
     }
 
-    public void setPreviousGuesses(List<String> previousGuesses) {
+    public void setPreviousGuesses(List<Character> previousGuesses) {
         this.previousGuesses = previousGuesses;
     }
 
-    public int getWrongGuesses() {
-        return wrongGuesses;
+    public boolean isYouWin() {
+        return youWin;
     }
 
-    public void setWrongGuesses(int wrongGuesses) {
-        this.wrongGuesses = wrongGuesses;
-    }
-
-    public int getRightGuesses() {
-        return rightGuesses;
-    }
-
-    public void setRightGuesses(int rightGuesses) {
-        this.rightGuesses = rightGuesses;
-    }
-
-    public int getPlayerLives() {
-        return playerLives;
-    }
-
-    public void setPlayerLives(int playerLives) {
-        this.playerLives = playerLives;
-    }
 }
