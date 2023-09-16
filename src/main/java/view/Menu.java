@@ -115,13 +115,7 @@ public class Menu {
             System.out.println("The Postman catches your couch on fire.");
         }
 
-        //Todo Make a single method for all of the below for each game instead of putting it in each game
-
-        System.out.println();
-        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
-        in.nextLine();
-        andJustLikeThatHeIsGone();
-        theNextDayArrives();
+        itGoesOnAndOnMyFriends();
     }
 
     public void hangmanGame() {
@@ -139,23 +133,7 @@ public class Menu {
         while(lives > 0 && youWin == false) {
             System.out.println("You have " + lives + " lives left.\n");
 
-            System.out.println("All Guesses So Far: ");
-            for (char guess : previousGuesses) {
-                System.out.print(guess + " ");
-            }
-            System.out.println();
-
-            System.out.println("Correct Guesses: ");
-            for (int i = 0; i < mysteryWord.length(); i++) {
-                char wordChar = mysteryWord.charAt(i);
-
-                if (correctGuesses.contains(wordChar)) {
-                    System.out.print(wordChar);
-                } else {
-                    System.out.print("_");
-                }
-            }
-            System.out.println();
+            displayHangmanStats(mysteryWord, previousGuesses, correctGuesses);
 
             System.out.println("What letter would you like to guess?:");
             String guessedLetter = in.nextLine().toUpperCase();
@@ -173,11 +151,9 @@ public class Menu {
                     correctGuesses.add(letter);
                     previousGuesses.add(letter);
 
-                    if (correctGuesses.size() == mysteryWord.length()) {
-                        youWin = true;
-                    }
-
                     //Todo put in a for loop letter counter to == to mystery word
+
+                    youWin = hasGuessedMysteryWord(mysteryWord, correctGuesses);
 
                     if (youWin == true) {
                         break;
@@ -196,13 +172,28 @@ public class Menu {
 
         displayHangmanGameResult(youWin, mysteryWord);
 
-        System.out.println();
-        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
-        in.nextLine();
-        andJustLikeThatHeIsGone();
-        theNextDayArrives();
+        itGoesOnAndOnMyFriends();
     }
 
+    private void displayHangmanStats(String mysteryWord, List<Character> previousGuesses, List<Character> correctGuesses) {
+        System.out.println("All Guesses So Far: ");
+        for (char guess : previousGuesses) {
+            System.out.print(guess + " ");
+        }
+        System.out.println();
+
+        System.out.println("Correct Guesses: ");
+        for (int i = 0; i < mysteryWord.length(); i++) {
+            char wordChar = mysteryWord.charAt(i);
+
+            if (correctGuesses.contains(wordChar)) {
+                System.out.print(wordChar);
+            } else {
+                System.out.print("_");
+            }
+        }
+        System.out.println();
+    }
     private void displayHangmanGameResult(boolean youWin, String mysteryWord) {
         if (youWin) {
             System.out.println("You win!! The word was: " + mysteryWord);
@@ -215,6 +206,17 @@ public class Menu {
         }
     }
 
+    private boolean hasGuessedMysteryWord(String mysteryWord, List<Character> correctGuesses) {
+        for (int i = 0; i < mysteryWord.length(); i++) {
+            char wordChar = mysteryWord.charAt(i);
+            if (!correctGuesses.contains(wordChar)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
     public void theGameIsATie() {
         System.out.println();
         System.out.println("    It's a tie!");
@@ -224,6 +226,13 @@ public class Menu {
     public void tellUserInvalidSelection() {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
+    }
+
+    public void itGoesOnAndOnMyFriends() {
+        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
+        in.nextLine();
+        andJustLikeThatHeIsGone();
+        theNextDayArrives();
     }
 
     public void andJustLikeThatHeIsGone() {
