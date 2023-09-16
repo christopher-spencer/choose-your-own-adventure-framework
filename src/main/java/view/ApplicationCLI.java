@@ -20,16 +20,15 @@ public class ApplicationCLI {
 
         if (userSelection.equalsIgnoreCase("Y")) {
            menu.answerTheDoor();
-           menu.rockPaperScissorsGame();;
         } else if (userSelection.equalsIgnoreCase("N")) {
            menu.dontAnswerTheDoor();
-           menu.rockPaperScissorsGame();
         } else {
             menu.tellUserInvalidSelection();
             knockKnock();
         }
     }
 
+    //Todo put in random logic to have the game keep going, switching randomly between games each day
 
     public static void main(String[] args) {
         Menu menu = new Menu();

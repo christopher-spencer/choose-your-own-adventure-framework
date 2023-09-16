@@ -2,8 +2,6 @@ package view;
 
 import games.Hangman;
 import games.RockPaperScissorsGame;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -69,15 +67,13 @@ public class Menu {
         System.out.println();
     }
 
-    public void thePostmanWantsToPlayAGame() { //Todo split this in two to separate the name of the game in another method
+    public void thePostmanWantsToPlayAGame() {
         System.out.println("    The Postman wants to play a game!");
         System.out.println();
         randomPostmanGame();
     }
 
     public void randomPostmanGame() {
-        //Todo put in random logic here to insert random game opener into thePostmanWantsToPlayAGame()
-
         Random random = new Random();
         int randomNumber = random.nextInt(2);
 
@@ -130,16 +126,15 @@ public class Menu {
 
     public void hangmanGame() {
 
-        //Todo split up this method into smaller containable methods and put logic in Hangman Class instead of here
+        //Todo split up this method into smaller containable methods
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
-        int mysteryWordLength = mysteryWord.length();
         int lives = hangmanGame.getPlayerLives();
         boolean youWin = hangmanGame.isYouWin();
         List<Character> correctGuesses = hangmanGame.getCorrectGuesses();
         List<Character> previousGuesses = hangmanGame.getPreviousGuesses();
 
-        System.out.println("Your mystery word is " + mysteryWordLength + " letters long!\n");
+        System.out.println("Your mystery word is " + mysteryWord.length() + " letters long!\n");
 
         while(lives > 0 && youWin == false) {
             System.out.println("You have " + lives + " lives left.\n");
@@ -151,7 +146,7 @@ public class Menu {
             System.out.println();
 
             System.out.println("Correct Guesses: ");
-            for (int i = 0; i < mysteryWordLength; i++) {
+            for (int i = 0; i < mysteryWord.length(); i++) {
                 char wordChar = mysteryWord.charAt(i);
 
                 if (correctGuesses.contains(wordChar)) {
@@ -178,7 +173,7 @@ public class Menu {
                     correctGuesses.add(letter);
                     previousGuesses.add(letter);
 
-                    if (correctGuesses.size() == mysteryWordLength) {
+                    if (correctGuesses.size() == mysteryWord.length()) {
                         youWin = true;
                     }
 
@@ -199,6 +194,16 @@ public class Menu {
             }
         }
 
+        displayHangmanGameResult(youWin, mysteryWord);
+
+        System.out.println();
+        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
+        in.nextLine();
+        andJustLikeThatHeIsGone();
+        theNextDayArrives();
+    }
+
+    private void displayHangmanGameResult(boolean youWin, String mysteryWord) {
         if (youWin) {
             System.out.println("You win!! The word was: " + mysteryWord);
             System.out.println();
@@ -208,13 +213,6 @@ public class Menu {
             System.out.println();
             System.out.println("The Postman waters your plants with a liter of motor oil.\n");
         }
-
-        System.out.println();
-        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
-        in.nextLine();
-        andJustLikeThatHeIsGone();
-        theNextDayArrives();
-
     }
 
     public void theGameIsATie() {
