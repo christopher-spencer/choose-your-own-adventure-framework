@@ -44,14 +44,14 @@ public class Menu {
     }
 
     public String doYouAnswerTheDoor() {
-        System.out.println("    KNOCK! KNOCK! KNOCK!");
-        System.out.println();
-        System.out.println("    KNOCK! KNOCK! KNOCK!");
-        System.out.println();
-        System.out.println("    KNOCK! KNOCK! KNOCK!");
-        System.out.println();
-        System.out.println("    Do you answer the door? (Y/N):");
-        return  in.nextLine();
+            System.out.println("    KNOCK! KNOCK! KNOCK!");
+            System.out.println();
+            System.out.println("    KNOCK! KNOCK! KNOCK!");
+            System.out.println();
+            System.out.println("    KNOCK! KNOCK! KNOCK!");
+            System.out.println();
+            System.out.println("    Do you answer the door? (Y/N):");
+            return in.nextLine();
     }
 
     public void answerTheDoor() {
@@ -150,9 +150,7 @@ public class Menu {
                     System.out.println("'Congrats! You've guessed a correct letter!' the Postman says.\n");
                     correctGuesses.add(letter);
                     previousGuesses.add(letter);
-
-                    //Todo put in a for loop letter counter to == to mystery word
-
+                    
                     youWin = hasGuessedMysteryWord(mysteryWord, correctGuesses);
 
                     if (youWin == true) {
