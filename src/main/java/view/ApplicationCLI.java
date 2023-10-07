@@ -5,6 +5,8 @@ import games.RockPaperScissorsGame;
 public class ApplicationCLI {
 
     private Menu menu;
+    boolean continuePlaying = true;
+    
     public ApplicationCLI(Menu menu) {
         this.menu = menu;
     }
@@ -12,16 +14,20 @@ public class ApplicationCLI {
     public void run() {
         menu.showWelcomeMessage();
         menu.letTheGamesBegin();
-        knockKnock();
+        while (continuePlaying) {
+            knockKnock();
+        }
     }
 
     public void knockKnock() {
         String userSelection = menu.doYouAnswerTheDoor();
 
-        if (userSelection.equalsIgnoreCase("Y")) {
+        if (userSelection.equalsIgnoreCase("Y") || userSelection.equalsIgnoreCase("YES")) {
            menu.answerTheDoor();
-        } else if (userSelection.equalsIgnoreCase("N")) {
+        } else if (userSelection.equalsIgnoreCase("N") || (userSelection.equalsIgnoreCase("NO"))) {
            menu.dontAnswerTheDoor();
+        } else if (userSelection.equalsIgnoreCase("Q") || (userSelection.equalsIgnoreCase("QUIT"))) {
+            continuePlaying = false;
         } else {
             menu.tellUserInvalidSelection();
             knockKnock();

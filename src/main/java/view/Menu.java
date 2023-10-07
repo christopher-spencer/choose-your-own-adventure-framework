@@ -50,7 +50,7 @@ public class Menu {
             System.out.println();
             System.out.println("    KNOCK! KNOCK! KNOCK!");
             System.out.println();
-            System.out.println("    Do you answer the door? (Y/N):");
+            System.out.println("    Do you answer the door? Enter (Y)es or (N)o or (Q)uit:");
             return in.nextLine();
     }
 
@@ -213,7 +213,6 @@ public class Menu {
         }
         return true;
     }
-
 
     public void theGameIsATie() {
         System.out.println();
