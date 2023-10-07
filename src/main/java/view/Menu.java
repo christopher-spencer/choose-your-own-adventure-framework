@@ -92,6 +92,8 @@ public class Menu {
         return in.nextLine();
     }
 
+    //todo if the player just clicks enter, goes on without user selection
+
     public void rockPaperScissorsGame() {
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
         String postmanChoice = rpsGame.postmanMove().toUpperCase();
@@ -236,6 +238,8 @@ public class Menu {
         theNextDayArrives();
     }
 
+    //todo occasionally for some reason the game goes through andJustLikeThaHeIsGone && theNextDayArrives twice..
+
     public void andJustLikeThatHeIsGone() {
         System.out.println();
         System.out.println("    *******************************************************************");
@@ -283,6 +287,6 @@ public class Menu {
         System.out.println();
         System.out.println("    But wait! What's that sound?!");
         System.out.println();
-        doYouAnswerTheDoor();
+//        doYouAnswerTheDoor();
     }
 }

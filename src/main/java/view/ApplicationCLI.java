@@ -36,8 +36,6 @@ public class ApplicationCLI {
         }
     }
 
-    //Todo put in random logic to have the game keep going, switching randomly between games each day
-
     public static void main(String[] args) {
         Menu menu = new Menu();
         ApplicationCLI cli = new ApplicationCLI(menu);
