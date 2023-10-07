@@ -171,6 +171,9 @@ public class Menu {
 
         displayHangmanGameResult(youWin, mysteryWord);
 
+        correctGuesses.clear();
+        previousGuesses.clear();
+
         itGoesOnAndOnMyFriends();
     }
 
