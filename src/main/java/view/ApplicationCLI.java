@@ -6,7 +6,7 @@ public class ApplicationCLI {
 
     private Menu menu;
     boolean continuePlaying = true;
-    
+
     public ApplicationCLI(Menu menu) {
         this.menu = menu;
     }
@@ -18,6 +18,8 @@ public class ApplicationCLI {
             knockKnock();
         }
     }
+
+    //Todo showing knock knock yes or no twice on repetition
 
     public void knockKnock() {
         String userSelection = menu.doYouAnswerTheDoor();

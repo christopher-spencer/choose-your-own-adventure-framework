@@ -121,6 +121,7 @@ public class Menu {
     public void hangmanGame() {
 
         //Todo split up this method into smaller containable methods
+        //Todo need to reset game word and guess list for next random hangman game
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int lives = hangmanGame.getPlayerLives();
