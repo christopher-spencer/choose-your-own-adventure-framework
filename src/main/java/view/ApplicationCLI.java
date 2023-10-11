@@ -18,9 +18,7 @@ public class ApplicationCLI {
             knockKnock();
         }
     }
-
-    //Todo showing knock knock yes or no twice on repetition
-
+    
     public void knockKnock() {
         String userSelection = menu.doYouAnswerTheDoor();
 
