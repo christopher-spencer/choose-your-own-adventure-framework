@@ -124,6 +124,8 @@ public class Menu {
 
         //Todo split up this method into smaller containable methods
 
+        //Todo create hangman "GUI"
+
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int lives = hangmanGame.getPlayerLives();
         boolean youWin = hangmanGame.isYouWin();

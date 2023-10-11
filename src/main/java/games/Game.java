@@ -1,6 +1,9 @@
 package games;
 
 public class Game {
+
+    //could add player wins and postman wins to game class
+    //todo think more about restructuring/adding what you can to game class
     private String playerMove;
     private String postmanMove;
 
