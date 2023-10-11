@@ -28,15 +28,14 @@ public class TicTacToe extends Game{
 
     // As the "GUI" changes, need to record change so that it keeps appearing each round
 
-    // if Top Left && Middle Middle && Bottom Right == True
-    // if Top Middle && Middle Middle && Bottom Middle == True
-    // if Bottom Left && Middle Middle && Top Right == True
-    // if Middle Left && Middle Middle && Middle Right == True
-
-    // if Top Left && Middle Left && Bottom Left == True
-    // if Top Left && Top Middle && Top Right == true
-    // if Top Right && Middle Right && Bottom Right == true
-    // if Bottom Left && Bottom Middle && Bottom Right == true
+    // 1.) if Top Left && Middle Middle && Bottom Right == True
+    // 2.) if Top Middle && Middle Middle && Bottom Middle == True
+    // 3.) if Bottom Left && Middle Middle && Top Right == True
+    // 4.) if Middle Left && Middle Middle && Middle Right == True
+    // 5.) if Top Left && Middle Left && Bottom Left == True
+    // 6.) if Top Left && Top Middle && Top Right == true
+    // 7.) if Top Right && Middle Right && Bottom Right == true
+    // 8.) if Bottom Left && Bottom Middle && Bottom Right == true
 
 
 
