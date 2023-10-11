@@ -28,7 +28,6 @@ public class Hangman extends Game {
     }
 
     public String randomMysteryWord(List<String> mysteryWords) {
-
         Random random = new Random();
         int randomIndex = random.nextInt(this.mysteryWords.size());
         return mysteryWords.get(randomIndex);
