@@ -2,6 +2,17 @@ package games;
 
 public class TicTacToe extends Game{
 
+    private boolean topLeft = false;
+    private boolean topMiddle = false;
+    private boolean topRight = false;
+    private boolean middleLeft = false;
+    private boolean middleMiddle = false;
+    private boolean middleRight = false;
+    private boolean bottomLeft = false;
+    private boolean bottomMiddle = false;
+    private boolean bottomRight = false;
+
+
     //todo What do we need for Tic Tac Toe:
 
     //player wins vs postman wins boolean (could add to Game class)
