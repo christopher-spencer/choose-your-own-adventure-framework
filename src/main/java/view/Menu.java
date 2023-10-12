@@ -76,6 +76,7 @@ public class Menu {
     public void randomPostmanGame() {
         Random random = new Random();
         int randomNumber = random.nextInt(2);
+        //TODO change bound to 3 when tictactoe is ready to be included
 
         if (randomNumber == 0) {
             System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
@@ -84,6 +85,10 @@ public class Menu {
         if (randomNumber == 1) {
             System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
             hangmanGame();
+        }
+        if (randomNumber == 2) {
+            System.out.println("    'TIC TAC TOE!' he screams as he quickly assembles a gallows in the living room.");
+            ticTacToeGame();
         }
     }
 
@@ -221,7 +226,7 @@ public class Menu {
         return true;
     }
 
-    public void ticTacToe() {
+    public void ticTacToeGame() {
         //Todo implement ticTacToe text and logic
     }
 
