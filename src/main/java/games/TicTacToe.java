@@ -54,6 +54,8 @@ public class TicTacToe extends Game{
     // 7.) if Top Right && Middle Right && Bottom Right == true
     // 8.) if Bottom Left && Bottom Middle && Bottom Right == true
 
+    // x2 because need these truth combos for both Xxx's and Ooo's
+
 
 
 
