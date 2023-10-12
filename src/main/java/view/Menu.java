@@ -221,6 +221,10 @@ public class Menu {
         return true;
     }
 
+    public void ticTacToe() {
+        //Todo implement ticTacToe text and logic
+    }
+
     public void theGameIsATie() {
         System.out.println();
         System.out.println("    It's a tie!");
