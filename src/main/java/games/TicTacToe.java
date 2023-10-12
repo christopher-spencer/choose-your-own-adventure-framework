@@ -2,15 +2,24 @@ package games;
 
 public class TicTacToe extends Game{
 
-    private boolean topLeft = false;
-    private boolean topMiddle = false;
-    private boolean topRight = false;
-    private boolean middleLeft = false;
-    private boolean middleMiddle = false;
-    private boolean middleRight = false;
-    private boolean bottomLeft = false;
-    private boolean bottomMiddle = false;
-    private boolean bottomRight = false;
+    private boolean topLeftX = false;
+    private boolean topLeftO = false;
+    private boolean topMiddleX = false;
+    private boolean topMiddleO = false;
+    private boolean topRightX = false;
+    private boolean topRightO = false;
+    private boolean middleLeftX = false;
+    private boolean middleLeftO = false;
+    private boolean middleMiddleX = false;
+    private boolean middleMiddleO = false;
+    private boolean middleRightX = false;
+    private boolean middleRightO = false;
+    private boolean bottomLeftX = false;
+    private boolean bottomLeftO = false;
+    private boolean bottomMiddleX = false;
+    private boolean bottomMiddleO = false;
+    private boolean bottomRightX = false;
+    private boolean bottomRightO = false;
 
 
     //todo What do we need for Tic Tac Toe:
