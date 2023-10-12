@@ -87,7 +87,7 @@ public class Menu {
             hangmanGame();
         }
         if (randomNumber == 2) {
-            System.out.println("    'TIC TAC TOE!' he screams as he quickly assembles a gallows in the living room.");
+            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
             ticTacToeGame();
         }
     }
