@@ -28,9 +28,6 @@ public class TicTacToe extends Game{
 
     //need to build an actual menu "GUI" graph showing xs and os on board
 
-    //Think about how to keep track of where those xs and os are
-    //Probably a counter, if 3 you win---> counter only goes up based on three in row on board
-
     // Need to keep track of assigning or picking X's or O's
     // As well as crossing off possibly spots as they are taken
 
