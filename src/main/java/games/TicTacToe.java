@@ -43,6 +43,8 @@ public class TicTacToe extends Game{
     //  Bottom Left | Bottom Middle | Bottom Right
     //              |               |
 
+    // Create a separate GUI menu for each possible TTT graph???
+
     // As the "GUI" changes, need to record change so that it keeps appearing each round
 
     // 1.) if Top Left && Middle Middle && Bottom Right == True
