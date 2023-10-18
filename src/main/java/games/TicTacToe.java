@@ -76,7 +76,14 @@ public class TicTacToe extends Game{
 
     // x2 because need these truth combos for both Xxx's and Ooo's
 
-
+    //              |       \/       |    [``]
+    //              |       /\       |    [,,]
+    // --------------------------------------------
+    //              |                |
+    //              |                |
+    // --------------------------------------------
+    //              |                |
+    //              |                |
 
 
 
