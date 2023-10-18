@@ -45,7 +45,7 @@ public class TicTacToe extends Game{
 
     // Create a separate GUI menu for each possible TTT graph???
 
-    // Use a 2D array to hold the board char[] ticTacToeBoard = new char[3][3];
+    // Use a 2D array to hold the board char[] ticTacToeBoard = new char[3][3]; ???
 
     // As the "GUI" changes, need to record change so that it keeps appearing each round
     // But by that account, I think I might need to create a graph for every possible move
@@ -84,6 +84,28 @@ public class TicTacToe extends Game{
     // --------------------------------------------
     //              |                |
     //              |                |
+
+
+
+    //       \/     |       \/       |    [``]
+    //       /\     |       /\       |    [,,]
+    // --------------------------------------------
+    //              |                |
+    //              |                |
+    // --------------------------------------------
+    //              |                |
+    //              |                |
+
+
+
+    //              |       \/       |    [``]
+    //              |       /\       |    [,,]
+    // --------------------------------------------
+    //              |       \/       |
+    //              |       /\       |
+    // --------------------------------------------
+    //              |       \/       |
+    //              |       /\       |
 
 
 
