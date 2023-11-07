@@ -17,6 +17,8 @@ public class Hangman extends Game {
         initializeMysteryWords();
     }
 
+    //Todo: Mystery words is a possible opportunity to use file or database
+
     public void initializeMysteryWords() {
         this.mysteryWords = new ArrayList<>();
         mysteryWords.add("WEASEL");
