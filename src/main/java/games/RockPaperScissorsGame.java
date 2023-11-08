@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class RockPaperScissorsGame extends Game {
 
+    //todo switch things up to ensure you're using RPS class more fully & improve OOP
+
     private String rock = "ROCK";
     private String paper = "PAPER";
     private String scissors = "SCISSORS";
