@@ -237,6 +237,10 @@ public class Menu {
                 {' ', ' ', ' '}
         };
 
+        // todo if logic to change board to X's and O's based on user choice
+        // todo random choices for postman
+        // todo if boolean logic => player wins method
+
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
                 System.out.println(board[row][column]);
