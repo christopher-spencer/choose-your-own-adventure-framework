@@ -230,6 +230,27 @@ public class Menu {
         //Todo implement ticTacToe text and logic
     }
 
+    public void ticTacToeBoard() {
+        char[][] board = {
+                {' ', ' ', ' '},
+                {' ', ' ', ' '},
+                {' ', ' ', ' '}
+        };
+
+        for (int row = 0; row < 3; row++) {
+            for (int column = 0; column < 3; column++) {
+                System.out.println(board[row][column]);
+                if (column < 2) {
+                    System.out.println(" | ");
+                }
+            }
+            System.out.println();
+            if (row < 2) {
+                System.out.println("------------");
+            }
+        }
+    }
+
     public void theGameIsATie() {
         System.out.println();
         System.out.println("    It's a tie!");
