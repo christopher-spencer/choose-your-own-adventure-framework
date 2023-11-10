@@ -246,7 +246,7 @@ public class Menu {
             }
             System.out.println();
             if (row < 2) {
-                System.out.println("------------");
+                System.out.println("---------");
             }
         }
     }
