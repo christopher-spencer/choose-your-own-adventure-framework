@@ -26,8 +26,6 @@ public class TicTacToe extends Game{
 
     //player wins vs postman wins boolean (could add to Game class)
 
-    //need to build an actual menu "GUI" graph showing xs and os on board
-
     // Need to keep track of assigning or picking X's or O's
     // As well as crossing off possibly spots as they are taken
 
@@ -43,12 +41,9 @@ public class TicTacToe extends Game{
     //  Bottom Left | Bottom Middle | Bottom Right
     //              |               |
 
-    // Create a separate GUI menu for each possible TTT graph???
-
     // Use a 2D array to hold the board char[] ticTacToeBoard = new char[3][3]; ???
 
     // As the "GUI" changes, need to record change so that it keeps appearing each round
-    // But by that account, I think I might need to create a graph for every possible move
 
     // First move: 9 possible moves.
     //Second move: 8 possible moves (because one cell is occupied).
