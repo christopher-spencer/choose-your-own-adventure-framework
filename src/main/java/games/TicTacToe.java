@@ -25,49 +25,6 @@ public class TicTacToe extends Game{
 
     }
 
-    public TicTacToe(boolean topLeftX, boolean topLeftO, boolean topMiddleX, boolean topMiddleO, boolean topRightX, boolean topRightO, boolean middleLeftX, boolean middleLeftO, boolean middleMiddleX, boolean middleMiddleO, boolean middleRightX, boolean middleRightO, boolean bottomLeftX, boolean bottomLeftO, boolean bottomMiddleX, boolean bottomMiddleO, boolean bottomRightX, boolean bottomRightO) {
-        this.topLeftX = topLeftX;
-        this.topLeftO = topLeftO;
-        this.topMiddleX = topMiddleX;
-        this.topMiddleO = topMiddleO;
-        this.topRightX = topRightX;
-        this.topRightO = topRightO;
-        this.middleLeftX = middleLeftX;
-        this.middleLeftO = middleLeftO;
-        this.middleMiddleX = middleMiddleX;
-        this.middleMiddleO = middleMiddleO;
-        this.middleRightX = middleRightX;
-        this.middleRightO = middleRightO;
-        this.bottomLeftX = bottomLeftX;
-        this.bottomLeftO = bottomLeftO;
-        this.bottomMiddleX = bottomMiddleX;
-        this.bottomMiddleO = bottomMiddleO;
-        this.bottomRightX = bottomRightX;
-        this.bottomRightO = bottomRightO;
-    }
-
-    public TicTacToe(String playerMove, String postmanMove, boolean topLeftX, boolean topLeftO, boolean topMiddleX, boolean topMiddleO, boolean topRightX, boolean topRightO, boolean middleLeftX, boolean middleLeftO, boolean middleMiddleX, boolean middleMiddleO, boolean middleRightX, boolean middleRightO, boolean bottomLeftX, boolean bottomLeftO, boolean bottomMiddleX, boolean bottomMiddleO, boolean bottomRightX, boolean bottomRightO) {
-        super(playerMove, postmanMove);
-        this.topLeftX = topLeftX;
-        this.topLeftO = topLeftO;
-        this.topMiddleX = topMiddleX;
-        this.topMiddleO = topMiddleO;
-        this.topRightX = topRightX;
-        this.topRightO = topRightO;
-        this.middleLeftX = middleLeftX;
-        this.middleLeftO = middleLeftO;
-        this.middleMiddleX = middleMiddleX;
-        this.middleMiddleO = middleMiddleO;
-        this.middleRightX = middleRightX;
-        this.middleRightO = middleRightO;
-        this.bottomLeftX = bottomLeftX;
-        this.bottomLeftO = bottomLeftO;
-        this.bottomMiddleX = bottomMiddleX;
-        this.bottomMiddleO = bottomMiddleO;
-        this.bottomRightX = bottomRightX;
-        this.bottomRightO = bottomRightO;
-    }
-
     public boolean isTopLeftX() {
         return topLeftX;
     }
