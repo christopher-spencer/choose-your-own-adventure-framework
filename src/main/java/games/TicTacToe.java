@@ -21,8 +21,50 @@ public class TicTacToe extends Game{
     private boolean bottomRightX = false;
     private boolean bottomRightO = false;
 
+    public TicTacToe(boolean topLeftX, boolean topLeftO, boolean topMiddleX, boolean topMiddleO, boolean topRightX, boolean topRightO, boolean middleLeftX, boolean middleLeftO, boolean middleMiddleX, boolean middleMiddleO, boolean middleRightX, boolean middleRightO, boolean bottomLeftX, boolean bottomLeftO, boolean bottomMiddleX, boolean bottomMiddleO, boolean bottomRightX, boolean bottomRightO) {
+        this.topLeftX = topLeftX;
+        this.topLeftO = topLeftO;
+        this.topMiddleX = topMiddleX;
+        this.topMiddleO = topMiddleO;
+        this.topRightX = topRightX;
+        this.topRightO = topRightO;
+        this.middleLeftX = middleLeftX;
+        this.middleLeftO = middleLeftO;
+        this.middleMiddleX = middleMiddleX;
+        this.middleMiddleO = middleMiddleO;
+        this.middleRightX = middleRightX;
+        this.middleRightO = middleRightO;
+        this.bottomLeftX = bottomLeftX;
+        this.bottomLeftO = bottomLeftO;
+        this.bottomMiddleX = bottomMiddleX;
+        this.bottomMiddleO = bottomMiddleO;
+        this.bottomRightX = bottomRightX;
+        this.bottomRightO = bottomRightO;
+    }
 
-    //todo What do we need for Tic Tac Toe:
+    public TicTacToe(String playerMove, String postmanMove, boolean topLeftX, boolean topLeftO, boolean topMiddleX, boolean topMiddleO, boolean topRightX, boolean topRightO, boolean middleLeftX, boolean middleLeftO, boolean middleMiddleX, boolean middleMiddleO, boolean middleRightX, boolean middleRightO, boolean bottomLeftX, boolean bottomLeftO, boolean bottomMiddleX, boolean bottomMiddleO, boolean bottomRightX, boolean bottomRightO) {
+        super(playerMove, postmanMove);
+        this.topLeftX = topLeftX;
+        this.topLeftO = topLeftO;
+        this.topMiddleX = topMiddleX;
+        this.topMiddleO = topMiddleO;
+        this.topRightX = topRightX;
+        this.topRightO = topRightO;
+        this.middleLeftX = middleLeftX;
+        this.middleLeftO = middleLeftO;
+        this.middleMiddleX = middleMiddleX;
+        this.middleMiddleO = middleMiddleO;
+        this.middleRightX = middleRightX;
+        this.middleRightO = middleRightO;
+        this.bottomLeftX = bottomLeftX;
+        this.bottomLeftO = bottomLeftO;
+        this.bottomMiddleX = bottomMiddleX;
+        this.bottomMiddleO = bottomMiddleO;
+        this.bottomRightX = bottomRightX;
+        this.bottomRightO = bottomRightO;
+    }
+    
+//todo What do we need for Tic Tac Toe:
 
     //player wins vs postman wins boolean (could add to Game class)
 
