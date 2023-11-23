@@ -21,6 +21,10 @@ public class TicTacToe extends Game{
     private boolean bottomRightX = false;
     private boolean bottomRightO = false;
 
+    public TicTacToe() {
+
+    }
+
     public TicTacToe(boolean topLeftX, boolean topLeftO, boolean topMiddleX, boolean topMiddleO, boolean topRightX, boolean topRightO, boolean middleLeftX, boolean middleLeftO, boolean middleMiddleX, boolean middleMiddleO, boolean middleRightX, boolean middleRightO, boolean bottomLeftX, boolean bottomLeftO, boolean bottomMiddleX, boolean bottomMiddleO, boolean bottomRightX, boolean bottomRightO) {
         this.topLeftX = topLeftX;
         this.topLeftO = topLeftO;
