@@ -2,6 +2,8 @@ package view;
 
 import games.Hangman;
 import games.RockPaperScissorsGame;
+import games.TicTacToe;
+
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -13,6 +15,7 @@ public class Menu {
     private static final Scanner in = new Scanner(System.in);
     private RockPaperScissorsGame rpsGame = new RockPaperScissorsGame();
     private Hangman hangmanGame = new Hangman();
+    private TicTacToe ticTacToeGame = new TicTacToe();
 
     public void showWelcomeMessage() {
         System.out.println();
