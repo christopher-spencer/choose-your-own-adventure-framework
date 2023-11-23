@@ -63,8 +63,152 @@ public class TicTacToe extends Game{
         this.bottomRightX = bottomRightX;
         this.bottomRightO = bottomRightO;
     }
-    
-//todo What do we need for Tic Tac Toe:
+
+    public boolean isTopLeftX() {
+        return topLeftX;
+    }
+
+    public void setTopLeftX(boolean topLeftX) {
+        this.topLeftX = topLeftX;
+    }
+
+    public boolean isTopLeftO() {
+        return topLeftO;
+    }
+
+    public void setTopLeftO(boolean topLeftO) {
+        this.topLeftO = topLeftO;
+    }
+
+    public boolean isTopMiddleX() {
+        return topMiddleX;
+    }
+
+    public void setTopMiddleX(boolean topMiddleX) {
+        this.topMiddleX = topMiddleX;
+    }
+
+    public boolean isTopMiddleO() {
+        return topMiddleO;
+    }
+
+    public void setTopMiddleO(boolean topMiddleO) {
+        this.topMiddleO = topMiddleO;
+    }
+
+    public boolean isTopRightX() {
+        return topRightX;
+    }
+
+    public void setTopRightX(boolean topRightX) {
+        this.topRightX = topRightX;
+    }
+
+    public boolean isTopRightO() {
+        return topRightO;
+    }
+
+    public void setTopRightO(boolean topRightO) {
+        this.topRightO = topRightO;
+    }
+
+    public boolean isMiddleLeftX() {
+        return middleLeftX;
+    }
+
+    public void setMiddleLeftX(boolean middleLeftX) {
+        this.middleLeftX = middleLeftX;
+    }
+
+    public boolean isMiddleLeftO() {
+        return middleLeftO;
+    }
+
+    public void setMiddleLeftO(boolean middleLeftO) {
+        this.middleLeftO = middleLeftO;
+    }
+
+    public boolean isMiddleMiddleX() {
+        return middleMiddleX;
+    }
+
+    public void setMiddleMiddleX(boolean middleMiddleX) {
+        this.middleMiddleX = middleMiddleX;
+    }
+
+    public boolean isMiddleMiddleO() {
+        return middleMiddleO;
+    }
+
+    public void setMiddleMiddleO(boolean middleMiddleO) {
+        this.middleMiddleO = middleMiddleO;
+    }
+
+    public boolean isMiddleRightX() {
+        return middleRightX;
+    }
+
+    public void setMiddleRightX(boolean middleRightX) {
+        this.middleRightX = middleRightX;
+    }
+
+    public boolean isMiddleRightO() {
+        return middleRightO;
+    }
+
+    public void setMiddleRightO(boolean middleRightO) {
+        this.middleRightO = middleRightO;
+    }
+
+    public boolean isBottomLeftX() {
+        return bottomLeftX;
+    }
+
+    public void setBottomLeftX(boolean bottomLeftX) {
+        this.bottomLeftX = bottomLeftX;
+    }
+
+    public boolean isBottomLeftO() {
+        return bottomLeftO;
+    }
+
+    public void setBottomLeftO(boolean bottomLeftO) {
+        this.bottomLeftO = bottomLeftO;
+    }
+
+    public boolean isBottomMiddleX() {
+        return bottomMiddleX;
+    }
+
+    public void setBottomMiddleX(boolean bottomMiddleX) {
+        this.bottomMiddleX = bottomMiddleX;
+    }
+
+    public boolean isBottomMiddleO() {
+        return bottomMiddleO;
+    }
+
+    public void setBottomMiddleO(boolean bottomMiddleO) {
+        this.bottomMiddleO = bottomMiddleO;
+    }
+
+    public boolean isBottomRightX() {
+        return bottomRightX;
+    }
+
+    public void setBottomRightX(boolean bottomRightX) {
+        this.bottomRightX = bottomRightX;
+    }
+
+    public boolean isBottomRightO() {
+        return bottomRightO;
+    }
+
+    public void setBottomRightO(boolean bottomRightO) {
+        this.bottomRightO = bottomRightO;
+    }
+
+    //todo What do we need for Tic Tac Toe:
 
     //player wins vs postman wins boolean (could add to Game class)
 
