@@ -192,21 +192,6 @@ public class TicTacToe extends Game{
 
     // As the "GUI" changes, need to record change so that it keeps appearing each round
 
-    // First move: 9 possible moves.
-    //Second move: 8 possible moves (because one cell is occupied).
-    //Third move: 7 possible moves.
-    //Fourth move: 6 possible moves.
-    //Fifth move: 5 possible moves.
-    //Sixth move: 4 possible moves.
-    //Seventh move: 3 possible moves.
-    //Eighth move: 2 possible moves.
-    //Ninth move: 1 possible move.
-
-    // Total of 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45 possible moves
-
-    // Think of a possible easier way to do this?? Using method to fill an empty board?
-
-
     // 1.) if Top Left && Middle Middle && Bottom Right == True
     // 2.) if Top Middle && Middle Middle && Bottom Middle == True
     // 3.) if Bottom Left && Middle Middle && Top Right == True
