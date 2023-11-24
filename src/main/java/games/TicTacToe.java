@@ -203,19 +203,6 @@ public class TicTacToe extends Game{
 
     // x2 because need these truth combos for both Xxx's and Ooo's
 
-    //              |       \/       |    [``]
-    //              |       /\       |    [,,]
-    // --------------------------------------------
-    //              |                |
-    //              |                |
-    // --------------------------------------------
-    //              |                |
-    //              |                |
-
-/*   THE ABOVE BOARD WOULD REQUIRE MORE LOOP LOGIC BUT MIGHT BE SOMETHING TO WORK
-     TOWARDS EVENTUALLY
-*/
-
     //         |   |
     //       ---------
     //         |   |
