@@ -171,7 +171,7 @@ public class TicTacToe extends Game{
 
     //todo What do we need for Tic Tac Toe:
 
-    //player wins vs postman wins boolean (could add to Game class)
+    //todo player wins vs postman wins boolean (add to Game class)
 
     // Need to keep track of assigning or picking X's or O's
     // As well as crossing off possibly spots as they are taken
