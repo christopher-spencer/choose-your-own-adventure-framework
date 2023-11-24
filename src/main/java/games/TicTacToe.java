@@ -173,7 +173,7 @@ public class TicTacToe extends Game{
 
     //todo player wins vs postman wins boolean (add to Game class)
 
-    // Need to keep track of assigning or picking X's or O's
+    //todo Need to keep track of assigning or picking X's or O's
     // As well as crossing off possibly spots as they are taken
 
     //There are nine possible spots in Tac Tac Toe
