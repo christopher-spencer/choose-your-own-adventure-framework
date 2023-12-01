@@ -29,144 +29,144 @@ public class TicTacToe extends Game{
         return isTopLeftX;
     }
 
-    public void setTopLeftX(boolean topLeftX) {
-        this.isTopLeftX = topLeftX;
+    public void setTopLeftX(boolean isTopLeftX) {
+        this.isTopLeftX = isTopLeftX;
     }
 
     public boolean isTopLeftO() {
         return isTopLeftO;
     }
 
-    public void setTopLeftO(boolean topLeftO) {
-        this.isTopLeftO = topLeftO;
+    public void setTopLeftO(boolean isTopLeftO) {
+        this.isTopLeftO = isTopLeftO;
     }
 
     public boolean isTopMiddleX() {
         return isTopMiddleX;
     }
 
-    public void setTopMiddleX(boolean topMiddleX) {
-        this.isTopMiddleX = topMiddleX;
+    public void setTopMiddleX(boolean isTopMiddleX) {
+        this.isTopMiddleX = isTopMiddleX;
     }
 
     public boolean isTopMiddleO() {
         return isTopMiddleO;
     }
 
-    public void setTopMiddleO(boolean topMiddleO) {
-        this.isTopMiddleO = topMiddleO;
+    public void setTopMiddleO(boolean isTopMiddleO) {
+        this.isTopMiddleO = isTopMiddleO;
     }
 
     public boolean isTopRightX() {
         return isTopRightX;
     }
 
-    public void setTopRightX(boolean topRightX) {
-        this.isTopRightX = topRightX;
+    public void setTopRightX(boolean isTopRightX) {
+        this.isTopRightX = isTopRightX;
     }
 
     public boolean isTopRightO() {
         return isTopRightO;
     }
 
-    public void setTopRightO(boolean topRightO) {
-        this.isTopRightO = topRightO;
+    public void setTopRightO(boolean isTopRightO) {
+        this.isTopRightO = isTopRightO;
     }
 
     public boolean isMiddleLeftX() {
         return isMiddleLeftX;
     }
 
-    public void setMiddleLeftX(boolean middleLeftX) {
-        this.isMiddleLeftX = middleLeftX;
+    public void setMiddleLeftX(boolean isMiddleLeftX) {
+        this.isMiddleLeftX = isMiddleLeftX;
     }
 
     public boolean isMiddleLeftO() {
         return isMiddleLeftO;
     }
 
-    public void setMiddleLeftO(boolean middleLeftO) {
-        this.isMiddleLeftO = middleLeftO;
+    public void setMiddleLeftO(boolean isMiddleLeftO) {
+        this.isMiddleLeftO = isMiddleLeftO;
     }
 
     public boolean isMiddleMiddleX() {
         return isMiddleMiddleX;
     }
 
-    public void setMiddleMiddleX(boolean middleMiddleX) {
-        this.isMiddleMiddleX = middleMiddleX;
+    public void setMiddleMiddleX(boolean isMiddleMiddleX) {
+        this.isMiddleMiddleX = isMiddleMiddleX;
     }
 
     public boolean isMiddleMiddleO() {
         return isMiddleMiddleO;
     }
 
-    public void setMiddleMiddleO(boolean middleMiddleO) {
-        this.isMiddleMiddleO = middleMiddleO;
+    public void setMiddleMiddleO(boolean isMiddleMiddleO) {
+        this.isMiddleMiddleO = isMiddleMiddleO;
     }
 
     public boolean isMiddleRightX() {
         return isMiddleRightX;
     }
 
-    public void setMiddleRightX(boolean middleRightX) {
-        this.isMiddleRightX = middleRightX;
+    public void setMiddleRightX(boolean isMiddleRightX) {
+        this.isMiddleRightX = isMiddleRightX;
     }
 
     public boolean isMiddleRightO() {
         return isMiddleRightO;
     }
 
-    public void setMiddleRightO(boolean middleRightO) {
-        this.isMiddleRightO = middleRightO;
+    public void setMiddleRightO(boolean isMiddleRightO) {
+        this.isMiddleRightO = isMiddleRightO;
     }
 
     public boolean isBottomLeftX() {
         return isBottomLeftX;
     }
 
-    public void setBottomLeftX(boolean bottomLeftX) {
-        this.isBottomLeftX = bottomLeftX;
+    public void setBottomLeftX(boolean isBottomLeftX) {
+        this.isBottomLeftX = isBottomLeftX;
     }
 
     public boolean isBottomLeftO() {
         return isBottomLeftO;
     }
 
-    public void setBottomLeftO(boolean bottomLeftO) {
-        this.isBottomLeftO = bottomLeftO;
+    public void setBottomLeftO(boolean isBottomLeftO) {
+        this.isBottomLeftO = isBottomLeftO;
     }
 
     public boolean isBottomMiddleX() {
         return isBottomMiddleX;
     }
 
-    public void setBottomMiddleX(boolean bottomMiddleX) {
-        this.isBottomMiddleX = bottomMiddleX;
+    public void setBottomMiddleX(boolean isBottomMiddleX) {
+        this.isBottomMiddleX = isBottomMiddleX;
     }
 
     public boolean isBottomMiddleO() {
         return isBottomMiddleO;
     }
 
-    public void setBottomMiddleO(boolean bottomMiddleO) {
-        this.isBottomMiddleO = bottomMiddleO;
+    public void setBottomMiddleO(boolean isBottomMiddleO) {
+        this.isBottomMiddleO = isBottomMiddleO;
     }
 
     public boolean isBottomRightX() {
         return isBottomRightX;
     }
 
-    public void setBottomRightX(boolean bottomRightX) {
-        this.isBottomRightX = bottomRightX;
+    public void setBottomRightX(boolean isBottomRightX) {
+        this.isBottomRightX = isBottomRightX;
     }
 
     public boolean isBottomRightO() {
         return isBottomRightO;
     }
 
-    public void setBottomRightO(boolean bottomRightO) {
-        this.isBottomRightO = bottomRightO;
+    public void setBottomRightO(boolean isBottomRightO) {
+        this.isBottomRightO = isBottomRightO;
     }
 
     //todo What do we need for Tic Tac Toe:
