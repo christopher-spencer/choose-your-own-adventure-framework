@@ -312,6 +312,12 @@ public class Menu {
             board[2][1] = 'X';
         }
 
+        if (ticTacToeGame.isBottomRightO()) {
+            board[2][2] = 'O';
+        } else if (ticTacToeGame.isBottomRightX()) {
+            board[2][2] = 'X';
+        }
+
         return board;
     }
 
