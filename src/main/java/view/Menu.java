@@ -252,6 +252,14 @@ public class Menu {
             board[0][0] = ' ';
         }
 
+        if (ticTacToeGame.isTopMiddleO()) {
+            board[0][1] = '0';
+        } else if (ticTacToeGame.isTopMiddleX()) {
+            board[0][1] = 'X';
+        } else {
+            board[0][1] = ' ';
+        }
+
 
 
         for (int row = 0; row < 3; row++) {
