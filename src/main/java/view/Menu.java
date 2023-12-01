@@ -250,25 +250,19 @@ public class Menu {
             board[0][0] = 'O';
         } else if (ticTacToeGame.isTopLeftX()) {
             board[0][0] = 'X';
-        } else {
-            board[0][0] = ' ';
         }
 
         if (ticTacToeGame.isTopMiddleO()) {
             board[0][1] = '0';
         } else if (ticTacToeGame.isTopMiddleX()) {
             board[0][1] = 'X';
-        } else {
-            board[0][1] = ' ';
         }
 
         if (ticTacToeGame.isTopRightO()) {
             board[0][2] = 'O';
         } else if (ticTacToeGame.isTopRightX()) {
             board[0][2] = 'X';
-        } else {
-            board[0][2] = ' ';
-        }
+        } 
 
 
 
@@ -284,6 +278,10 @@ public class Menu {
                 System.out.println("---------");
             }
         }
+    }
+
+    public void ticTacToeXsAndOsPositions() {
+
     }
 
     public void theGameIsATie() {
