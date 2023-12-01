@@ -246,6 +246,24 @@ public class Menu {
 
         // todo if X is chosen can't choose O and vice versa
 
+        board = ticTacToeXsAndOsPositions(board);
+
+        for (int row = 0; row < 3; row++) {
+            for (int column = 0; column < 3; column++) {
+                System.out.println(board[row][column]);
+                if (column < 2) {
+                    System.out.println(" | ");
+                }
+            }
+            System.out.println();
+            if (row < 2) {
+                System.out.println("---------");
+            }
+        }
+    }
+
+    public char[][] ticTacToeXsAndOsPositions(char[][] board) {
+
         if (ticTacToeGame.isTopLeftO()) {
             board[0][0] = 'O';
         } else if (ticTacToeGame.isTopLeftX()) {
@@ -262,26 +280,9 @@ public class Menu {
             board[0][2] = 'O';
         } else if (ticTacToeGame.isTopRightX()) {
             board[0][2] = 'X';
-        } 
-
-
-
-        for (int row = 0; row < 3; row++) {
-            for (int column = 0; column < 3; column++) {
-                System.out.println(board[row][column]);
-                if (column < 2) {
-                    System.out.println(" | ");
-                }
-            }
-            System.out.println();
-            if (row < 2) {
-                System.out.println("---------");
-            }
         }
-    }
 
-    public void ticTacToeXsAndOsPositions() {
-
+        return board;
     }
 
     public void theGameIsATie() {
