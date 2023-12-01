@@ -244,6 +244,10 @@ public class Menu {
         // todo random choices for postman
         // todo if boolean logic => player wins method
 
+        if (ticTacToeGame.isTopLeftO()) {
+            board[0][0] = 'O';
+        }
+
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
                 System.out.println(board[row][column]);
