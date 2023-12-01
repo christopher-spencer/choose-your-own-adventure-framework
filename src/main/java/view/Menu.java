@@ -288,6 +288,12 @@ public class Menu {
             board[1][0] = 'X';
         }
 
+        if (ticTacToeGame.isMiddleMiddleO()) {
+            board[1][1] = 'O';
+        } else if (ticTacToeGame.isMiddleMiddleX()) {
+            board[1][1] = 'X';
+        }
+
         return board;
     }
 
