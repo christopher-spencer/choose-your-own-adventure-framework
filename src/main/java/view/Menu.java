@@ -244,6 +244,8 @@ public class Menu {
         // todo random choices for postman
         // todo if boolean logic => player wins method
 
+        // todo if X is chosen can't choose O and vice versa
+
         if (ticTacToeGame.isTopLeftO()) {
             board[0][0] = 'O';
         } else if (ticTacToeGame.isTopLeftX()) {
