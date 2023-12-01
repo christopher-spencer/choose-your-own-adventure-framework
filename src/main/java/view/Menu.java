@@ -246,7 +246,11 @@ public class Menu {
 
         if (ticTacToeGame.isTopLeftO()) {
             board[0][0] = 'O';
+        } else if (ticTacToeGame.isTopLeftX()) {
+            board[0][0] = 'X';
         }
+
+        
 
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
