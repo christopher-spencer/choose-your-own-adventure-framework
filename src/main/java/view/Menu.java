@@ -294,6 +294,12 @@ public class Menu {
             board[1][1] = 'X';
         }
 
+        if (ticTacToeGame.isMiddleRightO()) {
+            board[1][2] = 'O';
+        } else if (ticTacToeGame.isMiddleRightX()) {
+            board[1][2] = 'X';
+        }
+
         return board;
     }
 
