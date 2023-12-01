@@ -246,7 +246,7 @@ public class Menu {
 
         // todo if X is chosen can't choose O and vice versa
 
-        board = ticTacToeXsAndOsPositions(board);
+        board = xsAndOsPositions(board);
 
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
@@ -262,7 +262,7 @@ public class Menu {
         }
     }
 
-    public char[][] ticTacToeXsAndOsPositions(char[][] board) {
+    public char[][] xsAndOsPositions(char[][] board) {
 
         if (ticTacToeGame.isTopLeftO()) {
             board[0][0] = 'O';
