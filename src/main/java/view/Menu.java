@@ -109,7 +109,7 @@ public class Menu {
         }
 
         //TODO uncomment random selector for TTT and update above number when TTT is ready
-        
+
 //        if (randomNumber == 2) {
 //            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
 //            ticTacToeGame();
@@ -270,6 +270,12 @@ public class Menu {
 
     public void ticTacToeGame() {
         //Todo implement ticTacToe text and logic
+
+        // todo if logic to change board to X's and O's based on user choice
+        // todo random choices for postman
+        // todo if boolean logic => player wins method
+
+        // todo if X is chosen can't choose O and vice versa
     }
 
     public void ticTacToeBoard() {
@@ -278,12 +284,6 @@ public class Menu {
                 {' ', ' ', ' '},
                 {' ', ' ', ' '}
         };
-
-        // todo if logic to change board to X's and O's based on user choice
-        // todo random choices for postman
-        // todo if boolean logic => player wins method
-
-        // todo if X is chosen can't choose O and vice versa
 
         board = getXsAndOsPositions(board);
 
