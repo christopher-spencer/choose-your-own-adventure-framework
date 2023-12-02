@@ -361,7 +361,7 @@ public class Menu {
     }
 
     /*
-        TRANSITION FROM GAME TO GAME SECTION
+        * ~ * ~ * TRANSITION FROM GAME TO GAME SECTION * ~ * ~ *
      */
 
     public void itGoesOnAndOnMyFriends() {
