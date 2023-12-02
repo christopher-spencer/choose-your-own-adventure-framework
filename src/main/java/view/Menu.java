@@ -298,6 +298,8 @@ public class Menu {
                 {' ', ' ', ' '}
         };
 
+        //TODO add a variable for SPOT TAKEN linked to NUMBERS on player choice and feed it to XOPosition method
+
         board = getXsAndOsPositions(board);
 
         for (int row = 0; row < 3; row++) {
@@ -374,7 +376,7 @@ public class Menu {
     }
 
     public void checkWhichTicTacToeSpotsAreTaken(char[][] board) {
-        
+
     }
 
     /*
