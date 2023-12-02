@@ -268,17 +268,30 @@ public class Menu {
      *********************************************************************************
      */
 
+    public String playerTicTacToeMove() {
+        // todo if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
+
+        printTicTacToeBoard();
+        System.out.println("    What position do you choose?");
+        System.out.println("    Enter one of the following number inputs:");
+        System.out.println();
+        System.out.println("    (1) | (2) | (3)");
+        System.out.println("    ----------------");
+        System.out.println("    (4) | (5) | (6)");
+        System.out.println("    ----------------");
+        System.out.println("    (7) | (8) | (9)");
+        return in.nextLine();
+    }
+
     public void ticTacToeGame() {
         //Todo implement ticTacToe text and logic
 
         // todo if logic to change board to X's and O's based on user choice
         // todo random choices for postman
         // todo if boolean logic => player wins method
-
-        // todo if X is chosen can't choose O and vice versa
     }
 
-    public void ticTacToeBoard() {
+    public void printTicTacToeBoard() {
         char[][] board = {
                 {' ', ' ', ' '},
                 {' ', ' ', ' '},
