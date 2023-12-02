@@ -17,6 +17,10 @@ public class Menu {
     private Hangman hangmanGame = new Hangman();
     private TicTacToe ticTacToeGame = new TicTacToe();
 
+    /*
+        CHOOSE YOUR OWN ADVENTURE FRAMEWORK OPENING SECTION
+    */
+
     public void showWelcomeMessage() {
         System.out.println();
         System.out.println("                                 ***************************");
@@ -46,6 +50,10 @@ public class Menu {
         System.out.println();
     }
 
+    /*
+        DO YOU ANSWER THE DOOR SECTION
+     */
+
     public String doYouAnswerTheDoor() {
             System.out.println("    KNOCK! KNOCK! KNOCK!");
             System.out.println();
@@ -69,6 +77,10 @@ public class Menu {
         thePostmanWantsToPlayAGame();
         System.out.println();
     }
+
+    /*
+        THE POSTMAN WANTS TO PLAY A RANDOM GAME SECTION
+     */
 
     public void thePostmanWantsToPlayAGame() {
         System.out.println("    The Postman wants to play a game!");
@@ -94,6 +106,10 @@ public class Menu {
             ticTacToeGame();
         }
     }
+
+    /*
+        ROCK PAPER SCISSORS GAME
+     */
 
     public String playerRockPaperScissorsMove() {
         System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
@@ -127,6 +143,10 @@ public class Menu {
 
         itGoesOnAndOnMyFriends();
     }
+
+    /*
+        HANGMAN GAME
+     */
 
     public void hangmanGame() {
 
@@ -229,6 +249,10 @@ public class Menu {
         return true;
     }
 
+    /*
+        TIC TAC TOE GAME
+     */
+
     public void ticTacToeGame() {
         //Todo implement ticTacToe text and logic
     }
@@ -321,6 +345,10 @@ public class Menu {
         return board;
     }
 
+    /*
+        RANDOM GAME METHODS
+     */
+
     public void theGameIsATie() {
         System.out.println();
         System.out.println("    It's a tie!");
@@ -331,6 +359,10 @@ public class Menu {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
     }
+
+    /*
+        TRANSITION FROM GAME TO GAME SECTION
+     */
 
     public void itGoesOnAndOnMyFriends() {
         System.out.println("Once you have gathered your bearings, press ENTER to continue:");
