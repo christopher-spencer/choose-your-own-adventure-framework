@@ -18,7 +18,7 @@ public class Menu {
     private TicTacToe ticTacToeGame = new TicTacToe();
 
     /*
-        CHOOSE YOUR OWN ADVENTURE FRAMEWORK OPENING SECTION
+        * ~ * ~ * CHOOSE YOUR OWN ADVENTURE FRAMEWORK OPENING SECTION * ~ * ~ *
     */
 
     public void showWelcomeMessage() {
@@ -51,7 +51,7 @@ public class Menu {
     }
 
     /*
-        DO YOU ANSWER THE DOOR SECTION
+        * ~ * ~ * DO YOU ANSWER THE DOOR SECTION * ~ * ~ *
      */
 
     public String doYouAnswerTheDoor() {
@@ -79,7 +79,7 @@ public class Menu {
     }
 
     /*
-        THE POSTMAN WANTS TO PLAY A RANDOM GAME SECTION
+        * ~ * ~ * THE POSTMAN WANTS TO PLAY A RANDOM GAME SECTION * ~ * ~ *
      */
 
     public void thePostmanWantsToPlayAGame() {
@@ -108,7 +108,7 @@ public class Menu {
     }
 
     /*
-        ROCK PAPER SCISSORS GAME
+        * ~ * ~ * ROCK PAPER SCISSORS GAME SECTION * ~ * ~ *
      */
 
     public String playerRockPaperScissorsMove() {
@@ -145,7 +145,7 @@ public class Menu {
     }
 
     /*
-        HANGMAN GAME
+    * ~ * ~ * HANGMAN GAME SECTION * ~ * ~ *
      */
 
     public void hangmanGame() {
@@ -250,7 +250,7 @@ public class Menu {
     }
 
     /*
-        TIC TAC TOE GAME
+        * ~ * ~ * TIC TAC TOE GAME SECTION * ~ * ~ *
      */
 
     public void ticTacToeGame() {
@@ -346,7 +346,7 @@ public class Menu {
     }
 
     /*
-        RANDOM GAME METHODS
+        * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
      */
 
     public void theGameIsATie() {
