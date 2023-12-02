@@ -107,6 +107,9 @@ public class Menu {
             System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
             hangmanGame();
         }
+
+        //TODO uncomment random selector for TTT and update above number when TTT is ready
+        
 //        if (randomNumber == 2) {
 //            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
 //            ticTacToeGame();
