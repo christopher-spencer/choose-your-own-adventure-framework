@@ -91,10 +91,10 @@ public class Menu {
     public void thePostmanWantsToPlayAGame() {
         System.out.println("    The Postman wants to play a game!");
         System.out.println();
-        randomPostmanGame();
+        randomGameSelector();
     }
 
-    public void randomPostmanGame() {
+    public void randomGameSelector() {
         Random random = new Random();
         int randomNumber = random.nextInt(2);
         //TODO change bound to 3 when tictactoe is ready to be included
@@ -107,10 +107,10 @@ public class Menu {
             System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
             hangmanGame();
         }
-        if (randomNumber == 2) {
-            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-            ticTacToeGame();
-        }
+//        if (randomNumber == 2) {
+//            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//            ticTacToeGame();
+//        }
     }
 
     /*
