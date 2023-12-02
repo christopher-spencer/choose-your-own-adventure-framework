@@ -1,9 +1,9 @@
 package games;
 
 public class Game {
-
+    //TODO Game Class should be an ABSTRACT CLASS
     //could add player wins and postman wins to game class
-    //todo think more about restructuring/adding what you can to game class
+    //TODO think more about restructuring/adding what you can to game class
     private String playerMove;
     private String postmanMove;
 
