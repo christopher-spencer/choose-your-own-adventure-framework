@@ -130,8 +130,13 @@ public class Menu {
     //todo if the player just clicks enter, goes on without user selection
 
     public void rockPaperScissorsGame() {
+        String rock = rpsGame.getRock();
+        String paper = rpsGame.getPaper();
+        String scissors = rpsGame.getScissors();
+
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
         String postmanChoice = rpsGame.getPostmanMove().toUpperCase();
+
         System.out.println("You have chosen: " + userChoice);
         System.out.println("The Postman chose: " + postmanChoice);
 
@@ -140,9 +145,9 @@ public class Menu {
             System.out.println("    The Postman pours pancake mix on your head.");
             System.out.println();
             rockPaperScissorsGame();
-        } else if ((userChoice.equals(rpsGame.getRock()) && postmanChoice.equals(rpsGame.getScissors())) ||
-                (userChoice.equals(rpsGame.getPaper()) && postmanChoice.equals(rpsGame.getRock())) ||
-                (userChoice.equals(rpsGame.getScissors()) && postmanChoice.equals(rpsGame.getPaper()))) {
+        } else if ( (userChoice.equals(rock) && postmanChoice.equals(scissors)) ||
+                (userChoice.equals(paper) && postmanChoice.equals(rock)) ||
+                (userChoice.equals(scissors) && postmanChoice.equals(paper)) ) {
             System.out.println("You win!");
             System.out.println();
             System.out.println("The Postman slaps a pie in your face.");
