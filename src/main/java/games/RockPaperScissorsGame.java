@@ -3,7 +3,7 @@ package games;
 import java.util.Random;
 
 public class RockPaperScissorsGame extends Game {
-    
+
     private String rock = "ROCK";
     private String paper = "PAPER";
     private String scissors = "SCISSORS";
@@ -29,15 +29,9 @@ public class RockPaperScissorsGame extends Game {
         return postmanChoice;
     }
 
-    public String getRock() {
-        return rock;
-    }
+    public String getRock() { return rock; }
 
-    public String getPaper() {
-        return paper;
-    }
+    public String getPaper() { return paper; }
 
-    public String getScissors() {
-        return scissors;
-    }
+    public String getScissors() { return scissors; }
 }
