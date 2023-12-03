@@ -140,9 +140,9 @@ public class Menu {
             System.out.println("    The Postman pours pancake mix on your head.");
             System.out.println();
             rockPaperScissorsGame();
-        } else if ((userChoice.equals("ROCK") && postmanChoice.equals("SCISSORS")) ||
-                (userChoice.equals("PAPER") && postmanChoice.equals("ROCK")) ||
-                (userChoice.equals("SCISSORS") && postmanChoice.equals("PAPER"))) {
+        } else if ((userChoice.equals(rpsGame.getRock()) && postmanChoice.equals(rpsGame.getScissors())) ||
+                (userChoice.equals(rpsGame.getPaper()) && postmanChoice.equals(rpsGame.getRock())) ||
+                (userChoice.equals(rpsGame.getScissors()) && postmanChoice.equals(rpsGame.getPaper()))) {
             System.out.println("You win!");
             System.out.println();
             System.out.println("The Postman slaps a pie in your face.");

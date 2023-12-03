@@ -1,9 +1,8 @@
 package games;
 
 public abstract class Game {
-    //TODO add player wins and postman wins to game class
+    //TODO add player wins and postman wins to game class and TIE GAME BOOLEAN
     //TODO think more about restructuring/adding what you can to game class
-    
     private String playerMove;
     private String postmanMove;
 
