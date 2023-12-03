@@ -293,7 +293,7 @@ public class Menu {
 
         // todo if logic to change board to X's and O's based on user choice
         // todo random choices for postman
-        // todo if boolean logic => player wins method
+        // todo if boolean logic => player wins method (e.g. if Top Left && Middle Middle && Bottom Right == True)
     }
 
     public void printTicTacToeBoard() {
