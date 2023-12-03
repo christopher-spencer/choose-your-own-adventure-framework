@@ -1,6 +1,6 @@
 package games;
 
-public class Game {
+public abstract class Game {
     //TODO Game Class should be an ABSTRACT CLASS
     //could add player wins and postman wins to game class
     //TODO think more about restructuring/adding what you can to game class
