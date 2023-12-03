@@ -13,7 +13,6 @@ public class RockPaperScissorsGame extends Game {
     public RockPaperScissorsGame() {
 
     }
-    //TODO override getPostmanMove from Game class?
 
     @Override
     public String getPostmanMove(){
