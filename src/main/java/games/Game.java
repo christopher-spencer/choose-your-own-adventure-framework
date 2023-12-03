@@ -3,7 +3,7 @@ package games;
 public abstract class Game {
     //TODO add player wins and postman wins to game class
     //TODO think more about restructuring/adding what you can to game class
-    //TODO boolean isYouWin and isPostmanWin can be moved here
+    
     private String playerMove;
     private String postmanMove;
 
