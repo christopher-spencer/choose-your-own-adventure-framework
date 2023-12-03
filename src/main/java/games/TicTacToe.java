@@ -25,6 +25,8 @@ public class TicTacToe extends Game{
 
     }
 
+    // TODO could let player choose X's or O's then set Postman Move accordingly
+
     @Override
     public String getPostmanMove() {
         return "O";
