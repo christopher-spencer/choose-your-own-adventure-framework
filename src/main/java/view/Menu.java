@@ -131,7 +131,7 @@ public class Menu {
 
     public void rockPaperScissorsGame() {
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
-        String postmanChoice = rpsGame.postmanMove().toUpperCase();
+        String postmanChoice = rpsGame.getPostmanMove().toUpperCase();
         System.out.println("You have chosen: " + userChoice);
         System.out.println("The Postman chose: " + postmanChoice);
 

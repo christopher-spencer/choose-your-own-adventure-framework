@@ -14,7 +14,9 @@ public class RockPaperScissorsGame extends Game {
 
     }
     //TODO override getPostmanMove from Game class?
-    public String postmanMove(){
+
+    @Override
+    public String getPostmanMove(){
         String postmanChoice = "";
         Random random = new Random();
         int randomMove = random.nextInt(3);
