@@ -25,6 +25,16 @@ public class TicTacToe extends Game{
 
     }
 
+    @Override
+    public String getPostmanMove() {
+        return "O";
+    }
+
+    @Override
+    public String getPlayerMove() {
+        return "X";
+    }
+
     public boolean isTopLeftX() {
         return isTopLeftX;
     }
