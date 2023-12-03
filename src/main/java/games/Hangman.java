@@ -6,9 +6,6 @@ import java.util.Random;
 
 public class Hangman extends Game {
 
-    //todo switch things up to ensure you're using HM class more fully & improve OOP
-
-
     private List<String> mysteryWords;
     private String guessedLetter;
     private List<Character> correctGuesses = new ArrayList<>();
