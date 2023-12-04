@@ -385,6 +385,7 @@ public class Menu {
     }
 
     public String playerPicksXsVsOs() {
+        // TODO let player choose X's or O's then set Postman Move accordingly
         return "";
     }
 
