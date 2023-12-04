@@ -125,6 +125,8 @@ public class Menu {
     public String playerRockPaperScissorsMove() {
         System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
         return in.nextLine();
+
+        //TODO need INVALID SELECTION if not rock paper or scissors
     }
 
     //todo if the player just clicks enter, goes on without user selection
@@ -289,6 +291,8 @@ public class Menu {
     }
 
     public void ticTacToeGame() {
+
+        int playerChoice = Integer.parseInt(playerTicTacToeMove());
         //Todo implement ticTacToe text and logic
 
         // todo if logic to change board to X's and O's based on user choice
