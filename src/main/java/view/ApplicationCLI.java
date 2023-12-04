@@ -11,6 +11,7 @@ public class ApplicationCLI {
         this.menu = menu;
     }
 
+
     public void run() {
         menu.showWelcomeMessage();
         menu.letTheGamesBegin();
