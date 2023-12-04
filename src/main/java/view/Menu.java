@@ -129,7 +129,7 @@ public class Menu {
         //TODO need INVALID SELECTION if not rock paper or scissors
     }
 
-    //todo if the player just clicks enter, goes on without user selection
+    //TODO if the player just clicks enter, goes on without user selection
 
     public void rockPaperScissorsGame() {
         String rock = rpsGame.getRock();
