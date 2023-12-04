@@ -288,6 +288,8 @@ public class Menu {
         System.out.println("    ----------------");
         System.out.println("    (7) | (8) | (9)");
         return in.nextLine();
+
+        //TODO exception handling for not picking a number
     }
 
     public void ticTacToeGame() {
