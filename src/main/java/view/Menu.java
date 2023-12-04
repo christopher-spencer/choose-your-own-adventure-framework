@@ -300,9 +300,9 @@ public class Menu {
 
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
-        if (playerChoice == 1 && playerPicksXsVsOs().equals("X")) {
+        if (playerChoice == 1 && playerPicksXsVsOs() == ('X')) {
             ticTacToeGame.setTopLeftX(true);
-        } else if (playerChoice == 1 && playerPicksXsVsOs().equals("O")) {
+        } else if (playerChoice == 1 && playerPicksXsVsOs() == ('O')) {
             ticTacToeGame.setTopLeftO(true);
         }
     }
@@ -391,9 +391,10 @@ public class Menu {
         return board;
     }
 
-    public String playerPicksXsVsOs() {
+    public char playerPicksXsVsOs() {
         // TODO let player choose X's or O's then set Postman Move accordingly
-        return "";
+        char xsOrOs = 'X';
+        return xsOrOs;
     }
 
     /*
