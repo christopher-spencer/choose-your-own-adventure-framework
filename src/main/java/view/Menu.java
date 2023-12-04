@@ -384,6 +384,10 @@ public class Menu {
         return board;
     }
 
+    public String playerPicksXsVsOs() {
+        return "";
+    }
+
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
