@@ -35,7 +35,9 @@ public class TicTacToe extends Game{
         return "X";
     }
 
-    public boolean isATicTacToeWinner() {
+    @Override
+    public boolean isYouWin() {
+        //TODO add YOU WIN vs POSTMAN WIN logic
         boolean isAWinner = false;
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {

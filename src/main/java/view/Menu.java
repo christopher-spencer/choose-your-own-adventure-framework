@@ -449,49 +449,6 @@ public class Menu {
         return playerChoice;
     }
 
-    //TODO this is a great example of a method I can just move to the TTT class since there's no CLI stuff involved
-    // AND it can OVERRIDE winner method from Game class
-
-    public boolean ticTacToeWin() {
-        boolean isAWinner = false;
-
-        if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isTopMiddleX() && ticTacToeGame.isTopRightX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopLeftO() && ticTacToeGame.isTopMiddleO() && ticTacToeGame.isTopRightO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isMiddleLeftX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isMiddleRightX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isMiddleLeftO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isMiddleRightO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isBottomLeftX() && ticTacToeGame.isBottomMiddleX() && ticTacToeGame.isBottomRightX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isBottomLeftO() && ticTacToeGame.isBottomMiddleO() && ticTacToeGame.isBottomRightO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isMiddleLeftX() && ticTacToeGame.isBottomLeftX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopLeftO() && ticTacToeGame.isMiddleLeftO() && ticTacToeGame.isBottomLeftO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopMiddleX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isBottomMiddleX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopMiddleO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isBottomMiddleO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopRightX() && ticTacToeGame.isMiddleRightX() && ticTacToeGame.isBottomRightX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isMiddleRightO() && ticTacToeGame.isBottomRightO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isBottomRightX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopLeftO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isBottomRightO()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopRightX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isBottomLeftX()) {
-            isAWinner = true;
-        } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isBottomLeftO()) {
-            isAWinner = true;
-        }
-
-        return isAWinner;
-    }
-
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
