@@ -462,9 +462,9 @@ public class Menu {
             isAWinner = true;
         } else if (ticTacToeGame.isBottomLeftO() && ticTacToeGame.isBottomMiddleO() && ticTacToeGame.isBottomRightO()) {
             isAWinner = true;
-        } else if (ticTacToeGame.isTopRightX() && ticTacToeGame.isMiddleRightX() && ticTacToeGame.isBottomRightX()) {
+        } else if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isMiddleLeftX() && ticTacToeGame.isBottomLeftX()) {
             isAWinner = true;
-        } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isMiddleRightO() && ticTacToeGame.isBottomRightO()) {
+        } else if (ticTacToeGame.isTopLeftO() && ticTacToeGame.isMiddleLeftO() && ticTacToeGame.isBottomLeftO()) {
             isAWinner = true;
         }
     }
