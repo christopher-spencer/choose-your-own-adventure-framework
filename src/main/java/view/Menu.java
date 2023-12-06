@@ -427,18 +427,24 @@ public class Menu {
         return board;
     }
 
-    public char playerPicksXsVsOs(char playerChoice) {
+    public char playerPicksXsVsOs() {
         // TODO let player choose X's or O's then set Postman Move accordingly
+        String playerChoice = "";
         char xsOrOs = ' ';
 
-        if (playerChoice == 'X') {
+        System.out.println("    Do you want to play as X's or O's?");
+        System.out.println("    Enter ( X ) or ( O ): ");
+
+        playerChoice = in.nextLine();
+
+        if (playerChoice.equals("X")) {
             xsOrOs = 'X';
-        } else if (playerChoice == 'O') {
+        } else if (playerChoice.equals("O")) {
             xsOrOs = 'O';
         } else {
             tellUserInvalidSelection();
         }
-        
+
         return xsOrOs;
     }
 
