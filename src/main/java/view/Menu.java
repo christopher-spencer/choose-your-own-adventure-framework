@@ -301,6 +301,7 @@ public class Menu {
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
+        // or cut the X vs O logic/move it to separate method
 
         if (playerChoice == 1 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setTopLeftX(true);
