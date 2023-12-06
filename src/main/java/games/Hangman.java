@@ -65,5 +65,4 @@ public class Hangman extends Game {
     public void setPreviousGuesses(List<Character> previousGuesses) {
         this.previousGuesses = previousGuesses;
     }
-
 }
