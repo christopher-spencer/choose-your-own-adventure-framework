@@ -448,6 +448,7 @@ public class Menu {
     }
 
     //TODO this is a great example of a method I can just move to the TTT class since there's no CLI stuff involved
+    // AND it can OVERRIDE winner method from Game class
 
     public boolean ticTacToeWin() {
         boolean isAWinner = false;
