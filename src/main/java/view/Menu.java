@@ -302,41 +302,41 @@ public class Menu {
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
 
-        if (playerChoice == 1 && playerPicksXsVsOs() == 'X') {
+        if (playerChoice == 1 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setTopLeftX(true);
-        } else if (playerChoice == 1 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 1 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setTopLeftO(true);
-        } else if (playerChoice == 2 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 2 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
-        } else if (playerChoice == 2 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 2 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setTopMiddleO(true);
-        } else if (playerChoice == 3 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 3 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setTopRightX(true);
-        } else if (playerChoice == 3 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 3 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setTopRightO(true);
-        } else if (playerChoice == 4 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 4 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setMiddleLeftX(true);
-        } else if (playerChoice == 4 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 4 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setMiddleLeftO(true);
-        } else if (playerChoice == 5 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 5 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setMiddleMiddleX(true);
-        } else if (playerChoice == 5 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 5 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setMiddleMiddleO(true);
-        } else if (playerChoice == 6 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 6 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setMiddleRightX(true);
-        } else if (playerChoice == 6 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 6 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setMiddleRightO(true);
-        } else if (playerChoice == 7 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 7 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setBottomLeftX(true);
-        } else if (playerChoice == 7 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 7 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setBottomLeftO(true);
-        } else if (playerChoice == 8 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 8 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setBottomMiddleX(true);
-        } else if (playerChoice == 8 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 8 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setBottomMiddleO(true);
-        } else if (playerChoice == 9 && playerPicksXsVsOs() == 'X') {
+        } else if (playerChoice == 9 && playerChoiceXorO() == 'X') {
             ticTacToeGame.setBottomRightX(true);
-        } else if (playerChoice == 9 && playerPicksXsVsOs() == 'O') {
+        } else if (playerChoice == 9 && playerChoiceXorO() == 'O') {
             ticTacToeGame.setBottomRightO(true);
         } else {
             tellUserInvalidSelection();
@@ -427,25 +427,25 @@ public class Menu {
         return board;
     }
 
-    public char playerPicksXsVsOs() {
+    public char playerChoiceXorO() {
         // TODO let player choose X's or O's then set Postman Move accordingly
-        String playerChoice = "";
-        char xsOrOs = ' ';
+        String chooseXorO = "";
+        char playerChoice = ' ';
 
         System.out.println("    Do you want to play as X's or O's?");
         System.out.println("    Enter ( X ) or ( O ): ");
 
-        playerChoice = in.nextLine();
+        chooseXorO = in.nextLine();
 
-        if (playerChoice.equals("X")) {
-            xsOrOs = 'X';
-        } else if (playerChoice.equals("O")) {
-            xsOrOs = 'O';
+        if (chooseXorO.equals("X")) {
+            playerChoice = 'X';
+        } else if (chooseXorO.equals("O")) {
+            playerChoice = 'O';
         } else {
             tellUserInvalidSelection();
         }
 
-        return xsOrOs;
+        return playerChoice;
     }
 
     /*
