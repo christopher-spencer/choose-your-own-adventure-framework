@@ -35,6 +35,46 @@ public class TicTacToe extends Game{
         return "X";
     }
 
+    public boolean ticTacToeWin() {
+        boolean isAWinner = false;
+
+        if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
+            isAWinner = true;
+        } else if (isTopLeftO() && isTopMiddleO() && isTopRightO()) {
+            isAWinner = true;
+        } else if (isMiddleLeftX() && isMiddleMiddleX() && isMiddleRightX()) {
+            isAWinner = true;
+        } else if (isMiddleLeftO() && isMiddleMiddleO() && isMiddleRightO()) {
+            isAWinner = true;
+        } else if (isBottomLeftX() && isBottomMiddleX() && isBottomRightX()) {
+            isAWinner = true;
+        } else if (isBottomLeftO() && isBottomMiddleO() && isBottomRightO()) {
+            isAWinner = true;
+        } else if (isTopLeftX() && isMiddleLeftX() && isBottomLeftX()) {
+            isAWinner = true;
+        } else if (isTopLeftO() && isMiddleLeftO() && isBottomLeftO()) {
+            isAWinner = true;
+        } else if (isTopMiddleX() && isMiddleMiddleX() && isBottomMiddleX()) {
+            isAWinner = true;
+        } else if (isTopMiddleO() && isMiddleMiddleO() && isBottomMiddleO()) {
+            isAWinner = true;
+        } else if (isTopRightX() && isMiddleRightX() && isBottomRightX()) {
+            isAWinner = true;
+        } else if (isTopRightO() && isMiddleRightO() && isBottomRightO()) {
+            isAWinner = true;
+        } else if (isTopLeftX() && isMiddleMiddleX() && isBottomRightX()) {
+            isAWinner = true;
+        } else if (isTopLeftO() && isMiddleMiddleO() && isBottomRightO()) {
+            isAWinner = true;
+        } else if (isTopRightX() && isMiddleMiddleX() && isBottomLeftX()) {
+            isAWinner = true;
+        } else if (isTopRightO() && isMiddleMiddleO() && isBottomLeftO()) {
+            isAWinner = true;
+        }
+
+        return isAWinner;
+    }
+
     public boolean isTopLeftX() {
         return isTopLeftX;
     }
