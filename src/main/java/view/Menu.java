@@ -277,6 +277,27 @@ public class Menu {
      *********************************************************************************
      */
 
+    public char playerChoiceXorO() {
+        // TODO let player choose X's or O's then set Postman Move accordingly
+        String chooseXorO = "";
+        char playerChoice = ' ';
+
+        System.out.println("    Do you want to play as X's or O's?");
+        System.out.println("    Enter ( X ) or ( O ): ");
+
+        chooseXorO = in.nextLine();
+
+        if (chooseXorO.equals("X")) {
+            playerChoice = 'X';
+        } else if (chooseXorO.equals("O")) {
+            playerChoice = 'O';
+        } else {
+            tellUserInvalidSelection();
+        }
+
+        return playerChoice;
+    }
+
     public String playerTicTacToeMove() {
         // todo if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
 
@@ -426,27 +447,6 @@ public class Menu {
         }
 
         return board;
-    }
-
-    public char playerChoiceXorO() {
-        // TODO let player choose X's or O's then set Postman Move accordingly
-        String chooseXorO = "";
-        char playerChoice = ' ';
-
-        System.out.println("    Do you want to play as X's or O's?");
-        System.out.println("    Enter ( X ) or ( O ): ");
-
-        chooseXorO = in.nextLine();
-
-        if (chooseXorO.equals("X")) {
-            playerChoice = 'X';
-        } else if (chooseXorO.equals("O")) {
-            playerChoice = 'O';
-        } else {
-            tellUserInvalidSelection();
-        }
-
-        return playerChoice;
     }
 
     /*
