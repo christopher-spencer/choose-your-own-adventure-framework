@@ -328,6 +328,10 @@ public class Menu {
             ticTacToeGame.setBottomLeftX(true);
         } else if (playerChoice == 7 && playerPicksXsVsOs() == 'O') {
             ticTacToeGame.setBottomLeftO(true);
+        } else if (playerChoice == 8 && playerPicksXsVsOs() == 'X') {
+            ticTacToeGame.setBottomMiddleX(true);
+        } else if (playerChoice == 8 && playerPicksXsVsOs() == 'O') {
+            ticTacToeGame.setBottomMiddleO(true);
         }
      }
 
