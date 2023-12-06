@@ -482,7 +482,7 @@ public class Menu {
             isAWinner = true;
         } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isBottomLeftO()) {
             isAWinner = true;
-        }
+        } 
 
         return isAWinner;
     }
