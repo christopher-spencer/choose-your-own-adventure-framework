@@ -447,7 +447,7 @@ public class Menu {
         return playerChoice;
     }
 
-    public void ticTacToeWin() {
+    public boolean ticTacToeWin() {
         boolean isAWinner = false;
 
         if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isTopMiddleX() && ticTacToeGame.isTopRightX()) {
@@ -466,7 +466,13 @@ public class Menu {
             isAWinner = true;
         } else if (ticTacToeGame.isTopLeftO() && ticTacToeGame.isMiddleLeftO() && ticTacToeGame.isBottomLeftO()) {
             isAWinner = true;
+        } else if (ticTacToeGame.isTopMiddleX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isBottomMiddleX()) {
+            isAWinner = true;
+        } else if (ticTacToeGame.isTopMiddleO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isBottomMiddleO()) {
+            isAWinner = true;
         }
+        
+        return isAWinner;
     }
 
     /*
