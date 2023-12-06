@@ -300,10 +300,14 @@ public class Menu {
 
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
-        if (playerChoice == 1 && playerPicksXsVsOs() == ('X')) {
+        if (playerChoice == 1 && playerPicksXsVsOs() == 'X') {
             ticTacToeGame.setTopLeftX(true);
-        } else if (playerChoice == 1 && playerPicksXsVsOs() == ('O')) {
+        } else if (playerChoice == 1 && playerPicksXsVsOs() == 'O') {
             ticTacToeGame.setTopLeftO(true);
+        } else if (playerChoice == 2 && playerPicksXsVsOs() == 'X') {
+            ticTacToeGame.setTopMiddleX(true);
+        } else if (playerChoice == 2 && playerPicksXsVsOs() == 'O') {
+            ticTacToeGame.setTopMiddleO(true);
         }
     }
 
