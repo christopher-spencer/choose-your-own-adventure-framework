@@ -447,6 +447,8 @@ public class Menu {
         return playerChoice;
     }
 
+    //TODO this is a great example of a method I can just move to the TTT class since there's no CLI stuff involved
+
     public boolean ticTacToeWin() {
         boolean isAWinner = false;
 
@@ -482,7 +484,7 @@ public class Menu {
             isAWinner = true;
         } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isBottomLeftO()) {
             isAWinner = true;
-        } 
+        }
 
         return isAWinner;
     }
