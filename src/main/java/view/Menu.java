@@ -458,6 +458,10 @@ public class Menu {
             isAWinner = true;
         } else if (ticTacToeGame.isMiddleLeftO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isMiddleRightO()) {
             isAWinner = true;
+        } else if (ticTacToeGame.isBottomLeftX() && ticTacToeGame.isBottomMiddleX() && ticTacToeGame.isBottomRightX()) {
+            isAWinner = true;
+        } else if (ticTacToeGame.isBottomLeftO() && ticTacToeGame.isBottomMiddleO() && ticTacToeGame.isBottomRightO()) {
+            isAWinner = true;
         }
     }
 
