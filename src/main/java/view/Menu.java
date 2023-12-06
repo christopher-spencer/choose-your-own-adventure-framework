@@ -447,6 +447,16 @@ public class Menu {
         return playerChoice;
     }
 
+    public void ticTacToeWin() {
+        boolean isAWinner = false;
+
+        if (ticTacToeGame.isTopRightX() && ticTacToeGame.isTopMiddleX() && ticTacToeGame.isTopRightX()) {
+            isAWinner = true;
+        } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isTopMiddleO() && ticTacToeGame.isTopRightO()) {
+            isAWinner = true;
+        }
+    }
+
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
