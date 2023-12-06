@@ -11,7 +11,6 @@ public class Hangman extends Game {
     private List<Character> correctGuesses = new ArrayList<>();
     private List<Character> previousGuesses = new ArrayList<>();
     private int playerLives = 5;
-    private boolean youWin = false;
 
     public Hangman() {
         initializeMysteryWords();
@@ -65,10 +64,6 @@ public class Hangman extends Game {
 
     public void setPreviousGuesses(List<Character> previousGuesses) {
         this.previousGuesses = previousGuesses;
-    }
-
-    public boolean isYouWin() {
-        return youWin;
     }
 
 }

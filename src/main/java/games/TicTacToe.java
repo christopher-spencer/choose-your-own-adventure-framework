@@ -35,7 +35,7 @@ public class TicTacToe extends Game{
         return "X";
     }
 
-    public boolean ticTacToeWin() {
+    public boolean isATicTacToeWinner() {
         boolean isAWinner = false;
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {

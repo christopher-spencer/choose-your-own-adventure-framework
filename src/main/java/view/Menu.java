@@ -123,10 +123,10 @@ public class Menu {
      */
 
     public String playerRockPaperScissorsMove() {
+        //TODO need INVALID SELECTION if not rock paper or scissors
+
         System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
         return in.nextLine();
-
-        //TODO need INVALID SELECTION if not rock paper or scissors
     }
 
     //TODO if the player just clicks enter, goes on without user selection

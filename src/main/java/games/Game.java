@@ -5,6 +5,7 @@ public abstract class Game {
     //TODO think more about restructuring/adding what you can to game class
     private String playerMove;
     private String postmanMove;
+    private boolean isYouWin = false;
 
     public Game() {
 
@@ -29,5 +30,9 @@ public abstract class Game {
 
     public void setPostmanMove(String postmanMove) {
         this.postmanMove = postmanMove;
+    }
+
+    public boolean isYouWin() {
+        return isYouWin;
     }
 }
