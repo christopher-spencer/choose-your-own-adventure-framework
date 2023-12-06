@@ -474,6 +474,8 @@ public class Menu {
             isAWinner = true;
         } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isMiddleRightO() && ticTacToeGame.isBottomRightO()) {
             isAWinner = true;
+        } else if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isBottomRightX()) {
+            isAWinner = true;
         }
 
         return isAWinner;
