@@ -301,6 +301,8 @@ public class Menu {
     public String playerTicTacToeMove() {
         // todo if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
 
+        // TODO just initialize the BOARD with numbers instead of spaces, so they remain outside of Xs and Os
+
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
         System.out.println("    Enter one of the following number inputs:");
