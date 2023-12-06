@@ -450,9 +450,13 @@ public class Menu {
     public void ticTacToeWin() {
         boolean isAWinner = false;
 
-        if (ticTacToeGame.isTopRightX() && ticTacToeGame.isTopMiddleX() && ticTacToeGame.isTopRightX()) {
+        if (ticTacToeGame.isTopLeftX() && ticTacToeGame.isTopMiddleX() && ticTacToeGame.isTopRightX()) {
             isAWinner = true;
-        } else if (ticTacToeGame.isTopRightO() && ticTacToeGame.isTopMiddleO() && ticTacToeGame.isTopRightO()) {
+        } else if (ticTacToeGame.isTopLeftO() && ticTacToeGame.isTopMiddleO() && ticTacToeGame.isTopRightO()) {
+            isAWinner = true;
+        } else if (ticTacToeGame.isMiddleLeftX() && ticTacToeGame.isMiddleMiddleX() && ticTacToeGame.isMiddleRightX()) {
+            isAWinner = true;
+        } else if (ticTacToeGame.isMiddleLeftO() && ticTacToeGame.isMiddleMiddleO() && ticTacToeGame.isMiddleRightO()) {
             isAWinner = true;
         }
     }
