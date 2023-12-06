@@ -301,7 +301,7 @@ public class Menu {
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
-        
+
         if (playerChoice == 1 && playerPicksXsVsOs() == 'X') {
             ticTacToeGame.setTopLeftX(true);
         } else if (playerChoice == 1 && playerPicksXsVsOs() == 'O') {
@@ -427,9 +427,18 @@ public class Menu {
         return board;
     }
 
-    public char playerPicksXsVsOs() {
+    public char playerPicksXsVsOs(char playerChoice) {
         // TODO let player choose X's or O's then set Postman Move accordingly
-        char xsOrOs = 'X';
+        char xsOrOs = ' ';
+
+        if (playerChoice == 'X') {
+            xsOrOs = 'X';
+        } else if (playerChoice == 'O') {
+            xsOrOs = 'O';
+        } else {
+            tellUserInvalidSelection();
+        }
+        
         return xsOrOs;
     }
 
