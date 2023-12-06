@@ -308,8 +308,12 @@ public class Menu {
             ticTacToeGame.setTopMiddleX(true);
         } else if (playerChoice == 2 && playerPicksXsVsOs() == 'O') {
             ticTacToeGame.setTopMiddleO(true);
+        } else if (playerChoice == 3 && playerPicksXsVsOs() == 'X') {
+            ticTacToeGame.setTopRightX(true);
+        } else if (playerChoice == 3 && playerPicksXsVsOs() == 'O') {
+            ticTacToeGame.setTopRightO(true);
         }
-    }
+     }
 
     public void printTicTacToeBoard() {
         char[][] board = {
