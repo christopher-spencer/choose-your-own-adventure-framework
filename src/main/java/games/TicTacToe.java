@@ -2,6 +2,9 @@ package games;
 
 public class TicTacToe extends Game{
 
+    char playerChoice = ' ';
+    char postmanChoice = ' ';
+
     private boolean isTopLeftX = false;
     private boolean isTopLeftO = false;
     private boolean isTopMiddleX = false;
@@ -76,6 +79,14 @@ public class TicTacToe extends Game{
 
         return isAWinner;
     }
+
+    public char getPlayerChoice() { return playerChoice; }
+
+    public void setPlayerChoice(char playerChoice) { this.playerChoice = playerChoice; }
+
+    public char getPostmanChoice() { return postmanChoice; }
+
+    public void setPostmanChoice(char postmanChoice) { this.postmanChoice = postmanChoice; }
 
     public boolean isTopLeftX() {
         return isTopLeftX;
