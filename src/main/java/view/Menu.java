@@ -277,7 +277,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public char playerChoiceXorO() {
+    public void playerChoiceXorO() {
         // TODO let player choose X's or O's then set Postman Move accordingly
         String chooseXorO = "";
         char playerChoice = ' ';
@@ -289,28 +289,19 @@ public class Menu {
         chooseXorO = in.nextLine();
 
         if (chooseXorO.equals("X")) {
-            playerChoice = 'X';
-            postmanChoice = 'O';
+            ticTacToeGame.setPlayerChoice('X');
+            playerChoice = ticTacToeGame.getPlayerChoice();
+
+            ticTacToeGame.setPostmanChoice('O');
+            postmanChoice = ticTacToeGame.getPostmanChoice();
         } else if (chooseXorO.equals("O")) {
-            playerChoice = 'O';
-            postmanChoice = 'X';
+            ticTacToeGame.setPlayerChoice('O');
+            playerChoice = ticTacToeGame.getPlayerChoice();
+            ticTacToeGame.setPostmanChoice('X');
+            postmanChoice = ticTacToeGame.getPostmanChoice();
         } else {
             tellUserInvalidSelection();
         }
-
-        return playerChoice;
-    }
-
-    public char postmanChoiceXorO(char playerChoice) {
-        char postmanChoice = ' ';
-
-        if (playerChoice == 'X') {
-            postmanChoice = 'O';
-        } else if (playerChoice == 'O') {
-            postmanChoice = 'X';
-        }
-
-        return postmanChoice;
     }
 
     public String playerTicTacToeMove() {
