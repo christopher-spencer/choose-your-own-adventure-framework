@@ -281,6 +281,7 @@ public class Menu {
         // TODO let player choose X's or O's then set Postman Move accordingly
         String chooseXorO = "";
         char playerChoice = ' ';
+        char postmanChoice = ' ';
 
         System.out.println("    Do you want to play as X's or O's?");
         System.out.println("    Enter ( X ) or ( O ): ");
@@ -289,13 +290,27 @@ public class Menu {
 
         if (chooseXorO.equals("X")) {
             playerChoice = 'X';
+            postmanChoice = 'O';
         } else if (chooseXorO.equals("O")) {
             playerChoice = 'O';
+            postmanChoice = 'X';
         } else {
             tellUserInvalidSelection();
         }
 
         return playerChoice;
+    }
+
+    public char postmanChoiceXorO(char playerChoice) {
+        char postmanChoice = ' ';
+
+        if (playerChoice == 'X') {
+            postmanChoice = 'O';
+        } else if (playerChoice == 'O') {
+            postmanChoice = 'X';
+        }
+
+        return postmanChoice;
     }
 
     public String playerTicTacToeMove() {
