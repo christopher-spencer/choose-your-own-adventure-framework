@@ -277,16 +277,19 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void playerChoiceXorO() {
-        // TODO let player choose X's or O's then set Postman Move accordingly
+    public void playerAndPostmanChooseXorO() {
+
         String chooseXorO = "";
         char playerChoice = ' ';
         char postmanChoice = ' ';
 
+        System.out.println("    Welcome to Tic Tac Toe!");
         System.out.println("    Do you want to play as X's or O's?");
         System.out.println("    Enter ( X ) or ( O ): ");
 
-        chooseXorO = in.nextLine();
+        chooseXorO = in.nextLine().toUpperCase();
+
+        //TODO just need to SET choices here and GET elsewhere
 
         if (chooseXorO.equals("X")) {
             ticTacToeGame.setPlayerChoice('X');
