@@ -279,19 +279,16 @@ public class Menu {
      */
 
     public void playerAndPostmanChooseXorO() {
-
         // TODO uncomment out initialized method in randomGameSelector when ready to test
 
         String chooseXorO = "";
-        char playerChoice = ' ';
-        char postmanChoice = ' ';
 
         System.out.println("    Welcome to Tic Tac Toe!");
         System.out.println("    Do you want to play as X's or O's?");
         System.out.println("    Enter ( X ) or ( O ): ");
 
         chooseXorO = in.nextLine().toUpperCase();
-        
+
         if (chooseXorO.equals("X")) {
             ticTacToeGame.setPlayerChoice('X');
             ticTacToeGame.setPostmanChoice('O');
