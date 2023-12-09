@@ -46,78 +46,125 @@ public class TicTacToe extends Game{
     @Override
     public boolean isYouWin() {
 
-        //TODO still wouldn't accurately reflect if Postman wins :(
-
-        boolean playerWins = false;
+        //TODO this method is way too repetitive and massive
+        boolean isAWinner = false;
         char playerChoice = getPlayerChoice();
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopLeftO() && isTopMiddleO() && isTopRightO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isMiddleLeftX() && isMiddleMiddleX() && isMiddleRightX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isMiddleLeftO() && isMiddleMiddleO() && isMiddleRightO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isBottomLeftX() && isBottomMiddleX() && isBottomRightX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isBottomLeftO() && isBottomMiddleO() && isBottomRightO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopLeftX() && isMiddleLeftX() && isBottomLeftX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopLeftO() && isMiddleLeftO() && isBottomLeftO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopMiddleX() && isMiddleMiddleX() && isBottomMiddleX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopMiddleO() && isMiddleMiddleO() && isBottomMiddleO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopRightX() && isMiddleRightX() && isBottomRightX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopRightO() && isMiddleRightO() && isBottomRightO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopLeftX() && isMiddleMiddleX() && isBottomRightX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopLeftO() && isMiddleMiddleO() && isBottomRightO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopRightX() && isMiddleMiddleX() && isBottomLeftX()) {
+            isAWinner = true;
             if (playerChoice == 'X') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         } else if (isTopRightO() && isMiddleMiddleO() && isBottomLeftO()) {
+            isAWinner = true;
             if (playerChoice == 'O') {
-                playerWins = true;
+                isPlayerWin = true;
+            } else {
+                isPostmanWin = true;
             }
         }
 
-        return playerWins;
+        return isAWinner;
     }
 
     public char getPlayerChoice() { return playerChoice; }
