@@ -27,9 +27,6 @@ public class TicTacToe extends Game{
     private boolean threeXsInARow = false;
     private boolean threeOsInARow = false;
 
-//    private boolean isPlayerWin = false;
-//    private boolean isPostmanWin = false;
-
     public TicTacToe() {
 
     }
