@@ -34,21 +34,9 @@ public class TicTacToe extends Game{
 
     }
 
-    // TODO these getPostmanMove and getPlayerMove overrides no longer necessary
-
-    @Override
-    public String getPostmanMove() {
-        return "O";
-    }
-
-    @Override
-    public String getPlayerMove() {
-        return "X";
-    }
-
     @Override
     public boolean isAWinner() {
-        //TODO this method is way too repetitive and massive
+
         boolean isAWinner = false;
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
