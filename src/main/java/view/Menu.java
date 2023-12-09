@@ -364,6 +364,8 @@ public class Menu {
         } else {
             tellUserInvalidSelection();
         }
+
+        //TODO reset all TTT variables after the game
      }
 
     public void printTicTacToeBoard() {
