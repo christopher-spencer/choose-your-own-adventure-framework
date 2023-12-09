@@ -309,24 +309,24 @@ public class Menu {
 
     public String playerTicTacToeMove() {
         // todo if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
-
-        // TODO just initialize the BOARD with numbers instead of spaces, so they remain outside of Xs and Os
-
+        
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
         System.out.println("    Enter one of the following number inputs:");
         System.out.println();
-        System.out.println("    (1) | (2) | (3)");
-        System.out.println("    ----------------");
-        System.out.println("    (4) | (5) | (6)");
-        System.out.println("    ----------------");
-        System.out.println("    (7) | (8) | (9)");
+        printTicTacToeBoard();
+        System.out.println();
+//        System.out.println("    (1) | (2) | (3)");
+//        System.out.println("    ----------------");
+//        System.out.println("    (4) | (5) | (6)");
+//        System.out.println("    ----------------");
+//        System.out.println("    (7) | (8) | (9)");
         return in.nextLine();
     }
 
     public void ticTacToeGame() {
         //Todo implement ticTacToe text and logic
-        
+
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
