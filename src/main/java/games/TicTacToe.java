@@ -24,6 +24,9 @@ public class TicTacToe extends Game{
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
 
+    private boolean threeXsInARow = false;
+    private boolean threeOsInARow = false;
+
 //    private boolean isPlayerWin = false;
 //    private boolean isPostmanWin = false;
 
@@ -312,7 +315,16 @@ public class TicTacToe extends Game{
     public void setBottomRightO(boolean isBottomRightO) {
         this.isBottomRightO = isBottomRightO;
     }
-//
+
+    public boolean isThreeXsInARow() { return threeXsInARow; }
+
+    public void setThreeXsInARow(boolean threeXsInARow) { this.threeXsInARow = threeXsInARow; }
+
+    public boolean isThreeOsInARow() { return threeOsInARow; }
+
+    public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
+
+    //
 //    public boolean isPlayerWin() { return isPlayerWin; }
 //
 //    public void setPlayerWin(boolean playerWin) { isPlayerWin = playerWin; }
