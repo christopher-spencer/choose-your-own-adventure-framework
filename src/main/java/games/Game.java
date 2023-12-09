@@ -1,12 +1,13 @@
 package games;
 
 public abstract class Game {
-    //TODO add player wins and postman wins to game class and TIE GAME BOOLEAN
     //TODO think more about restructuring/adding what you can to game class
     private String playerMove;
     private String postmanMove;
 
     //TODO better to have isPostmanWin and isPlayerWin
+
+    //TODO TIE GAME BOOLEAN
 
     private boolean isYouWin = false;
 
