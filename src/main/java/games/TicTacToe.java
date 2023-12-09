@@ -31,6 +31,8 @@ public class TicTacToe extends Game{
 
     }
 
+    // TODO these getPostmanMove and getPlayerMove overrides no longer accurate
+
     @Override
     public String getPostmanMove() {
         return "O";
@@ -43,6 +45,8 @@ public class TicTacToe extends Game{
 
     @Override
     public boolean isYouWin() {
+
+        //TODO still wouldn't accurately reflect if Postman wins :(
 
         boolean playerWins = false;
         char playerChoice = getPlayerChoice();
