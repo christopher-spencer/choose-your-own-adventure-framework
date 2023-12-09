@@ -97,7 +97,7 @@ public class Menu {
     public void randomGameSelector() {
         Random random = new Random();
         int randomNumber = random.nextInt(2);
-        //TODO change bound to 3 when tictactoe is ready to be included
+        //TODO change bound to 3 && uncomment TTT selector when TTT is ready to be included
 
         if (randomNumber == 0) {
             System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
@@ -107,8 +107,6 @@ public class Menu {
             System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
             hangmanGame();
         }
-
-        //TODO uncomment random selector for TTT and update above number when TTT is ready
 
 //        if (randomNumber == 2) {
 //            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
@@ -124,13 +122,11 @@ public class Menu {
      */
 
     public String playerRockPaperScissorsMove() {
-        //TODO need INVALID SELECTION if not rock paper or scissors
+        //TODO need INVALID SELECTION if not rock paper or scissors (if the player just clicks enter, goes on without user selection)
 
         System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
         return in.nextLine();
     }
-
-    //TODO if the player just clicks enter, goes on without user selection
 
     public void rockPaperScissorsGame() {
         String rock = rpsGame.getRock();
@@ -143,7 +139,7 @@ public class Menu {
         System.out.println("You have chosen: " + userChoice);
         System.out.println("The Postman chose: " + postmanChoice);
 
-        //TODO possibly switch up else if logic below to incorporate isYouWin and isATie from Game class
+        //TODO switch up else if logic below to incorporate isYouWin and isATie from Game class
 
         if (userChoice.equals(postmanChoice)) {
             theGameIsATie();
@@ -174,8 +170,7 @@ public class Menu {
     public void hangmanGame() {
 
         //Todo split up this method into smaller containable methods
-
-        //Todo create hangman "GUI"
+        //Todo create hangman GUI
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int lives = hangmanGame.getPlayerLives();
@@ -279,8 +274,6 @@ public class Menu {
      */
 
     public void playerAndPostmanChooseXorO() {
-        // TODO uncomment out initialized method in randomGameSelector when ready to test
-
         String chooseXorO = "";
 
         System.out.println("    Welcome to Tic Tac Toe!");
@@ -301,7 +294,7 @@ public class Menu {
     }
 
     public String playerTicTacToeMove() {
-        // todo if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
+        // TODO if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
 
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
@@ -318,8 +311,6 @@ public class Menu {
     }
 
     public void ticTacToeGame() {
-        //Todo implement ticTacToe text and logic
-
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
@@ -365,7 +356,7 @@ public class Menu {
             tellUserInvalidSelection();
         }
 
-        //TODO reset all TTT variables after the game
+        //TODO reset all TTT variables after each game
      }
 
     public void printTicTacToeBoard() {
@@ -482,7 +473,7 @@ public class Menu {
         theNextDayArrives();
     }
 
-    //todo occasionally for some reason the game goes through andJustLikeThaHeIsGone && theNextDayArrives twice..
+    //TODO sometimes goes through andJustLikeThaHeIsGone && theNextDayArrives twice...?
 
     public void andJustLikeThatHeIsGone() {
         System.out.println();
