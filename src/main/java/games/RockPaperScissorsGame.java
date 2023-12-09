@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class RockPaperScissorsGame extends Game {
 
+    //TODO change to CONSTANTS
+    
     private String rock = "ROCK";
     private String paper = "PAPER";
     private String scissors = "SCISSORS";
