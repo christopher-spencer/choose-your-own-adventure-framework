@@ -179,7 +179,7 @@ public class Menu {
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int lives = hangmanGame.getPlayerLives();
-        boolean youWin = hangmanGame.isYouWin();
+        boolean youWin = hangmanGame.isPlayerWin();
         List<Character> correctGuesses = hangmanGame.getCorrectGuesses();
         List<Character> previousGuesses = hangmanGame.getPreviousGuesses();
 
