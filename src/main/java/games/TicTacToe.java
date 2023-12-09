@@ -2,8 +2,8 @@ package games;
 
 public class TicTacToe extends Game{
 
-    char playerChoice = ' ';
-    char postmanChoice = ' ';
+    private char playerChoice = ' ';
+    private char postmanChoice = ' ';
 
     private boolean isTopLeftX = false;
     private boolean isTopLeftO = false;
