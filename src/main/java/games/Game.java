@@ -5,6 +5,9 @@ public abstract class Game {
     //TODO think more about restructuring/adding what you can to game class
     private String playerMove;
     private String postmanMove;
+
+    //TODO better to have isPostmanWin and isPlayerWin
+
     private boolean isYouWin = false;
 
     public Game() {
