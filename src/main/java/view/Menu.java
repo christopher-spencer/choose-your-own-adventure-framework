@@ -326,10 +326,7 @@ public class Menu {
 
     public void ticTacToeGame() {
         //Todo implement ticTacToe text and logic
-
-        // todo random choices for postman
-        // todo if boolean logic => player wins method (e.g. if Top Left && Middle Middle && Bottom Right == True)
-
+        
         int playerChoice = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
@@ -378,9 +375,9 @@ public class Menu {
 
     public void printTicTacToeBoard() {
         char[][] board = {
-                {' ', ' ', ' '},
-                {' ', ' ', ' '},
-                {' ', ' ', ' '}
+                {'1', '2', '3'},
+                {'4', '5', '6'},
+                {'7', '8', '9'}
         };
 
         //TODO add a variable for SPOT TAKEN linked to NUMBERS on player choice and feed it to XOPosition method
