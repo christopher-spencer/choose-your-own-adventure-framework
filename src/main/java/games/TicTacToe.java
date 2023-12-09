@@ -113,11 +113,15 @@ public class TicTacToe extends Game{
         }
     }
 
+    //TODO add logic and 9 moves counter for noMoreMovesPossible
+//    @Override
+//    public boolean isNoMoreMovesPossible() {
+//        return false;
+//    }
+
     @Override
     public boolean isATie() {
-        //TODO if noMoreMovesPossible = true && isAWinner = false
-
-        return false;
+        return isNoMoreMovesPossible() && !isAWinner();
     }
 
     public char getPlayerChoice() { return playerChoice; }

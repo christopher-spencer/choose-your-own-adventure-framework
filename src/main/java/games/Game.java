@@ -8,6 +8,7 @@ public abstract class Game {
     private boolean isPlayerWin = false;
     private boolean isPostmanWin = false;
     private boolean isATie = false;
+    private boolean isNoMoreMovesPossible = false;
 
     public Game() {
 
@@ -33,7 +34,7 @@ public abstract class Game {
         return isAWinner;
     }
 
-    public void setIsAWinner(boolean aWinner) { aWinner = isAWinner; }
+    public void setAWinner(boolean AWinner) { isAWinner = AWinner; }
 
     public boolean isPlayerWin() { return isPlayerWin; }
 
@@ -46,4 +47,8 @@ public abstract class Game {
     public boolean isATie() { return isATie; }
 
     public void setATie(boolean ATie) { isATie = ATie; }
+
+    public boolean isNoMoreMovesPossible() { return isNoMoreMovesPossible; }
+
+    public void setNoMoreMovesPossible(boolean noMoreMovesPossible) { isNoMoreMovesPossible = noMoreMovesPossible; }
 }
