@@ -48,107 +48,57 @@ public class TicTacToe extends Game{
 
     @Override
     public boolean isAWinner() {
-
         //TODO this method is way too repetitive and massive
-        char playerChoice = getPlayerChoice();
         boolean isAWinner = false;
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isTopLeftO() && isTopMiddleO() && isTopRightO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isMiddleLeftX() && isMiddleMiddleX() && isMiddleRightX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isMiddleLeftO() && isMiddleMiddleO() && isMiddleRightO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isBottomLeftX() && isBottomMiddleX() && isBottomRightX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isBottomLeftO() && isBottomMiddleO() && isBottomRightO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isTopLeftX() && isMiddleLeftX() && isBottomLeftX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isTopLeftO() && isMiddleLeftO() && isBottomLeftO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isTopMiddleX() && isMiddleMiddleX() && isBottomMiddleX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isTopMiddleO() && isMiddleMiddleO() && isBottomMiddleO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isTopRightX() && isMiddleRightX() && isBottomRightX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isTopRightO() && isMiddleRightO() && isBottomRightO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isTopLeftX() && isMiddleMiddleX() && isBottomRightX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isTopLeftO() && isMiddleMiddleO() && isBottomRightO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         } else if (isTopRightX() && isMiddleMiddleX() && isBottomLeftX()) {
-            if (playerChoice == 'X') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeXsInARow = true;
         } else if (isTopRightO() && isMiddleMiddleO() && isBottomLeftO()) {
-            if (playerChoice == 'O') {
-                setPlayerWin(true);
-            } else {
-                setPostmanWin(true);
-            }
+            isAWinner = true;
+            threeOsInARow = true;
         }
 
         return isAWinner;
@@ -156,12 +106,26 @@ public class TicTacToe extends Game{
 
     @Override
     public boolean isPlayerWin() {
-        return isAWinner() && isPlayerWin();
+
+        if (isAWinner() && playerChoice == 'X' && isThreeXsInARow()) {
+            return isPlayerWin();
+        } else if (isAWinner() && playerChoice == 'O' && isThreeOsInARow()) {
+            return isPlayerWin();
+        } else {
+            return false;
+        }
     }
 
     @Override
     public boolean isPostmanWin() {
-        return isAWinner() && isPostmanWin();
+
+        if (isAWinner() && postmanChoice == 'X' && isThreeXsInARow()) {
+            return isPostmanWin();
+        } else if (isAWinner() && postmanChoice == 'O' && isThreeOsInARow()) {
+            return isPostmanWin();
+        } else {
+            return false;
+        }
     }
 
     public char getPlayerChoice() { return playerChoice; }
@@ -172,9 +136,7 @@ public class TicTacToe extends Game{
 
     public void setPostmanChoice(char postmanChoice) { this.postmanChoice = postmanChoice; }
 
-    public boolean isTopLeftX() {
-        return isTopLeftX;
-    }
+    public boolean isTopLeftX() { return isTopLeftX; }
 
     public void setTopLeftX(boolean isTopLeftX) {
         this.isTopLeftX = isTopLeftX;
