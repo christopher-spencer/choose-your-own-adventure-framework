@@ -7,7 +7,7 @@ public abstract class Game {
 
     //TODO better to have isPostmanWin and isPlayerWin
 
-    //TODO TIE GAME BOOLEAN
+    //TODO TIE GAME BOOLEAN use for RPS!!!
 
     private boolean isAWinner = false;
     private boolean isPlayerWin = false;
