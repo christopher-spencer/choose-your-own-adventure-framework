@@ -112,6 +112,7 @@ public class Menu {
 
 //        if (randomNumber == 2) {
 //            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//            playerAndPostmanChooseXorO();
 //            ticTacToeGame();
 //        }
     }
@@ -279,6 +280,8 @@ public class Menu {
 
     public void playerAndPostmanChooseXorO() {
 
+        // TODO uncomment out initialized method in randomGameSelector when ready to test
+
         String chooseXorO = "";
         char playerChoice = ' ';
         char postmanChoice = ' ';
@@ -309,7 +312,7 @@ public class Menu {
 
     public String playerTicTacToeMove() {
         // todo if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
-        
+
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
         System.out.println("    Enter one of the following number inputs:");
