@@ -24,8 +24,8 @@ public class TicTacToe extends Game{
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
 
-    private boolean isPlayerWin = false;
-    private boolean isPostmanWin = false;
+//    private boolean isPlayerWin = false;
+//    private boolean isPostmanWin = false;
 
     public TicTacToe() {
 
@@ -44,110 +44,121 @@ public class TicTacToe extends Game{
     }
 
     @Override
-    public boolean isYouWin() {
+    public boolean isAWinner() {
 
         //TODO this method is way too repetitive and massive
         char playerChoice = getPlayerChoice();
+        boolean isAWinner = false;
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopLeftO() && isTopMiddleO() && isTopRightO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isMiddleLeftX() && isMiddleMiddleX() && isMiddleRightX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isMiddleLeftO() && isMiddleMiddleO() && isMiddleRightO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isBottomLeftX() && isBottomMiddleX() && isBottomRightX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isBottomLeftO() && isBottomMiddleO() && isBottomRightO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopLeftX() && isMiddleLeftX() && isBottomLeftX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopLeftO() && isMiddleLeftO() && isBottomLeftO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopMiddleX() && isMiddleMiddleX() && isBottomMiddleX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopMiddleO() && isMiddleMiddleO() && isBottomMiddleO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopRightX() && isMiddleRightX() && isBottomRightX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopRightO() && isMiddleRightO() && isBottomRightO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopLeftX() && isMiddleMiddleX() && isBottomRightX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopLeftO() && isMiddleMiddleO() && isBottomRightO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopRightX() && isMiddleMiddleX() && isBottomLeftX()) {
             if (playerChoice == 'X') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         } else if (isTopRightO() && isMiddleMiddleO() && isBottomLeftO()) {
             if (playerChoice == 'O') {
-                isPlayerWin = true;
+                setPlayerWin(true);
             } else {
-                isPostmanWin = true;
+                setPostmanWin(true);
             }
         }
 
-        return isPlayerWin || isPostmanWin;
+        return isAWinner;
+    }
+
+    @Override
+    public boolean isPlayerWin() {
+        return isAWinner() && isPlayerWin();
+    }
+
+    @Override
+    public boolean isPostmanWin() {
+        return isAWinner() && isPostmanWin();
     }
 
     public char getPlayerChoice() { return playerChoice; }
@@ -301,12 +312,12 @@ public class TicTacToe extends Game{
     public void setBottomRightO(boolean isBottomRightO) {
         this.isBottomRightO = isBottomRightO;
     }
-
-    public boolean isPlayerWin() { return isPlayerWin; }
-
-    public void setPlayerWin(boolean playerWin) { isPlayerWin = playerWin; }
-
-    public boolean isPostmanWin() { return isPostmanWin; }
-
-    public void setPostmanWin(boolean postmanWin) { isPostmanWin = postmanWin; }
+//
+//    public boolean isPlayerWin() { return isPlayerWin; }
+//
+//    public void setPlayerWin(boolean playerWin) { isPlayerWin = playerWin; }
+//
+//    public boolean isPostmanWin() { return isPostmanWin; }
+//
+//    public void setPostmanWin(boolean postmanWin) { isPostmanWin = postmanWin; }
 }

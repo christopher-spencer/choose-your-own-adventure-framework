@@ -9,7 +9,7 @@ public abstract class Game {
 
     //TODO TIE GAME BOOLEAN
 
-    private boolean isYouWin = false;
+    private boolean isAWinner = false;
     private boolean isPlayerWin = false;
     private boolean isPostmanWin = false;
     private boolean isATie = false;
@@ -39,11 +39,11 @@ public abstract class Game {
         this.postmanMove = postmanMove;
     }
 
-    public boolean isYouWin() {
-        return isYouWin;
+    public boolean isAWinner() {
+        return isAWinner;
     }
 
-    public void setYouWin(boolean youWin) { isYouWin = youWin; }
+    public void setIsAWinner(boolean aWinner) { aWinner = isAWinner; }
 
     public boolean isPlayerWin() { return isPlayerWin; }
 
