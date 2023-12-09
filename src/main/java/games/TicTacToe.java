@@ -215,13 +215,4 @@ public class TicTacToe extends Game{
     public boolean isThreeOsInARow() { return threeOsInARow; }
 
     public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
-
-    //
-//    public boolean isPlayerWin() { return isPlayerWin; }
-//
-//    public void setPlayerWin(boolean playerWin) { isPlayerWin = playerWin; }
-//
-//    public boolean isPostmanWin() { return isPostmanWin; }
-//
-//    public void setPostmanWin(boolean postmanWin) { isPostmanWin = postmanWin; }
 }
