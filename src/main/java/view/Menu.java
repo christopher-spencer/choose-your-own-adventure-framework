@@ -311,46 +311,46 @@ public class Menu {
     }
 
     public void ticTacToeGame() {
-        int playerChoice = Integer.parseInt(playerTicTacToeMove());
+        int playerMove = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
         // or cut the X vs O logic/move it to separate method
 
-        if (playerChoice == 1 && ticTacToeGame.getPlayerChoice() == 'X') {
+        if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopLeftX(true);
-        } else if (playerChoice == 1 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setTopLeftO(true);
-        } else if (playerChoice == 2 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
-        } else if (playerChoice == 2 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setTopMiddleO(true);
-        } else if (playerChoice == 3 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 3 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopRightX(true);
-        } else if (playerChoice == 3 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 3 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setTopRightO(true);
-        } else if (playerChoice == 4 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 4 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setMiddleLeftX(true);
-        } else if (playerChoice == 4 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 4 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setMiddleLeftO(true);
-        } else if (playerChoice == 5 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 5 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setMiddleMiddleX(true);
-        } else if (playerChoice == 5 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 5 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setMiddleMiddleO(true);
-        } else if (playerChoice == 6 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 6 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setMiddleRightX(true);
-        } else if (playerChoice == 6 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 6 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setMiddleRightO(true);
-        } else if (playerChoice == 7 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 7 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setBottomLeftX(true);
-        } else if (playerChoice == 7 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 7 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setBottomLeftO(true);
-        } else if (playerChoice == 8 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 8 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setBottomMiddleX(true);
-        } else if (playerChoice == 8 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 8 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setBottomMiddleO(true);
-        } else if (playerChoice == 9 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 9 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setBottomRightX(true);
-        } else if (playerChoice == 9 && ticTacToeGame.getPlayerChoice() == 'O') {
+        } else if (playerMove == 9 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setBottomRightO(true);
         } else {
             tellUserInvalidSelection();
