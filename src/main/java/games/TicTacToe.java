@@ -138,145 +138,75 @@ public class TicTacToe extends Game{
 
     public boolean isTopLeftX() { return isTopLeftX; }
 
-    public void setTopLeftX(boolean isTopLeftX) {
-        this.isTopLeftX = isTopLeftX;
-    }
+    public void setTopLeftX(boolean isTopLeftX) { this.isTopLeftX = isTopLeftX; }
 
-    public boolean isTopLeftO() {
-        return isTopLeftO;
-    }
+    public boolean isTopLeftO() { return isTopLeftO; }
 
-    public void setTopLeftO(boolean isTopLeftO) {
-        this.isTopLeftO = isTopLeftO;
-    }
+    public void setTopLeftO(boolean isTopLeftO) { this.isTopLeftO = isTopLeftO; }
 
-    public boolean isTopMiddleX() {
-        return isTopMiddleX;
-    }
+    public boolean isTopMiddleX() { return isTopMiddleX; }
 
-    public void setTopMiddleX(boolean isTopMiddleX) {
-        this.isTopMiddleX = isTopMiddleX;
-    }
+    public void setTopMiddleX(boolean isTopMiddleX) { this.isTopMiddleX = isTopMiddleX; }
 
-    public boolean isTopMiddleO() {
-        return isTopMiddleO;
-    }
+    public boolean isTopMiddleO() { return isTopMiddleO; }
 
-    public void setTopMiddleO(boolean isTopMiddleO) {
-        this.isTopMiddleO = isTopMiddleO;
-    }
+    public void setTopMiddleO(boolean isTopMiddleO) { this.isTopMiddleO = isTopMiddleO; }
 
-    public boolean isTopRightX() {
-        return isTopRightX;
-    }
+    public boolean isTopRightX() { return isTopRightX; }
 
-    public void setTopRightX(boolean isTopRightX) {
-        this.isTopRightX = isTopRightX;
-    }
+    public void setTopRightX(boolean isTopRightX) { this.isTopRightX = isTopRightX; }
 
-    public boolean isTopRightO() {
-        return isTopRightO;
-    }
+    public boolean isTopRightO() { return isTopRightO; }
 
-    public void setTopRightO(boolean isTopRightO) {
-        this.isTopRightO = isTopRightO;
-    }
+    public void setTopRightO(boolean isTopRightO) { this.isTopRightO = isTopRightO; }
 
-    public boolean isMiddleLeftX() {
-        return isMiddleLeftX;
-    }
+    public boolean isMiddleLeftX() { return isMiddleLeftX; }
 
-    public void setMiddleLeftX(boolean isMiddleLeftX) {
-        this.isMiddleLeftX = isMiddleLeftX;
-    }
+    public void setMiddleLeftX(boolean isMiddleLeftX) { this.isMiddleLeftX = isMiddleLeftX; }
 
-    public boolean isMiddleLeftO() {
-        return isMiddleLeftO;
-    }
+    public boolean isMiddleLeftO() { return isMiddleLeftO; }
 
-    public void setMiddleLeftO(boolean isMiddleLeftO) {
-        this.isMiddleLeftO = isMiddleLeftO;
-    }
+    public void setMiddleLeftO(boolean isMiddleLeftO) { this.isMiddleLeftO = isMiddleLeftO; }
 
-    public boolean isMiddleMiddleX() {
-        return isMiddleMiddleX;
-    }
+    public boolean isMiddleMiddleX() { return isMiddleMiddleX; }
 
-    public void setMiddleMiddleX(boolean isMiddleMiddleX) {
-        this.isMiddleMiddleX = isMiddleMiddleX;
-    }
+    public void setMiddleMiddleX(boolean isMiddleMiddleX) { this.isMiddleMiddleX = isMiddleMiddleX; }
 
-    public boolean isMiddleMiddleO() {
-        return isMiddleMiddleO;
-    }
+    public boolean isMiddleMiddleO() { return isMiddleMiddleO; }
 
-    public void setMiddleMiddleO(boolean isMiddleMiddleO) {
-        this.isMiddleMiddleO = isMiddleMiddleO;
-    }
+    public void setMiddleMiddleO(boolean isMiddleMiddleO) { this.isMiddleMiddleO = isMiddleMiddleO; }
 
-    public boolean isMiddleRightX() {
-        return isMiddleRightX;
-    }
+    public boolean isMiddleRightX() { return isMiddleRightX; }
 
-    public void setMiddleRightX(boolean isMiddleRightX) {
-        this.isMiddleRightX = isMiddleRightX;
-    }
+    public void setMiddleRightX(boolean isMiddleRightX) { this.isMiddleRightX = isMiddleRightX; }
 
-    public boolean isMiddleRightO() {
-        return isMiddleRightO;
-    }
+    public boolean isMiddleRightO() { return isMiddleRightO; }
 
-    public void setMiddleRightO(boolean isMiddleRightO) {
-        this.isMiddleRightO = isMiddleRightO;
-    }
+    public void setMiddleRightO(boolean isMiddleRightO) { this.isMiddleRightO = isMiddleRightO; }
 
-    public boolean isBottomLeftX() {
-        return isBottomLeftX;
-    }
+    public boolean isBottomLeftX() { return isBottomLeftX; }
 
-    public void setBottomLeftX(boolean isBottomLeftX) {
-        this.isBottomLeftX = isBottomLeftX;
-    }
+    public void setBottomLeftX(boolean isBottomLeftX) { this.isBottomLeftX = isBottomLeftX; }
 
-    public boolean isBottomLeftO() {
-        return isBottomLeftO;
-    }
+    public boolean isBottomLeftO() { return isBottomLeftO; }
 
-    public void setBottomLeftO(boolean isBottomLeftO) {
-        this.isBottomLeftO = isBottomLeftO;
-    }
+    public void setBottomLeftO(boolean isBottomLeftO) { this.isBottomLeftO = isBottomLeftO; }
 
-    public boolean isBottomMiddleX() {
-        return isBottomMiddleX;
-    }
+    public boolean isBottomMiddleX() { return isBottomMiddleX; }
 
-    public void setBottomMiddleX(boolean isBottomMiddleX) {
-        this.isBottomMiddleX = isBottomMiddleX;
-    }
+    public void setBottomMiddleX(boolean isBottomMiddleX) { this.isBottomMiddleX = isBottomMiddleX; }
 
-    public boolean isBottomMiddleO() {
-        return isBottomMiddleO;
-    }
+    public boolean isBottomMiddleO() { return isBottomMiddleO; }
 
-    public void setBottomMiddleO(boolean isBottomMiddleO) {
-        this.isBottomMiddleO = isBottomMiddleO;
-    }
+    public void setBottomMiddleO(boolean isBottomMiddleO) { this.isBottomMiddleO = isBottomMiddleO; }
 
-    public boolean isBottomRightX() {
-        return isBottomRightX;
-    }
+    public boolean isBottomRightX() { return isBottomRightX; }
 
-    public void setBottomRightX(boolean isBottomRightX) {
-        this.isBottomRightX = isBottomRightX;
-    }
+    public void setBottomRightX(boolean isBottomRightX) { this.isBottomRightX = isBottomRightX; }
 
-    public boolean isBottomRightO() {
-        return isBottomRightO;
-    }
+    public boolean isBottomRightO() { return isBottomRightO; }
 
-    public void setBottomRightO(boolean isBottomRightO) {
-        this.isBottomRightO = isBottomRightO;
-    }
+    public void setBottomRightO(boolean isBottomRightO) { this.isBottomRightO = isBottomRightO; }
 
     public boolean isThreeXsInARow() { return threeXsInARow; }
 
