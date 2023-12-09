@@ -291,20 +291,13 @@ public class Menu {
         System.out.println("    Enter ( X ) or ( O ): ");
 
         chooseXorO = in.nextLine().toUpperCase();
-
-        //TODO just need to SET choices here and GET elsewhere
-
+        
         if (chooseXorO.equals("X")) {
             ticTacToeGame.setPlayerChoice('X');
-            playerChoice = ticTacToeGame.getPlayerChoice();
-
             ticTacToeGame.setPostmanChoice('O');
-            postmanChoice = ticTacToeGame.getPostmanChoice();
         } else if (chooseXorO.equals("O")) {
             ticTacToeGame.setPlayerChoice('O');
-            playerChoice = ticTacToeGame.getPlayerChoice();
             ticTacToeGame.setPostmanChoice('X');
-            postmanChoice = ticTacToeGame.getPostmanChoice();
         } else {
             tellUserInvalidSelection();
         }
