@@ -113,6 +113,13 @@ public class TicTacToe extends Game{
         }
     }
 
+    @Override
+    public boolean isATie() {
+        //TODO if noMoreMovesPossible = true && isAWinner = false
+
+        return false;
+    }
+
     public char getPlayerChoice() { return playerChoice; }
 
     public void setPlayerChoice(char playerChoice) { this.playerChoice = playerChoice; }
