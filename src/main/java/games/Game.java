@@ -13,11 +13,6 @@ public abstract class Game {
 
     }
 
-    public Game(String playerMove, String postmanMove) {
-        this.playerMove = playerMove;
-        this.postmanMove = postmanMove;
-    }
-
     public String getPlayerMove() {
         return playerMove;
     }
