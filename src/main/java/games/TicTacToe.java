@@ -24,6 +24,9 @@ public class TicTacToe extends Game{
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
 
+    private boolean isPlayerWin = false;
+    private boolean isPostmanWin = false;
+
     public TicTacToe() {
 
     }
@@ -41,6 +44,8 @@ public class TicTacToe extends Game{
     @Override
     public boolean isYouWin() {
         //TODO add YOU WIN vs POSTMAN WIN logic
+        //TODO set isAWinner to variable in TTT Game
+        //  IF LOGIC if player = X and isAWinner was X, player wins
         boolean isAWinner = false;
 
         if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
@@ -231,4 +236,12 @@ public class TicTacToe extends Game{
     public void setBottomRightO(boolean isBottomRightO) {
         this.isBottomRightO = isBottomRightO;
     }
+
+    public boolean isPlayerWin() { return isPlayerWin; }
+
+    public void setPlayerWin(boolean playerWin) { isPlayerWin = playerWin; }
+
+    public boolean isPostmanWin() { return isPostmanWin; }
+
+    public void setPostmanWin(boolean postmanWin) { isPostmanWin = postmanWin; }
 }
