@@ -143,7 +143,7 @@ public class Menu {
         System.out.println("You have chosen: " + userChoice);
         System.out.println("The Postman chose: " + postmanChoice);
 
-        //TODO possibly switch up else if logic below to incorporate isYouWin from Game class
+        //TODO possibly switch up else if logic below to incorporate isYouWin and isATie from Game class
 
         if (userChoice.equals(postmanChoice)) {
             theGameIsATie();
