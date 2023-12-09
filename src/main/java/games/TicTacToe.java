@@ -31,7 +31,7 @@ public class TicTacToe extends Game{
 
     }
 
-    // TODO these getPostmanMove and getPlayerMove overrides no longer accurate
+    // TODO these getPostmanMove and getPlayerMove overrides no longer necessary
 
     @Override
     public String getPostmanMove() {
