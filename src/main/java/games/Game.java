@@ -8,7 +8,6 @@ public abstract class Game {
     private boolean isPlayerWin = false;
     private boolean isPostmanWin = false;
     private boolean isATie = false;
-
     private int numberOfMovesTillGameOver = 0;
     private boolean isNoMoreMovesPossible = false;
 
@@ -49,6 +48,10 @@ public abstract class Game {
     public boolean isATie() { return isATie; }
 
     public void setATie(boolean ATie) { isATie = ATie; }
+
+    public int getNumberOfMovesTillGameOver() { return numberOfMovesTillGameOver; }
+
+    public void setNumberOfMovesTillGameOver(int numberOfMovesTillGameOver) { this.numberOfMovesTillGameOver = numberOfMovesTillGameOver; }
 
     public boolean isNoMoreMovesPossible() { return isNoMoreMovesPossible; }
 
