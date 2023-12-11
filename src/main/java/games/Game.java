@@ -4,10 +4,12 @@ public abstract class Game {
     //TODO think more about restructuring/adding what you can to game class
     private String playerMove;
     private String postmanMove;
+    
     private boolean isAWinner = false;
     private boolean isPlayerWin = false;
     private boolean isPostmanWin = false;
     private boolean isATie = false;
+
     private int numberOfMovesTillGameOver = 0;
     private boolean isNoMoreMovesPossible = false;
 
