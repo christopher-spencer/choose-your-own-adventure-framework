@@ -8,6 +8,8 @@ public abstract class Game {
     private boolean isPlayerWin = false;
     private boolean isPostmanWin = false;
     private boolean isATie = false;
+
+    private int numberOfMovesTillGameOver = 0;
     private boolean isNoMoreMovesPossible = false;
 
     public Game() {
