@@ -273,6 +273,9 @@ public class Menu {
      *********************************************************************************
      */
 
+    //TODO Need to add playerAndPostmanChooseXorO method to TTTGame
+    // but ONLY want it to play out at beginning, not before each turn!!!
+
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
 
