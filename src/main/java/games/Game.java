@@ -15,6 +15,8 @@ public abstract class Game {
 
     }
 
+    public abstract int calculateNumberOfMovesTillGameOver();
+
     public String getPlayerMove() {
         return playerMove;
     }
