@@ -123,6 +123,7 @@ public class TicTacToe extends Game{
 
     @Override
     public boolean isATie() {
+
         return isNoMoreMovesPossible() && !isAWinner();
     }
 
