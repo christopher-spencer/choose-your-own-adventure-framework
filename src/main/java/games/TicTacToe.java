@@ -126,6 +126,12 @@ public class TicTacToe extends Game{
 
         return isNoMoreMovesPossible() && !isAWinner();
     }
+    
+    public boolean possibleMovesCounter() {
+        int count = getNinePossibleMoves();
+
+        return false;
+    }
 
     public char getPlayerChoice() { return playerChoice; }
 
