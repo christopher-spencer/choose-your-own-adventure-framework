@@ -113,7 +113,7 @@ public class TicTacToe extends Game{
         }
     }
 
-    //TODO add logic and 9 moves counter for noMoreMovesPossible
+    //TODO implement isNoMoreMovesPossible in the TTT Game
     @Override
     public boolean isNoMoreMovesPossible() {
 
