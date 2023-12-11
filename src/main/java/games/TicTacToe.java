@@ -27,6 +27,8 @@ public class TicTacToe extends Game{
     private boolean threeXsInARow = false;
     private boolean threeOsInARow = false;
 
+    private int ninePossibleMoves = 9;
+
     public TicTacToe() {
 
     }
@@ -211,4 +213,6 @@ public class TicTacToe extends Game{
     public boolean isThreeOsInARow() { return threeOsInARow; }
 
     public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
+
+
 }
