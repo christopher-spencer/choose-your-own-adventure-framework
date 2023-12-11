@@ -294,7 +294,8 @@ public class Menu {
     }
 
     public String playerTicTacToeMove() {
-        // TODO if X occupies spot can't choose number for that spot (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
+        // TODO if X occupies spot can't choose number for that spot
+        //  (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
 
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
@@ -361,7 +362,8 @@ public class Menu {
                 {'7', '8', '9'}
         };
 
-        //TODO add a variable for SPOT TAKEN linked to NUMBERS on player choice and feed it to XOPosition method
+        //TODO add a variable for SPOT TAKEN linked to NUMBERS on player choice and
+        // feed it to XOPosition method
 
         board = getXsAndOsPositions(board);
 
