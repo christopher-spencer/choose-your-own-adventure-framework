@@ -214,5 +214,7 @@ public class TicTacToe extends Game{
 
     public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
 
+    public int getNinePossibleMoves() { return ninePossibleMoves; }
 
+    public void setNinePossibleMoves(int ninePossibleMoves) { this.ninePossibleMoves = ninePossibleMoves; }
 }
