@@ -127,7 +127,7 @@ public class TicTacToe extends Game{
         return isNoMoreMovesPossible() && !isAWinner();
     }
 
-    public int possibleMovesCounter() {
+    public int numberOfMovesTillGameOver() {
         int movesCounter = getPossibleMovesLeft();
 
         movesCounter--;
