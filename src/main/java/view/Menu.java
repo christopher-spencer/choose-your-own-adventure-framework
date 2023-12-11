@@ -273,6 +273,10 @@ public class Menu {
      *********************************************************************************
      */
 
+    public void ticTacToeGame() {
+        //TODO reset all TTT variables after each game
+    }
+
     //TODO Need to add playerAndPostmanChooseXorO method to TTTGame
     // but ONLY want it to play out at beginning, not before each turn!!!
 
@@ -309,7 +313,7 @@ public class Menu {
         return in.nextLine();
     }
 
-    public void ticTacToeGame() {
+    public void playerTicTacToeMoveLogic() {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
 
         //TODO Possibly use a shorter, more streamlined way to do this IF logic
@@ -354,8 +358,6 @@ public class Menu {
         } else {
             tellUserInvalidSelection();
         }
-
-        //TODO reset all TTT variables after each game
      }
 
     public void printTicTacToeBoard() {
