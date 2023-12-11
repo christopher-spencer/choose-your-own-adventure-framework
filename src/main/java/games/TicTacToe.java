@@ -27,7 +27,7 @@ public class TicTacToe extends Game{
     private boolean threeXsInARow = false;
     private boolean threeOsInARow = false;
 
-    private int ninePossibleMoves = 9;
+    private int possibleMovesLeft = 9;
 
     public TicTacToe() {
 
@@ -126,9 +126,9 @@ public class TicTacToe extends Game{
 
         return isNoMoreMovesPossible() && !isAWinner();
     }
-    
+
     public boolean possibleMovesCounter() {
-        int count = getNinePossibleMoves();
+        int count = getPossibleMovesLeft();
 
         return false;
     }
@@ -221,7 +221,7 @@ public class TicTacToe extends Game{
 
     public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
 
-    public int getNinePossibleMoves() { return ninePossibleMoves; }
+    public int getPossibleMovesLeft() { return possibleMovesLeft; }
 
-    public void setNinePossibleMoves(int ninePossibleMoves) { this.ninePossibleMoves = ninePossibleMoves; }
+    public void setPossibleMovesLeft(int possibleMovesLeft) { this.possibleMovesLeft = possibleMovesLeft; }
 }
