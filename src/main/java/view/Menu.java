@@ -275,6 +275,9 @@ public class Menu {
 
     public void ticTacToeGame() {
         //TODO reset all TTT variables after each game
+
+        playerAndPostmanChooseXorO();
+        playerTicTacToeMove();
     }
 
     //TODO Need to add playerAndPostmanChooseXorO method to TTTGame
