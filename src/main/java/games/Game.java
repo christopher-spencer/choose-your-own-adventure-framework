@@ -10,11 +10,11 @@ public abstract class Game {
     private boolean isPostmanWin = false;
     private boolean isATie = false;
 
-    private int numberOfMovesTillGameOver = 0;
+    protected int numberOfMovesTillGameOver = 0;
     private boolean isNoMoreMovesPossible = false;
 
-    public Game() {
-
+    public Game(int value) {
+        numberOfMovesTillGameOver = value;
     }
 
     public String getPlayerMove() {

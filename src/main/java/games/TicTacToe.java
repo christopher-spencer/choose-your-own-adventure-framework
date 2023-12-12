@@ -27,8 +27,9 @@ public class TicTacToe extends Game{
     private boolean threeXsInARow = false;
     private boolean threeOsInARow = false;
 
+    // TODO Attempting to snag version of numberOfMovesTillGameOver from game class
     public TicTacToe() {
-
+        super(9);
     }
 
     @Override
@@ -126,11 +127,9 @@ public class TicTacToe extends Game{
         return isNoMoreMovesPossible() && !isAWinner();
     }
 
-    //TODO I think this method will reset to 9 everytime, need in parameter?
-    public int calculateNumberOfMovesTillGameOver() {
-        setNumberOfMovesTillGameOver(9);
-        int movesCounter = getNumberOfMovesTillGameOver();
-
+    public int calculateNumberOfMovesTillGameOver(int movesCounter) {
+//        setNumberOfMovesTillGameOver(9);
+//        int movesCounter = getNumberOfMovesTillGameOver();
         movesCounter--;
 
         return movesCounter;

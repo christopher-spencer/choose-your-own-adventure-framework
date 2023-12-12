@@ -280,7 +280,7 @@ public class Menu {
         boolean isPostmanWin = ticTacToeGame.isPostmanWin();
         boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
         boolean isATie = ticTacToeGame.isATie();
-        int numberOfMovesTillGameOver = ticTacToeGame.calculateNumberOfMovesTillGameOver();
+        int numberOfMovesTillGameOver = ticTacToeGame.getNumberOfMovesTillGameOver();
 
         playerAndPostmanChooseXorO();
         playerTicTacToeMove();
@@ -324,7 +324,7 @@ public class Menu {
         System.out.println();
         return in.nextLine();
     }
-    
+
     public void playerTicTacToeMoveLogic() {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
 
