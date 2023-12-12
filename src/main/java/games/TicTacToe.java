@@ -126,6 +126,7 @@ public class TicTacToe extends Game{
         return isNoMoreMovesPossible() && !isAWinner();
     }
 
+    //TODO I think this method will reset to 9 everytime, need in parameter?
     public int calculateNumberOfMovesTillGameOver() {
         setNumberOfMovesTillGameOver(9);
         int movesCounter = getNumberOfMovesTillGameOver();

@@ -284,6 +284,12 @@ public class Menu {
 
         playerAndPostmanChooseXorO();
         playerTicTacToeMove();
+        playerTicTacToeMoveLogic();
+        printTicTacToeBoard();
+//
+//        while (!isAWinner || !isATie) {
+//
+//        }
     }
 
     //TODO Need to add playerAndPostmanChooseXorO method to TTTGame
