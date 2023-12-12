@@ -330,9 +330,6 @@ public class Menu {
     public void playerTicTacToeMoveLogic() {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
 
-        //TODO Possibly use a shorter, more streamlined way to do this IF logic
-        // or cut the X vs O logic/move it to separate method
-
         if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopLeftX(true);
         } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O') {
@@ -375,7 +372,7 @@ public class Menu {
      }
 
      public void eitherXOrOMarksTheSpot() {
-        
+
      }
 
     public void printTicTacToeBoard() {
