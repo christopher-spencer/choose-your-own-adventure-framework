@@ -374,6 +374,10 @@ public class Menu {
         }
      }
 
+     public void eitherXOrOMarksTheSpot() {
+        
+     }
+
     public void printTicTacToeBoard() {
         char[][] board = {
                 {'1', '2', '3'},
