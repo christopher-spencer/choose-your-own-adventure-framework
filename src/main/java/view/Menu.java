@@ -275,6 +275,12 @@ public class Menu {
 
     public void ticTacToeGame() {
         //TODO reset all TTT variables after each game
+        boolean isAWinner = ticTacToeGame.isAWinner();
+        boolean isPlayerWin = ticTacToeGame.isPlayerWin();
+        boolean isPostmanWin = ticTacToeGame.isPostmanWin();
+        boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
+        boolean isATie = ticTacToeGame.isATie();
+        int numberOfMovesTillGameOver = ticTacToeGame.calculateNumberOfMovesTillGameOver();
 
         playerAndPostmanChooseXorO();
         playerTicTacToeMove();
