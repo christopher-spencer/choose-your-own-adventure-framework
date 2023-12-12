@@ -316,7 +316,6 @@ public class Menu {
 
     public String playerTicTacToeMove() {
         // TODO if X occupies spot can't choose number for that spot
-        //  (SHOW A GRAPH WITH THAT NUMBER UNAVAILABLE)
 
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
