@@ -280,16 +280,16 @@ public class Menu {
         boolean isPostmanWin = ticTacToeGame.isPostmanWin();
         boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
         boolean isATie = ticTacToeGame.isATie();
-        int numberOfMovesTillGameOver = ticTacToeGame.getNumberOfMovesTillGameOver();
+        int movesLeft = ticTacToeGame.getNumberOfMovesTillGameOver();
 
         playerAndPostmanChooseXorO();
-        playerTicTacToeMove();
-        playerTicTacToeMoveLogic();
-        printTicTacToeBoard();
-//
-//        while (!isAWinner || !isATie) {
-//
-//        }
+
+        while (!isAWinner || !isATie) {
+            playerTicTacToeMove();
+            playerTicTacToeMoveLogic();
+            movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
+            printTicTacToeBoard();
+        }
     }
 
     public void playerAndPostmanChooseXorO() {
