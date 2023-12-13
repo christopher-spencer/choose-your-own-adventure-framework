@@ -331,6 +331,8 @@ public class Menu {
     }
 
     public void postmanTicTacToeMove() {
+        //TODO need to eliminate numbers from random selector that aren't on the board
+
         Random random = new Random();
         int postmanMove = random.nextInt(9);
     }
