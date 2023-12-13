@@ -4,10 +4,7 @@ import games.Hangman;
 import games.RockPaperScissorsGame;
 import games.TicTacToe;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
-
+import java.util.*;
 
 
 public class Menu {
@@ -392,7 +389,14 @@ public class Menu {
      }
 
      public void eitherXOrOMarksTheSpot() {
+        //TODO feed it LIST in parameters and RETURN List to update in main TTTGame?
+        List<Integer> spotTaken = new ArrayList<>();
 
+        if (ticTacToeGame.isTopLeftX() || ticTacToeGame.isTopLeftO()) {
+            spotTaken.add(1);
+        } else if (ticTacToeGame.isTopMiddleX() || ticTacToeGame.isTopMiddleO()) {
+            spotTaken.add(2);
+        }
      }
 
     public void printTicTacToeBoard() {
