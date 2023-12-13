@@ -333,7 +333,17 @@ public class Menu {
     public int postmanTicTacToeMove() {
         //TODO need to eliminate numbers from random selector that aren't on the board
         Random random = new Random();
-        return random.nextInt(9);
+        int postmanMove = random.nextInt(9);
+
+        //TODO Figure out if spot taken in eitherXOrOMarksTheSpot then feed it here
+
+//        int spotTaken = eitherXOrOMarksTheSpot();
+//
+//        while (postmanMove == spotTaken) {
+//            postmanMove = random.nextInt(9);
+//        }
+
+        return postmanMove;
     }
 
     //TODO change to logic for both postman and player to avoid repetitive method
