@@ -393,7 +393,7 @@ public class Menu {
                 {'7', '8', '9'}
         };
 
-        //TODO add a variable for SPOT TAKEN linked to NUMBERS on player choice and
+        //TODO add a variable (or MAP or LIST?) for SPOT TAKEN linked to NUMBERS on player choice and
         // feed it to XOPosition method
 
         board = getXsAndOsPositions(board);
