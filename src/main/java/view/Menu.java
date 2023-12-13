@@ -330,11 +330,10 @@ public class Menu {
         return in.nextLine();
     }
 
-    public void postmanTicTacToeMove() {
+    public int postmanTicTacToeMove() {
         //TODO need to eliminate numbers from random selector that aren't on the board
-
         Random random = new Random();
-        int postmanMove = random.nextInt(9);
+        return random.nextInt(9);
     }
 
     //TODO change to logic for both postman and player to avoid repetitive method
