@@ -291,6 +291,10 @@ public class Menu {
             playerTicTacToeMoveLogic();
             movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
             printTicTacToeBoard();
+
+//            if (isNoMoreMovesPossible) {
+//
+//            }
         }
     }
 
@@ -326,6 +330,12 @@ public class Menu {
         return in.nextLine();
     }
 
+    public void postmanTicTacToeMove() {
+        Random random = new Random();
+        int postmanMove = random.nextInt(9);
+    }
+
+    //TODO change to logic for both postman and player to avoid repetitive method
     public void playerTicTacToeMoveLogic() {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
 
