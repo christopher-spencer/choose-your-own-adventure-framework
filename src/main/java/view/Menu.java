@@ -288,7 +288,7 @@ public class Menu {
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             //TODO Feed spotTaken to playerTicTacToeMoveLogic to check it
-            playerTicTacToeMoveLogic();
+            playerTicTacToeMoveLogic(spotTaken);
             movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
             printTicTacToeBoard();
 
@@ -350,14 +350,18 @@ public class Menu {
 
     //TODO change to logic for both postman and player to avoid repetitive method
     //TODO move TTTMoveLogic to TTTGame Class
-    public void playerTicTacToeMoveLogic() {
+    public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
         int postmanMove = postmanTicTacToeMove();
 
-        if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X') {
-            ticTacToeGame.setTopLeftX(true);
-        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O') {
-            ticTacToeGame.setTopLeftO(true);
+        if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X')
+                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X'))
+                && !spotTaken.contains(1)) {
+                    ticTacToeGame.setTopLeftX(true);
+        } else if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O')
+                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'O'))
+                && !spotTaken.contains(1)) {
+                    ticTacToeGame.setTopLeftO(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'O') {
