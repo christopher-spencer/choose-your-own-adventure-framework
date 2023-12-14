@@ -1,5 +1,8 @@
 package games;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TicTacToe extends Game{
 
     private char playerChoice = ' ';
@@ -26,6 +29,8 @@ public class TicTacToe extends Game{
 
     private boolean threeXsInARow = false;
     private boolean threeOsInARow = false;
+
+    List<Integer> spotTaken = new ArrayList<>();
 
     // TODO Attempting to snag version of numberOfMovesTillGameOver from game class
     public TicTacToe() {
@@ -135,6 +140,33 @@ public class TicTacToe extends Game{
         return movesCounter;
     }
 
+    public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
+
+        spotTaken = getSpotTaken();
+
+        if (isTopLeftX() || isTopLeftO()) {
+            spotTaken.add(1);
+        } else if (isTopMiddleX() || isTopMiddleO()) {
+            spotTaken.add(2);
+        } else if (isTopRightX() || isTopRightO()) {
+            spotTaken.add(3);
+        } else if (isMiddleLeftX() || isMiddleLeftO()) {
+            spotTaken.add(4);
+        } else if (isMiddleMiddleX() || isMiddleMiddleO()) {
+            spotTaken.add(5);
+        } else if (isMiddleRightX() || isMiddleRightO()) {
+            spotTaken.add(6);
+        } else if (isBottomLeftX() || isBottomLeftO()) {
+            spotTaken.add(7);
+        } else if (isBottomMiddleX() || isBottomMiddleO()) {
+            spotTaken.add(8);
+        } else if (isBottomRightX() || isBottomRightO()) {
+            spotTaken.add(9);
+        }
+
+        return spotTaken;
+    }
+
     public char getPlayerChoice() { return playerChoice; }
 
     public void setPlayerChoice(char playerChoice) { this.playerChoice = playerChoice; }
@@ -222,4 +254,8 @@ public class TicTacToe extends Game{
     public boolean isThreeOsInARow() { return threeOsInARow; }
 
     public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
+
+    public List<Integer> getSpotTaken() { return spotTaken; }
+
+    public void setSpotTaken(List<Integer> spotTaken) { this.spotTaken = spotTaken; }
 }

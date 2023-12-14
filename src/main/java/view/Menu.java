@@ -279,16 +279,13 @@ public class Menu {
         boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
         boolean isATie = ticTacToeGame.isATie();
         int movesLeft = ticTacToeGame.getNumberOfMovesTillGameOver();
-
-        List<Integer> spotTaken = new ArrayList<>();
-
-        spotTaken = eitherXOrOMarksTheSpot(spotTaken);
-
+        List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
 
         playerAndPostmanChooseXorO();
 
         while (!isAWinner || !isATie) {
             playerTicTacToeMove();
+            spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             //TODO Feed spotTaken to playerTicTacToeMoveLogic to check it
             playerTicTacToeMoveLogic();
@@ -396,32 +393,32 @@ public class Menu {
         }
      }
 
-     public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
-
-        //TODO move eitherXOrOMarksTheSpot to TTT Class (?)
-
-        if (ticTacToeGame.isTopLeftX() || ticTacToeGame.isTopLeftO()) {
-            spotTaken.add(1);
-        } else if (ticTacToeGame.isTopMiddleX() || ticTacToeGame.isTopMiddleO()) {
-            spotTaken.add(2);
-        } else if (ticTacToeGame.isTopRightX() || ticTacToeGame.isTopRightO()) {
-            spotTaken.add(3);
-        } else if (ticTacToeGame.isMiddleLeftX() || ticTacToeGame.isMiddleLeftO()) {
-            spotTaken.add(4);
-        } else if (ticTacToeGame.isMiddleMiddleX() || ticTacToeGame.isMiddleMiddleO()) {
-            spotTaken.add(5);
-        } else if (ticTacToeGame.isMiddleRightX() || ticTacToeGame.isMiddleRightO()) {
-            spotTaken.add(6);
-        } else if (ticTacToeGame.isBottomLeftX() || ticTacToeGame.isBottomLeftO()) {
-            spotTaken.add(7);
-        } else if (ticTacToeGame.isBottomMiddleX() || ticTacToeGame.isBottomMiddleO()) {
-            spotTaken.add(8);
-        } else if (ticTacToeGame.isBottomRightX() || ticTacToeGame.isBottomRightO()) {
-            spotTaken.add(9);
-        }
-
-        return spotTaken;
-     }
+//     public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
+//
+//        //TODO move eitherXOrOMarksTheSpot to TTT Class (?)
+//
+//        if (ticTacToeGame.isTopLeftX() || ticTacToeGame.isTopLeftO()) {
+//            spotTaken.add(1);
+//        } else if (ticTacToeGame.isTopMiddleX() || ticTacToeGame.isTopMiddleO()) {
+//            spotTaken.add(2);
+//        } else if (ticTacToeGame.isTopRightX() || ticTacToeGame.isTopRightO()) {
+//            spotTaken.add(3);
+//        } else if (ticTacToeGame.isMiddleLeftX() || ticTacToeGame.isMiddleLeftO()) {
+//            spotTaken.add(4);
+//        } else if (ticTacToeGame.isMiddleMiddleX() || ticTacToeGame.isMiddleMiddleO()) {
+//            spotTaken.add(5);
+//        } else if (ticTacToeGame.isMiddleRightX() || ticTacToeGame.isMiddleRightO()) {
+//            spotTaken.add(6);
+//        } else if (ticTacToeGame.isBottomLeftX() || ticTacToeGame.isBottomLeftO()) {
+//            spotTaken.add(7);
+//        } else if (ticTacToeGame.isBottomMiddleX() || ticTacToeGame.isBottomMiddleO()) {
+//            spotTaken.add(8);
+//        } else if (ticTacToeGame.isBottomRightX() || ticTacToeGame.isBottomRightO()) {
+//            spotTaken.add(9);
+//        }
+//
+//        return spotTaken;
+//     }
 
     public void printTicTacToeBoard() {
         char[][] board = {
