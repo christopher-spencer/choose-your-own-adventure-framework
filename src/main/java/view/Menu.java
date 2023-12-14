@@ -396,6 +396,8 @@ public class Menu {
 
      public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
 
+        //TODO move eitherXOrOMarksTheSpot to TTT Class (?)
+
         if (ticTacToeGame.isTopLeftX() || ticTacToeGame.isTopLeftO()) {
             spotTaken.add(1);
         } else if (ticTacToeGame.isTopMiddleX() || ticTacToeGame.isTopMiddleO()) {
