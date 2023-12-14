@@ -401,6 +401,16 @@ public class Menu {
             spotTaken.add(3);
         } else if (ticTacToeGame.isMiddleLeftX() || ticTacToeGame.isMiddleLeftO()) {
             spotTaken.add(4);
+        } else if (ticTacToeGame.isMiddleMiddleX() || ticTacToeGame.isMiddleMiddleO()) {
+            spotTaken.add(5);
+        } else if (ticTacToeGame.isMiddleRightX() || ticTacToeGame.isMiddleRightO()) {
+            spotTaken.add(6);
+        } else if (ticTacToeGame.isBottomLeftX() || ticTacToeGame.isBottomLeftO()) {
+            spotTaken.add(7);
+        } else if (ticTacToeGame.isBottomMiddleX() || ticTacToeGame.isBottomMiddleO()) {
+            spotTaken.add(8);
+        } else if (ticTacToeGame.isBottomRightX() || ticTacToeGame.isBottomRightO()) {
+            spotTaken.add(9);
         }
      }
 
