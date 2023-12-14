@@ -354,6 +354,9 @@ public class Menu {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
         int postmanMove = postmanTicTacToeMove();
 
+        //TODO if playerChoice is invalid, need to refeed the pick a move method
+        // but if postmanChoice invalid, don't feed it the player move method
+
         if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X')
                 || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X'))
                 && !spotTaken.contains(1)) {
