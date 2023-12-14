@@ -397,6 +397,8 @@ public class Menu {
             spotTaken.add(1);
         } else if (ticTacToeGame.isTopMiddleX() || ticTacToeGame.isTopMiddleO()) {
             spotTaken.add(2);
+        } else if (ticTacToeGame.isTopRightX() || ticTacToeGame.isTopRightO()) {
+            spotTaken.add(3);
         }
      }
 
