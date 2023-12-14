@@ -287,7 +287,7 @@ public class Menu {
             playerTicTacToeMove();
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
-            //TODO double triple check some of the logic youre playing with here
+            //TODO double triple check some of the logic you're playing with here
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!isNoMoreMovesPossible) {
                 postmanTicTacToeMove(spotTaken);
@@ -347,21 +347,19 @@ public class Menu {
         return postmanMove;
     }
 
-    //TODO move TTTMoveLogic to TTTGame Class
+    //TODO move TTTMoveLogic to TTTGame Class (?)
     public void ticTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
         int postmanMove = postmanTicTacToeMove(spotTaken);
 
-        //TODO if playerChoice is invalid, need to refeed the pick a move method
+        //TODO if playerChoice is invalid, need to re-feed the pick a move method
         // but if postmanChoice invalid, don't feed it the player move method
 
-        if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X')
-                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X'))
-                && !spotTaken.contains(1)) {
+        if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(1))
+                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X'))) {
                     ticTacToeGame.setTopLeftX(true);
-        } else if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O')
-                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'O'))
-                && !spotTaken.contains(1)) {
+        } else if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(1))
+                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'O'))) {
                     ticTacToeGame.setTopLeftO(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
