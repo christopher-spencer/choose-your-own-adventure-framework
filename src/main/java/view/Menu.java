@@ -288,7 +288,7 @@ public class Menu {
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             //TODO Feed spotTaken to playerTicTacToeMoveLogic to check it
-            playerTicTacToeMoveLogic(spotTaken);
+            ticTacToeMoveLogic(spotTaken);
             movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
             printTicTacToeBoard();
 
@@ -350,7 +350,7 @@ public class Menu {
 
     //TODO change to logic for both postman and player to avoid repetitive method
     //TODO move TTTMoveLogic to TTTGame Class
-    public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
+    public void ticTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
         int postmanMove = postmanTicTacToeMove();
 
