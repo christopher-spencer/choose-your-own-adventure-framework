@@ -292,6 +292,12 @@ public class Menu {
 //            if (isNoMoreMovesPossible) {
 //
 //            }
+
+            if (isPlayerWin || isPostmanWin) {
+                isAWinner = true;
+            } else if (isNoMoreMovesPossible) {
+                isATie = true;
+            }
         }
     }
 
