@@ -287,8 +287,13 @@ public class Menu {
             playerTicTacToeMove();
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
-            //TODO Feed spotTaken to playerTicTacToeMoveLogic to check it
-            ticTacToeMoveLogic(spotTaken);
+            //TODO double triple check some of the logic youre playing with here
+            //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
+            if (!isNoMoreMovesPossible) {
+                postmanTicTacToeMove(spotTaken);
+                ticTacToeMoveLogic(spotTaken);
+            }
+
             movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
             printTicTacToeBoard();
 
@@ -321,7 +326,6 @@ public class Menu {
     }
 
     public String playerTicTacToeMove() {
-        // TODO if X occupies spot can't choose number for that spot
 
         printTicTacToeBoard();
         System.out.println("    What position do you choose?");
@@ -332,27 +336,21 @@ public class Menu {
         return in.nextLine();
     }
 
-    public int postmanTicTacToeMove() {
-        //TODO need to eliminate numbers from random selector that aren't on the board
+    public int postmanTicTacToeMove(List<Integer> spotTaken) {
         Random random = new Random();
         int postmanMove = random.nextInt(9) + 1;
 
-        //TODO Figure out if spot taken in eitherXOrOMarksTheSpot then feed it here
-
-//        int spotTaken = eitherXOrOMarksTheSpot();
-//
-//        while (postmanMove == spotTaken) {
-//            postmanMove = random.nextInt(9);
-//        }
+        while (spotTaken.contains(postmanMove)) {
+            postmanMove = random.nextInt(9) + 1;
+        }
 
         return postmanMove;
     }
 
-    //TODO change to logic for both postman and player to avoid repetitive method
     //TODO move TTTMoveLogic to TTTGame Class
     public void ticTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
-        int postmanMove = postmanTicTacToeMove();
+        int postmanMove = postmanTicTacToeMove(spotTaken);
 
         //TODO if playerChoice is invalid, need to refeed the pick a move method
         // but if postmanChoice invalid, don't feed it the player move method
