@@ -289,10 +289,6 @@ public class Menu {
             movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
             printTicTacToeBoard();
 
-//            if (isNoMoreMovesPossible) {
-//
-//            }
-
             if (isPlayerWin || isPostmanWin) {
                 isAWinner = true;
             } else if (isNoMoreMovesPossible) {
