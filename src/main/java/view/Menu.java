@@ -389,9 +389,9 @@ public class Menu {
         }
      }
 
-     public void eitherXOrOMarksTheSpot() {
+     public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
         //TODO feed it LIST in parameters and RETURN List to update in main TTTGame?
-        List<Integer> spotTaken = new ArrayList<>();
+//        List<Integer> spotTaken = new ArrayList<>();
 
         if (ticTacToeGame.isTopLeftX() || ticTacToeGame.isTopLeftO()) {
             spotTaken.add(1);
@@ -412,6 +412,8 @@ public class Menu {
         } else if (ticTacToeGame.isBottomRightX() || ticTacToeGame.isBottomRightO()) {
             spotTaken.add(9);
         }
+
+        return spotTaken;
      }
 
     public void printTicTacToeBoard() {
