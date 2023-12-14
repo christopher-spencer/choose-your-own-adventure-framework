@@ -335,7 +335,7 @@ public class Menu {
     public int postmanTicTacToeMove() {
         //TODO need to eliminate numbers from random selector that aren't on the board
         Random random = new Random();
-        int postmanMove = random.nextInt(9);
+        int postmanMove = random.nextInt(9) + 1;
 
         //TODO Figure out if spot taken in eitherXOrOMarksTheSpot then feed it here
 
@@ -352,6 +352,7 @@ public class Menu {
     //TODO move TTTMoveLogic to TTTGame Class
     public void playerTicTacToeMoveLogic() {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
+        int postmanMove = postmanTicTacToeMove();
 
         if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopLeftX(true);
