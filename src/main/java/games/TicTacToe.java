@@ -122,7 +122,6 @@ public class TicTacToe extends Game{
     @Override
     public boolean isNoMoreMovesPossible() {
 
-//        return calculateNumberOfMovesTillGameOver() == 0;
         return numberOfMovesTillGameOver == 0;
     }
 
@@ -133,8 +132,6 @@ public class TicTacToe extends Game{
     }
 
     public int calculateNumberOfMovesTillGameOver(int movesCounter) {
-//        setNumberOfMovesTillGameOver(9);
-//        int movesCounter = getNumberOfMovesTillGameOver();
         movesCounter--;
 
         return movesCounter;
