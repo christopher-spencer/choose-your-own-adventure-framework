@@ -279,6 +279,11 @@ public class Menu {
         boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
         boolean isATie = ticTacToeGame.isATie();
         int movesLeft = ticTacToeGame.getNumberOfMovesTillGameOver();
+        
+        List<Integer> spotTaken = new ArrayList<>();
+
+        spotTaken = eitherXOrOMarksTheSpot(spotTaken);
+
 
         playerAndPostmanChooseXorO();
 
