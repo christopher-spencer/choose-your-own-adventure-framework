@@ -279,7 +279,7 @@ public class Menu {
         boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
         boolean isATie = ticTacToeGame.isATie();
         int movesLeft = ticTacToeGame.getNumberOfMovesTillGameOver();
-        
+
         List<Integer> spotTaken = new ArrayList<>();
 
         spotTaken = eitherXOrOMarksTheSpot(spotTaken);
@@ -395,8 +395,6 @@ public class Menu {
      }
 
      public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
-        //TODO feed it LIST in parameters and RETURN List to update in main TTTGame?
-//        List<Integer> spotTaken = new ArrayList<>();
 
         if (ticTacToeGame.isTopLeftX() || ticTacToeGame.isTopLeftO()) {
             spotTaken.add(1);
