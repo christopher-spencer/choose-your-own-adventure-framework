@@ -289,6 +289,8 @@ public class Menu {
 
         while (!isAWinner || !isATie) {
             playerTicTacToeMove();
+
+            //TODO Feed spotTaken to playerTicTacToeMoveLogic to check it
             playerTicTacToeMoveLogic();
             movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
             printTicTacToeBoard();
