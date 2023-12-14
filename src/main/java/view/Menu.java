@@ -349,6 +349,7 @@ public class Menu {
     }
 
     //TODO change to logic for both postman and player to avoid repetitive method
+    //TODO move TTTMoveLogic to TTTGame Class
     public void playerTicTacToeMoveLogic() {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
 
