@@ -273,7 +273,6 @@ public class Menu {
     public void ticTacToeGame() {
         //TODO reset all TTT variables after each game
 
-        //TODO Are all variables necessary?
         boolean isAWinner = ticTacToeGame.isAWinner();
         boolean isPlayerWin = ticTacToeGame.isPlayerWin();
         boolean isPostmanWin = ticTacToeGame.isPostmanWin();
