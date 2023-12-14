@@ -401,10 +401,6 @@ public class Menu {
                 {'7', '8', '9'}
         };
 
-        //TODO add a variable (or MAP or LIST?) for SPOT TAKEN linked to NUMBERS on player choice and
-        // feed it to XOPosition method
-        // OR BOOLEAN for 1 through 9 position spotTaken in TTT CLASS
-
         board = getXsAndOsPositions(board);
 
         for (int row = 0; row < 3; row++) {
