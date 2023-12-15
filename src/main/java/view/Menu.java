@@ -317,35 +317,8 @@ public class Menu {
             theGameIsATie();
         }
 
-        //Reset all TicTacToe Game Variables
-
-        ticTacToeGame.setPlayerChoice(' ');
-        ticTacToeGame.setPostmanChoice(' ');
-
-        ticTacToeGame.setTopLeftX(false);
-        ticTacToeGame.setTopLeftO(false);
-        ticTacToeGame.setTopMiddleX(false);
-        ticTacToeGame.setTopMiddleO(false);
-        ticTacToeGame.setTopRightX(false);
-        ticTacToeGame.setTopRightO(false);
-        ticTacToeGame.setMiddleLeftX(false);
-        ticTacToeGame.setMiddleLeftO(false);
-        ticTacToeGame.setMiddleMiddleX(false);
-        ticTacToeGame.setMiddleMiddleO(false);
-        ticTacToeGame.setMiddleRightX(false);
-        ticTacToeGame.setMiddleRightO(false);
-        ticTacToeGame.setBottomLeftX(false);
-        ticTacToeGame.setBottomLeftO(false);
-        ticTacToeGame.setBottomMiddleX(false);
-        ticTacToeGame.setBottomMiddleO(false);
-        ticTacToeGame.setBottomRightX(false);
-        ticTacToeGame.setBottomRightO(false);
-
-        ticTacToeGame.setThreeXsInARow(false);
-        ticTacToeGame.setThreeOsInARow(false);
-
+        resetTicTacToeGame();
         spotTaken.clear();
-        ticTacToeGame.setNumberOfMovesTillGameOver(9);
     }
 
     public void playerAndPostmanChooseXorO() {
@@ -521,6 +494,35 @@ public class Menu {
         }
 
         return board;
+    }
+
+    public void resetTicTacToeGame() {
+        
+        ticTacToeGame.setPlayerChoice(' ');
+        ticTacToeGame.setPostmanChoice(' ');
+
+        ticTacToeGame.setTopLeftX(false);
+        ticTacToeGame.setTopLeftO(false);
+        ticTacToeGame.setTopMiddleX(false);
+        ticTacToeGame.setTopMiddleO(false);
+        ticTacToeGame.setTopRightX(false);
+        ticTacToeGame.setTopRightO(false);
+        ticTacToeGame.setMiddleLeftX(false);
+        ticTacToeGame.setMiddleLeftO(false);
+        ticTacToeGame.setMiddleMiddleX(false);
+        ticTacToeGame.setMiddleMiddleO(false);
+        ticTacToeGame.setMiddleRightX(false);
+        ticTacToeGame.setMiddleRightO(false);
+        ticTacToeGame.setBottomLeftX(false);
+        ticTacToeGame.setBottomLeftO(false);
+        ticTacToeGame.setBottomMiddleX(false);
+        ticTacToeGame.setBottomMiddleO(false);
+        ticTacToeGame.setBottomRightX(false);
+        ticTacToeGame.setBottomRightO(false);
+
+        ticTacToeGame.setThreeXsInARow(false);
+        ticTacToeGame.setThreeOsInARow(false);
+        ticTacToeGame.setNumberOfMovesTillGameOver(9);
     }
 
     /*
