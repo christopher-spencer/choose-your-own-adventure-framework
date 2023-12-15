@@ -283,6 +283,11 @@ public class Menu {
         playerAndPostmanChooseXorO();
 
         while (!isAWinner || !isATie) {
+
+            if (isPlayerWin || isPostmanWin) {
+                isAWinner = true;
+            }
+            
             playerTicTacToeMove();
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
@@ -291,28 +296,25 @@ public class Menu {
             if (!isNoMoreMovesPossible) {
                 postmanTicTacToeMove(spotTaken);
                 ticTacToeMoveLogic(spotTaken);
+                movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
+                printTicTacToeBoard();
             } else {
-                isATie = true;
-            }
-
-            movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
-            printTicTacToeBoard();
-
-            if (isPlayerWin || isPostmanWin) {
-                isAWinner = true;
-            } else if (isNoMoreMovesPossible) {
                 isATie = true;
             }
         }
 
-        if (isPlayerWin) {
-            System.out.println("    You win!");
-            System.out.println();
-            System.out.println("    The postman goes to the kitchen and picks up all of your cereal boxes one by one. He dumps them in a mop bucket, then fills the bucket with whole milk. He kicks it over.");
-        } else if (isPostmanWin) {
-            System.out.println("    The postman wins!");
-            System.out.println();
-            System.out.println("The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes it against your forehead.");
+        if (isAWinner) {
+            if (isPlayerWin) {
+                System.out.println("    You win!");
+                System.out.println();
+                System.out.println("    The postman goes to the kitchen and picks up all of your cereal boxes one by one. He dumps them in a mop bucket, then fills the bucket with whole milk. He kicks it over.");
+            } else if (isPostmanWin) {
+                System.out.println("    The postman wins!");
+                System.out.println();
+                System.out.println("    The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes it against your forehead.");
+            }
+        } else if (isATie) {
+            theGameIsATie();
         }
 
         //Reset all TicTacToe Game Variables
