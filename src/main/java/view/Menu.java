@@ -271,7 +271,6 @@ public class Menu {
      */
 
     public void ticTacToeGame() {
-        //TODO reset all TTT variables after each game
 
         boolean isAWinner = ticTacToeGame.isAWinner();
         boolean isPlayerWin = ticTacToeGame.isPlayerWin();
@@ -315,6 +314,17 @@ public class Menu {
             System.out.println();
             System.out.println("The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes it against your forehead.");
         }
+
+        //TODO reset all TTT variables after each game
+
+
+        isAWinner = false;
+        isPlayerWin = false;
+        isPostmanWin = false;
+        isNoMoreMovesPossible = false;
+        isATie = false;
+        movesLeft = 9;
+        spotTaken.clear();
     }
 
     public void playerAndPostmanChooseXorO() {
