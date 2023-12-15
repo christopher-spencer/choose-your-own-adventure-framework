@@ -283,11 +283,11 @@ public class Menu {
         playerAndPostmanChooseXorO();
 
         while (!isAWinner || !isATie) {
-
-            if (isPlayerWin || isPostmanWin) {
+            //TODO need to check this after EACH player move AND after EACH postman move
+            if (ticTacToeGame.isThreeXsInARow() || ticTacToeGame.isThreeOsInARow()) {
                 isAWinner = true;
             }
-            
+
             playerTicTacToeMove();
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
