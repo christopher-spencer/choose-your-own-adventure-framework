@@ -318,8 +318,6 @@ public class Menu {
         }
 
         resetTicTacToeGame();
-        
-        //TODO reset in the ResetTTTGame method (?)
         spotTaken.clear();
     }
 
@@ -415,7 +413,7 @@ public class Menu {
             ticTacToeGame.setTopRightX(true);
         }
 
-        
+
 
 
 
