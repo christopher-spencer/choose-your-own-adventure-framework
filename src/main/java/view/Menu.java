@@ -499,9 +499,13 @@ public class Menu {
             ticTacToeMoveLogic(spotTaken);
         } else if (postmanMove == 8 && ticTacToeGame.getPostmanChoice() == 'O') {
             ticTacToeGame.setBottomMiddleO(true);
-        }
-
-        else if (playerMove == 9 && ticTacToeGame.getPlayerChoice() == 'X') {
+        } else if (playerMove == 9 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(9)) {
+            ticTacToeGame.setBottomRightX(true);
+        } else if (playerMove == 9 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(9)) {
+            tellUserInvalidSelection();
+            playerTicTacToeMove();
+            ticTacToeMoveLogic(spotTaken);
+        } else if (postmanMove == 9 && ticTacToeGame.getPostmanChoice() == 'X') {
             ticTacToeGame.setBottomRightX(true);
         }
 
