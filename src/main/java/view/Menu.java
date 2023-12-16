@@ -364,6 +364,8 @@ public class Menu {
     }
 
     //TODO move TTTMoveLogic to TTTGame Class (?)
+    //TODO perhaps break this back up into playerTTTMoveLogic vs postmanTTTMoveLogic
+    // to cut down on size and not duplicate method in TTTGAME
     public void ticTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
         int postmanMove = postmanTicTacToeMove(spotTaken);
