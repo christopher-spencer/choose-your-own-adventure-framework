@@ -373,12 +373,18 @@ public class Menu {
         //TODO if playerChoice is invalid, need to re-feed the pick a move method
         // but if postmanChoice invalid, don't feed it the player move method
 
-        if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(1))
-                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X'))) {
-                    ticTacToeGame.setTopLeftX(true);
-        } else if (((playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(1))
-                || (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'O'))) {
-                    ticTacToeGame.setTopLeftO(true);
+        if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(1)) {
+            ticTacToeGame.setTopLeftX(true);
+        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(1)) {
+            tellUserInvalidSelection();
+        } else if (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X') {
+            ticTacToeGame.setTopLeftX(true);
+        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(1)) {
+            ticTacToeGame.setTopLeftO(true);
+        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && spotTaken.contains(1)) {
+            tellUserInvalidSelection();
+        } else if (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'O') {
+            ticTacToeGame.setTopLeftO(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'O') {
