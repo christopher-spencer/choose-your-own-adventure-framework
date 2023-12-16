@@ -284,9 +284,7 @@ public class Menu {
 
         while (!isAWinner || !isATie) {
             //TODO need to check this after EACH player move AND after EACH postman move
-            if (ticTacToeGame.isThreeXsInARow() || ticTacToeGame.isThreeOsInARow()) {
-                isAWinner = true;
-            }
+            isAWinner = isThreeInARow(isAWinner);
 
             playerTicTacToeMove();
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
@@ -599,6 +597,14 @@ public class Menu {
         }
 
         return board;
+    }
+
+    public boolean isThreeInARow(boolean isAWinner) {
+        if (ticTacToeGame.isThreeXsInARow() || ticTacToeGame.isThreeOsInARow()) {
+            isAWinner = true;
+        }
+
+        return isAWinner;
     }
 
     public void resetTicTacToeGame() {
