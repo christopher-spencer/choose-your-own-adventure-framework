@@ -459,6 +459,14 @@ public class Menu {
             ticTacToeMoveLogic(spotTaken);
         } else if (postmanMove == 6 && ticTacToeGame.getPostmanChoice() == 'X') {
             ticTacToeGame.setMiddleRightX(true);
+        } else if (playerMove == 6 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(6)) {
+            ticTacToeGame.setMiddleRightO(true);
+        } else if (playerMove == 6 && ticTacToeGame.getPlayerChoice() == 'O' && spotTaken.contains(6)) {
+            tellUserInvalidSelection();
+            playerTicTacToeMove();
+            ticTacToeMoveLogic(spotTaken);
+        } else if (postmanMove == 6 && ticTacToeGame.getPostmanChoice() == 'O') {
+            ticTacToeGame.setMiddleRightO(true);
         }
 
 
@@ -467,9 +475,7 @@ public class Menu {
 
 
 
-        else if (playerMove == 6 && ticTacToeGame.getPlayerChoice() == 'O') {
-            ticTacToeGame.setMiddleRightO(true);
-        } else if (playerMove == 7 && ticTacToeGame.getPlayerChoice() == 'X') {
+        else if (playerMove == 7 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setBottomLeftX(true);
         } else if (playerMove == 7 && ticTacToeGame.getPlayerChoice() == 'O') {
             ticTacToeGame.setBottomLeftO(true);
