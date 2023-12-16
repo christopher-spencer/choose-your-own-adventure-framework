@@ -377,29 +377,37 @@ public class Menu {
             ticTacToeGame.setTopLeftX(true);
         } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(1)) {
             tellUserInvalidSelection();
+            playerTicTacToeMove();
+            ticTacToeMoveLogic(spotTaken);
         } else if (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X') {
             ticTacToeGame.setTopLeftX(true);
         } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(1)) {
             ticTacToeGame.setTopLeftO(true);
         } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && spotTaken.contains(1)) {
             tellUserInvalidSelection();
+            playerTicTacToeMove();
+            ticTacToeMoveLogic(spotTaken);
         } else if (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'O') {
             ticTacToeGame.setTopLeftO(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(2)) {
             ticTacToeGame.setTopMiddleX(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(2)) {
             tellUserInvalidSelection();
+            playerTicTacToeMove();
+            ticTacToeMoveLogic(spotTaken);
         } else if (postmanMove == 2 && ticTacToeGame.getPostmanChoice() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(2)) {
             ticTacToeGame.setTopMiddleO(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'O' && spotTaken.contains(2)) {
             tellUserInvalidSelection();
+            playerTicTacToeMove();
+            ticTacToeMoveLogic(spotTaken);
         } else if (postmanMove == 2 && ticTacToeGame.getPostmanChoice() == 'O') {
             ticTacToeGame.setTopMiddleO(true);
         }
 
-        
+
 
         else if (playerMove == 3 && ticTacToeGame.getPlayerChoice() == 'X') {
             ticTacToeGame.setTopRightX(true);
