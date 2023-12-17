@@ -362,23 +362,25 @@ public class Menu {
     }
 
     //TODO move TTTMoveLogic to TTTGame Class (?)
-    //TODO perhaps break this back up into playerTTTMoveLogic vs postmanTTTMoveLogic
-    // to cut down on size and not duplicate method in TTTGAME
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
 
-        if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(1)) {
-            ticTacToeGame.setTopLeftX(true);
-        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(1)) {
-            tellUserInvalidSelection();
-            playerTicTacToeMove();
-            playerTicTacToeMoveLogic(spotTaken);
-        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && !spotTaken.contains(1)) {
-            ticTacToeGame.setTopLeftO(true);
-        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O' && spotTaken.contains(1)) {
-            tellUserInvalidSelection();
-            playerTicTacToeMove();
-            playerTicTacToeMoveLogic(spotTaken);
+        if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X') {
+            if (!spotTaken.contains(1)) {
+                ticTacToeGame.setTopLeftX(true);
+            } else {
+                tellUserInvalidSelection();
+                playerTicTacToeMove();
+                playerTicTacToeMoveLogic(spotTaken);
+            }
+        } else if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'O') {
+            if (!spotTaken.contains(1)) {
+                ticTacToeGame.setTopLeftO(true);
+            } else {
+                tellUserInvalidSelection();
+                playerTicTacToeMove();
+                playerTicTacToeMoveLogic(spotTaken);
+            }
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(2)) {
             ticTacToeGame.setTopMiddleX(true);
         } else if (playerMove == 2 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(2)) {
