@@ -366,7 +366,6 @@ public class Menu {
     // to cut down on size and not duplicate method in TTTGAME
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
-        int postmanMove = postmanTicTacToeMove(spotTaken);
 
         if (playerMove == 1 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(1)) {
             ticTacToeGame.setTopLeftX(true);
