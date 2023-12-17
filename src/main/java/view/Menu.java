@@ -362,7 +362,6 @@ public class Menu {
     }
 
     //TODO move TTTMoveLogic to TTTGame Class (?)
-    //TODO set playerChoice X and O to variables to improve readability
     //TODO variables for magic numbers
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
@@ -518,6 +517,7 @@ public class Menu {
         }
      }
 
+    //TODO set postmanChoice X and O to variables to improve readability
     public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
 
