@@ -392,8 +392,6 @@ public class Menu {
             tellUserInvalidSelection();
             playerTicTacToeMove();
             playerTicTacToeMoveLogic(spotTaken);
-        } else if (postmanMove == 2 && ticTacToeGame.getPostmanChoice() == 'O') {
-            ticTacToeGame.setTopMiddleO(true);
         } else if (playerMove == 3 && ticTacToeGame.getPlayerChoice() == 'X' && !spotTaken.contains(3)) {
             ticTacToeGame.setTopRightX(true);
         } else if (playerMove == 3 && ticTacToeGame.getPlayerChoice() == 'X' && spotTaken.contains(3)) {
@@ -520,6 +518,8 @@ public class Menu {
             ticTacToeGame.setTopLeftO(true);
         } else if (postmanMove == 2 && ticTacToeGame.getPostmanChoice() == 'X') {
             ticTacToeGame.setTopMiddleX(true);
+        } else if (postmanMove == 2 && ticTacToeGame.getPostmanChoice() == 'O') {
+            ticTacToeGame.setTopMiddleO(true);
         }
     }
 
