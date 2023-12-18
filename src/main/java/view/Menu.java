@@ -520,6 +520,8 @@ public class Menu {
     //TODO set postmanChoice X and O to variables to improve readability
     public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
+        boolean isPostmanXs = ticTacToeGame.getPostmanChoice() == 'X';
+        boolean isPostmanOs = ticTacToeGame.getPostmanChoice() == 'O';
 
         if (postmanMove == 1 && ticTacToeGame.getPostmanChoice() == 'X') {
             ticTacToeGame.setTopLeftX(true);
@@ -559,7 +561,6 @@ public class Menu {
             ticTacToeGame.setBottomRightO(true);
         }
     }
-
 
         public void printTicTacToeBoard() {
         char[][] board = {
