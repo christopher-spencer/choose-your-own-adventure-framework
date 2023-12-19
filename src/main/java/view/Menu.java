@@ -303,7 +303,7 @@ public class Menu {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken, movesLeft);
             } else {
-                //TODO Why saying not used? 
+                //TODO Why saying not used?
                 isATie = true;
                 break;
             }
