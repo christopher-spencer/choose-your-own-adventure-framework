@@ -302,8 +302,6 @@ public class Menu {
             if (!isNoMoreMovesPossible) {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken, movesLeft);
-                movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
-//                printTicTacToeBoard();
             } else {
                 isATie = true;
                 break;
@@ -518,7 +516,9 @@ public class Menu {
                 tellUserInvalidSelection();
             }
         }
-     }
+
+        ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
+    }
 
     public void postmanTicTacToeMoveLogic(List<Integer> spotTaken, int movesLeft) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
@@ -562,6 +562,8 @@ public class Menu {
         } else if (postmanMove == 9 && isPostmanOs) {
             ticTacToeGame.setBottomRightO(true);
         }
+
+        ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
     }
 
         public void printTicTacToeBoard() {
