@@ -93,23 +93,25 @@ public class Menu {
 
     public void randomGameSelector() {
         Random random = new Random();
-        int randomNumber = random.nextInt(2);
-        //TODO change bound to 3 && uncomment TTT selector when TTT is ready to be included
+//        int randomNumber = random.nextInt(2);
+        //TODO placeholder to check TTT
+        // (change bound to 3 && uncomment TTT selector when TTT is ready to be included)
+        int randomNumber = 2;
 
-        if (randomNumber == 0) {
-            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-            rockPaperScissorsGame();
-        }
-        if (randomNumber == 1) {
-            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-            hangmanGame();
-        }
-
-//        if (randomNumber == 2) {
-//            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-//            playerAndPostmanChooseXorO();
-//            ticTacToeGame();
+//        if (randomNumber == 0) {
+//            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+//            rockPaperScissorsGame();
 //        }
+//        if (randomNumber == 1) {
+//            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+//            hangmanGame();
+//        }
+
+        if (randomNumber == 2) {
+            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+            playerAndPostmanChooseXorO();
+            ticTacToeGame();
+        }
     }
 
     /*
@@ -287,13 +289,14 @@ public class Menu {
             isAWinner = isThreeInARow(isAWinner);
 
             playerTicTacToeMove();
+            playerTicTacToeMoveLogic(spotTaken);
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             //TODO double triple check some of the logic you're playing with here
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!isNoMoreMovesPossible) {
                 postmanTicTacToeMove(spotTaken);
-                playerTicTacToeMoveLogic(spotTaken);
+                postmanTicTacToeMoveLogic(spotTaken);
                 movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
                 printTicTacToeBoard();
             } else {
