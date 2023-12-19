@@ -318,7 +318,7 @@ public class Menu {
                 System.out.println();
                 System.out.println("    The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes it against your forehead.");
             }
-        } else if (isATie) {
+        } else {
             theGameIsATie();
         }
 
