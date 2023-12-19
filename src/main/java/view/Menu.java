@@ -272,6 +272,10 @@ public class Menu {
      *********************************************************************************
      */
 
+    // TODO Game asks for X or O choice twice, and can be changed on second ask
+    // TODO if three in a row/winner the game just keeps asking for selection
+    //  even after all spaces filled
+
     public void ticTacToeGame() {
 
         boolean isAWinner = ticTacToeGame.isAWinner();
