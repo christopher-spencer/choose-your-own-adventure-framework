@@ -379,12 +379,14 @@ public class Menu {
     //TODO move TTTMoveLogic to TTTGame Class (?)
     //TODO variables for magic numbers
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken, int movesLeft) {
-        int playerMove = Integer.parseInt(playerTicTacToeMove());
+        int playerMove;
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
         boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
         boolean isValidMove = false;
 
         while (!isValidMove) {
+
+            playerMove = Integer.parseInt(playerTicTacToeMove());
 
             if (playerMove == 1 && isPlayerXs) {
                 if (!spotTaken.contains(1)) {
