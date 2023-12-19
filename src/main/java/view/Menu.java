@@ -400,138 +400,121 @@ public class Menu {
             } else if (playerMove == 1 && isPlayerOs) {
                 if (!spotTaken.contains(1)) {
                     ticTacToeGame.setTopLeftO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 2 && isPlayerXs) {
                 if (!spotTaken.contains(2)) {
                     ticTacToeGame.setTopMiddleX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 2 && isPlayerOs) {
                 if (!spotTaken.contains(2)) {
                     ticTacToeGame.setTopMiddleO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 3 && isPlayerXs) {
                 if (!spotTaken.contains(3)) {
                     ticTacToeGame.setTopRightX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 3 && isPlayerOs) {
                 if (!spotTaken.contains(3)) {
                     ticTacToeGame.setTopRightO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 4 && isPlayerXs) {
                 if (!spotTaken.contains(4)) {
                     ticTacToeGame.setMiddleLeftX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 4 && isPlayerOs) {
                 if (!spotTaken.contains(4)) {
                     ticTacToeGame.setMiddleLeftO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 5 && isPlayerXs) {
                 if (!spotTaken.contains(5)) {
                     ticTacToeGame.setMiddleMiddleX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 5 && isPlayerOs) {
                 if (!spotTaken.contains(5)) {
                     ticTacToeGame.setMiddleMiddleO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 6 && isPlayerXs) {
                 if (!spotTaken.contains(6)) {
                     ticTacToeGame.setMiddleRightX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 6 && isPlayerOs) {
                 if (!spotTaken.contains(6)) {
                     ticTacToeGame.setMiddleRightO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 7 && isPlayerXs) {
                 if (!spotTaken.contains(7)) {
                     ticTacToeGame.setBottomLeftX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 7 && isPlayerOs) {
                 if (!spotTaken.contains(7)) {
                     ticTacToeGame.setBottomLeftO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 8 && isPlayerXs) {
                 if (!spotTaken.contains(8)) {
                     ticTacToeGame.setBottomMiddleX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 8 && isPlayerOs) {
                 if (!spotTaken.contains(8)) {
                     ticTacToeGame.setBottomMiddleO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 9 && isPlayerXs) {
                 if (!spotTaken.contains(9)) {
                     ticTacToeGame.setBottomRightX(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else if (playerMove == 9 && isPlayerOs) {
                 if (!spotTaken.contains(9)) {
                     ticTacToeGame.setBottomRightO(true);
+                    isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
-                    playerTicTacToeMove();
-                    playerTicTacToeMoveLogic(spotTaken);
                 }
             } else {
                 tellUserInvalidSelection();
