@@ -575,9 +575,9 @@ public class Menu {
 
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 3; column++) {
-                System.out.println(board[row][column]);
+                System.out.print(board[row][column]);
                 if (column < 2) {
-                    System.out.println(" | ");
+                    System.out.print(" | ");
                 }
             }
             System.out.println();
