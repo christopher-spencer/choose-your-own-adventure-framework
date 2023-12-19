@@ -370,6 +370,8 @@ public class Menu {
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
         boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
 
+        //TODO add while loop to avoid recursion
+
         if (playerMove == 1 && isPlayerXs) {
             if (!spotTaken.contains(1)) {
                 ticTacToeGame.setTopLeftX(true);
