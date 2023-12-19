@@ -289,7 +289,7 @@ public class Menu {
 
         playerAndPostmanChooseXorO();
 
-        while (!isAWinner || !isATie) {
+        while (!isAWinner && !isATie) {
             //TODO need to check this after EACH player move AND after EACH postman move
             isAWinner = isThreeInARow(isAWinner);
 
