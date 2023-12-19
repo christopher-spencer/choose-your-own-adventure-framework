@@ -276,6 +276,8 @@ public class Menu {
     // TODO if three in a row/winner the game just keeps asking for selection
     //  even after all spaces filled
 
+    //TODO Game ALSO asks for each move twice
+
     public void ticTacToeGame() {
 
         boolean isAWinner = ticTacToeGame.isAWinner();
