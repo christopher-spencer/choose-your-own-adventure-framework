@@ -385,9 +385,7 @@ public class Menu {
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
         boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
         boolean isValidMove = false;
-
-        //TODO add while loop to avoid recursion
-
+        
         while (!isValidMove) {
 
             if (playerMove == 1 && isPlayerXs) {
