@@ -344,7 +344,6 @@ public class Menu {
 
     public String playerTicTacToeMove() {
 
-        printTicTacToeBoard();
         System.out.println("    What position do you choose?");
         System.out.println("    Enter one of the following number inputs:");
         System.out.println();
