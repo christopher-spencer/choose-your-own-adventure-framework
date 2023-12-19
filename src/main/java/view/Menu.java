@@ -325,6 +325,7 @@ public class Menu {
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
 
+        System.out.println();
         System.out.println("    Welcome to Tic Tac Toe!");
         System.out.println();
         System.out.println("    Do you want to play as X's or O's?");
@@ -338,10 +339,12 @@ public class Menu {
             ticTacToeGame.setPlayerChoice('X');
             ticTacToeGame.setPostmanChoice('O');
             System.out.println("You have chosen to play as X's!");
+            System.out.println();
         } else if (chooseXorO.equals("O")) {
             ticTacToeGame.setPlayerChoice('O');
             ticTacToeGame.setPostmanChoice('X');
             System.out.println("You have chosen to play as O's!");
+            System.out.println();
         } else {
             tellUserInvalidSelection();
         }
