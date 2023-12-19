@@ -294,14 +294,14 @@ public class Menu {
             isAWinner = isThreeInARow(isAWinner);
 
             playerTicTacToeMove();
-            playerTicTacToeMoveLogic(spotTaken);
+            playerTicTacToeMoveLogic(spotTaken, movesLeft);
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             //TODO double triple check some of the logic you're playing with here
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!isNoMoreMovesPossible) {
                 postmanTicTacToeMove(spotTaken);
-                postmanTicTacToeMoveLogic(spotTaken);
+                postmanTicTacToeMoveLogic(spotTaken, movesLeft);
                 movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
 //                printTicTacToeBoard();
             } else {
@@ -380,12 +380,12 @@ public class Menu {
 
     //TODO move TTTMoveLogic to TTTGame Class (?)
     //TODO variables for magic numbers
-    public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
+    public void playerTicTacToeMoveLogic(List<Integer> spotTaken, int movesLeft) {
         int playerMove = Integer.parseInt(playerTicTacToeMove());
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
         boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
         boolean isValidMove = false;
-        
+
         while (!isValidMove) {
 
             if (playerMove == 1 && isPlayerXs) {
@@ -520,7 +520,7 @@ public class Menu {
         }
      }
 
-    public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
+    public void postmanTicTacToeMoveLogic(List<Integer> spotTaken, int movesLeft) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
         boolean isPostmanXs = ticTacToeGame.getPostmanChoice() == 'X';
         boolean isPostmanOs = ticTacToeGame.getPostmanChoice() == 'O';
