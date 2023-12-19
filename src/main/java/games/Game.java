@@ -13,6 +13,10 @@ public abstract class Game {
     protected int numberOfMovesTillGameOver = 0;
     private boolean isNoMoreMovesPossible = false;
 
+    public Game() {
+
+    }
+
     public Game(int value) {
         numberOfMovesTillGameOver = value;
     }
