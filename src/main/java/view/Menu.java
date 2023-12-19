@@ -338,12 +338,12 @@ public class Menu {
         if (chooseXorO.equals("X")) {
             ticTacToeGame.setPlayerChoice('X');
             ticTacToeGame.setPostmanChoice('O');
-            System.out.println("You have chosen to play as X's!");
+            System.out.println("    You have chosen to play as X's!");
             System.out.println();
         } else if (chooseXorO.equals("O")) {
             ticTacToeGame.setPlayerChoice('O');
             ticTacToeGame.setPostmanChoice('X');
-            System.out.println("You have chosen to play as O's!");
+            System.out.println("    You have chosen to play as O's!");
             System.out.println();
         } else {
             tellUserInvalidSelection();
@@ -584,6 +584,7 @@ public class Menu {
         board = getXsAndOsPositions(board);
 
         for (int row = 0; row < 3; row++) {
+            System.out.print("          ");
             for (int column = 0; column < 3; column++) {
                 System.out.print(board[row][column]);
                 if (column < 2) {
@@ -592,7 +593,7 @@ public class Menu {
             }
             System.out.println();
             if (row < 2) {
-                System.out.println("---------");
+                System.out.println("        -------------");
             }
         }
     }
