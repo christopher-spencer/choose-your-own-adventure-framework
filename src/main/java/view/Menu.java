@@ -326,7 +326,9 @@ public class Menu {
         String chooseXorO = "";
 
         System.out.println("    Welcome to Tic Tac Toe!");
+        System.out.println();
         System.out.println("    Do you want to play as X's or O's?");
+        System.out.println();
         System.out.println("    Enter ( X ) or ( O ): ");
 
         chooseXorO = in.nextLine().toUpperCase();
@@ -345,6 +347,7 @@ public class Menu {
     public String playerTicTacToeMove() {
 
         System.out.println("    What position do you choose?");
+        System.out.println();
         System.out.println("    Enter one of the following number inputs:");
         System.out.println();
         printTicTacToeBoard();
