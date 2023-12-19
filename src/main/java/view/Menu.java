@@ -298,7 +298,7 @@ public class Menu {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken);
                 movesLeft = ticTacToeGame.calculateNumberOfMovesTillGameOver(movesLeft);
-                printTicTacToeBoard();
+//                printTicTacToeBoard();
             } else {
                 isATie = true;
             }
@@ -330,15 +330,18 @@ public class Menu {
         System.out.println("    Do you want to play as X's or O's?");
         System.out.println();
         System.out.println("    Enter ( X ) or ( O ): ");
+        System.out.println();
 
         chooseXorO = in.nextLine().toUpperCase();
 
         if (chooseXorO.equals("X")) {
             ticTacToeGame.setPlayerChoice('X');
             ticTacToeGame.setPostmanChoice('O');
+            System.out.println("You have chosen to play as X's!");
         } else if (chooseXorO.equals("O")) {
             ticTacToeGame.setPlayerChoice('O');
             ticTacToeGame.setPostmanChoice('X');
+            System.out.println("You have chosen to play as O's!");
         } else {
             tellUserInvalidSelection();
         }
