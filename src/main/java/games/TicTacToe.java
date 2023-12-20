@@ -36,9 +36,7 @@ public class TicTacToe extends Game{
     public TicTacToe() {
         super(9);
     }
-
-    //TODO break this up in to isThreeXsInARow and isThreeOsInARow then use
-    // isAWinner to return isThreeXsInARow || isThreeOsInARow
+    
     @Override
     public boolean isAWinner() {
 
