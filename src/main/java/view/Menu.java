@@ -289,24 +289,27 @@ public class Menu {
 
         playerAndPostmanChooseXorO();
 
-        while (!isAWinner && !isATie) {
+        while (!ticTacToeGame.isAWinner() && !ticTacToeGame.isATie()) {
             //TODO need to check this after EACH player move AND after EACH postman move
-            isAWinner = isThreeInARow(isAWinner);
 
             playerTicTacToeMove();
             playerTicTacToeMoveLogic(spotTaken, movesLeft);
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
-            //TODO double triple check some of the logic you're playing with here
+            if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
+                break;
+            }
+
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!isNoMoreMovesPossible) {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken, movesLeft);
-            } else {
-                //TODO Why saying not used?
-                isATie = true;
-                break;
-            }
+
+                if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
+                    break;
+                }
+
+            } 
         }
 
         if (isAWinner) {
@@ -650,14 +653,6 @@ public class Menu {
         }
 
         return board;
-    }
-
-    public boolean isThreeInARow(boolean isAWinner) {
-        if (ticTacToeGame.isThreeXsInARow() || ticTacToeGame.isThreeOsInARow()) {
-            isAWinner = true;
-        }
-
-        return isAWinner;
     }
 
     public void resetTicTacToeGame() {

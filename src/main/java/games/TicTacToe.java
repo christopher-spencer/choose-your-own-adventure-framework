@@ -36,7 +36,7 @@ public class TicTacToe extends Game{
     public TicTacToe() {
         super(9);
     }
-    
+
     @Override
     public boolean isAWinner() {
 
