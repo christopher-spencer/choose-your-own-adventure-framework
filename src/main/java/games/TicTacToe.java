@@ -27,6 +27,8 @@ public class TicTacToe extends Game{
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
 
+    //TODO check into this just for curiosity's sake (used in setter but not getter)?
+
     private boolean threeXsInARow = false;
     private boolean threeOsInARow = false;
 
