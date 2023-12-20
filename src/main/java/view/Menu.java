@@ -293,7 +293,7 @@ public class Menu {
             //TODO need to check this after EACH player move AND after EACH postman move
 
             playerTicTacToeMove();
-            playerTicTacToeMoveLogic(spotTaken, movesLeft);
+            playerTicTacToeMoveLogic(spotTaken);
             spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
@@ -303,7 +303,7 @@ public class Menu {
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!ticTacToeGame.isNoMoreMovesPossible()) {
                 postmanTicTacToeMove(spotTaken);
-                postmanTicTacToeMoveLogic(spotTaken, movesLeft);
+                postmanTicTacToeMoveLogic(spotTaken);
                 spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
                 if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
@@ -383,7 +383,7 @@ public class Menu {
 
     //TODO move TTTMoveLogic to TTTGame Class (?)
     //TODO variables for magic numbers
-    public void playerTicTacToeMoveLogic(List<Integer> spotTaken, int movesLeft) {
+    public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
         boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
@@ -527,7 +527,7 @@ public class Menu {
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
     }
 
-    public void postmanTicTacToeMoveLogic(List<Integer> spotTaken, int movesLeft) {
+    public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
         boolean isPostmanXs = ticTacToeGame.getPostmanChoice() == 'X';
         boolean isPostmanOs = ticTacToeGame.getPostmanChoice() == 'O';
