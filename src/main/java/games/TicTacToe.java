@@ -73,6 +73,7 @@ public class TicTacToe extends Game{
        numberOfMovesTillGameOver--;
     }
 
+    //TODO better in SETTER for SpotTaken?
     public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
 
         spotTaken = getSpotTaken();
