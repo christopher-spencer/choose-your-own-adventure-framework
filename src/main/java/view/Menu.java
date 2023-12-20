@@ -271,12 +271,6 @@ public class Menu {
      *********************************************************************************
      */
 
-    // TODO Game asks for X or O choice twice, and can be changed on second ask
-    // TODO if three in a row/winner the game just keeps asking for selection
-    //  even after all spaces filled
-
-    //TODO Game ALSO asks for each move twice
-
     public void ticTacToeGame() {
 
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
@@ -324,6 +318,7 @@ public class Menu {
         resetTicTacToeGame();
         spotTaken.clear();
     }
+
     //TODO currently if you make invalid selection it tells you but doesn't ask again
     // so the whole game just continues to spit out invalid selection
     public void playerAndPostmanChooseXorO() {
@@ -354,7 +349,6 @@ public class Menu {
         }
     }
 
-    //TODO move TTTMoveLogic to TTTGame Class (?)
     //TODO variables for magic numbers
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
