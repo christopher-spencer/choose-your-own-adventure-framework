@@ -20,7 +20,7 @@ public class Battleship extends Game {
     boolean postmanSubmarineSunk;
     boolean postmanPatrolBoatSunk;
 
-    // TODO add a subclass for each ship?
+    // TODO add a subclass for each ship? Could override ship sunk method in each ship subclass
 
     // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
 

@@ -690,7 +690,7 @@ public class Menu {
      */
 
     public void battleshipGame() {
-        
+
     }
 
     /*
