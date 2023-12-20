@@ -20,15 +20,22 @@ public class Battleship extends Game {
     boolean postmanSubmarineSunk;
     boolean postmanPatrolBoatSunk;
 
+    // TODO need to be able to select where you place your ships at the beginning of the game
+    //  and random placement selector for Postman ships on their own board
+
     // TODO add a subclass for each ship? Could override ship sunk method in each ship subclass
 
     // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
 
-    // Keep track of every single battleship location
-    // Keep track of misses vs hits
-    // If right number of hits, sink ships
+    //TODO for player, need a visual grid to record both your moves on their grid
+    // and to visualize your own grid of ships
+    // (2 versions of same graph where 1 shows the ships and the other just shows miss/hits)
 
-    // Player wins when all opponent's ships have sunk
+    // TODO Keep track of every single battleship location
+    // TODO Keep track of misses vs hits
+    // TODO If right number of hits, sink ships
+
+    // TODO Player wins when all opponent's ships have sunk or vice-versa
 
     public Battleship() {
 
