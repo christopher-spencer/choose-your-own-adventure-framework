@@ -3,10 +3,22 @@ package games;
 public class Battleship {
 
     int carrier = 5;
-    int battleShip = 4;
+    int battleship = 4;
     int destroyer = 3;
     int submarine = 3;
     int patrolBoat = 2;
+
+    boolean playerCarrierSunk;
+    boolean playerBattleshipSunk;
+    boolean playerDestroyerSunk;
+    boolean playerSubmarineSunk;
+    boolean playerPatrolBoatSunk;
+
+    boolean postmanCarrierSunk;
+    boolean postmanBattleshipSunk;
+    boolean postmanDestroyerSunk;
+    boolean postmanSubmarineSunk;
+    boolean postmanPatrolBoatSunk;
 
     // Something similar to TicTacToe where need to figure out CLI graph will work
 
