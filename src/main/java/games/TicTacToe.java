@@ -32,7 +32,7 @@ public class TicTacToe extends Game{
 
     List<Integer> spotTaken = new ArrayList<>();
 
-    // TODO Attempting to snag version of numberOfMovesTillGameOver from game class
+    // Snagging numberOfMovesTillGameOver variable from game class
     public TicTacToe() {
         super(9);
     }
