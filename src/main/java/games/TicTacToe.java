@@ -97,7 +97,6 @@ public class TicTacToe extends Game{
         return isAWinner;
     }
 
-    //TODO fix recursion calls and just return isAWinner() && playerChoice == 'X' && isThreeXsInARow(), etc.
     @Override
     public boolean isPlayerWin() {
 
@@ -108,13 +107,8 @@ public class TicTacToe extends Game{
     @Override
     public boolean isPostmanWin() {
 
-        if (isAWinner() && postmanChoice == 'X' && isThreeXsInARow()) {
-            return isPostmanWin();
-        } else if (isAWinner() && postmanChoice == 'O' && isThreeOsInARow()) {
-            return isPostmanWin();
-        } else {
-            return false;
-        }
+       return isAWinner() && postmanChoice == 'X' && isThreeXsInARow()
+                || isAWinner() && postmanChoice == 'O' && isThreeOsInARow();
     }
 
     @Override
