@@ -1,5 +1,6 @@
 package view;
 
+import games.Battleship;
 import games.Hangman;
 import games.RockPaperScissorsGame;
 import games.TicTacToe;
@@ -13,6 +14,7 @@ public class Menu {
     private RockPaperScissorsGame rpsGame = new RockPaperScissorsGame();
     private Hangman hangmanGame = new Hangman();
     private TicTacToe ticTacToeGame = new TicTacToe();
+    private Battleship battleshipGame = new Battleship();
 
     /*
      *********************************************************************************
@@ -679,6 +681,16 @@ public class Menu {
         ticTacToeGame.setThreeXsInARow(false);
         ticTacToeGame.setThreeOsInARow(false);
         ticTacToeGame.setNumberOfMovesTillGameOver(9);
+    }
+
+    /*
+     *********************************************************************************
+     * ~ * ~ * BATTLESHIP GAME SECTION * ~ * ~ *
+     *********************************************************************************
+     */
+
+    public void battleshipGame() {
+        
     }
 
     /*

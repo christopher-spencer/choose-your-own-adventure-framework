@@ -1,6 +1,6 @@
 package games;
 
-public class Battleship {
+public class Battleship extends Game {
 
     int carrier = 5;
     int battleship = 4;
@@ -20,7 +20,9 @@ public class Battleship {
     boolean postmanSubmarineSunk;
     boolean postmanPatrolBoatSunk;
 
-    // Something similar to TicTacToe where need to figure out CLI graph will work
+    // TODO add a subclass for each ship?
+
+    // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
 
     // Keep track of every single battleship location
     // Keep track of misses vs hits
@@ -28,5 +30,8 @@ public class Battleship {
 
     // Player wins when all opponent's ships have sunk
 
-    // Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
+    public Battleship() {
+
+    }
+
 }
