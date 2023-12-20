@@ -69,10 +69,8 @@ public class TicTacToe extends Game{
         return isNoMoreMovesPossible() && !isAWinner();
     }
 
-    public int calculateNumberOfMovesTillGameOver(int movesLeft) {
-       movesLeft = numberOfMovesTillGameOver--;
-
-        return movesLeft;
+    public void subtractFromNumberOfMovesTillGameOver() {
+       numberOfMovesTillGameOver--;
     }
 
     public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
