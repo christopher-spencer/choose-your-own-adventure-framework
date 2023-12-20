@@ -42,61 +42,7 @@ public class TicTacToe extends Game{
     @Override
     public boolean isAWinner() {
 
-        boolean isAWinner = false;
-
-        if (isTopLeftX() && isTopMiddleX() && isTopRightX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isTopLeftO() && isTopMiddleO() && isTopRightO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isMiddleLeftX() && isMiddleMiddleX() && isMiddleRightX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isMiddleLeftO() && isMiddleMiddleO() && isMiddleRightO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isBottomLeftX() && isBottomMiddleX() && isBottomRightX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isBottomLeftO() && isBottomMiddleO() && isBottomRightO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isTopLeftX() && isMiddleLeftX() && isBottomLeftX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isTopLeftO() && isMiddleLeftO() && isBottomLeftO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isTopMiddleX() && isMiddleMiddleX() && isBottomMiddleX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isTopMiddleO() && isMiddleMiddleO() && isBottomMiddleO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isTopRightX() && isMiddleRightX() && isBottomRightX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isTopRightO() && isMiddleRightO() && isBottomRightO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isTopLeftX() && isMiddleMiddleX() && isBottomRightX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isTopLeftO() && isMiddleMiddleO() && isBottomRightO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        } else if (isTopRightX() && isMiddleMiddleX() && isBottomLeftX()) {
-            isAWinner = true;
-            threeXsInARow = true;
-        } else if (isTopRightO() && isMiddleMiddleO() && isBottomLeftO()) {
-            isAWinner = true;
-            threeOsInARow = true;
-        }
-
-        return isAWinner;
-
-//        return isThreeXsInARow() || isThreeOsInARow();
+        return isThreeXsInARow() || isThreeOsInARow();
     }
 
     @Override
@@ -238,11 +184,29 @@ public class TicTacToe extends Game{
 
     public void setBottomRightO(boolean isBottomRightO) { this.isBottomRightO = isBottomRightO; }
 
-    public boolean isThreeXsInARow() { return threeXsInARow; }
+    public boolean isThreeXsInARow() {
+        return isTopLeftX() && isTopMiddleX() && isTopRightX()
+                || isMiddleLeftX() && isMiddleMiddleX() && isMiddleRightX()
+                || isBottomLeftX() && isBottomMiddleX() && isBottomRightX()
+                || isTopLeftX() && isMiddleLeftX() && isBottomLeftX()
+                || isTopMiddleX() && isMiddleMiddleX() && isBottomMiddleX()
+                || isTopRightX() && isMiddleRightX() && isBottomRightX()
+                || isTopLeftX() && isMiddleMiddleX() && isBottomRightX()
+                || isTopRightX() && isMiddleMiddleX() && isBottomLeftX();
+    }
 
     public void setThreeXsInARow(boolean threeXsInARow) { this.threeXsInARow = threeXsInARow; }
 
-    public boolean isThreeOsInARow() { return threeOsInARow; }
+    public boolean isThreeOsInARow() {
+        return isTopLeftO() && isTopMiddleO() && isTopRightO()
+                || isMiddleLeftO() && isMiddleMiddleO() && isMiddleRightO()
+                || isBottomLeftO() && isBottomMiddleO() && isBottomRightO()
+                || isTopLeftO() && isMiddleLeftO() && isBottomLeftO()
+                || isTopMiddleO() && isMiddleMiddleO() && isBottomMiddleO()
+                || isTopRightO() && isMiddleRightO() && isBottomRightO()
+                || isTopLeftO() && isMiddleMiddleO() && isBottomRightO()
+                || isTopRightO() && isMiddleMiddleO() && isBottomLeftO();
+    }
 
     public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
 
