@@ -359,17 +359,6 @@ public class Menu {
         }
     }
 
-    public int postmanTicTacToeMove(List<Integer> spotTaken) {
-        Random random = new Random();
-        int postmanMove = random.nextInt(9) + 1;
-
-        while (spotTaken.contains(postmanMove)) {
-            postmanMove = random.nextInt(9) + 1;
-        }
-
-        return postmanMove;
-    }
-
     //TODO move TTTMoveLogic to TTTGame Class (?)
     //TODO variables for magic numbers
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
@@ -523,6 +512,17 @@ public class Menu {
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
+    }
+
+    public int postmanTicTacToeMove(List<Integer> spotTaken) {
+        Random random = new Random();
+        int postmanMove = random.nextInt(9) + 1;
+
+        while (spotTaken.contains(postmanMove)) {
+            postmanMove = random.nextInt(9) + 1;
+        }
+
+        return postmanMove;
     }
 
     public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
