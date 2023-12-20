@@ -101,13 +101,8 @@ public class TicTacToe extends Game{
     @Override
     public boolean isPlayerWin() {
 
-        if (isAWinner() && playerChoice == 'X' && isThreeXsInARow()) {
-            return isPlayerWin();
-        } else if (isAWinner() && playerChoice == 'O' && isThreeOsInARow()) {
-            return isPlayerWin();
-        } else {
-            return false;
-        }
+        return isAWinner() && playerChoice == 'X' && isThreeXsInARow()
+                || isAWinner() && playerChoice == 'O' && isThreeOsInARow();
     }
 
     @Override
