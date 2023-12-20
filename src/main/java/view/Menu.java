@@ -294,7 +294,6 @@ public class Menu {
 
             playerTicTacToeMove();
             playerTicTacToeMoveLogic(spotTaken);
-            spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
             if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                 break;
@@ -304,7 +303,6 @@ public class Menu {
             if (!ticTacToeGame.isNoMoreMovesPossible()) {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken);
-                spotTaken = ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
                 if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                     break;
@@ -525,6 +523,8 @@ public class Menu {
         }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
+        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
+
     }
 
     public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
@@ -571,6 +571,8 @@ public class Menu {
         }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
+        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
+
     }
 
         public void printTicTacToeBoard() {
