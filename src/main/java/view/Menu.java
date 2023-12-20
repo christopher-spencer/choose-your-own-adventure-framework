@@ -278,13 +278,7 @@ public class Menu {
     //TODO Game ALSO asks for each move twice
 
     public void ticTacToeGame() {
-
-        boolean isAWinner = ticTacToeGame.isAWinner();
-        boolean isPlayerWin = ticTacToeGame.isPlayerWin();
-        boolean isPostmanWin = ticTacToeGame.isPostmanWin();
-        boolean isNoMoreMovesPossible = ticTacToeGame.isNoMoreMovesPossible();
-        boolean isATie = ticTacToeGame.isATie();
-        int movesLeft = ticTacToeGame.getNumberOfMovesTillGameOver();
+        
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
 
         playerAndPostmanChooseXorO();
