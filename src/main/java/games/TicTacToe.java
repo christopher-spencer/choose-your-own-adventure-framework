@@ -95,6 +95,8 @@ public class TicTacToe extends Game{
         }
 
         return isAWinner;
+
+//        return isThreeXsInARow() || isThreeOsInARow();
     }
 
     @Override
