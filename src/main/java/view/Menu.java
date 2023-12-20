@@ -278,7 +278,7 @@ public class Menu {
     //TODO Game ALSO asks for each move twice
 
     public void ticTacToeGame() {
-        
+
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
 
         playerAndPostmanChooseXorO();
@@ -324,7 +324,8 @@ public class Menu {
         resetTicTacToeGame();
         spotTaken.clear();
     }
-
+    //TODO currently if you make invalid selection it tells you but doesn't ask again
+    // so the whole game just continues to spit out invalid selection
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
 
