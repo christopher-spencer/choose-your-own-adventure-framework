@@ -111,6 +111,11 @@ public class Menu {
             System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
             ticTacToeGame();
         }
+
+//        if (randomNumber == 3) {
+//            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills it with water, hops in, and beckons you to join him.");
+//            battleshipGame();
+//        }
     }
 
     /*
