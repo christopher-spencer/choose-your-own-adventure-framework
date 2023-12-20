@@ -291,7 +291,6 @@ public class Menu {
 
         while (!ticTacToeGame.isAWinner() && !ticTacToeGame.isATie()) {
 
-            playerTicTacToeMove();
             playerTicTacToeMoveLogic(spotTaken);
 
             if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
@@ -360,17 +359,6 @@ public class Menu {
         }
     }
 
-    public String playerTicTacToeMove() {
-
-        System.out.println("    What position do you choose?");
-        System.out.println();
-        System.out.println("    Enter one of the following number inputs:");
-        System.out.println();
-        printTicTacToeBoard();
-        System.out.println();
-        return in.nextLine();
-    }
-
     public int postmanTicTacToeMove(List<Integer> spotTaken) {
         Random random = new Random();
         int postmanMove = random.nextInt(9) + 1;
@@ -392,7 +380,14 @@ public class Menu {
 
         while (!isValidMove) {
 
-            playerMove = Integer.parseInt(playerTicTacToeMove());
+            System.out.println("    What position do you choose?");
+            System.out.println();
+            System.out.println("    Enter one of the following number inputs:");
+            System.out.println();
+            printTicTacToeBoard();
+            System.out.println();
+
+            playerMove = Integer.parseInt(in.nextLine());
 
             if (playerMove == 1 && isPlayerXs) {
                 if (!spotTaken.contains(1)) {
