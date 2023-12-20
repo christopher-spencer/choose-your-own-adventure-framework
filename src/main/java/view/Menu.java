@@ -317,6 +317,8 @@ public class Menu {
 
         resetTicTacToeGame();
         spotTaken.clear();
+
+        itGoesOnAndOnMyFriends();
     }
 
     //TODO currently if you make invalid selection it tells you but doesn't ask again
