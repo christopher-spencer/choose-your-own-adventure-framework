@@ -692,12 +692,13 @@ public class Menu {
      */
 
     public void battleshipGame() {
+        // TODO feed these to the print board and logic methods to keep track of each
+        String[][] playerBoard;
+        String[][] playerOpponentDisplay;
+        String[][] postmanBoard;
+        String[][] postmanOpponentDisplay;
 
     }
-
-    // TODO split this into separate methods for opponentDisplayBoard and displayBoard
-
-    // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
 
     // TODO instead of a million booleans, if board[1][1] !=  A1 (?)
 

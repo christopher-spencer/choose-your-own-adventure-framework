@@ -7,11 +7,11 @@ public class Battleship extends Game {
     private static final String EMPTY = "  ";
     private static final String BOAT = "[]";
 
-    private int carrierHealthPoints = 5;
-    private int battleshipHealthPoints = 4;
-    private int destroyerHealthPoints = 3;
-    private int submarineHealthPoints = 3;
-    private int patrolBoatHealthPoints = 2;
+    private int carrierHP = 5;
+    private int battleshipHP = 4;
+    private int destroyerHP = 3;
+    private int submarineHP = 3;
+    private int patrolBoatHP = 2;
 
     private boolean playerCarrierSunk = false;
     private boolean playerBattleshipSunk = false;
