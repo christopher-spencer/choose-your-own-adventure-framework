@@ -709,8 +709,11 @@ public class Menu {
         };
 
         // TODO bring in all the boards and use if logic to determine which to print
-//        playerBoard = getPlayerBattleshipPositions(playerBoard);
-//        postmanBoard = getPostmanBattleshipPositions(postmanBoard)
+//        playerMoveBoard = getPlayerBattleshipPositions(playerMoveBoard);
+//        playerDisplayBoard = getPlayerBattleshipPositions(playerDisplayBoard);
+//        postmanMoveBoard = getPostmanBattleshipPositions(postmanMoveBoard)
+//        postmanDisplayBoard = getPostmanBattleshipPositions(postmanDisplayBoard)
+
 
         for (int row = 0; row < 11; row++) {
             System.out.print("          ");
