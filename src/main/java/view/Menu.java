@@ -701,10 +701,6 @@ public class Menu {
 
     // TODO instead of a million booleans, if board[1][1] !=  A1 (?)
 
-    // [][][] to display boats
-    // XX to display hits
-    // () to display misses
-
     public void battleshipOpponentDisplay() {
         String[][] board = {
             {" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"},

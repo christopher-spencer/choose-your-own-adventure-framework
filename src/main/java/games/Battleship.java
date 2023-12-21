@@ -2,6 +2,11 @@ package games;
 
 public class Battleship extends Game {
 
+    private static final String HIT = "XX";
+    private static final String MISS = "()";
+    private static final String EMPTY = "  ";
+    private static final String BOAT = "[]";
+
     private int carrierHealthPoints = 5;
     private int battleshipHealthPoints = 4;
     private int destroyerHealthPoints = 3;
