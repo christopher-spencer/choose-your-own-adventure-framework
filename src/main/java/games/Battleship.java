@@ -2,11 +2,11 @@ package games;
 
 public class Battleship extends Game {
 
-    int carrier = 5;
-    int battleship = 4;
-    int destroyer = 3;
-    int submarine = 3;
-    int patrolBoat = 2;
+    int carrierHealthPoints = 5;
+    int battleshipHealthPoints = 4;
+    int destroyerHealthPoints = 3;
+    int submarineHealthPoints = 3;
+    int patrolBoatHealthPoints = 2;
 
     boolean playerCarrierSunk;
     boolean playerBattleshipSunk;
