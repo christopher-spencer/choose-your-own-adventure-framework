@@ -42,4 +42,63 @@ public class Battleship extends Game {
 
     }
 
+    public int getCarrierHP() { return carrierHP; }
+
+    public void setCarrierHP(int carrierHP) { this.carrierHP = carrierHP; }
+
+    public int getBattleshipHP() { return battleshipHP; }
+
+    public void setBattleshipHP(int battleshipHP) { this.battleshipHP = battleshipHP; }
+
+    public int getDestroyerHP() { return destroyerHP; }
+
+    public void setDestroyerHP(int destroyerHP) { this.destroyerHP = destroyerHP; }
+
+    public int getSubmarineHP() { return submarineHP; }
+
+    public void setSubmarineHP(int submarineHP) { this.submarineHP = submarineHP; }
+
+    public int getPatrolBoatHP() { return patrolBoatHP; }
+
+    public void setPatrolBoatHP(int patrolBoatHP) { this.patrolBoatHP = patrolBoatHP; }
+
+    public boolean isPlayerCarrierSunk() { return playerCarrierSunk; }
+
+    public void setPlayerCarrierSunk(boolean playerCarrierSunk) { this.playerCarrierSunk = playerCarrierSunk; }
+
+    public boolean isPlayerBattleshipSunk() { return playerBattleshipSunk; }
+
+    public void setPlayerBattleshipSunk(boolean playerBattleshipSunk) { this.playerBattleshipSunk = playerBattleshipSunk; }
+
+    public boolean isPlayerDestroyerSunk() { return playerDestroyerSunk; }
+
+    public void setPlayerDestroyerSunk(boolean playerDestroyerSunk) { this.playerDestroyerSunk = playerDestroyerSunk; }
+
+    public boolean isPlayerSubmarineSunk() { return playerSubmarineSunk; }
+
+    public void setPlayerSubmarineSunk(boolean playerSubmarineSunk) { this.playerSubmarineSunk = playerSubmarineSunk; }
+
+    public boolean isPlayerPatrolBoatSunk() { return playerPatrolBoatSunk; }
+
+    public void setPlayerPatrolBoatSunk(boolean playerPatrolBoatSunk) { this.playerPatrolBoatSunk = playerPatrolBoatSunk; }
+
+    public boolean isPostmanCarrierSunk() { return postmanCarrierSunk; }
+
+    public void setPostmanCarrierSunk(boolean postmanCarrierSunk) { this.postmanCarrierSunk = postmanCarrierSunk; }
+
+    public boolean isPostmanBattleshipSunk() { return postmanBattleshipSunk; }
+
+    public void setPostmanBattleshipSunk(boolean postmanBattleshipSunk) { this.postmanBattleshipSunk = postmanBattleshipSunk; }
+
+    public boolean isPostmanDestroyerSunk() { return postmanDestroyerSunk; }
+
+    public void setPostmanDestroyerSunk(boolean postmanDestroyerSunk) { this.postmanDestroyerSunk = postmanDestroyerSunk; }
+
+    public boolean isPostmanSubmarineSunk() { return postmanSubmarineSunk; }
+
+    public void setPostmanSubmarineSunk(boolean postmanSubmarineSunk) { this.postmanSubmarineSunk = postmanSubmarineSunk; }
+
+    public boolean isPostmanPatrolBoatSunk() { return postmanPatrolBoatSunk; }
+
+    public void setPostmanPatrolBoatSunk(boolean postmanPatrolBoatSunk) { this.postmanPatrolBoatSunk = postmanPatrolBoatSunk; }
 }

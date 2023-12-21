@@ -693,10 +693,10 @@ public class Menu {
 
     public void battleshipGame() {
         // TODO feed these to the print board and logic methods to keep track of each
-        String[][] playerBoard;
-        String[][] playerOpponentDisplay;
-        String[][] postmanBoard;
-        String[][] postmanOpponentDisplay;
+        String[][] playerBoard = new String[11][11];
+        String[][] playerOpponentDisplay = new String[11][11];
+        String[][] postmanBoard = new String[11][11];
+        String[][] postmanOpponentDisplay = new String[11][11];
 
     }
 
@@ -760,7 +760,6 @@ public class Menu {
                 System.out.println("        ---------------------------------------------------------------");
             }
         }
-
     }
 
     /*
