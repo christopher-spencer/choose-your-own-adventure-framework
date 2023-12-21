@@ -695,7 +695,7 @@ public class Menu {
 
     public void printBattleshipBoard() {
         String[][] board = {
-            {" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"},
+            {" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"},
             {"A", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"},
             {"B", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"},
             {"C", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10"},
@@ -707,6 +707,24 @@ public class Menu {
             {"I", "I1", "I2", "I3", "I4", "I5", "I6", "I7", "I8", "I9", "I10"},
             {"J", "J1", "J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "J10"},
         };
+
+        // TODO bring in all the boards and use if logic to determine which to print
+//        playerBoard = getPlayerBattleshipPositions(playerBoard);
+//        postmanBoard = getPostmanBattleshipPositions(postmanBoard)
+
+        for (int row = 0; row < 11; row++) {
+            System.out.print("          ");
+            for (int column = 0; column < 11; column++) {
+                System.out.print(board[row][column]);
+                if (column < 10) {
+                    System.out.print(" | ");
+                }
+            }
+            System.out.println();
+            if (row < 10) {
+                System.out.println("        -----------------------------------------------------------");
+            }
+        }
 
     }
 
