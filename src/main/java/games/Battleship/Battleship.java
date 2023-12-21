@@ -1,6 +1,10 @@
 package games.Battleship;
 
+import games.Battleship.Ship.Ship;
 import games.Game;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Battleship extends Game {
 
@@ -8,6 +12,8 @@ public class Battleship extends Game {
     private static final String MISS = "()";
     private static final String EMPTY = "  ";
     private static final String BOAT = "[]";
+
+    private List<Ship> ships;
 
     private int carrierHP = 5;
     private int battleshipHP = 4;
@@ -41,7 +47,16 @@ public class Battleship extends Game {
     // TODO Player wins when all opponent's ships have sunk or vice-versa
 
     public Battleship() {
+        ships = new ArrayList<>();
+        initializeShips();
+    }
 
+    private void initializeShips() {
+        ships.add(new Ship("Carrier", 5));
+        ships.add(new Ship("Battleship", 4));
+        ships.add(new Ship("Destroyer", 3));
+        ships.add(new Ship("Submarine", 3));
+        ships.add(new Ship("PatrolBoat", 2));
     }
 
     @Override
