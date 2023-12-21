@@ -23,10 +23,6 @@ public class Battleship extends Game {
     // TODO need to be able to select where you place your ships at the beginning of the game
     //  and random placement selector for Postman ships on their own board
 
-    // TODO add a subclass for each ship? Could override ship sunk method in each ship subclass
-
-    // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
-
     //TODO for player, need a visual grid to record both your moves on their grid
     // and to visualize your own grid of ships
     // (2 versions of same graph where 1 shows the ships and the other just shows miss/hits)

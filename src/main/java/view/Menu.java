@@ -693,6 +693,10 @@ public class Menu {
 
     }
 
+    // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
+
+    // TODO instead of a million booleans, if board[1][1] !=  A1 (?)
+
     public void printBattleshipBoard() {
         String[][] board = {
             {" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"},
