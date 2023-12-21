@@ -60,5 +60,14 @@ public class Battleship extends Game {
         //TODO Update with hit and miss logic
         return isPlayerWin() || isPostmanWin();
     }
-    
+
+    @Override
+    public boolean isPlayerWin() {
+        return isShipSunk("Postman", "Carrier")
+                && isShipSunk("Postman", "Battleship")
+                && isShipSunk("Postman", "Destroyer")
+                && isShipSunk("Postman", "Submarine")
+                && isShipSunk("Postman", "PatrolBoat");
+    }
+
 }
