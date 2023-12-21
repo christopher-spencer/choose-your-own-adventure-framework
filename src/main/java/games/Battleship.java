@@ -42,6 +42,12 @@ public class Battleship extends Game {
 
     }
 
+    @Override
+    public boolean isAWinner() {
+        //TODO Update with hit and miss logic
+        return isPlayerWin() || isPostmanWin();
+    }
+
     public int getCarrierHP() { return carrierHP; }
 
     public void setCarrierHP(int carrierHP) { this.carrierHP = carrierHP; }
