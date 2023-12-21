@@ -2,12 +2,14 @@ package games.Battleship.Ship;
 
 public class Ship {
 
+    private String player;
     private String name;
     private int size;
     private int hitPoints;
     private boolean isSunk;
 
-    public Ship(String name, int size) {
+    public Ship(String player, String name, int size) {
+        this.player = player;
         this.name = name;
         this.size = size;
         this.hitPoints = size;
@@ -20,6 +22,10 @@ public class Ship {
             isSunk = true;
         }
     }
+
+    public String getPlayer() { return player; }
+
+    public void setPlayer(String player) { this.player = player; }
 
     public String getName() { return name; }
 

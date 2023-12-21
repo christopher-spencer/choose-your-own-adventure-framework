@@ -52,16 +52,21 @@ public class Battleship extends Game {
     }
 
     private void initializeShips() {
-        ships.add(new Ship("Carrier", 5));
-        ships.add(new Ship("Battleship", 4));
-        ships.add(new Ship("Destroyer", 3));
-        ships.add(new Ship("Submarine", 3));
-        ships.add(new Ship("PatrolBoat", 2));
+        ships.add(new Ship("User", "Carrier", 5));
+        ships.add(new Ship("User", "Battleship", 4));
+        ships.add(new Ship("User", "Destroyer", 3));
+        ships.add(new Ship("User", "Submarine", 3));
+        ships.add(new Ship("User", "PatrolBoat", 2));
+        ships.add(new Ship("Postman", "Carrier", 5));
+        ships.add(new Ship("Postman", "Battleship", 4));
+        ships.add(new Ship("Postman", "Destroyer", 3));
+        ships.add(new Ship("Postman", "Submarine", 3));
+        ships.add(new Ship("Postman", "PatrolBoat", 2));
     }
 
-    public boolean isShipSunk(String shipName) {
+    public boolean isShipSunk(String player, String shipName) {
         for (Ship ship : ships) {
-            if (ship.getName().equals(shipName)) {
+            if (ship.getPlayer().equals(player) && ship.getName().equals(shipName)) {
                 return ship.isSunk();
             }
         }
