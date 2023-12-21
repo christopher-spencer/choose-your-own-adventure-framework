@@ -685,7 +685,7 @@ public class Menu {
 
     /*
      *********************************************************************************
-     * ~ * ~ * BATTLESHIP GAME SECTION * ~ * ~ *
+                        * ~ * ~ * BATTLESHIP GAME SECTION * ~ * ~ *
      *********************************************************************************
      */
 
@@ -693,12 +693,18 @@ public class Menu {
 
     }
 
+    // TODO split this into separate methods for opponentDisplayBoard and displayBoard
+
     // TODO Need a 2D Array for PlayerBoard and PostmanBoard, but only print PlayerBoard
 
     // TODO instead of a million booleans, if board[1][1] !=  A1 (?)
 
-    public void printBattleshipBoard() {
-        String[][] opponentBoard = {
+    // [][][] to display boats
+    // XX to display hits
+    // () to display misses
+
+    public void battleshipOpponentDisplay() {
+        String[][] board = {
             {" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"},
             {"A", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"},
             {"B", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"},
@@ -712,9 +718,10 @@ public class Menu {
             {"J", "J1", "J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "J10"},
         };
 
-        // [][][] to display boats
-        // XX to display hits
-        // () to display misses
+        battleshipPrintBoard(board);
+    }
+
+    public void battleshipBoardDisplay() {
 
         String[][] board = {
             {" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"},
@@ -730,6 +737,10 @@ public class Menu {
             {"J", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
         };
 
+        battleshipPrintBoard(board);
+    }
+
+    public void battleshipPrintBoard(String[][] board) {
         // TODO bring in all the boards and use if logic to determine which to print
 //        playerMoveBoard = getPlayerBattleshipPositions(playerMoveBoard);
 //        playerDisplayBoard = getPlayerBattleshipPositions(playerDisplayBoard);
