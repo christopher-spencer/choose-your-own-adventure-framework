@@ -654,6 +654,8 @@ public class Menu {
         return board;
     }
 
+    //TODO move to TTT Class
+
     public void resetTicTacToeGame() {
 
         ticTacToeGame.setPlayerChoice(' ');

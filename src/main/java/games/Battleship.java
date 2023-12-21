@@ -2,23 +2,23 @@ package games;
 
 public class Battleship extends Game {
 
-    int carrierHealthPoints = 5;
-    int battleshipHealthPoints = 4;
-    int destroyerHealthPoints = 3;
-    int submarineHealthPoints = 3;
-    int patrolBoatHealthPoints = 2;
+    private int carrierHealthPoints = 5;
+    private int battleshipHealthPoints = 4;
+    private int destroyerHealthPoints = 3;
+    private int submarineHealthPoints = 3;
+    private int patrolBoatHealthPoints = 2;
 
-    boolean playerCarrierSunk;
-    boolean playerBattleshipSunk;
-    boolean playerDestroyerSunk;
-    boolean playerSubmarineSunk;
-    boolean playerPatrolBoatSunk;
+    private boolean playerCarrierSunk = false;
+    private boolean playerBattleshipSunk = false;
+    private boolean playerDestroyerSunk = false;
+    private boolean playerSubmarineSunk = false;
+    private boolean playerPatrolBoatSunk = false;
 
-    boolean postmanCarrierSunk;
-    boolean postmanBattleshipSunk;
-    boolean postmanDestroyerSunk;
-    boolean postmanSubmarineSunk;
-    boolean postmanPatrolBoatSunk;
+    private boolean postmanCarrierSunk = false;
+    private boolean postmanBattleshipSunk = false;
+    private boolean postmanDestroyerSunk = false;
+    private boolean postmanSubmarineSunk = false;
+    private boolean postmanPatrolBoatSunk = false;
 
     // TODO need to be able to select where you place your ships at the beginning of the game
     //  and random placement selector for Postman ships on their own board
