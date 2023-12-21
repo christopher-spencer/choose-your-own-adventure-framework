@@ -698,6 +698,7 @@ public class Menu {
         String[][] playerOpponentDisplay = new String[11][11];
         String[][] postmanBoard = new String[11][11];
         String[][] postmanOpponentDisplay = new String[11][11];
+
     }
 
     // TODO instead of a million booleans, if board[1][1] !=  A1 (?)
