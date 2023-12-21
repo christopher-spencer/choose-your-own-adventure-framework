@@ -70,4 +70,13 @@ public class Battleship extends Game {
                 && isShipSunk("Postman", "PatrolBoat");
     }
 
+    @Override
+    public boolean isPostmanWin() {
+        return isShipSunk("User", "Carrier")
+                && isShipSunk("User", "Battleship")
+                && isShipSunk("User", "Destroyer")
+                && isShipSunk("User", "Submarine")
+                && isShipSunk("User", "PatrolBoat");
+    }
+
 }
