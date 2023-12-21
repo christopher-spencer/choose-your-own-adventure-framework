@@ -1,7 +1,5 @@
 package view;
 
-import games.RockPaperScissorsGame;
-
 public class ApplicationCLI {
 
     private Menu menu;

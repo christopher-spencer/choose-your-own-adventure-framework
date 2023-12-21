@@ -1,4 +1,6 @@
-package games;
+package games.Battleship;
+
+import games.Game;
 
 public class Battleship extends Game {
 

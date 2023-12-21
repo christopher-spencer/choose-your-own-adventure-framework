@@ -1,9 +1,11 @@
-package games;
+package games.TicTacToe;
+
+import games.Game;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicTacToe extends Game{
+public class TicTacToe extends Game {
 
     // TODO think about how to refactor TTTGame,
     //  such as simplifying massive list of booleans

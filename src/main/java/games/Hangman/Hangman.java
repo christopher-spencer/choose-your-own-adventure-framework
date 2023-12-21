@@ -1,4 +1,6 @@
-package games;
+package games.Hangman;
+
+import games.Game;
 
 import java.util.ArrayList;
 import java.util.List;

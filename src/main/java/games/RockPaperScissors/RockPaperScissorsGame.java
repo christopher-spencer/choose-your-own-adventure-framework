@@ -1,4 +1,6 @@
-package games;
+package games.RockPaperScissors;
+
+import games.Game;
 
 import java.util.Random;
 

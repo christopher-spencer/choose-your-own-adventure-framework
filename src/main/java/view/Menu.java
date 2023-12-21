@@ -1,9 +1,9 @@
 package view;
 
-import games.Battleship;
-import games.Hangman;
-import games.RockPaperScissorsGame;
-import games.TicTacToe;
+import games.Battleship.Battleship;
+import games.Hangman.Hangman;
+import games.RockPaperScissors.RockPaperScissorsGame;
+import games.TicTacToe.TicTacToe;
 
 import java.util.*;
 
