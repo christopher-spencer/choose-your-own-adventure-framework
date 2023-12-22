@@ -22,10 +22,8 @@ public class Battleship extends Game {
 
     // TODO Keep track of every single battleship location
     // TODO Keep track of misses vs hits
-    // TODO If right number of hits, sink ships
-
-    // TODO Player wins when all opponent's ships have sunk or vice-versa
-
+    // TODO If right number of hits, booleans sink ships
+    
     public Battleship() {
         ships = new ArrayList<>();
         initializeShips();
