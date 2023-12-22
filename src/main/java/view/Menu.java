@@ -708,9 +708,12 @@ public class Menu {
 
     public void initializeBoard(String[][] board) {
 
+        // Column Headers
         board[0] = new String[]{" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"};
 
+        // Row Headers initialized for the for loop
         char rowLabel = 'A';
+
         for (int i = 1; i < board.length; i++) {
             board[i][0] = String.valueOf(rowLabel++);
             Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
@@ -737,7 +740,9 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
-    public void placeShip(String player, String shipName, int startRow, int startCol, int endRow, int endCol) {
+    public void placeShip(String player, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
+        // TODO how to best access ships from Battleship or Ship class (?)
+
         // TODO Place ship on the board for loop (?)
         // TODO Update the board with ship positions
     }

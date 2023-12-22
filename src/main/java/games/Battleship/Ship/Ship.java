@@ -8,11 +8,11 @@ public class Ship {
     private int hitPoints;
     private boolean isSunk;
 
-    public Ship(String player, String shipName, int size) {
+    public Ship(String player, String shipName, int length) {
         this.player = player;
         this.shipName = shipName;
         this.length = length;
-        this.hitPoints = size;
+        this.hitPoints = length;
         this.isSunk = false;
     }
 
