@@ -740,6 +740,22 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
+    public void placeShip(String whoseShipIsIt, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
+        // TODO how to best access ships from Battleship or Ship class (?)
+        Ship ship = battleshipGame.getShipByOwnerAndShipName(whoseShipIsIt, shipName);
+        // TODO Update the board with ship positions
+        //  (think about easiest way for player to place this ship)
+        //  (Do we need rowEnd and columnEnd or something?)
+
+        if (ship != null) {
+            placeShip(whoseShipIsIt, shipName, shipLength, startRow, startCol, isHorizontal);
+        } else {
+            tellUserInvalidSelection();
+        }
+
+        // TODO Place ship on the board for loop (?)
+    }
+
     public void playerTurn(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
     }

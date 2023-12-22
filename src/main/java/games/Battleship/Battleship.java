@@ -42,12 +42,15 @@ public class Battleship extends Game {
         ships.add(new Ship("Postman", "PatrolBoat", 2));
     }
 
-    public void placeShip(String whoseShipIsIt, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
-        // TODO how to best access ships from Battleship or Ship class (?)
-        Ship ship = getShipByOwnerAndShipName(whoseShipIsIt, shipName);
-        // TODO Place ship on the board for loop (?)
-        // TODO Update the board with ship positions
-    }
+//    public void placeShip(String whoseShipIsIt, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
+//        Ship ship = getShipByOwnerAndShipName(whoseShipIsIt, shipName);
+//
+//        if (ship != null) {
+//            placeShip(whoseShipIsIt, shipName, shipLength, startRow, startCol, isHorizontal);
+//        } else {
+//            // Invalid Selection method (?)
+//        }
+//    }
 
     public boolean isShipSunk(String player, String shipName) {
         for (Ship ship : ships) {
