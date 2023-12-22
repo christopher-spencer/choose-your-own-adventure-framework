@@ -4,14 +4,14 @@ public class Ship {
 
     private String player;
     private String name;
-    private int size;
+    private int length;
     private int hitPoints;
     private boolean isSunk;
 
     public Ship(String player, String name, int size) {
         this.player = player;
         this.name = name;
-        this.size = size;
+        this.length = length;
         this.hitPoints = size;
         this.isSunk = false;
     }
@@ -31,9 +31,9 @@ public class Ship {
 
     public void setName(String name) { this.name = name; }
 
-    public int getSize() { return size; }
+    public int getLength() { return length; }
 
-    public void setSize(int size) { this.size = size; }
+    public void setLength(int size) { this.length = length; }
 
     public int getHitPoints() { return hitPoints; }
 
