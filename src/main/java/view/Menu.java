@@ -774,10 +774,36 @@ public class Menu {
         // TODO Update postmanBoard and playerOpponentDisplay
     }
 
+//    public void playerTurn(int row, int col) {
+//        String result = attack(postmanBoard, row, col);
+//        playerOpponentDisplay[row][col] = result;
+//        // Additional logic for checking if a ship is sunk
+//    }
+//
+//    private String attack(String[][] board, int row, int col) {
+//        if (board[row][col].equals(BOAT)) {
+//            board[row][col] = HIT;
+//            return HIT;
+//        } else {
+//            board[row][col] = MISS;
+//            return MISS;
+//        }
+//    }
+
     public void postmanTurn() {
         // TODO Randomized selector
         // TODO Update playerBoard and postmanOpponentDisplay
     }
+
+//    public void postmanTurn() {
+//        // AI logic to select target (row, col)
+//        int row = // AI logic to determine row
+//        int col = // AI logic to determine col
+//
+//                String result = attack(playerBoard, row, col);
+//        postmanOpponentDisplay[row][col] = result;
+//        // Additional logic for checking if a ship is sunk
+//    }
 
     /*
      *********************************************************************************
