@@ -23,7 +23,7 @@ public class Battleship extends Game {
     // TODO Keep track of every single battleship location
     // TODO Keep track of misses vs hits
     // TODO If right number of hits, booleans sink ships
-    
+
     public Battleship() {
         ships = new ArrayList<>();
         initializeShips();
@@ -44,7 +44,7 @@ public class Battleship extends Game {
 
     public boolean isShipSunk(String player, String shipName) {
         for (Ship ship : ships) {
-            if (ship.getPlayer().equals(player) && ship.getName().equals(shipName)) {
+            if (ship.getPlayer().equals(player) && ship.getShipName().equals(shipName)) {
                 return ship.isSunk();
             }
         }

@@ -737,6 +737,20 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
+    public void placeShip(String player, String shipName, int startRow, int startCol, int endRow, int endCol) {
+        // TODO Place ship on the board for loop (?)
+        // TODO Update the board with ship positions
+    }
+
+    public void playerTurn(int row, int col) {
+        // TODO Update postmanBoard and playerOpponentDisplay
+    }
+
+    public void postmanTurn() {
+        // TODO Randomized selector
+        // TODO Update playerBoard and postmanOpponentDisplay
+    }
+
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
