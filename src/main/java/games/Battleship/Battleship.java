@@ -79,4 +79,19 @@ public class Battleship extends Game {
                 && isShipSunk("User", "PatrolBoat");
     }
 
+    public static String getHITMarker() {
+        return HIT;
+    }
+
+    public static String getMissMarker() {
+        return MISS;
+    }
+
+    public static String getEmptyMarker() {
+        return EMPTY;
+    }
+
+    public static String getBoatMarker() {
+        return BOAT;
+    }
 }
