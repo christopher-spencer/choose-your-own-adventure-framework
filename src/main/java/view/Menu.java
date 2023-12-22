@@ -701,52 +701,10 @@ public class Menu {
 
     }
 
-//    public void battleshipBoardDisplay() {
-//
-//        String[][] board = {
-//            {" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"},
-//            {"A", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"B", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"C", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"D", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"E", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"F", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"G", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"H", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"I", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "},
-//            {"J", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "}
-//        };
-//
-//        battleshipPrintBoard(board);
-//    }
-
-//    public void battleshipPrintBoard(String[][] board) {
-//        // TODO bring in all the boards and use if logic to determine which to print
-////        playerMoveBoard = getPlayerBattleshipPositions(playerMoveBoard);
-////        playerDisplayBoard = getPlayerBattleshipPositions(playerDisplayBoard);
-////        postmanMoveBoard = getPostmanBattleshipPositions(postmanMoveBoard)
-////        postmanDisplayBoard = getPostmanBattleshipPositions(postmanDisplayBoard)
-//
-//
-//        for (int row = 0; row < 11; row++) {
-//            System.out.print("          ");
-//            for (int column = 0; column < 11; column++) {
-//                System.out.print(board[row][column]);
-//                if (column < 10) {
-//                    System.out.print(" | ");
-//                }
-//            }
-//            System.out.println();
-//            if (row < 10) {
-//                System.out.println("        ---------------------------------------------------------------");
-//            }
-//        }
-//    }
-
     public void initializeBoard(String[][] board) {
-        // Initialize column headers
+
         board[0] = new String[]{" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
-        // Initialize row headers and cells
+
         char rowLabel = 'A';
         for (int i = 1; i < board.length; i++) {
             board[i][0] = String.valueOf(rowLabel++);
