@@ -699,6 +699,11 @@ public class Menu {
         String[][] postmanBoard = new String[11][11];
         String[][] postmanOpponentDisplay = new String[11][11];
 
+        initializeBoard(playerBoard);
+        initializeBoard(playerOpponentDisplay);
+        initializeBoard(postmanBoard);
+        initializeBoard(postmanOpponentDisplay);
+
     }
 
     public void initializeBoard(String[][] board) {
