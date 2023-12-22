@@ -708,7 +708,7 @@ public class Menu {
 
     public void initializeBoard(String[][] board) {
 
-        board[0] = new String[]{" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        board[0] = new String[]{" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"};
 
         char rowLabel = 'A';
         for (int i = 1; i < board.length; i++) {
@@ -718,6 +718,7 @@ public class Menu {
     }
 
     public void battleshipPrintBoard(String[][] board) {
+        System.out.print("          ");
         for (int row = 0; row < board.length; row++) {
             for (int column = 0; column < board[row].length; column++) {
                 System.out.print(board[row][column]);
@@ -727,7 +728,7 @@ public class Menu {
             }
             System.out.println();
             if (row < board.length - 1) {
-                System.out.println("-------------------------------------------------------");
+                System.out.println("        -------------------------------------------------------");
             }
         }
     }
