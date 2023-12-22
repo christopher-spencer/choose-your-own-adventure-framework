@@ -44,7 +44,7 @@ public class Battleship extends Game {
 
     public void placeShip(String whoseShipIsIt, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
         // TODO how to best access ships from Battleship or Ship class (?)
-
+        Ship ship = getShipByOwnerAndShipName(whoseShipIsIt, shipName);
         // TODO Place ship on the board for loop (?)
         // TODO Update the board with ship positions
     }
