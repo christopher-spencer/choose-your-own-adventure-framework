@@ -754,7 +754,21 @@ public class Menu {
         }
 
         // TODO Place ship on the board for loop (?)
+
     }
+
+    //TODO review this...
+//    public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
+//        int length = ship.getLength();
+//        for (int i = 0; i < length; i++) {
+//            if (isHorizontal) {
+//                board[startRow][startCol + i] = Battleship.getBoatMarker();
+//            } else {
+//                board[startRow + i][startCol] = Battleship.getBoatMarker();
+//            }
+//        }
+//        // Update ship's position in the Ship object here if needed
+//    }
 
     public void playerTurn(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay

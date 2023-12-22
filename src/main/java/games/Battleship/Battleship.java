@@ -41,7 +41,7 @@ public class Battleship extends Game {
         ships.add(new Ship("Postman", "Submarine", 3));
         ships.add(new Ship("Postman", "PatrolBoat", 2));
     }
-    
+
     public boolean isShipSunk(String player, String shipName) {
         for (Ship ship : ships) {
             if (ship.getWhoseShipIsIt().equals(player) && ship.getShipName().equals(shipName)) {
