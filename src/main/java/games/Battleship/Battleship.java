@@ -42,9 +42,16 @@ public class Battleship extends Game {
         ships.add(new Ship("Postman", "PatrolBoat", 2));
     }
 
+    public void placeShip(String whoseShipIsIt, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
+        // TODO how to best access ships from Battleship or Ship class (?)
+
+        // TODO Place ship on the board for loop (?)
+        // TODO Update the board with ship positions
+    }
+
     public boolean isShipSunk(String player, String shipName) {
         for (Ship ship : ships) {
-            if (ship.getPlayer().equals(player) && ship.getShipName().equals(shipName)) {
+            if (ship.getWhoseShipIsIt().equals(player) && ship.getShipName().equals(shipName)) {
                 return ship.isSunk();
             }
         }
@@ -73,6 +80,15 @@ public class Battleship extends Game {
                 && isShipSunk("User", "Destroyer")
                 && isShipSunk("User", "Submarine")
                 && isShipSunk("User", "PatrolBoat");
+    }
+
+    public Ship getShipByOwnerAndShipName(String whoseShipIsIt, String shipName) {
+        for (Ship ship : ships) {
+            if (ship.getWhoseShipIsIt().equals(whoseShipIsIt) && ship.getShipName().equals(shipName)) {
+                return ship;
+            }
+        }
+        return null;
     }
 
     public static String getHITMarker() {

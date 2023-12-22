@@ -2,14 +2,15 @@ package games.Battleship.Ship;
 
 public class Ship {
 
-    private String player;
+    // TODO player seems like a good variable to put in Game Class (playerOrPostman)
+    private String whoseShipIsIt;
     private String shipName;
     private int length;
     private int hitPoints;
     private boolean isSunk;
 
-    public Ship(String player, String shipName, int length) {
-        this.player = player;
+    public Ship(String whoseShipIsIt, String shipName, int length) {
+        this.whoseShipIsIt = whoseShipIsIt;
         this.shipName = shipName;
         this.length = length;
         this.hitPoints = length;
@@ -23,9 +24,9 @@ public class Ship {
         }
     }
 
-    public String getPlayer() { return player; }
+    public String getWhoseShipIsIt() { return whoseShipIsIt; }
 
-    public void setPlayer(String player) { this.player = player; }
+    public void setWhoseShipIsIt(String whoseShipIsIt) { this.whoseShipIsIt = whoseShipIsIt; }
 
     public String getShipName() { return shipName; }
 

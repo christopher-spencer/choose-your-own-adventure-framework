@@ -740,13 +740,6 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
-    public void placeShip(String player, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
-        // TODO how to best access ships from Battleship or Ship class (?)
-
-        // TODO Place ship on the board for loop (?)
-        // TODO Update the board with ship positions
-    }
-
     public void playerTurn(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
     }
