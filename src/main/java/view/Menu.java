@@ -731,6 +731,7 @@ public class Menu {
         System.out.println();
     }
 
+    //TODO think of a more user friendly way to get this information
     public String whereWouldYouLikeToPlaceYourShip(Ship ship) {
 
         System.out.println();
@@ -778,29 +779,12 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
-    public void placeShip(String whoseShipIsIt, String shipName, int startRow, int startCol, boolean isHorizontal) {
-        // TODO how to best access ships from Battleship or Ship class (?)
-        Ship ship = battleshipGame.getShipByOwnerAndShipName(whoseShipIsIt, shipName);
-        int shipLength = ship.getLength();
-
-        // TODO Update the board with ship positions
-        //  (think about easiest way for player to place this ship)
-        //  (Do we need rowEnd and columnEnd or something?)
-
-        if (ship != null) {
-            placeShip(whoseShipIsIt, shipName, startRow, startCol, isHorizontal);
-        } else {
-            tellUserInvalidSelection();
-        }
-
-        // TODO Place ship on the board for loop (?)
-
-    }
-
+    // TODO how to best access ships from Battleship or Ship class (?)
     //TODO review this...
-    public void placeShipLogic(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
-        int length = ship.getLength();
-        for (int i = 0; i < length; i++) {
+    public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
+
+        int shipLength = ship.getLength();
+        for (int i = 0; i < shipLength; i++) {
             if (isHorizontal) {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
             } else {
