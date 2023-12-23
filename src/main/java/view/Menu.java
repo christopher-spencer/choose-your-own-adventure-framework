@@ -721,9 +721,13 @@ public class Menu {
         // TODO snag start row, start column, and isHorizontal from user selection
 //        placeShip(playerBoard, userCarrier, startRow, startColumn, isHorizontal);
         whereWouldYouLikeToPlaceYourShip(userBattleship);
+//        placeShip(playerBoard, userBattleship, startRow, startColumn, isHorizontal);
         whereWouldYouLikeToPlaceYourShip(userDestroyer);
+//        placeShip(playerBoard, userDestroyer, startRow, startColumn, isHorizontal);
         whereWouldYouLikeToPlaceYourShip(userSubmarine);
+//        placeShip(playerBoard, userSubmarine, startRow, startColumn, isHorizontal);
         whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
+//        placeShip(playerBoard, userPatrolBoat, startRow, startColumn, isHorizontal);
 
     }
 
