@@ -704,6 +704,11 @@ public class Menu {
         initializeBoard(postmanBoard);
         initializeBoard(postmanOpponentDisplay);
 
+        Ship userCarrier = battleshipGame.getShipByOwnerAndShipName("User", "Carrier");
+
+        welcomeToBattleShip();
+        whereWouldYouLikeToPlaceYourShip(userCarrier);
+
     }
 
     public void welcomeToBattleShip() {
