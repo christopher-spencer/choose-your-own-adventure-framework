@@ -693,6 +693,18 @@ public class Menu {
      */
 
     public void battleshipGame() {
+        Ship userCarrier = battleshipGame.getShipByOwnerAndShipName("User", "Carrier");
+        Ship userBattleship = battleshipGame.getShipByOwnerAndShipName("User", "Battleship");
+        Ship userDestroyer = battleshipGame.getShipByOwnerAndShipName("User", "Destroyer");
+        Ship userSubmarine = battleshipGame.getShipByOwnerAndShipName("User", "Submarine");
+        Ship userPatrolBoat = battleshipGame.getShipByOwnerAndShipName("User", "PatrolBoat");
+
+        Ship postmanCarrier = battleshipGame.getShipByOwnerAndShipName("Postman", "Carrier");
+        Ship postmanBattleship = battleshipGame.getShipByOwnerAndShipName("Postman", "Battleship");
+        Ship postmanDestroyer = battleshipGame.getShipByOwnerAndShipName("Postman", "Destroyer");
+        Ship postmanSubmarine = battleshipGame.getShipByOwnerAndShipName("Postman", "Submarine");
+        Ship postmanPatrolBoat = battleshipGame.getShipByOwnerAndShipName("Postman", "PatrolBoat");
+
         // TODO feed these to the print board and logic methods to keep track of each
         String[][] playerBoard = new String[11][11];
         String[][] playerOpponentDisplay = new String[11][11];
@@ -704,10 +716,12 @@ public class Menu {
         initializeBoard(postmanBoard);
         initializeBoard(postmanOpponentDisplay);
 
-        Ship userCarrier = battleshipGame.getShipByOwnerAndShipName("User", "Carrier");
-
         welcomeToBattleShip();
         whereWouldYouLikeToPlaceYourShip(userCarrier);
+        whereWouldYouLikeToPlaceYourShip(userBattleship);
+        whereWouldYouLikeToPlaceYourShip(userDestroyer);
+        whereWouldYouLikeToPlaceYourShip(userSubmarine);
+        whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
 
     }
 
@@ -718,8 +732,11 @@ public class Menu {
     }
 
     public String whereWouldYouLikeToPlaceYourShip(Ship ship) {
+
         System.out.println();
-        System.out.println("Where would you like to place your" + ship.getShipName() + "?");
+        System.out.println("Where would you like to place your " + ship.getShipName() + "?");
+        System.out.println();
+        System.out.println("Pick a row and column for start position (e.g. A1, A2, B3, B4, C5, C6):");
         System.out.println();
 
         return in.nextLine();
