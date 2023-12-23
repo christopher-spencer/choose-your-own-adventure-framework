@@ -706,6 +706,13 @@ public class Menu {
 
     }
 
+    public void welcomeToBattleShip() {
+        System.out.println();
+        System.out.println("    Welcome to Battleship!");
+        System.out.println();
+        
+    }
+
     public void initializeBoard(String[][] board) {
 
         // Column Headers
@@ -737,18 +744,21 @@ public class Menu {
     }
 
     public void battleshipBoardDisplay(String[][] board) {
+
         battleshipPrintBoard(board);
     }
 
-    public void placeShip(String whoseShipIsIt, String shipName, int shipLength, int startRow, int startCol, boolean isHorizontal) {
+    public void placeShip(String whoseShipIsIt, String shipName, int startRow, int startCol, boolean isHorizontal) {
         // TODO how to best access ships from Battleship or Ship class (?)
         Ship ship = battleshipGame.getShipByOwnerAndShipName(whoseShipIsIt, shipName);
+        int shipLength = ship.getLength();
+
         // TODO Update the board with ship positions
         //  (think about easiest way for player to place this ship)
         //  (Do we need rowEnd and columnEnd or something?)
 
         if (ship != null) {
-            placeShip(whoseShipIsIt, shipName, shipLength, startRow, startCol, isHorizontal);
+            placeShip(whoseShipIsIt, shipName, startRow, startCol, isHorizontal);
         } else {
             tellUserInvalidSelection();
         }
@@ -758,17 +768,17 @@ public class Menu {
     }
 
     //TODO review this...
-//    public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
-//        int length = ship.getLength();
-//        for (int i = 0; i < length; i++) {
-//            if (isHorizontal) {
-//                board[startRow][startCol + i] = Battleship.getBoatMarker();
-//            } else {
-//                board[startRow + i][startCol] = Battleship.getBoatMarker();
-//            }
-//        }
-//        // Update ship's position in the Ship object here if needed
-//    }
+    public void placeShipLogic(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
+        int length = ship.getLength();
+        for (int i = 0; i < length; i++) {
+            if (isHorizontal) {
+                board[startRow][startCol + i] = Battleship.getBoatMarker();
+            } else {
+                board[startRow + i][startCol] = Battleship.getBoatMarker();
+            }
+        }
+        // Update ship's position in the Ship object here if needed
+    }
 
     public void playerTurn(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
