@@ -736,7 +736,8 @@ public class Menu {
         System.out.println();
         System.out.println("Where would you like to place your " + ship.getShipName() + "?");
         System.out.println();
-        System.out.println("Pick a row and column for start position (e.g. A1, A2, B3, B4, C5, C6):");
+        System.out.println("Pick whether the ship should be horizontal (H) or vertical (V) as well as " +
+                "a row and a column for start position (e.g. H-A1, V-A2, H-B3, V-B4, H-C5, V-C6):");
         System.out.println();
 
         return in.nextLine();
