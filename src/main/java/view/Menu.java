@@ -710,7 +710,14 @@ public class Menu {
         System.out.println();
         System.out.println("    Welcome to Battleship!");
         System.out.println();
-        
+    }
+
+    public String whereWouldYouLikeToPlaceYourShip(Ship ship) {
+        System.out.println();
+        System.out.println("Where would you like to place your" + ship.getShipName() + "?");
+        System.out.println();
+
+        return in.nextLine();
     }
 
     public void initializeBoard(String[][] board) {
