@@ -698,7 +698,6 @@ public class Menu {
         Ship userDestroyer = battleshipGame.getShipByOwnerAndShipName("User", "Destroyer");
         Ship userSubmarine = battleshipGame.getShipByOwnerAndShipName("User", "Submarine");
         Ship userPatrolBoat = battleshipGame.getShipByOwnerAndShipName("User", "PatrolBoat");
-
         Ship postmanCarrier = battleshipGame.getShipByOwnerAndShipName("Postman", "Carrier");
         Ship postmanBattleship = battleshipGame.getShipByOwnerAndShipName("Postman", "Battleship");
         Ship postmanDestroyer = battleshipGame.getShipByOwnerAndShipName("Postman", "Destroyer");
@@ -755,6 +754,24 @@ public class Menu {
 //        placeShip(playerBoard, userPatrolBoat, startRow, startColumn, isHorizontal);
     }
 
+    public void placeShipUserEntryConverter() {
+        
+    }
+
+    // TODO how to best access ships from Battleship or Ship class (?)
+    //TODO review this...
+    public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
+
+        int shipLength = ship.getLength();
+        for (int i = 0; i < shipLength; i++) {
+            if (isHorizontal) {
+                board[startRow][startCol + i] = Battleship.getBoatMarker();
+            } else {
+                board[startRow + i][startCol] = Battleship.getBoatMarker();
+            }
+        }
+    }
+
     public void initializeBoard(String[][] board) {
 
         // Column Headers
@@ -788,20 +805,6 @@ public class Menu {
     public void battleshipBoardDisplay(String[][] board) {
 
         battleshipPrintBoard(board);
-    }
-
-    // TODO how to best access ships from Battleship or Ship class (?)
-    //TODO review this...
-    public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
-
-        int shipLength = ship.getLength();
-        for (int i = 0; i < shipLength; i++) {
-            if (isHorizontal) {
-                board[startRow][startCol + i] = Battleship.getBoatMarker();
-            } else {
-                board[startRow + i][startCol] = Battleship.getBoatMarker();
-            }
-        }
     }
 
     public void playerTurn(int row, int col) {
