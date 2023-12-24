@@ -727,6 +727,7 @@ public class Menu {
         System.out.println();
     }
 
+    //TODO convert to isHorizontal boolean in here
     public String askUserForShipPlacementOrientation(Ship ship) {
         System.out.println();
         System.out.println("Would you like to place your " + ship.getShipName() + " horizontally (H) or vertically (V)?");
@@ -737,6 +738,7 @@ public class Menu {
         return in.nextLine();
     }
 
+    //TODO convert to startRow in here
     public String askUserForShipPlacementRow(Ship ship) {
         System.out.println();
         System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
@@ -747,6 +749,7 @@ public class Menu {
         return in.nextLine();
     }
 
+    //TODO convert to startCol in here
     public String askUserForShipPlacementColumn(Ship ship) {
         System.out.println();
         System.out.println("What column would you like to place your " + ship.getShipName() + " in?");
