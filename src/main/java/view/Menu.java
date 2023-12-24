@@ -727,7 +727,6 @@ public class Menu {
         System.out.println();
     }
 
-    //TODO think of a more user friendly way to get this information
     public String askUserForShipPlacementOrientation(Ship ship) {
         System.out.println();
         System.out.println("Would you like to place your " + ship.getShipName() + " horizontally (H) or vertically (V)?");
@@ -758,16 +757,10 @@ public class Menu {
         return in.nextLine();
     }
 
-    public String whereWouldYouLikeToPlaceYourShip(Ship ship) {
-
-        System.out.println();
-        System.out.println("Where would you like to place your " + ship.getShipName() + "?");
-        System.out.println();
-        System.out.println("Pick whether the ship should be horizontal (H) or vertical (V) as well as " +
-                "a row and a column for start position (e.g. H-A1, V-A2, H-B3, V-B4, H-C5, V-C6):");
-        System.out.println();
-
-        return in.nextLine();
+    public void whereWouldYouLikeToPlaceYourShip(Ship ship) {
+        askUserForShipPlacementOrientation(ship);
+        askUserForShipPlacementRow(ship);
+        askUserForShipPlacementColumn(ship);
     }
 
     public void whereWouldYouLikeToPlaceYourShips(Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
