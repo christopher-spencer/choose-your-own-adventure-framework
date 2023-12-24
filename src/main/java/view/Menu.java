@@ -727,7 +727,6 @@ public class Menu {
         System.out.println();
     }
 
-    //TODO convert to isHorizontal boolean in here
     public boolean askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
         boolean isHorizontal = false;
