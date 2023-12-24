@@ -746,6 +746,8 @@ public class Menu {
         System.out.println("Enter the starting row (A-J):");
         System.out.println();
 
+        // TODO Add while loop to make sure selection is valid before moving on
+
         String startRow = in.nextLine();
 
         if (!startRow.equals("A")
@@ -798,7 +800,7 @@ public class Menu {
     public void placeShipUserEntryConverter() {
 
     }
-    
+
     // TODO Convert startRow to int
     public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
 
