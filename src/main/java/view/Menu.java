@@ -728,14 +728,32 @@ public class Menu {
     }
 
     //TODO convert to isHorizontal boolean in here
-    public String askUserForShipPlacementOrientation(Ship ship) {
-        System.out.println();
-        System.out.println("Would you like to place your " + ship.getShipName() + " horizontally (H) or vertically (V)?");
-        System.out.println();
-        System.out.println("Enter (H) or (V):");
-        System.out.println();
+    public boolean askUserForShipPlacementOrientation(Ship ship) {
+        boolean isValidSelection = false;
+        boolean isHorizontal = false;
+        String userSelection = "";
 
-        return in.nextLine();
+        while (!isValidSelection) {
+
+            System.out.println();
+            System.out.println("Would you like to place your " + ship.getShipName() + " horizontally (H) or vertically (V)?");
+            System.out.println();
+            System.out.println("Enter (H) or (V):");
+            System.out.println();
+
+            userSelection = in.nextLine();
+
+            if (userSelection.equalsIgnoreCase("H")) {
+                isHorizontal = true;
+                isValidSelection = true;
+            } else if (userSelection.equalsIgnoreCase("V")) {
+                isValidSelection = true;
+            } else {
+                tellUserInvalidSelection();
+            }
+        }
+
+        return isHorizontal;
     }
 
     public int askUserForShipPlacementRow(Ship ship) {
@@ -807,7 +825,7 @@ public class Menu {
             System.out.println();
             System.out.println("Enter the starting column (1-10):");
             System.out.println();
-            
+
             startCol = Integer.parseInt(in.nextLine());
 
             if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
