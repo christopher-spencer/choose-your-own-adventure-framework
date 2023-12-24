@@ -743,7 +743,7 @@ public class Menu {
 
     public void whereWouldYouLikeToPlaceYourShips(Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
         whereWouldYouLikeToPlaceYourShip(userCarrier);
-        // TODO snag start row, start column, and isHorizontal from user selection
+        // TODO snag and modify start row, start column, and isHorizontal from user selection
 //        placeShip(playerBoard, userCarrier, startRow, startColumn, isHorizontal);
         whereWouldYouLikeToPlaceYourShip(userBattleship);
 //        placeShip(playerBoard, userBattleship, startRow, startColumn, isHorizontal);
@@ -768,7 +768,7 @@ public class Menu {
             Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
         }
     }
-    
+
     public void battleshipPrintBoard(String[][] board) {
         System.out.print("          ");
         for (int row = 0; row < board.length; row++) {
