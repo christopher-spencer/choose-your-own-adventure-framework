@@ -797,11 +797,11 @@ public class Menu {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
             }
         }
-        // Update ship's position in the Ship object here if needed
     }
 
     public void playerTurn(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
+        // TODO override playerMove in Game class and move to Battleship class
     }
 
 //    public void playerTurn(int row, int col) {
