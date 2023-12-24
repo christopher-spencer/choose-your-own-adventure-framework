@@ -797,22 +797,27 @@ public class Menu {
     }
 
     public int askUserForShipPlacementColumn(Ship ship) {
-        System.out.println();
-        System.out.println("What column would you like to place your " + ship.getShipName() + " in?");
-        System.out.println();
-        System.out.println("Enter the starting column (1-10):");
-        System.out.println();
+        boolean isValidSelection = false;
+        int startCol = 0;
 
-        // TODO Add while loop to make sure selection is valid before moving on
+        while (!isValidSelection) {
 
-        int startCol = Integer.parseInt(in.nextLine());
+            System.out.println();
+            System.out.println("What column would you like to place your " + ship.getShipName() + " in?");
+            System.out.println();
+            System.out.println("Enter the starting column (1-10):");
+            System.out.println();
+            
+            startCol = Integer.parseInt(in.nextLine());
 
-        if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
-                && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
-                && startCol != 9 && startCol != 10) {
-            tellUserInvalidSelection();
+            if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
+                    && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
+                    && startCol != 9 && startCol != 10) {
+                tellUserInvalidSelection();
+            } else {
+                isValidSelection = true;
+            }
         }
-
         return startCol;
     }
 
