@@ -8,6 +8,7 @@ public class Ship {
     private int length;
     private int hitPoints;
     private boolean isSunk;
+    //TODO modify user selection to update these variables on ship placement
     private boolean isHorizontal;
     private int startRow;
     private int startCol;
