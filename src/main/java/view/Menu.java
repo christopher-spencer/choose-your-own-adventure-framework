@@ -728,6 +728,36 @@ public class Menu {
     }
 
     //TODO think of a more user friendly way to get this information
+    public String askUserForShipPlacementOrientation(Ship ship) {
+        System.out.println();
+        System.out.println("Would you like to place your " + ship.getShipName() + " horizontally (H) or vertically (V)?");
+        System.out.println();
+        System.out.println("Enter (H) or (V):");
+        System.out.println();
+
+        return in.nextLine();
+    }
+
+    public String askUserForShipPlacementRow(Ship ship) {
+        System.out.println();
+        System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
+        System.out.println();
+        System.out.println("Enter the starting row (A-J):");
+        System.out.println();
+
+        return in.nextLine();
+    }
+
+    public String askUserForShipPlacementColumn(Ship ship) {
+        System.out.println();
+        System.out.println("What column would you like to place your " + ship.getShipName() + " in?");
+        System.out.println();
+        System.out.println("Enter the starting column (1-10):");
+        System.out.println();
+
+        return in.nextLine();
+    }
+
     public String whereWouldYouLikeToPlaceYourShip(Ship ship) {
 
         System.out.println();
@@ -755,7 +785,7 @@ public class Menu {
     }
 
     public void placeShipUserEntryConverter() {
-        
+
     }
 
     // TODO how to best access ships from Battleship or Ship class (?)
