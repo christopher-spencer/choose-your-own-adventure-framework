@@ -717,17 +717,8 @@ public class Menu {
         initializeBoard(postmanOpponentDisplay);
 
         welcomeToBattleShip();
-        whereWouldYouLikeToPlaceYourShip(userCarrier);
-        // TODO snag start row, start column, and isHorizontal from user selection
-//        placeShip(playerBoard, userCarrier, startRow, startColumn, isHorizontal);
-        whereWouldYouLikeToPlaceYourShip(userBattleship);
-//        placeShip(playerBoard, userBattleship, startRow, startColumn, isHorizontal);
-        whereWouldYouLikeToPlaceYourShip(userDestroyer);
-//        placeShip(playerBoard, userDestroyer, startRow, startColumn, isHorizontal);
-        whereWouldYouLikeToPlaceYourShip(userSubmarine);
-//        placeShip(playerBoard, userSubmarine, startRow, startColumn, isHorizontal);
-        whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
-//        placeShip(playerBoard, userPatrolBoat, startRow, startColumn, isHorizontal);
+        whereWouldYouLikeToPlaceYourShips(userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
+
 
     }
 
@@ -750,6 +741,20 @@ public class Menu {
         return in.nextLine();
     }
 
+    public void whereWouldYouLikeToPlaceYourShips(Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
+        whereWouldYouLikeToPlaceYourShip(userCarrier);
+        // TODO snag start row, start column, and isHorizontal from user selection
+//        placeShip(playerBoard, userCarrier, startRow, startColumn, isHorizontal);
+        whereWouldYouLikeToPlaceYourShip(userBattleship);
+//        placeShip(playerBoard, userBattleship, startRow, startColumn, isHorizontal);
+        whereWouldYouLikeToPlaceYourShip(userDestroyer);
+//        placeShip(playerBoard, userDestroyer, startRow, startColumn, isHorizontal);
+        whereWouldYouLikeToPlaceYourShip(userSubmarine);
+//        placeShip(playerBoard, userSubmarine, startRow, startColumn, isHorizontal);
+        whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
+//        placeShip(playerBoard, userPatrolBoat, startRow, startColumn, isHorizontal);
+    }
+
     public void initializeBoard(String[][] board) {
 
         // Column Headers
@@ -763,7 +768,7 @@ public class Menu {
             Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
         }
     }
-
+    
     public void battleshipPrintBoard(String[][] board) {
         System.out.print("          ");
         for (int row = 0; row < board.length; row++) {
