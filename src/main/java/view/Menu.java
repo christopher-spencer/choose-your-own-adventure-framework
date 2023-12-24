@@ -746,7 +746,22 @@ public class Menu {
         System.out.println("Enter the starting row (A-J):");
         System.out.println();
 
-        return in.nextLine();
+        String startRow = in.nextLine();
+
+        if (!startRow.equals("A")
+                && !startRow.equals("B")
+                && !startRow.equals("C")
+                && !startRow.equals("D")
+                && !startRow.equals("E")
+                && !startRow.equals("F")
+                && !startRow.equals("G")
+                && !startRow.equals("H")
+                && !startRow.equals("I")
+                && !startRow.equals("J")) {
+            tellUserInvalidSelection();
+        }
+            
+        return startRow;
     }
 
     //TODO convert to startCol in here
