@@ -738,31 +738,62 @@ public class Menu {
         return in.nextLine();
     }
 
-    public String askUserForShipPlacementRow(Ship ship) {
-        System.out.println();
-        System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
-        System.out.println();
-        System.out.println("Enter the starting row (A-J):");
-        System.out.println();
+    public int askUserForShipPlacementRow(Ship ship) {
+        boolean isValidSelection = false;
+        int startRowAsInt = 0;
 
-        // TODO Add while loop to make sure selection is valid before moving on
+        while (!isValidSelection) {
 
-        String startRow = in.nextLine();
 
-        if (!startRow.equals("A")
-                && !startRow.equals("B")
-                && !startRow.equals("C")
-                && !startRow.equals("D")
-                && !startRow.equals("E")
-                && !startRow.equals("F")
-                && !startRow.equals("G")
-                && !startRow.equals("H")
-                && !startRow.equals("I")
-                && !startRow.equals("J")) {
-            tellUserInvalidSelection();
+            System.out.println();
+            System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
+            System.out.println();
+            System.out.println("Enter the starting row (A-J):");
+            System.out.println();
+
+            String startRow = in.nextLine();
+
+            if (!startRow.equals("A") && !startRow.equals("B") && !startRow.equals("C")
+                    && !startRow.equals("D") && !startRow.equals("E") && !startRow.equals("F")
+                    && !startRow.equals("G") && !startRow.equals("H") && !startRow.equals("I")
+                    && !startRow.equals("J")) {
+
+                tellUserInvalidSelection();
+
+            } else if (startRow.equals("A")) {
+                startRowAsInt = 1;
+                isValidSelection = true;
+            } else if (startRow.equals("B")) {
+                startRowAsInt = 2;
+                isValidSelection = true;
+            } else if (startRow.equals("C")) {
+                startRowAsInt = 3;
+                isValidSelection = true;
+            } else if (startRow.equals("D")) {
+                startRowAsInt = 4;
+                isValidSelection = true;
+            } else if (startRow.equals("E")) {
+                startRowAsInt = 5;
+                isValidSelection = true;
+            } else if (startRow.equals("F")) {
+                startRowAsInt = 6;
+                isValidSelection = true;
+            } else if (startRow.equals("G")) {
+                startRowAsInt = 7;
+                isValidSelection = true;
+            } else if (startRow.equals("H")) {
+                startRowAsInt = 8;
+                isValidSelection = true;
+            } else if (startRow.equals("I")) {
+                startRowAsInt = 9;
+                isValidSelection = true;
+            } else {
+                startRowAsInt = 10;
+                isValidSelection = true;
+            }
         }
 
-        return startRow;
+        return startRowAsInt;
     }
 
     public int askUserForShipPlacementColumn(Ship ship) {

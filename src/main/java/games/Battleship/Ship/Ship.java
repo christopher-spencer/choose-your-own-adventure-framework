@@ -8,6 +8,9 @@ public class Ship {
     private int length;
     private int hitPoints;
     private boolean isSunk;
+    private boolean isHorizontal;
+    private int startRow;
+    private int startCol;
 
     public Ship(String whoseShipIsIt, String shipName, int length) {
         this.whoseShipIsIt = whoseShipIsIt;
