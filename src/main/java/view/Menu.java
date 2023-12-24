@@ -738,7 +738,6 @@ public class Menu {
         return in.nextLine();
     }
 
-    //TODO convert to startRow in here
     public String askUserForShipPlacementRow(Ship ship) {
         System.out.println();
         System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
@@ -766,15 +765,24 @@ public class Menu {
         return startRow;
     }
 
-    //TODO convert to startCol in here
-    public String askUserForShipPlacementColumn(Ship ship) {
+    public int askUserForShipPlacementColumn(Ship ship) {
         System.out.println();
         System.out.println("What column would you like to place your " + ship.getShipName() + " in?");
         System.out.println();
         System.out.println("Enter the starting column (1-10):");
         System.out.println();
 
-        return in.nextLine();
+        // TODO Add while loop to make sure selection is valid before moving on
+
+        int startCol = Integer.parseInt(in.nextLine());
+
+        if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
+                && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
+                && startCol != 9 && startCol != 10) {
+            tellUserInvalidSelection();
+        }
+
+        return startCol;
     }
 
     public void whereWouldYouLikeToPlaceYourShip(Ship ship) {
