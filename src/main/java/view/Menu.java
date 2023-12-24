@@ -760,7 +760,7 @@ public class Menu {
                 && !startRow.equals("J")) {
             tellUserInvalidSelection();
         }
-            
+
         return startRow;
     }
 
@@ -798,9 +798,8 @@ public class Menu {
     public void placeShipUserEntryConverter() {
 
     }
-
-    // TODO how to best access ships from Battleship or Ship class (?)
-    //TODO review this...
+    
+    // TODO Convert startRow to int
     public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
 
         int shipLength = ship.getLength();
