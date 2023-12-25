@@ -752,7 +752,7 @@ public class Menu {
         }
     }
 
-    public int askUserForShipPlacementRow(Ship ship) {
+    public void askUserForShipPlacementRow(Ship ship) {
         boolean isValidSelection = false;
         int startRowAsInt = 0;
 
@@ -806,8 +806,6 @@ public class Menu {
                 isValidSelection = true;
             }
         }
-
-        return startRowAsInt;
     }
 
     public int askUserForShipPlacementColumn(Ship ship) {
