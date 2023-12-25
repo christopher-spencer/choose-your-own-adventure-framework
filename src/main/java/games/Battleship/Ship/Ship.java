@@ -47,4 +47,16 @@ public class Ship {
     public boolean isSunk() { return isSunk; }
 
     public void setSunk(boolean sunk) { isSunk = sunk; }
+
+    public boolean isHorizontal() { return isHorizontal; }
+
+    public void setHorizontal(boolean horizontal) { isHorizontal = horizontal; }
+
+    public int getStartRow() { return startRow; }
+
+    public void setStartRow(int startRow) { this.startRow = startRow; }
+
+    public int getStartCol() { return startCol; }
+
+    public void setStartCol(int startCol) { this.startCol = startCol; }
 }
