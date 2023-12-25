@@ -754,11 +754,9 @@ public class Menu {
 
     public void askUserForShipPlacementRow(Ship ship) {
         boolean isValidSelection = false;
-        int startRowAsInt = 0;
 
         while (!isValidSelection) {
-
-
+            
             System.out.println();
             System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
             System.out.println();
@@ -775,34 +773,34 @@ public class Menu {
                 tellUserInvalidSelection();
 
             } else if (startRow.equals("A")) {
-                startRowAsInt = 1;
+                ship.setStartRow(1);
                 isValidSelection = true;
             } else if (startRow.equals("B")) {
-                startRowAsInt = 2;
+                ship.setStartRow(2);
                 isValidSelection = true;
             } else if (startRow.equals("C")) {
-                startRowAsInt = 3;
+                ship.setStartRow(3);
                 isValidSelection = true;
             } else if (startRow.equals("D")) {
-                startRowAsInt = 4;
+                ship.setStartRow(4);
                 isValidSelection = true;
             } else if (startRow.equals("E")) {
-                startRowAsInt = 5;
+                ship.setStartRow(5);
                 isValidSelection = true;
             } else if (startRow.equals("F")) {
-                startRowAsInt = 6;
+                ship.setStartRow(6);
                 isValidSelection = true;
             } else if (startRow.equals("G")) {
-                startRowAsInt = 7;
+                ship.setStartRow(7);
                 isValidSelection = true;
             } else if (startRow.equals("H")) {
-                startRowAsInt = 8;
+                ship.setStartRow(8);
                 isValidSelection = true;
             } else if (startRow.equals("I")) {
-                startRowAsInt = 9;
+                ship.setStartRow(9);
                 isValidSelection = true;
             } else {
-                startRowAsInt = 10;
+                ship.setStartRow(10);
                 isValidSelection = true;
             }
         }
