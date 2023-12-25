@@ -8,10 +8,11 @@ public class Ship {
     private int length;
     private int hitPoints;
     private boolean isSunk;
-    //TODO modify user selection to update these variables on ship placement
     private boolean isHorizontal;
     private int startRow;
     private int startCol;
+
+    //TODO Do I add isHorizontal StartRow and startCol to constructor since those are player chosen for placement?
 
     public Ship(String whoseShipIsIt, String shipName, int length) {
         this.whoseShipIsIt = whoseShipIsIt;

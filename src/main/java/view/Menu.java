@@ -840,25 +840,28 @@ public class Menu {
     public void whereWouldYouLikeToPlaceYourShips(Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
         whereWouldYouLikeToPlaceYourShip(userCarrier);
         // TODO snag and modify start row, start column, and isHorizontal from user selection
-//        placeShip(playerBoard, userCarrier, startRow, startColumn, isHorizontal);
+//        placeShip(playerBoard, userCarrier);
         whereWouldYouLikeToPlaceYourShip(userBattleship);
-//        placeShip(playerBoard, userBattleship, startRow, startColumn, isHorizontal);
+//        placeShip(playerBoard, userBattleship);
         whereWouldYouLikeToPlaceYourShip(userDestroyer);
-//        placeShip(playerBoard, userDestroyer, startRow, startColumn, isHorizontal);
+//        placeShip(playerBoard, userDestroyer);
         whereWouldYouLikeToPlaceYourShip(userSubmarine);
-//        placeShip(playerBoard, userSubmarine, startRow, startColumn, isHorizontal);
+//        placeShip(playerBoard, userSubmarine);
         whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
-//        placeShip(playerBoard, userPatrolBoat, startRow, startColumn, isHorizontal);
+//        placeShip(playerBoard, userPatrolBoat);
     }
 
     public void placeShipUserEntryConverter() {
 
     }
 
-    // TODO Convert startRow to int
-    public void placeShip(String[][] board, Ship ship, int startRow, int startCol, boolean isHorizontal) {
+    public void placeShip(String[][] board, Ship ship) {
 
         int shipLength = ship.getLength();
+        int startRow = ship.getStartRow();
+        int startCol = ship.getStartCol();
+        boolean isHorizontal = ship.isHorizontal();
+
         for (int i = 0; i < shipLength; i++) {
             if (isHorizontal) {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
