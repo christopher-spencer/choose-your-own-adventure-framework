@@ -716,8 +716,9 @@ public class Menu {
         initializeBoard(postmanOpponentDisplay);
 
         welcomeToBattleShip();
-        whereWouldYouLikeToPlaceYourShips(userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
 
+        //TODO need to also put in opponentdisplay(?) or make it equal to playerboard somewhere
+        whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
 
     }
 
@@ -837,10 +838,10 @@ public class Menu {
         askUserForShipPlacementColumn(ship);
     }
 
-    public void whereWouldYouLikeToPlaceYourShips(Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
+    public void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
         whereWouldYouLikeToPlaceYourShip(userCarrier);
         // TODO snag and modify start row, start column, and isHorizontal from user selection
-//        placeShip(playerBoard, userCarrier);
+//       placeShip(playerBoard, userCarrier);
         whereWouldYouLikeToPlaceYourShip(userBattleship);
 //        placeShip(playerBoard, userBattleship);
         whereWouldYouLikeToPlaceYourShip(userDestroyer);
