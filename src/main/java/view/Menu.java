@@ -572,7 +572,7 @@ public class Menu {
 
     }
 
-        public void printTicTacToeBoard() {
+    public void printTicTacToeBoard() {
         char[][] board = {
                 {'1', '2', '3'},
                 {'4', '5', '6'},
