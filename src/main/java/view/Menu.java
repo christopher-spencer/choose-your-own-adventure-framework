@@ -727,9 +727,8 @@ public class Menu {
         System.out.println();
     }
 
-    public boolean askUserForShipPlacementOrientation(Ship ship) {
+    public void askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
-        boolean isHorizontal = false;
         String userSelection = "";
 
         while (!isValidSelection) {
@@ -743,7 +742,7 @@ public class Menu {
             userSelection = in.nextLine();
 
             if (userSelection.equalsIgnoreCase("H")) {
-                isHorizontal = true;
+                ship.setHorizontal(true);
                 isValidSelection = true;
             } else if (userSelection.equalsIgnoreCase("V")) {
                 isValidSelection = true;
@@ -751,8 +750,6 @@ public class Menu {
                 tellUserInvalidSelection();
             }
         }
-
-        return isHorizontal;
     }
 
     public int askUserForShipPlacementRow(Ship ship) {
