@@ -756,7 +756,7 @@ public class Menu {
         boolean isValidSelection = false;
 
         while (!isValidSelection) {
-            
+
             System.out.println();
             System.out.println("What row would you like to place your " + ship.getShipName() + " in?");
             System.out.println();
@@ -806,7 +806,7 @@ public class Menu {
         }
     }
 
-    public int askUserForShipPlacementColumn(Ship ship) {
+    public void askUserForShipPlacementColumn(Ship ship) {
         boolean isValidSelection = false;
         int startCol = 0;
 
@@ -825,10 +825,10 @@ public class Menu {
                     && startCol != 9 && startCol != 10) {
                 tellUserInvalidSelection();
             } else {
+                ship.setStartCol(startCol);
                 isValidSelection = true;
             }
         }
-        return startCol;
     }
 
     public void whereWouldYouLikeToPlaceYourShip(Ship ship) {
