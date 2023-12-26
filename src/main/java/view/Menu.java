@@ -898,6 +898,13 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
+    public void whereWouldYouLikeToAttackRow() {
+        System.out.println();
+        System.out.println("    Where would you like to attack?");
+        System.out.println();
+        System.out.println("Select a row (A-J):");
+    }
+
     public void playerTurn(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         // TODO override playerMove in Game class and move to Battleship class
