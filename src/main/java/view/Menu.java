@@ -766,43 +766,38 @@ public class Menu {
 
             String startRow = in.nextLine();
 
-            if (!startRow.equals("A") && !startRow.equals("B") && !startRow.equals("C")
-                    && !startRow.equals("D") && !startRow.equals("E") && !startRow.equals("F")
-                    && !startRow.equals("G") && !startRow.equals("H") && !startRow.equals("I")
-                    && !startRow.equals("J")) {
-
-                tellUserInvalidSelection();
-
-            } else if (startRow.equals("A")) {
+            if (startRow.equalsIgnoreCase("A")) {
                 ship.setStartRow(1);
                 isValidSelection = true;
-            } else if (startRow.equals("B")) {
+            } else if (startRow.equalsIgnoreCase("B")) {
                 ship.setStartRow(2);
                 isValidSelection = true;
-            } else if (startRow.equals("C")) {
+            } else if (startRow.equalsIgnoreCase("C")) {
                 ship.setStartRow(3);
                 isValidSelection = true;
-            } else if (startRow.equals("D")) {
+            } else if (startRow.equalsIgnoreCase("D")) {
                 ship.setStartRow(4);
                 isValidSelection = true;
-            } else if (startRow.equals("E")) {
+            } else if (startRow.equalsIgnoreCase("E")) {
                 ship.setStartRow(5);
                 isValidSelection = true;
-            } else if (startRow.equals("F")) {
+            } else if (startRow.equalsIgnoreCase("F")) {
                 ship.setStartRow(6);
                 isValidSelection = true;
-            } else if (startRow.equals("G")) {
+            } else if (startRow.equalsIgnoreCase("G")) {
                 ship.setStartRow(7);
                 isValidSelection = true;
-            } else if (startRow.equals("H")) {
+            } else if (startRow.equalsIgnoreCase("H")) {
                 ship.setStartRow(8);
                 isValidSelection = true;
-            } else if (startRow.equals("I")) {
+            } else if (startRow.equalsIgnoreCase("I")) {
                 ship.setStartRow(9);
                 isValidSelection = true;
-            } else {
+            } else if (startRow.equalsIgnoreCase("J")) {
                 ship.setStartRow(10);
                 isValidSelection = true;
+            } else {
+                tellUserInvalidSelection();
             }
         }
     }
