@@ -709,12 +709,9 @@ public class Menu {
         String[][] playerOpponentDisplay = new String[11][11];
         String[][] postmanBoard = new String[11][11];
         String[][] postmanOpponentDisplay = new String[11][11];
-        
+
         initializeBoards(playerBoard, playerOpponentDisplay, postmanBoard, postmanOpponentDisplay);
-
         welcomeToBattleShip();
-
-        //TODO need to also put in opponentdisplay(?) or make it equal to playerboard somewhere
         whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
 
     }
