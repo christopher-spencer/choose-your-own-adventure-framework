@@ -709,11 +709,8 @@ public class Menu {
         String[][] playerOpponentDisplay = new String[11][11];
         String[][] postmanBoard = new String[11][11];
         String[][] postmanOpponentDisplay = new String[11][11];
-
-        initializeBoard(playerBoard);
-        initializeBoard(playerOpponentDisplay);
-        initializeBoard(postmanBoard);
-        initializeBoard(postmanOpponentDisplay);
+        
+        initializeBoards(playerBoard, playerOpponentDisplay, postmanBoard, postmanOpponentDisplay);
 
         welcomeToBattleShip();
 
@@ -874,6 +871,13 @@ public class Menu {
             board[i][0] = String.valueOf(rowLabel++);
             Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
         }
+    }
+
+    public void initializeBoards(String[][] playerBoard, String[][] playerOpponentDisplay, String[][] postmanBoard, String[][] postmanOpponentDisplay) {
+        initializeBoard(playerBoard);
+        initializeBoard(playerOpponentDisplay);
+        initializeBoard(postmanBoard);
+        initializeBoard(postmanOpponentDisplay);
     }
 
     public void battleshipPrintBoard(String[][] board) {
