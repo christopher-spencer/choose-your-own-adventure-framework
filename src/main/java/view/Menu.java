@@ -99,7 +99,7 @@ public class Menu {
 //        int randomNumber = random.nextInt(2);
         //TODO placeholder to check TTT
         // (change bound to 3 && uncomment TTT selector when TTT is ready to be included)
-        int randomNumber = 2;
+        int randomNumber = 3;
 
 //        if (randomNumber == 0) {
 //            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
@@ -110,15 +110,15 @@ public class Menu {
 //            hangmanGame();
 //        }
 
-        if (randomNumber == 2) {
-            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-            ticTacToeGame();
-        }
-
-//        if (randomNumber == 3) {
-//            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills it with water, hops in, and beckons you to join him.");
-//            battleshipGame();
+//        if (randomNumber == 2) {
+//            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//            ticTacToeGame();
 //        }
+
+        if (randomNumber == 3) {
+            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills it with water, hops in, and beckons you to join him.");
+            battleshipGame();
+        }
     }
 
     /*
@@ -714,6 +714,8 @@ public class Menu {
         welcomeToBattleShip();
         whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
 
+        //Test
+        battleshipBoardDisplay(playerBoard);
     }
 
     public void welcomeToBattleShip() {
@@ -916,12 +918,12 @@ public class Menu {
         return in.nextLine();
     }
 
-    public void playerTurn(int row, int col) {
+    public void playerMove(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         // TODO override playerMove in Game class and move to Battleship class
     }
 
-//    public void playerTurn(int row, int col) {
+//    public void playerMove(int row, int col) {
 //        String result = attack(postmanBoard, row, col);
 //        playerOpponentDisplay[row][col] = result;
 //        // Additional logic for checking if a ship is sunk
@@ -946,7 +948,7 @@ public class Menu {
         // TODO Update playerBoard and postmanOpponentDisplay
     }
 
-//    public void postmanTurn() {
+//    public void postmanMove() {
 //        // AI logic to select target (row, col)
 //        int row = // AI logic to determine row
 //        int col = // AI logic to determine col
