@@ -898,11 +898,22 @@ public class Menu {
         battleshipPrintBoard(board);
     }
 
-    public void whereWouldYouLikeToAttackRow() {
+    public String whereWouldYouLikeToAttackRow() {
         System.out.println();
         System.out.println("    Where would you like to attack?");
         System.out.println();
-        System.out.println("Select a row (A-J):");
+        System.out.println("    Select a row (A-J):");
+        System.out.println();
+
+        return in.nextLine();
+    }
+
+    public String whereWouldYouLikeToAttackColumn() {
+        System.out.println();
+        System.out.println("    Select a column (1-10):");
+        System.out.println();
+
+        return in.nextLine();
     }
 
     public void playerTurn(int row, int col) {
