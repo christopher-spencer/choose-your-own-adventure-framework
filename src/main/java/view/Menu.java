@@ -909,15 +909,19 @@ public class Menu {
 //        // Additional logic for checking if a ship is sunk
 //    }
 //
-//    private String attack(String[][] board, int row, int col) {
-//        if (board[row][col].equals(BOAT)) {
-//            board[row][col] = HIT;
-//            return HIT;
-//        } else {
-//            board[row][col] = MISS;
-//            return MISS;
-//        }
-//    }
+    private String attack(String[][] board, int row, int col) {
+        String BOAT = Battleship.getBoatMarker();
+        String HIT = Battleship.getHITMarker();
+        String MISS = Battleship.getMissMarker();
+
+        if (board[row][col].equals(BOAT)) {
+            board[row][col] = HIT;
+            return HIT;
+        } else {
+            board[row][col] = MISS;
+            return MISS;
+        }
+    }
 
     public void postmanTurn() {
         // TODO Randomized selector
