@@ -835,8 +835,7 @@ public class Menu {
 
     public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
         whereWouldYouLikeToPlaceYourShip(userCarrier);
-        // TODO snag and modify start row, start column, and isHorizontal from user selection
-       placeShip(playerBoard, userCarrier);
+        placeShip(playerBoard, userCarrier);
         whereWouldYouLikeToPlaceYourShip(userBattleship);
         placeShip(playerBoard, userBattleship);
         whereWouldYouLikeToPlaceYourShip(userDestroyer);
