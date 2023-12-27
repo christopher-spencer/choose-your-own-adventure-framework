@@ -323,7 +323,7 @@ public class Menu {
             theGameIsATie();
         }
 
-        resetTicTacToeGame();
+        ticTacToeGame.resetTicTacToeGame();
         spotTaken.clear();
 
         itGoesOnAndOnMyFriends();
