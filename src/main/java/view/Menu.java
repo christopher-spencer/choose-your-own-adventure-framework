@@ -725,7 +725,7 @@ public class Menu {
     }
 
     //TODO need to account for out of bounds exceptions for each ship depending on length
-
+    //TODO need to show invalid choice when two ships overlap
     public void askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
         String userSelection = "";
