@@ -109,9 +109,7 @@ public class TicTacToe extends Game {
 
         return spotTaken;
     }
-
-    //TODO have resetGame override from Game class
-
+    
     @Override
     public void resetGame() {
 
