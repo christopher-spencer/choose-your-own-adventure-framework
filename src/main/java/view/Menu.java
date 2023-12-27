@@ -655,37 +655,6 @@ public class Menu {
         return board;
     }
 
-    //TODO move to TTT Class
-
-    public void resetTicTacToeGame() {
-
-        ticTacToeGame.setPlayerChoice(' ');
-        ticTacToeGame.setPostmanChoice(' ');
-
-        ticTacToeGame.setTopLeftX(false);
-        ticTacToeGame.setTopLeftO(false);
-        ticTacToeGame.setTopMiddleX(false);
-        ticTacToeGame.setTopMiddleO(false);
-        ticTacToeGame.setTopRightX(false);
-        ticTacToeGame.setTopRightO(false);
-        ticTacToeGame.setMiddleLeftX(false);
-        ticTacToeGame.setMiddleLeftO(false);
-        ticTacToeGame.setMiddleMiddleX(false);
-        ticTacToeGame.setMiddleMiddleO(false);
-        ticTacToeGame.setMiddleRightX(false);
-        ticTacToeGame.setMiddleRightO(false);
-        ticTacToeGame.setBottomLeftX(false);
-        ticTacToeGame.setBottomLeftO(false);
-        ticTacToeGame.setBottomMiddleX(false);
-        ticTacToeGame.setBottomMiddleO(false);
-        ticTacToeGame.setBottomRightX(false);
-        ticTacToeGame.setBottomRightO(false);
-
-        ticTacToeGame.setThreeXsInARow(false);
-        ticTacToeGame.setThreeOsInARow(false);
-        ticTacToeGame.setNumberOfMovesTillGameOver(9);
-    }
-
     /*
      *********************************************************************************
                         * ~ * ~ * BATTLESHIP GAME SECTION * ~ * ~ *
