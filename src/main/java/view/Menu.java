@@ -135,9 +135,9 @@ public class Menu {
     }
 
     public void rockPaperScissorsGame() {
-        String rock = rpsGame.getRock();
-        String paper = rpsGame.getPaper();
-        String scissors = rpsGame.getScissors();
+        String rock = RockPaperScissorsGame.getROCK();
+        String paper = RockPaperScissorsGame.getPAPER();
+        String scissors = RockPaperScissorsGame.getSCISSORS();
 
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
         String postmanChoice = rpsGame.getPostmanMove().toUpperCase();

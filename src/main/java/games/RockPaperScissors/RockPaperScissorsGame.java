@@ -8,9 +8,9 @@ public class RockPaperScissorsGame extends Game {
 
     //TODO change to CONSTANTS
 
-    private String rock = "ROCK";
-    private String paper = "PAPER";
-    private String scissors = "SCISSORS";
+    private static final String ROCK = "ROCK";
+    private static final String PAPER = "PAPER";
+    private static final String SCISSORS = "SCISSORS";
 
     public RockPaperScissorsGame() {
 
@@ -33,9 +33,11 @@ public class RockPaperScissorsGame extends Game {
         return postmanChoice;
     }
 
-    public String getRock() { return rock; }
+    public static String getROCK() {
+        return ROCK;
+    }
 
-    public String getPaper() { return paper; }
+    public static String getPAPER() { return PAPER; }
 
-    public String getScissors() { return scissors; }
+    public static String getSCISSORS() { return SCISSORS; }
 }
