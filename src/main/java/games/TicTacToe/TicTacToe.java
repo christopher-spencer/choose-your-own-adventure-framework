@@ -111,6 +111,36 @@ public class TicTacToe extends Game {
         return spotTaken;
     }
 
+    //TODO have resetGame override from Game class
+    public void resetTicTacToeGame() {
+
+        setPlayerChoice(' ');
+        setPostmanChoice(' ');
+
+        setTopLeftX(false);
+        setTopLeftO(false);
+        setTopMiddleX(false);
+        setTopMiddleO(false);
+        setTopRightX(false);
+        setTopRightO(false);
+        setMiddleLeftX(false);
+        setMiddleLeftO(false);
+        setMiddleMiddleX(false);
+        setMiddleMiddleO(false);
+        setMiddleRightX(false);
+        setMiddleRightO(false);
+        setBottomLeftX(false);
+        setBottomLeftO(false);
+        setBottomMiddleX(false);
+        setBottomMiddleO(false);
+        setBottomRightX(false);
+        setBottomRightO(false);
+
+        setThreeXsInARow(false);
+        setThreeOsInARow(false);
+        setNumberOfMovesTillGameOver(9);
+    }
+
     public char getPlayerChoice() { return playerChoice; }
 
     public void setPlayerChoice(char playerChoice) { this.playerChoice = playerChoice; }
