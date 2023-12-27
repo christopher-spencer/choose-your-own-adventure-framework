@@ -930,6 +930,7 @@ public class Menu {
         // Additional logic for checking if a ship is sunk
     }
 
+    // TODO minus hitPoints from Ship class
     private String attack(String[][] board, int row, int col) {
         String BOAT = Battleship.getBoatMarker();
         String HIT = Battleship.getHITMarker();

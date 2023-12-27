@@ -14,13 +14,6 @@ public class Battleship extends Game {
     private static final String BOAT = "[]";
 
     private List<Ship> ships;
-
-    // TODO need to be able to select where you place your ships at the beginning of the game
-    //  and random placement selector for Postman ships on their own board
-
-    //TODO (2 versions of same graph where 1 shows the ships and the other just shows miss/hits)
-
-    // TODO Keep track of every single battleship location
     // TODO Keep track of misses vs hits
     // TODO If right number of hits, booleans sink ships
 

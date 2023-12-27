@@ -11,7 +11,7 @@ public class Ship {
     private boolean isHorizontal;
     private int startRow;
     private int startCol;
-    
+
     public Ship(String whoseShipIsIt, String shipName, int length) {
         this.whoseShipIsIt = whoseShipIsIt;
         this.shipName = shipName;
