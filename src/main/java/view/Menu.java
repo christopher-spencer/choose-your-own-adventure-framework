@@ -93,7 +93,7 @@ public class Menu {
         System.out.println();
         randomGameSelector();
     }
-
+        // TODO eventually add two player modes for each game
     public void randomGameSelector() {
         Random random = new Random();
 //        int randomNumber = random.nextInt(2);
