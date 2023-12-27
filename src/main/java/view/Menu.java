@@ -225,7 +225,7 @@ public class Menu {
         }
 
         displayHangmanGameResult(youWin, mysteryWord);
-        
+
         //TODO switch to resetGame override
         correctGuesses.clear();
         previousGuesses.clear();
@@ -334,6 +334,7 @@ public class Menu {
     // so the whole game just continues to spit out invalid selection
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
+        boolean isValidSelection = false;
 
         System.out.println();
         System.out.println("    Welcome to Tic Tac Toe!");
@@ -343,20 +344,24 @@ public class Menu {
         System.out.println("    Enter ( X ) or ( O ): ");
         System.out.println();
 
-        chooseXorO = in.nextLine().toUpperCase();
+        while (!isValidSelection) {
+            chooseXorO = in.nextLine().toUpperCase();
 
-        if (chooseXorO.equals("X")) {
-            ticTacToeGame.setPlayerChoice('X');
-            ticTacToeGame.setPostmanChoice('O');
-            System.out.println("    You have chosen to play as X's!");
-            System.out.println();
-        } else if (chooseXorO.equals("O")) {
-            ticTacToeGame.setPlayerChoice('O');
-            ticTacToeGame.setPostmanChoice('X');
-            System.out.println("    You have chosen to play as O's!");
-            System.out.println();
-        } else {
-            tellUserInvalidSelection();
+            if (chooseXorO.equals("X")) {
+                isValidSelection = true;
+                ticTacToeGame.setPlayerChoice('X');
+                ticTacToeGame.setPostmanChoice('O');
+                System.out.println("    You have chosen to play as X's!");
+                System.out.println();
+            } else if (chooseXorO.equals("O")) {
+                isValidSelection = true;
+                ticTacToeGame.setPlayerChoice('O');
+                ticTacToeGame.setPostmanChoice('X');
+                System.out.println("    You have chosen to play as O's!");
+                System.out.println();
+            } else {
+                tellUserInvalidSelection();
+            }
         }
     }
 
