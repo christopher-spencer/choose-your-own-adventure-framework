@@ -111,7 +111,9 @@ public class TicTacToe extends Game {
     }
 
     //TODO have resetGame override from Game class
-    public void resetTicTacToeGame() {
+
+    @Override
+    public void resetGame() {
 
         setPlayerChoice(' ');
         setPostmanChoice(' ');

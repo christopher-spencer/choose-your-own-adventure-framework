@@ -21,7 +21,12 @@ public abstract class Game {
     }
 
     public Game(int value) {
+
         numberOfMovesTillGameOver = value;
+    }
+
+    public void resetGame() {
+
     }
 
     public String getPlayerMove() {
