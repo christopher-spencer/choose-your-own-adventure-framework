@@ -363,7 +363,6 @@ public class Menu {
         }
     }
 
-    //TODO variables for magic numbers
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
