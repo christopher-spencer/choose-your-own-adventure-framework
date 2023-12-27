@@ -329,9 +329,7 @@ public class Menu {
 
         itGoesOnAndOnMyFriends();
     }
-
-    //TODO currently if you make invalid selection it tells you but doesn't ask again
-    // so the whole game just continues to spit out invalid selection
+    
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
         boolean isValidSelection = false;
