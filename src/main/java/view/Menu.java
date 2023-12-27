@@ -963,12 +963,9 @@ public class Menu {
         }
     }
 
-    public void postmanTurn() {
+//    public void postmanMove() {
         // TODO Randomized selector
         // TODO Update playerBoard and postmanOpponentDisplay
-    }
-
-//    public void postmanMove() {
 //        // AI logic to select target (row, col)
 //        int row = // AI logic to determine row
 //        int col = // AI logic to determine col
