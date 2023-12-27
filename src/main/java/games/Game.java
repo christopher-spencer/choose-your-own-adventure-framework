@@ -12,7 +12,6 @@ public abstract class Game {
     private boolean isPlayerWin = false;
     private boolean isPostmanWin = false;
     private boolean isATie = false;
-
     protected int numberOfMovesTillGameOver = 0;
     private boolean isNoMoreMovesPossible = false;
 
@@ -26,7 +25,12 @@ public abstract class Game {
     }
 
     public void resetGame() {
-
+        isAWinner = false;
+        isPlayerWin = false;
+        isPostmanWin = false;
+        isATie = false;
+        numberOfMovesTillGameOver = 0;
+        isNoMoreMovesPossible = false;
     }
 
     public String getPlayerMove() {
