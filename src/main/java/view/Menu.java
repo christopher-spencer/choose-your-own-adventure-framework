@@ -935,6 +935,12 @@ public class Menu {
         return in.nextLine();
     }
 
+    //TODO feed variables to hold attack column and row
+    public void whereWouldYouLikeToAttack() {
+        whereWouldYouLikeToAttackRow();
+        whereWouldYouLikeToAttackColumn();
+    }
+
     public void playerMove(int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         // TODO override playerMove in Game class and move to Battleship class
