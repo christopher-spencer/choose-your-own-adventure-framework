@@ -5,9 +5,7 @@ import games.Game;
 import java.util.Random;
 
 public class RockPaperScissorsGame extends Game {
-
-    //TODO change to CONSTANTS
-
+    
     private static final String ROCK = "ROCK";
     private static final String PAPER = "PAPER";
     private static final String SCISSORS = "SCISSORS";
