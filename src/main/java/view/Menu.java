@@ -329,7 +329,7 @@ public class Menu {
 
         itGoesOnAndOnMyFriends();
     }
-    
+
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
         boolean isValidSelection = false;
@@ -369,6 +369,7 @@ public class Menu {
         boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
         boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
         boolean isValidMove = false;
+        int topLeft = 1;
 
         while (!isValidMove) {
 
@@ -381,15 +382,15 @@ public class Menu {
 
             playerMove = Integer.parseInt(in.nextLine());
 
-            if (playerMove == 1 && isPlayerXs) {
-                if (!spotTaken.contains(1)) {
+            if (playerMove == topLeft && isPlayerXs) {
+                if (!spotTaken.contains(topLeft)) {
                     ticTacToeGame.setTopLeftX(true);
                     isValidMove = true;
                 } else {
                     tellUserInvalidSelection();
                 }
-            } else if (playerMove == 1 && isPlayerOs) {
-                if (!spotTaken.contains(1)) {
+            } else if (playerMove == topLeft && isPlayerOs) {
+                if (!spotTaken.contains(topLeft)) {
                     ticTacToeGame.setTopLeftO(true);
                     isValidMove = true;
                 } else {
