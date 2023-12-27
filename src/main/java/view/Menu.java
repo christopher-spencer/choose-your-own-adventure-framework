@@ -724,6 +724,8 @@ public class Menu {
         System.out.println();
     }
 
+    //TODO need to account for out of bounds exceptions for each ship depending on length
+
     public void askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
         String userSelection = "";
@@ -830,14 +832,23 @@ public class Menu {
     }
 
     public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
+        battleshipBoardDisplay(playerBoard);
         whereWouldYouLikeToPlaceYourShip(userCarrier);
         placeShip(playerBoard, userCarrier);
+
+        battleshipBoardDisplay(playerBoard);
         whereWouldYouLikeToPlaceYourShip(userBattleship);
         placeShip(playerBoard, userBattleship);
+
+        battleshipBoardDisplay(playerBoard);
         whereWouldYouLikeToPlaceYourShip(userDestroyer);
         placeShip(playerBoard, userDestroyer);
+
+        battleshipBoardDisplay(playerBoard);
         whereWouldYouLikeToPlaceYourShip(userSubmarine);
         placeShip(playerBoard, userSubmarine);
+
+        battleshipBoardDisplay(playerBoard);
         whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
         placeShip(playerBoard, userPatrolBoat);
     }
@@ -880,8 +891,9 @@ public class Menu {
     }
 
     public void battleshipPrintBoard(String[][] board) {
-        System.out.print("          ");
+
         for (int row = 0; row < board.length; row++) {
+            System.out.print("          ");
             for (int column = 0; column < board[row].length; column++) {
                 System.out.print(board[row][column]);
                 if (column < board[row].length - 1) {
