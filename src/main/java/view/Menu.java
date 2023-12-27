@@ -941,17 +941,14 @@ public class Menu {
         whereWouldYouLikeToAttackColumn();
     }
 
-    public void playerMove(int row, int col) {
+    public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         // TODO override playerMove in Game class and move to Battleship class
+        String result = attack(postmanBoard, row, col);
+        playerOpponentDisplay[row][col] = result;
+        // Additional logic for checking if a ship is sunk
     }
 
-//    public void playerMove(int row, int col) {
-//        String result = attack(postmanBoard, row, col);
-//        playerOpponentDisplay[row][col] = result;
-//        // Additional logic for checking if a ship is sunk
-//    }
-//
     private String attack(String[][] board, int row, int col) {
         String BOAT = Battleship.getBoatMarker();
         String HIT = Battleship.getHITMarker();
