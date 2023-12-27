@@ -225,7 +225,8 @@ public class Menu {
         }
 
         displayHangmanGameResult(youWin, mysteryWord);
-
+        
+        //TODO switch to resetGame override
         correctGuesses.clear();
         previousGuesses.clear();
 
