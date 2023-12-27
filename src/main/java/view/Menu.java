@@ -931,6 +931,7 @@ public class Menu {
     }
 
     // TODO minus hitPoints from Ship class
+    //TODO if HP == 0, isShipSunk == true
     private String attack(String[][] board, int row, int col) {
         String BOAT = Battleship.getBoatMarker();
         String HIT = Battleship.getHITMarker();

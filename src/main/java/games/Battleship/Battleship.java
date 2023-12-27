@@ -14,8 +14,6 @@ public class Battleship extends Game {
     private static final String BOAT = "[]";
 
     private List<Ship> ships;
-    // TODO Keep track of misses vs hits
-    // TODO If right number of hits, booleans sink ships
 
     public Battleship() {
         ships = new ArrayList<>();
