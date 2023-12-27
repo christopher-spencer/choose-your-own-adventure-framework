@@ -109,7 +109,7 @@ public class TicTacToe extends Game {
 
         return spotTaken;
     }
-    
+
     @Override
     public void resetGame() {
 
