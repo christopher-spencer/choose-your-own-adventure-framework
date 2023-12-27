@@ -718,10 +718,13 @@ public class Menu {
         battleshipBoardDisplay(playerBoard);
     }
 
+    //TODO add these WELCOMES to each game and style them out
     public void welcomeToBattleShip() {
         System.out.println();
         System.out.println("    Welcome to Battleship!");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     //TODO need to account for out of bounds exceptions for each ship depending on length
