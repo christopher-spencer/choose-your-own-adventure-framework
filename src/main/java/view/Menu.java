@@ -733,6 +733,8 @@ public class Menu {
         while (!isValidSelection) {
 
             System.out.println();
+            System.out.println("The " + ship.getShipName() + " takes up " + ship.getLength() + " spaces in length.");
+            System.out.println();
             System.out.println("Would you like to place your " + ship.getShipName() + " horizontally (H) or vertically (V)?");
             System.out.println();
             System.out.println("Enter (H) or (V):");
