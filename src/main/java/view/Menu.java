@@ -949,16 +949,16 @@ public class Menu {
         }
     }
 
-    public void postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
-        // TODO Update playerBoard and postmanOpponentDisplay
-        Random random = new Random();
-        int row = random.nextInt(9) + 1;
-        int col = random.nextInt(9) + 1;
-
-        String result = attack(playerBoard, row, col);
-        postmanOpponentDisplay[row][col] = result;
-        // Additional logic for checking if a ship is sunk (?)
-    }
+//    public void postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
+//        // TODO Update playerBoard and postmanOpponentDisplay
+//        Random random = new Random();
+//        int row = random.nextInt(9) + 1;
+//        int col = random.nextInt(9) + 1;
+//
+//        String result = attack(playerBoard, row, col);
+//        postmanOpponentDisplay[row][col] = result;
+//        // Additional logic for checking if a ship is sunk (?)
+//    }
 
     /*
      *********************************************************************************
