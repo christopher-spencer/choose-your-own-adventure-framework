@@ -950,7 +950,6 @@ public class Menu {
     }
 
     public void postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
-         // TODO Randomized selector
         // TODO Update playerBoard and postmanOpponentDisplay
         Random random = new Random();
         int row = random.nextInt(9) + 1;
@@ -958,7 +957,7 @@ public class Menu {
 
         String result = attack(playerBoard, row, col);
         postmanOpponentDisplay[row][col] = result;
-        // Additional logic for checking if a ship is sunk
+        // Additional logic for checking if a ship is sunk (?)
     }
 
     /*
