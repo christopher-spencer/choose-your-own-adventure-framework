@@ -750,7 +750,6 @@ public class Menu {
 
             String startRow = in.nextLine();
 
-            //TODO possibly check for exceptions here
             if (startRow.equalsIgnoreCase("A")) {
                 ship.setStartRow(1);
                 isValidSelection = true;
@@ -791,6 +790,8 @@ public class Menu {
         boolean isValidSelection = false;
         int startCol = 0;
 
+        //TODO check for exceptions here and if no good, rerun row and column
+        
         while (!isValidSelection) {
 
             System.out.println();
