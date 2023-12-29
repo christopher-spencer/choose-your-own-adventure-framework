@@ -791,7 +791,7 @@ public class Menu {
         int startCol = 0;
 
         //TODO check for exceptions here and if no good, rerun row and column
-        
+
         while (!isValidSelection) {
 
             System.out.println();
@@ -941,6 +941,7 @@ public class Menu {
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
+            //TODO subtract HP from the correct ship
             return HIT;
         } else {
             board[row][col] = MISS;
