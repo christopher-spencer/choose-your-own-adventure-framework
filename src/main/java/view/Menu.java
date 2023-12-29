@@ -750,6 +750,7 @@ public class Menu {
 
             String startRow = in.nextLine();
 
+            //TODO possibly check for exceptions here
             if (startRow.equalsIgnoreCase("A")) {
                 ship.setStartRow(1);
                 isValidSelection = true;
