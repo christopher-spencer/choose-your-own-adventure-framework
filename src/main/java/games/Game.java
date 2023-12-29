@@ -3,7 +3,6 @@ package games;
 public abstract class Game {
     //TODO think more about restructuring/adding what you can to game class
     //TODO another abstract class for boards (?)
-    //TODO add resetGame method to override in each class
 
     private String playerMove;
     private String postmanMove;
