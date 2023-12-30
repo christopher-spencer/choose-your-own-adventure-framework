@@ -5,6 +5,7 @@ import games.Game;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Battleship extends Game {
 
@@ -74,6 +75,42 @@ public class Battleship extends Game {
         }
         return null;
     }
+
+    public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
+        // TODO Update postmanBoard and playerOpponentDisplay
+        // TODO override playerMove in Game class and move to Battleship class
+        String result = attack(postmanBoard, row, col);
+        playerOpponentDisplay[row][col] = result;
+        // Additional logic for checking if a ship is sunk
+    }
+
+    // TODO minus hitPoints from Ship class
+    //TODO if HP == 0, isShipSunk == true
+    private String attack(String[][] board, int row, int col) {
+//        String BOAT = Battleship.getBoatMarker();
+//        String HIT = Battleship.getHITMarker();
+//        String MISS = Battleship.getMissMarker();
+
+        if (board[row][col].equals(BOAT)) {
+            board[row][col] = HIT;
+            //TODO subtract HP from the correct ship
+            return HIT;
+        } else {
+            board[row][col] = MISS;
+            return MISS;
+        }
+    }
+
+//        public void postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
+//        // TODO Update playerBoard and postmanOpponentDisplay
+//        Random random = new Random();
+//        int row = random.nextInt(9) + 1;
+//        int col = random.nextInt(9) + 1;
+//
+//        String result = attack(playerBoard, row, col);
+//        postmanOpponentDisplay[row][col] = result;
+//        // Additional logic for checking if a ship is sunk (?)
+//    }
 
     public List<Ship> getShips() { return ships; }
 
