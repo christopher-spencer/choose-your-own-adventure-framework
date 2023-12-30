@@ -76,6 +76,7 @@ public class Battleship extends Game {
         return null;
     }
 
+    //TODO connect to Game class
     public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         // TODO override playerMove in Game class and move to Battleship class
