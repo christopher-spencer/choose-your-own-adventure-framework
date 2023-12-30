@@ -702,7 +702,17 @@ public class Menu {
     //TODO add these WELCOMES to each game and style them out (add welcomes to randomSelector)
     public void welcomeToBattleShip() {
         System.out.println();
-        System.out.println("    Welcome to Battleship!");
+        System.out.println("    ***************************************************************************");
+        System.out.println("    *  *********************************************************************  *");
+        System.out.println("    *  *                                                                   *  *");
+        System.out.println("    *  *  *****   *****  ***** *****  *     *****  *****  *   *  *  *****  *  *");
+        System.out.println("    *  *  *    *  *   *    *     *    *     *      *      *   *  *  *   *  *  *");
+        System.out.println("    *  *  *****   *****    *     *    *     *****  *****  *****  *  *****  *  *");
+        System.out.println("    *  *  *    *  *   *    *     *    *     *          *  *   *  *  *      *  *");
+        System.out.println("    *  *  *****   *   *    *     *    ***** *****  *****  *   *  *  *      *  *");
+        System.out.println("    *  *                                                                   *  *");
+        System.out.println("    *  *********************************************************************  *");
+        System.out.println("    ***************************************************************************");
         System.out.println();
         System.out.println("    When you're ready, press ENTER to continue:");
         in.nextLine();
