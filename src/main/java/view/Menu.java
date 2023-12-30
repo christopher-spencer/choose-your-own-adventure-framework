@@ -330,12 +330,26 @@ public class Menu {
         itGoesOnAndOnMyFriends();
     }
 
+    public void welcomeToTicTacToe() {
+        System.out.println("    *********************************************************************");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *  *****  *  *****  *****  *****  *****  *****  *****  *****  *  *");
+        System.out.println("    *  *    *    *  *        *    *   *  *        *    *   *  *      *  *");
+        System.out.println("    *  *    *    *  *        *    *****  *        *    *   *  *****  *  *");
+        System.out.println("    *  *    *    *  *        *    *   *  *        *    *   *  *      *  *");
+        System.out.println("    *  *    *    *  *****    *    *   *  *****    *    *****  *****  *  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *********************************************************************");
+    }
+
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
         boolean isValidSelection = false;
 
         System.out.println();
-        System.out.println("    Welcome to Tic Tac Toe!");
+        welcomeToTicTacToe();
         System.out.println();
         System.out.println("    Do you want to play as X's or O's?");
         System.out.println();
