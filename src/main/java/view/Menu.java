@@ -127,13 +127,6 @@ public class Menu {
      *********************************************************************************
      */
 
-    public String playerRockPaperScissorsMove() {
-        //TODO need INVALID SELECTION if not rock paper or scissors (if the player just clicks enter, goes on without user selection)
-
-        System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
-        return in.nextLine();
-    }
-
     public void rockPaperScissorsGame() {
         String rock = RockPaperScissorsGame.getROCK();
         String paper = RockPaperScissorsGame.getPAPER();
@@ -165,6 +158,32 @@ public class Menu {
         }
 
         itGoesOnAndOnMyFriends();
+    }
+
+    public void welcomeToRockPaperScissors() {
+        System.out.println("    *********************************************************************");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *  *****   ****   *****  *    *                               *  *");
+        System.out.println("    *  *  *   *  *    *  *      *   *                                *  *");
+        System.out.println("    *  *  *  *  *      * *      * *                                  *  *");
+        System.out.println("    *  *  *   *  *    *  *      *  *                                 *  *");
+        System.out.println("    *  *  *    *  ****   *****  *    *                               *  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *  *****    ***   *****   *****  *****                        *  *");
+        System.out.println("    *  *  *    *  *   *  *    *  *      *   *                        *  *");
+        System.out.println("    *  *  *****   *****  *****   *****  *  *                         *  *");
+        System.out.println("    *  *  *       *   *  *       *      *   *                        *  *");
+        System.out.println("    *  *  *       *   *  *       *****  *    *                       *  *");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *********************************************************************");
+    }
+
+    public String playerRockPaperScissorsMove() {
+        //TODO need INVALID SELECTION if not rock paper or scissors (if the player just clicks enter, goes on without user selection)
+
+        System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
+        return in.nextLine();
     }
 
     /*
