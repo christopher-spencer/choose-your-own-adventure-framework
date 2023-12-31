@@ -769,7 +769,6 @@ public class Menu {
         battleshipBoardDisplay(playerBoard);
     }
 
-    //TODO add these WELCOMES to each game and style them out (add welcomes to randomSelector)
     public void welcomeToBattleShip() {
         System.out.println();
         System.out.println("    ***************************************************************************");
