@@ -132,6 +132,8 @@ public class Menu {
         String paper = RockPaperScissorsGame.getPAPER();
         String scissors = RockPaperScissorsGame.getSCISSORS();
 
+        welcomeToRockPaperScissors();
+
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
         String postmanChoice = rpsGame.getPostmanMove().toUpperCase();
 
@@ -184,6 +186,9 @@ public class Menu {
         System.out.println("    *  *                                                                 *  *");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     public String playerRockPaperScissorsMove() {
@@ -368,6 +373,9 @@ public class Menu {
         System.out.println("    *  *                                                             *  *");
         System.out.println("    *  ***************************************************************  *");
         System.out.println("    *********************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     public void playerAndPostmanChooseXorO() {
