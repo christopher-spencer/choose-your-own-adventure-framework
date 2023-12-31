@@ -769,6 +769,7 @@ public class Menu {
         battleshipBoardDisplay(playerBoard);
     }
 
+    //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
     public void welcomeToBattleShip() {
         System.out.println();
         System.out.println("    ***************************************************************************");
