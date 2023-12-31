@@ -209,6 +209,8 @@ public class Menu {
         //Todo split up this method into smaller containable methods
         //Todo create hangman GUI
 
+        welcomeToHangman();
+
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
         int lives = hangmanGame.getPlayerLives();
         boolean youWin = hangmanGame.isPlayerWin();
@@ -262,6 +264,23 @@ public class Menu {
         previousGuesses.clear();
 
         itGoesOnAndOnMyFriends();
+    }
+
+    public void welcomeToHangman() {
+        System.out.println("    **************************************************************************");
+        System.out.println("    *  ********************************************************************  *");
+        System.out.println("    *  *                                                                  *  *");
+        System.out.println("    *  *  *    *     *     *     *  *****    **     **     *     *     *  *  *");
+        System.out.println("    *  *  *    *   *   *   * *   *  *        * *   * *   *   *   * *   *  *  *");
+        System.out.println("    *  *  ******  *******  *  *  *  *   ***  *   *   *  *******  *  *  *  *  *");
+        System.out.println("    *  *  *    *  *     *  *   * *  *    *   *       *  *     *  *   * *  *  *");
+        System.out.println("    *  *  *    *  *     *  *     *  *****    *       *  *     *  *     *  *  *");
+        System.out.println("    *  *                                                                  *  *");
+        System.out.println("    *  ********************************************************************  *");
+        System.out.println("    **************************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     private void displayHangmanStats(String mysteryWord, List<Character> previousGuesses, List<Character> correctGuesses) {
