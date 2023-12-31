@@ -139,7 +139,7 @@ public class Menu {
         System.out.println("You have chosen: " + userChoice);
         System.out.println("The Postman chose: " + postmanChoice);
 
-        //TODO switch up else if logic below to incorporate isYouWin and isATie from Game class
+        //TODO switch up else if logic below to incorporate isYouWin and isATie from Game class (?)
 
         if (userChoice.equals(postmanChoice)) {
             theGameIsATie();
@@ -258,7 +258,7 @@ public class Menu {
 
         displayHangmanGameResult(youWin, mysteryWord);
 
-        //TODO switch to resetGame override
+        //TODO switch to resetGame override (currently commented out in HM Class
         correctGuesses.clear();
         previousGuesses.clear();
 
