@@ -97,8 +97,7 @@ public class Menu {
     public void randomGameSelector() {
         Random random = new Random();
 //        int randomNumber = random.nextInt(2);
-        //TODO placeholder to check TTT
-        // (change bound to 3 && uncomment TTT selector when TTT is ready to be included)
+        //TODO change bounds && uncomment selectors when Games are ready
         int randomNumber = 3;
 
 //        if (randomNumber == 0) {
