@@ -161,23 +161,29 @@ public class Menu {
     }
 
     public void welcomeToRockPaperScissors() {
-        System.out.println("    *********************************************************************");
-        System.out.println("    *  ***************************************************************  *");
-        System.out.println("    *  *                                                             *  *");
-        System.out.println("    *  *               *****   ****   *****  *    *                  *  *");
-        System.out.println("    *  *               *   *  *    *  *      *   *                   *  *");
-        System.out.println("    *  *               *  *  *      * *      * *                     *  *");
-        System.out.println("    *  *               *   *  *    *  *      *  *                    *  *");
-        System.out.println("    *  *               *    *  ****   *****  *    *                  *  *");
-        System.out.println("    *  *                                                             *  *");
-        System.out.println("    *  *            *****    ***   *****   *****  *****              *  *");
-        System.out.println("    *  *            *    *  *   *  *    *  *      *   *              *  *");
-        System.out.println("    *  *            *****   *****  *****   *****  *  *               *  *");
-        System.out.println("    *  *            *       *   *  *       *      *   *              *  *");
-        System.out.println("    *  *            *       *   *  *       *****  *    *             *  *");
-        System.out.println("    *  *                                                             *  *");
-        System.out.println("    *  ***************************************************************  *");
-        System.out.println("    *********************************************************************");
+        System.out.println("    *************************************************************************");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *                 *****   ****   *****  *    *                    *  *");
+        System.out.println("    *  *                 *   *  *    *  *      *   *                     *  *");
+        System.out.println("    *  *                 *  *  *      * *      * *                       *  *");
+        System.out.println("    *  *                 *   *  *    *  *      *  *                      *  *");
+        System.out.println("    *  *                 *    *  ****   *****  *    *                    *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *              *****    ***   *****   *****  *****                *  *");
+        System.out.println("    *  *              *    *  *   *  *    *  *      *   *                *  *");
+        System.out.println("    *  *              *****   *****  *****   *****  *  *                 *  *");
+        System.out.println("    *  *              *       *   *  *       *      *   *                *  *");
+        System.out.println("    *  *              *       *   *  *       *****  *    *               *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *   *****   *****  ***   *****   *****    ****    *****   *****   *  *");
+        System.out.println("    *  *  *        *       *   *       *        *    *   *   *  *        *  *");
+        System.out.println("    *  *    ****   *       *     ****    ****  *      *  *  *    ****    *  *");
+        System.out.println("    *  *        *  *       *         *       *  *    *   *   *        *  *  *");
+        System.out.println("    *  *   *****   *****  ***   *****   *****    ****    *    *  *****   *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *************************************************************************");
     }
 
     public String playerRockPaperScissorsMove() {
