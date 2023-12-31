@@ -7,11 +7,6 @@ import java.util.List;
 
 public class TicTacToe extends Game {
 
-    // TODO think about how to refactor TTTGame based on how we did Battleship
-
-    // TODO constants for EMPTY = ' ', X or O to check for each spot in the board array (?)
-    // TODO check the array for isAWinner logic and so on instead of the booleans
-
     private char playerChoice = ' ';
     private char postmanChoice = ' ';
 
