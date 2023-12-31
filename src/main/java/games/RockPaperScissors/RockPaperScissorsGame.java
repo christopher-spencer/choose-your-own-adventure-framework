@@ -15,7 +15,7 @@ public class RockPaperScissorsGame extends Game {
     }
 
     @Override
-    public String getPostmanMove(){
+    public String getPostmanMove() {
         String postmanChoice = "";
         Random random = new Random();
         int randomMove = random.nextInt(3);
