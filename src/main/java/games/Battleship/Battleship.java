@@ -123,12 +123,10 @@ public class Battleship extends Game {
             int currentRow = isHorizontal ? startRow : startRow + i;
             int currentCol = isHorizontal ? startCol + i : startCol;
 
-            // Check if out of bounds
             if (currentRow > 10 || currentCol > 10) {
                 return false;
             }
 
-            // Check for overlap
             if (!board[currentRow][currentCol].equals(Battleship.getEmptyMarker())) {
                 return false;
             }
