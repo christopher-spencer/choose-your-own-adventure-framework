@@ -819,8 +819,6 @@ public class Menu {
 
     public void askUserForShipPlacementRow(Ship ship, String[][] board) {
         boolean isValidSelection = false;
-        int shipLength = ship.getLength();
-        boolean isHorizontal = ship.isHorizontal();
 
         while (!isValidSelection) {
 
@@ -835,10 +833,8 @@ public class Menu {
             if (startRowString.length() == 1 && startRowString.charAt(0) >= 'A' && startRowString.charAt(0) <= 'J') {
                 int startRow = startRowString.charAt(0) - 'A';
                 ship.setStartRow(startRow);
-                isValidSelection = battleshipGame.isPlacementValid(ship, board);
-            }
-
-            if (!isValidSelection) {
+                isValidSelection = true;
+            } else {
                 tellUserInvalidSelection();
             }
         }
