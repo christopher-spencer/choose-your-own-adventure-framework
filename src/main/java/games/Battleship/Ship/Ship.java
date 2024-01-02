@@ -2,7 +2,6 @@ package games.Battleship.Ship;
 
 public class Ship {
 
-    // TODO player seems like a good variable to put in Game Class (playerOrPostman)
     private String whoseShipIsIt;
     private String shipName;
     private int length;
