@@ -892,14 +892,14 @@ public class Menu {
             }
         }
     }
-
+    //TODO while loop here to make sure all three add up to a valid spot
+    // then feed isValid boolean to all three methods to check (?)
     public void whereWouldYouLikeToPlaceYourShip(Ship ship) {
         askUserForShipPlacementOrientation(ship);
         askUserForShipPlacementRow(ship);
         askUserForShipPlacementColumn(ship);
     }
-    //TODO while loop here to make sure all three add up to a valid spot
-    // then feed isValid boolean to all three methods to check (?)
+
     public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
         battleshipBoardDisplay(playerBoard);
         whereWouldYouLikeToPlaceYourShip(userCarrier);
