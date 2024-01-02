@@ -139,8 +139,8 @@ public class Battleship extends Game {
 //        }
 //        return true;
 
-        int startRow = ship.getStartRow(); // Assuming 1-based index
-        int startCol = ship.getStartCol(); // Assuming 1-based index
+        int startRow = ship.getStartRow();
+        int startCol = ship.getStartCol();
         int shipLength = ship.getLength();
         boolean isHorizontal = ship.isHorizontal();
 

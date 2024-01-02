@@ -862,7 +862,8 @@ public class Menu {
             }
 
             if (!isValidSelection) {
-                tellUserInvalidSelection();
+//                tellUserInvalidSelection();
+                break;
             }
         }
     }
@@ -878,7 +879,8 @@ public class Menu {
                 askUserForShipPlacementColumn(ship, board);
                 isValidPlacement = battleshipGame.isPlacementValid(ship, board);
                 if (!isValidPlacement) {
-                    System.out.println("Invalid placement. The ship goes off the board. Please try again.");
+                    tellUserInvalidSelection();
+//                    System.out.println("Invalid placement. The ship goes off the board. Please try again.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");
