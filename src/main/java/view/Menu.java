@@ -884,6 +884,7 @@ public class Menu {
             startCol = Integer.parseInt(in.nextLine());
             boolean isOutOfBounds = ((startCol - 1) + shipLength) > 10;
 
+            //TODO might need to check isHorizontal && isOutOfBounds (doesnt matter if vertical?)
             if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
                     && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
                     && startCol != 9 && startCol != 10) {
