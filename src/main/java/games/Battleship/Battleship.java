@@ -119,8 +119,15 @@ public class Battleship extends Game {
         int shipLength = ship.getLength();
         boolean isHorizontal = ship.isHorizontal();
 
-        if (isHorizontal && startCol + shipLength > 10) return false;
-        if (!isHorizontal && startRow + shipLength > 10) return false;
+        if (isHorizontal) {
+            if (startCol + shipLength - 1 > 10) {
+                return false;
+            }
+        } else {
+            if (startRow + shipLength - 1 > 10) { 
+                return false;
+            }
+        }
 
         for (int i = 0; i < shipLength; i++) {
             int currentRow = isHorizontal ? startRow : startRow + i;

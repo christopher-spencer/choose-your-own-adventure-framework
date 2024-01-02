@@ -869,10 +869,20 @@ public class Menu {
     //TODO while loop here to make sure all three add up to a valid spot
     // then feed isValid boolean to all three methods to check (?)
     public void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
+        boolean isValidSelection = false;
 
-        askUserForShipPlacementOrientation(ship);
-        askUserForShipPlacementRow(ship, board);
-        askUserForShipPlacementColumn(ship, board);
+        while (!isValidSelection) {
+            askUserForShipPlacementOrientation(ship);
+            askUserForShipPlacementRow(ship, board);
+            askUserForShipPlacementColumn(ship, board);
+
+            if (!battleshipGame.isPlacementValid(ship, board)) {
+                tellUserInvalidSelection();
+            } else {
+                placeShip(board, ship);
+                isValidSelection = true;
+            }
+        }
     }
 
     public void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship... ships) {
@@ -880,7 +890,6 @@ public class Menu {
         for (Ship ship : ships) {
             battleshipBoardDisplay(board);
             whereWouldYouLikeToPlaceYourShip(ship, board);
-            placeShip(board, ship);
         }
     }
 
