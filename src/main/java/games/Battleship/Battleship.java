@@ -113,6 +113,29 @@ public class Battleship extends Game {
 //        // Additional logic for checking if a ship is sunk (?)
 //    }
 
+    public boolean isPlacementValid(Ship ship, String[][] board) {
+        int startRow = ship.getStartRow();
+        int startCol = ship.getStartCol();
+        int shipLength = ship.getLength();
+        boolean isHorizontal = ship.isHorizontal();
+
+        for (int i = 0; i < shipLength; i++) {
+            int currentRow = isHorizontal ? startRow : startRow + i;
+            int currentCol = isHorizontal ? startCol + i : startCol;
+
+            // Check if out of bounds
+            if (currentRow > 10 || currentCol > 10) {
+                return false;
+            }
+
+            // Check for overlap
+            if (!board[currentRow][currentCol].equals(Battleship.getEmptyMarker())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public List<Ship> getShips() { return ships; }
 
     public void setShips(List<Ship> ships) { this.ships = ships; }
