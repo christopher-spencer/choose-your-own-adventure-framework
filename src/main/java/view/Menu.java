@@ -881,12 +881,12 @@ public class Menu {
         askUserForShipPlacementColumn(ship, board);
     }
 
-    public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship... ships) {
+    public void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship... ships) {
 
         for (Ship ship : ships) {
-            battleshipBoardDisplay(playerBoard);
-            whereWouldYouLikeToPlaceYourShip(ship, playerBoard);
-            placeShip(playerBoard, ship);
+            battleshipBoardDisplay(board);
+            whereWouldYouLikeToPlaceYourShip(ship, board);
+            placeShip(board, ship);
         }
     }
 
