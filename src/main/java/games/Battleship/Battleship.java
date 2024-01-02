@@ -124,7 +124,7 @@ public class Battleship extends Game {
                 return false;
             }
         } else {
-            if (startRow + shipLength - 1 > 10) { 
+            if (startRow + shipLength - 1 > 10) {
                 return false;
             }
         }
