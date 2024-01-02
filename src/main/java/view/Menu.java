@@ -830,10 +830,11 @@ public class Menu {
             System.out.println("Enter the starting row (A-J):");
             System.out.println();
 
-            String startRowString = in.nextLine();
+            String startRowString = in.nextLine().trim().toUpperCase();
 
-            if (startRowString.matches("[A-J]")) {
-                ship.setStartRow(startRowString.charAt(0) - 'A' + 1);
+            if (startRowString.length() == 1 && startRowString.charAt(0) >= 'A' && startRowString.charAt(0) <= 'J') {
+                int startRow = startRowString.charAt(0) - 'A';
+                ship.setStartRow(startRow);
                 isValidSelection = battleshipGame.isPlacementValid(ship, board);
             }
 
