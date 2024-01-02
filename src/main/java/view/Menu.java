@@ -819,6 +819,8 @@ public class Menu {
 
     public void askUserForShipPlacementRow(Ship ship) {
         boolean isValidSelection = false;
+        int shipLength = ship.getLength();
+        boolean isHorizontal = ship.isHorizontal();
 
         while (!isValidSelection) {
 
@@ -828,38 +830,79 @@ public class Menu {
             System.out.println("Enter the starting row (A-J):");
             System.out.println();
 
-            String startRow = in.nextLine();
+            String startRowString = in.nextLine();
+            boolean isOutOfBounds = ((ship.getStartRow() - 1) + shipLength) > 10;
 
-            if (startRow.equalsIgnoreCase("A")) {
+            if (startRowString.equalsIgnoreCase("A")) {
                 ship.setStartRow(1);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("B")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("B")) {
                 ship.setStartRow(2);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("C")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("C")) {
                 ship.setStartRow(3);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("D")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("D")) {
                 ship.setStartRow(4);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("E")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("E")) {
                 ship.setStartRow(5);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("F")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("F")) {
                 ship.setStartRow(6);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("G")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("G")) {
                 ship.setStartRow(7);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("H")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("H")) {
                 ship.setStartRow(8);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("I")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("I")) {
                 ship.setStartRow(9);
-                isValidSelection = true;
-            } else if (startRow.equalsIgnoreCase("J")) {
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
+            } else if (startRowString.equalsIgnoreCase("J")) {
                 ship.setStartRow(10);
-                isValidSelection = true;
+                if (isOutOfBounds && !isHorizontal) {
+                    tellUserInvalidSelection();
+                } else {
+                    isValidSelection = true;
+                }
             } else {
                 tellUserInvalidSelection();
             }
@@ -870,6 +913,7 @@ public class Menu {
         boolean isValidSelection = false;
         int startCol = 0;
         int shipLength = ship.getLength();
+        boolean isHorizontal = ship.isHorizontal();
 
         //TODO check for exceptions here and if no good, rerun row and column
 
@@ -889,7 +933,7 @@ public class Menu {
                     && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
                     && startCol != 9 && startCol != 10) {
                 tellUserInvalidSelection();
-            } else if (isOutOfBounds) {
+            } else if (isOutOfBounds && isHorizontal) {
                 tellUserInvalidSelection();
             } else {
                 ship.setStartCol(startCol);
@@ -900,6 +944,10 @@ public class Menu {
     //TODO while loop here to make sure all three add up to a valid spot
     // then feed isValid boolean to all three methods to check (?)
     public void whereWouldYouLikeToPlaceYourShip(Ship ship) {
+        boolean isValidOrientation;
+        boolean isValidRow;
+        boolean isValidColumn;
+        
         askUserForShipPlacementOrientation(ship);
         askUserForShipPlacementRow(ship);
         askUserForShipPlacementColumn(ship);
