@@ -872,9 +872,6 @@ public class Menu {
     //TODO while loop here to make sure all three add up to a valid spot
     // then feed isValid boolean to all three methods to check (?)
     public void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
-        boolean isValidOrientation;
-        boolean isValidRow;
-        boolean isValidColumn;
 
         askUserForShipPlacementOrientation(ship);
         askUserForShipPlacementRow(ship, board);
