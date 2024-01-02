@@ -869,6 +869,7 @@ public class Menu {
     public void askUserForShipPlacementColumn(Ship ship) {
         boolean isValidSelection = false;
         int startCol = 0;
+        int shipLength = ship.getLength();
 
         //TODO check for exceptions here and if no good, rerun row and column
 
@@ -881,10 +882,13 @@ public class Menu {
             System.out.println();
 
             startCol = Integer.parseInt(in.nextLine());
+            boolean isOutOfBounds = ((startCol - 1) + shipLength) > 10;
 
             if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
                     && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
                     && startCol != 9 && startCol != 10) {
+                tellUserInvalidSelection();
+            } else if (isOutOfBounds) {
                 tellUserInvalidSelection();
             } else {
                 ship.setStartCol(startCol);
