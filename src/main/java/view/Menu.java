@@ -843,11 +843,9 @@ public class Menu {
         }
     }
 
-    public void askUserForShipPlacementColumn(Ship ship) {
+    public void askUserForShipPlacementColumn(Ship ship, String[][] board) {
         boolean isValidSelection = false;
         int startCol = 0;
-        int shipLength = ship.getLength();
-        boolean isHorizontal = ship.isHorizontal();
 
         //TODO check for exceptions here and if no good, rerun row and column
 
@@ -860,18 +858,14 @@ public class Menu {
             System.out.println();
 
             startCol = Integer.parseInt(in.nextLine());
-            boolean isOutOfBounds = ((startCol - 1) + shipLength) > 10;
 
-            //TODO might need to check isHorizontal && isOutOfBounds (doesnt matter if vertical?)
-            if (startCol != 1 && startCol != 2 && startCol != 3 && startCol != 4
-                    && startCol != 5 && startCol != 6 && startCol != 7 && startCol != 8
-                    && startCol != 9 && startCol != 10) {
-                tellUserInvalidSelection();
-            } else if (isOutOfBounds && isHorizontal) {
-                tellUserInvalidSelection();
-            } else {
+            if (startCol >= 1 && startCol <= 10) {
                 ship.setStartCol(startCol);
-                isValidSelection = true;
+                isValidSelection = battleshipGame.isPlacementValid(ship, board);
+            }
+
+            if (!isValidSelection) {
+                tellUserInvalidSelection();
             }
         }
     }
@@ -884,15 +878,15 @@ public class Menu {
 
         askUserForShipPlacementOrientation(ship);
         askUserForShipPlacementRow(ship, board);
-        askUserForShipPlacementColumn(ship);
+        askUserForShipPlacementColumn(ship, board);
     }
 
     public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship... ships) {
-       
+
         for (Ship ship : ships) {
             battleshipBoardDisplay(playerBoard);
             whereWouldYouLikeToPlaceYourShip(ship, playerBoard);
-            placeShip(playerBoard, ship); // This should be called only if the placement is valid.
+            placeShip(playerBoard, ship);
         }
     }
 
