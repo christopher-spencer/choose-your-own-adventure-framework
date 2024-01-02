@@ -869,20 +869,24 @@ public class Menu {
     //TODO while loop here to make sure all three add up to a valid spot
     // then feed isValid boolean to all three methods to check (?)
     public void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
-        boolean isValidSelection = false;
 
-        while (!isValidSelection) {
-            askUserForShipPlacementOrientation(ship);
-            askUserForShipPlacementRow(ship, board);
-            askUserForShipPlacementColumn(ship, board);
-
-            if (!battleshipGame.isPlacementValid(ship, board)) {
-                tellUserInvalidSelection();
-            } else {
-                placeShip(board, ship);
-                isValidSelection = true;
+        boolean isValidPlacement = false;
+        while (!isValidPlacement) {
+            try {
+                askUserForShipPlacementOrientation(ship);
+                askUserForShipPlacementRow(ship, board);
+                askUserForShipPlacementColumn(ship, board);
+                isValidPlacement = battleshipGame.isPlacementValid(ship, board);
+                if (!isValidPlacement) {
+                    System.out.println("Invalid placement. The ship goes off the board. Please try again.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+            } catch (Exception e) {
+                System.out.println("Unexpected error. Please try again.");
             }
         }
+        placeShip(board, ship);
     }
 
     public void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship... ships) {

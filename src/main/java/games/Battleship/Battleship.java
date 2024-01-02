@@ -114,29 +114,60 @@ public class Battleship extends Game {
 //    }
 
     public boolean isPlacementValid(Ship ship, String[][] board) {
-        int startRow = ship.getStartRow();
-        int startCol = ship.getStartCol();
+//        int startRow = ship.getStartRow();
+//        int startCol = ship.getStartCol();
+//        int shipLength = ship.getLength();
+//        boolean isHorizontal = ship.isHorizontal();
+//
+//        if (isHorizontal) {
+//            if (startCol + shipLength - 1 > 10) {
+//                return false;
+//            }
+//        } else {
+//            if (startRow + shipLength - 1 > 10) {
+//                return false;
+//            }
+//        }
+//
+//        for (int i = 0; i < shipLength; i++) {
+//            int currentRow = isHorizontal ? startRow : startRow + i;
+//            int currentCol = isHorizontal ? startCol + i : startCol;
+//
+//            if (!board[currentRow][currentCol].equals(Battleship.getEmptyMarker())) {
+//                return false;
+//            }
+//        }
+//        return true;
+
+        int startRow = ship.getStartRow(); // Assuming 1-based index
+        int startCol = ship.getStartCol(); // Assuming 1-based index
         int shipLength = ship.getLength();
         boolean isHorizontal = ship.isHorizontal();
 
         if (isHorizontal) {
+            // Check if ship fits horizontally within the board
             if (startCol + shipLength - 1 > 10) {
                 return false;
             }
+            // Check for overlapping ships
+            for (int i = 0; i < shipLength; i++) {
+                if (!board[startRow][startCol + i].equals(Battleship.getEmptyMarker())) {
+                    return false;
+                }
+            }
         } else {
+            // Check if ship fits vertically within the board
             if (startRow + shipLength - 1 > 10) {
                 return false;
             }
-        }
-
-        for (int i = 0; i < shipLength; i++) {
-            int currentRow = isHorizontal ? startRow : startRow + i;
-            int currentCol = isHorizontal ? startCol + i : startCol;
-
-            if (!board[currentRow][currentCol].equals(Battleship.getEmptyMarker())) {
-                return false;
+            // Check for overlapping ships
+            for (int i = 0; i < shipLength; i++) {
+                if (!board[startRow + i][startCol].equals(Battleship.getEmptyMarker())) {
+                    return false;
+                }
             }
         }
+
         return true;
     }
 
