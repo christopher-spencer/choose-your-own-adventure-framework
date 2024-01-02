@@ -831,7 +831,7 @@ public class Menu {
             String startRowString = in.nextLine().trim().toUpperCase();
 
             if (startRowString.length() == 1 && startRowString.charAt(0) >= 'A' && startRowString.charAt(0) <= 'J') {
-                int startRow = startRowString.charAt(0) - 'A';
+                int startRow = startRowString.charAt(0) - 'A' + 1;
                 ship.setStartRow(startRow);
                 isValidSelection = true;
             } else {
