@@ -947,7 +947,7 @@ public class Menu {
         boolean isValidOrientation;
         boolean isValidRow;
         boolean isValidColumn;
-        
+
         askUserForShipPlacementOrientation(ship);
         askUserForShipPlacementRow(ship);
         askUserForShipPlacementColumn(ship);
