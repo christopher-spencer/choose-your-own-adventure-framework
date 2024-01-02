@@ -788,8 +788,6 @@ public class Menu {
         in.nextLine();
     }
 
-    //TODO need to account for out of bounds exceptions for each ship depending on length
-    //TODO need to show invalid choice when two ships overlap
     public void askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
         String userSelection = "";
@@ -844,8 +842,6 @@ public class Menu {
         boolean isValidSelection = false;
         int startCol = 0;
 
-        //TODO check for exceptions here and if no good, rerun row and column
-
         while (!isValidSelection) {
 
             System.out.println();
@@ -862,13 +858,13 @@ public class Menu {
             }
 
             if (!isValidSelection) {
-//                tellUserInvalidSelection();
+                // The break goes back into while loop in whereWouldYouLikeToPlaceYourShip,
+                // starting over the whole placement
                 break;
             }
         }
     }
-    //TODO while loop here to make sure all three add up to a valid spot
-    // then feed isValid boolean to all three methods to check (?)
+    //TODO try catch necessary? Keep seeing if there are exceptions left to handle
     public void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
 
         boolean isValidPlacement = false;
@@ -880,7 +876,6 @@ public class Menu {
                 isValidPlacement = battleshipGame.isPlacementValid(ship, board);
                 if (!isValidPlacement) {
                     tellUserInvalidSelection();
-//                    System.out.println("Invalid placement. The ship goes off the board. Please try again.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");
