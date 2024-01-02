@@ -817,7 +817,7 @@ public class Menu {
         }
     }
 
-    public void askUserForShipPlacementRow(Ship ship) {
+    public void askUserForShipPlacementRow(Ship ship, String[][] board) {
         boolean isValidSelection = false;
         int shipLength = ship.getLength();
         boolean isHorizontal = ship.isHorizontal();
@@ -831,79 +831,13 @@ public class Menu {
             System.out.println();
 
             String startRowString = in.nextLine();
-            boolean isOutOfBounds = ((ship.getStartRow() - 1) + shipLength) > 10;
 
-            if (startRowString.equalsIgnoreCase("A")) {
-                ship.setStartRow(1);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("B")) {
-                ship.setStartRow(2);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("C")) {
-                ship.setStartRow(3);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("D")) {
-                ship.setStartRow(4);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("E")) {
-                ship.setStartRow(5);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("F")) {
-                ship.setStartRow(6);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("G")) {
-                ship.setStartRow(7);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("H")) {
-                ship.setStartRow(8);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("I")) {
-                ship.setStartRow(9);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else if (startRowString.equalsIgnoreCase("J")) {
-                ship.setStartRow(10);
-                if (isOutOfBounds && !isHorizontal) {
-                    tellUserInvalidSelection();
-                } else {
-                    isValidSelection = true;
-                }
-            } else {
+            if (startRowString.matches("[A-J]")) {
+                ship.setStartRow(startRowString.charAt(0) - 'A' + 1);
+                isValidSelection = battleshipGame.isPlacementValid(ship, board);
+            }
+
+            if (!isValidSelection) {
                 tellUserInvalidSelection();
             }
         }
@@ -943,36 +877,23 @@ public class Menu {
     }
     //TODO while loop here to make sure all three add up to a valid spot
     // then feed isValid boolean to all three methods to check (?)
-    public void whereWouldYouLikeToPlaceYourShip(Ship ship) {
+    public void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
         boolean isValidOrientation;
         boolean isValidRow;
         boolean isValidColumn;
 
         askUserForShipPlacementOrientation(ship);
-        askUserForShipPlacementRow(ship);
+        askUserForShipPlacementRow(ship, board);
         askUserForShipPlacementColumn(ship);
     }
 
-    public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship userCarrier, Ship userBattleship, Ship userDestroyer, Ship userSubmarine, Ship userPatrolBoat) {
-        battleshipBoardDisplay(playerBoard);
-        whereWouldYouLikeToPlaceYourShip(userCarrier);
-        placeShip(playerBoard, userCarrier);
-
-        battleshipBoardDisplay(playerBoard);
-        whereWouldYouLikeToPlaceYourShip(userBattleship);
-        placeShip(playerBoard, userBattleship);
-
-        battleshipBoardDisplay(playerBoard);
-        whereWouldYouLikeToPlaceYourShip(userDestroyer);
-        placeShip(playerBoard, userDestroyer);
-
-        battleshipBoardDisplay(playerBoard);
-        whereWouldYouLikeToPlaceYourShip(userSubmarine);
-        placeShip(playerBoard, userSubmarine);
-
-        battleshipBoardDisplay(playerBoard);
-        whereWouldYouLikeToPlaceYourShip(userPatrolBoat);
-        placeShip(playerBoard, userPatrolBoat);
+    public void whereWouldYouLikeToPlaceYourShips(String[][] playerBoard, Ship... ships) {
+       
+        for (Ship ship : ships) {
+            battleshipBoardDisplay(playerBoard);
+            whereWouldYouLikeToPlaceYourShip(ship, playerBoard);
+            placeShip(playerBoard, ship); // This should be called only if the placement is valid.
+        }
     }
 
     public void placeShip(String[][] board, Ship ship) {
