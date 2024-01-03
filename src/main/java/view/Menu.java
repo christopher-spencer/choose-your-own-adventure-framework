@@ -765,7 +765,7 @@ public class Menu {
         welcomeToBattleShip();
         // TODO postmanOpponentDisplay must update based on PlayerBoard
         whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
-        // TODO need a placePostmanShipsRandomly method that also updates playerOpponentDisplay
+        // TODO playerOpponentDisplay must update based on PostmanBoard
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
 
         // TEST DISPLAYS
