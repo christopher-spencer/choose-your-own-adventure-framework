@@ -791,6 +791,49 @@ public class Menu {
         in.nextLine();
     }
 
+    public void initializeBoard(String[][] board) {
+
+        // Column Headers
+        board[0] = new String[]{" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"};
+
+        // Row Headers initialized for the for loop
+        char rowLabel = 'A';
+
+        for (int i = 1; i < board.length; i++) {
+            board[i][0] = String.valueOf(rowLabel++);
+            Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
+        }
+    }
+
+    public void initializeBoards(String[][] playerBoard, String[][] playerOpponentDisplay, String[][] postmanBoard, String[][] postmanOpponentDisplay) {
+        initializeBoard(playerBoard);
+        initializeBoard(playerOpponentDisplay);
+        initializeBoard(postmanBoard);
+        initializeBoard(postmanOpponentDisplay);
+    }
+
+    public void battleshipPrintBoard(String[][] board) {
+
+        for (int row = 0; row < board.length; row++) {
+            System.out.print("          ");
+            for (int column = 0; column < board[row].length; column++) {
+                System.out.print(board[row][column]);
+                if (column < board[row].length - 1) {
+                    System.out.print(" | ");
+                }
+            }
+            System.out.println();
+            if (row < board.length - 1) {
+                System.out.println("        -------------------------------------------------------");
+            }
+        }
+    }
+
+    public void battleshipBoardDisplay(String[][] board) {
+
+        battleshipPrintBoard(board);
+    }
+
     public void askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
         String userSelection = "";
@@ -941,49 +984,6 @@ public class Menu {
                 }
             }
         }
-    }
-
-    public void initializeBoard(String[][] board) {
-
-        // Column Headers
-        board[0] = new String[]{" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"};
-
-        // Row Headers initialized for the for loop
-        char rowLabel = 'A';
-
-        for (int i = 1; i < board.length; i++) {
-            board[i][0] = String.valueOf(rowLabel++);
-            Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
-        }
-    }
-
-    public void initializeBoards(String[][] playerBoard, String[][] playerOpponentDisplay, String[][] postmanBoard, String[][] postmanOpponentDisplay) {
-        initializeBoard(playerBoard);
-        initializeBoard(playerOpponentDisplay);
-        initializeBoard(postmanBoard);
-        initializeBoard(postmanOpponentDisplay);
-    }
-
-    public void battleshipPrintBoard(String[][] board) {
-
-        for (int row = 0; row < board.length; row++) {
-            System.out.print("          ");
-            for (int column = 0; column < board[row].length; column++) {
-                System.out.print(board[row][column]);
-                if (column < board[row].length - 1) {
-                    System.out.print(" | ");
-                }
-            }
-            System.out.println();
-            if (row < board.length - 1) {
-                System.out.println("        -------------------------------------------------------");
-            }
-        }
-    }
-
-    public void battleshipBoardDisplay(String[][] board) {
-
-        battleshipPrintBoard(board);
     }
 
     public String whereWouldYouLikeToAttackRow() {
