@@ -913,6 +913,9 @@ public class Menu {
         }
     }
 
+    // TODO I need to make sure this method doesn't allow postmanShips to overlap
+    //  and that none of the postmans ships go out of bounds
+
     public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
         Random random = new Random();
         for (Ship ship : ships) {
