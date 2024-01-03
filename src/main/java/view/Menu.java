@@ -804,6 +804,8 @@ public class Menu {
             // (here, for conversion to a string), and then rowLabel is incremented (++).
             board[i][0] = String.valueOf(rowLabel++);
             // Fills rest of the board with emptyMarkers for initialization
+            // Arrays.fill() PARAMETERS [ 1.) Array to be filled, 2.) fromIndex, 3.) toIndex,
+            // 4.) value stored in all elements of the array ]
             Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
         }
     }
