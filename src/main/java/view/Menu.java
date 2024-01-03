@@ -961,9 +961,6 @@ public class Menu {
         }
     }
 
-    // TODO check to make sure this method doesn't allow postmanShips to overlap
-    //  and that none of the postmans ships go out of bounds
-
     public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
         Random random = new Random();
         for (Ship ship : ships) {
@@ -973,17 +970,18 @@ public class Menu {
                 // Randomly select horizontal or vertical placement
                 ship.setHorizontal(random.nextBoolean());
 
+                // Get the max starting row or starting column possible based on ship orientation
+                // Accounting for 11 rows w/ +1 b/c of headers
                 int maxRow = ship.isHorizontal() ? 10 : 10 - ship.getLength() + 1;
                 int maxCol = ship.isHorizontal() ? 10 - ship.getLength() + 1 : 10;
 
                 // Randomly select the starting position within valid range
-                int startRow = random.nextInt(maxRow) + 1; // for rows A to J
-                int startCol = random.nextInt(maxCol) + 1; // for columns 1 to 10
+                int startRow = random.nextInt(maxRow) + 1; // Accounting for random.nextInt starting at 0 with +1
+                int startCol = random.nextInt(maxCol) + 1; // Accounting for random.nextInt starting at 0 with +1
 
                 ship.setStartRow(startRow);
                 ship.setStartCol(startCol);
 
-                // Check if the random placement is valid
                 isValidPlacement = battleshipGame.isPlacementValid(ship, board);
 
                 if (isValidPlacement) {
