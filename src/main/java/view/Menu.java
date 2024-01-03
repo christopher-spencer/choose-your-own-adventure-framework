@@ -1022,6 +1022,7 @@ public class Menu {
         System.out.println();
     }
 
+    // TODO create a wider selection of InvalidSelection responses based on the situation
     public void tellUserInvalidSelection() {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
