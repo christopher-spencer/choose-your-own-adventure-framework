@@ -803,6 +803,7 @@ public class Menu {
             // Current value of rowLabel is used in the expression first
             // (here, for conversion to a string), and then rowLabel is incremented (++).
             board[i][0] = String.valueOf(rowLabel++);
+            // Fills rest of the board with emptyMarkers for initialization
             Arrays.fill(board[i], 1, board[i].length, Battleship.getEmptyMarker());
         }
     }
