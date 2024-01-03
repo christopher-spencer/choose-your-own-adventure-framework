@@ -764,11 +764,12 @@ public class Menu {
         initializeBoards(playerBoard, playerOpponentDisplay, postmanBoard, postmanOpponentDisplay);
         welcomeToBattleShip();
         // TODO postmanOpponentDisplay must update based on PlayerBoard
-        whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
+        //whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
         // TODO need a placePostmanShipsRandomly method that also updates playerOpponentDisplay
-        
+        placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
         //Test
-        battleshipBoardDisplay(playerBoard);
+        //battleshipBoardDisplay(playerBoard);
+        battleshipBoardDisplay(postmanBoard);
     }
 
     //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
@@ -908,6 +909,33 @@ public class Menu {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
             } else {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
+            }
+        }
+    }
+
+    public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
+        Random random = new Random();
+        for (Ship ship : ships) {
+            boolean isValidPlacement = false;
+
+            while (!isValidPlacement) {
+                // Randomly select horizontal or vertical placement
+                boolean isHorizontal = random.nextBoolean();
+                ship.setHorizontal(isHorizontal);
+
+                // Randomly select the starting position
+                int startRow = random.nextInt(10) + 1; // for rows A to J
+                int startCol = random.nextInt(10) + 1; // for columns 1 to 10
+
+                ship.setStartRow(startRow);
+                ship.setStartCol(startCol);
+
+                // Check if the random placement is valid
+                isValidPlacement = battleshipGame.isPlacementValid(ship, board);
+
+                if (isValidPlacement) {
+                    placeShip(board, ship);
+                }
             }
         }
     }
