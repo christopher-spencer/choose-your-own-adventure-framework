@@ -764,11 +764,15 @@ public class Menu {
         initializeBoards(playerBoard, playerOpponentDisplay, postmanBoard, postmanOpponentDisplay);
         welcomeToBattleShip();
         // TODO postmanOpponentDisplay must update based on PlayerBoard
-        //whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
+        whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
         // TODO need a placePostmanShipsRandomly method that also updates playerOpponentDisplay
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
-        //Test
-        //battleshipBoardDisplay(playerBoard);
+
+        // TEST DISPLAYS
+        System.out.println("This is the playerBoard");
+        battleshipBoardDisplay(playerBoard);
+        System.out.println();
+        System.out.println("This is the postmanBoard");
         battleshipBoardDisplay(postmanBoard);
     }
 
