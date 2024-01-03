@@ -755,7 +755,6 @@ public class Menu {
         Ship postmanSubmarine = battleshipGame.getShipByOwnerAndShipName("Postman", "Submarine");
         Ship postmanPatrolBoat = battleshipGame.getShipByOwnerAndShipName("Postman", "PatrolBoat");
 
-        // TODO feed these to the print board and logic methods to keep track of each
         String[][] playerBoard = new String[11][11];
         String[][] playerOpponentDisplay = new String[11][11];
         String[][] postmanBoard = new String[11][11];
