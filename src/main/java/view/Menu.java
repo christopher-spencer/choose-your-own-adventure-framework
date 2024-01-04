@@ -948,6 +948,8 @@ public class Menu {
         }
     }
 
+    // TODO include endRow or endCol to mark exact row/col spots where each
+    //  ship is located for attacks (?)
     public void placeShip(String[][] board, Ship ship) {
 
         int shipLength = ship.getLength();
