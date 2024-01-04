@@ -964,21 +964,12 @@ public class Menu {
                 String coordinate = battleshipGame.getShipCoordinate(startRow, startCol + i);
                 battleshipGame.updateShipLocation(coordinate, ship);
 
-                // TODO no longer necessary since I've created shipLocations Map?
-                if (i == shipLength - 1) {
-                    ship.setEndRow(startRow);
-                    ship.setEndCol(startCol + i);
-                }
             } else {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
 
                 String coordinate = battleshipGame.getShipCoordinate(startRow + i, startCol);
                 battleshipGame.updateShipLocation(coordinate, ship);
 
-                if (i == shipLength - 1) {
-                    ship.setEndRow(startRow + i);
-                    ship.setEndCol(startCol);
-                }
             }
         }
     }
