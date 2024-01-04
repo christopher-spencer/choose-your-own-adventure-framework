@@ -960,8 +960,18 @@ public class Menu {
         for (int i = 0; i < shipLength; i++) {
             if (isHorizontal) {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
+                
+                if (i == shipLength - 1) {
+                    ship.setEndRow(startRow);
+                    ship.setEndCol(startCol + i);
+                }
             } else {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
+
+                if (i == shipLength - 1) {
+                    ship.setEndRow(startRow + i);
+                    ship.setEndCol(startCol);
+                }
             }
         }
     }
