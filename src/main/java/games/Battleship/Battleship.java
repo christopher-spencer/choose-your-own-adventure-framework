@@ -132,9 +132,6 @@ public class Battleship extends Game {
     // TODO minus hitPoints from Ship class
     //TODO if HP == 0, isShipSunk == true
     private String attack(String[][] board, int row, int col) {
-//        String BOAT = Battleship.getBoatMarker();
-//        String HIT = Battleship.getHITMarker();
-//        String MISS = Battleship.getMissMarker();
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
