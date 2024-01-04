@@ -2,7 +2,6 @@ package games;
 
 public abstract class Game {
     //TODO think more about restructuring/adding what you can to game class
-    //TODO another abstract class for boards (?)
 
     private String playerMove;
     private String postmanMove;
