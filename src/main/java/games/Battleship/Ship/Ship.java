@@ -62,5 +62,11 @@ public class Ship {
 
     public void setStartCol(int startCol) { this.startCol = startCol; }
 
-    
+    public int getEndRow() { return endRow; }
+
+    public void setEndRow(int endRow) { this.endRow = endRow; }
+
+    public int getEndCol() { return endCol; }
+
+    public void setEndCol(int endCol) { this.endCol = endCol; }
 }
