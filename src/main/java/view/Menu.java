@@ -973,7 +973,7 @@ public class Menu {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
 
                 String coordinate = battleshipGame.getShipCoordinate(startRow + i, startCol);
-                
+
                 if (ship.getWhoseShipIsIt().equals("User")) {
                     battleshipGame.updatePlayerShipLocation(coordinate, ship);
                 } else if (ship.getWhoseShipIsIt().equals("Postman")) {
@@ -983,7 +983,6 @@ public class Menu {
         }
     }
 
-    // TODO update postmanPlaceShip with postmanShipLocations map
     public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
         Random random = new Random();
         for (Ship ship : ships) {
