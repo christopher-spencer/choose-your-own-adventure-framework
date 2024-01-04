@@ -947,9 +947,7 @@ public class Menu {
             whereWouldYouLikeToPlaceYourShip(ship, board);
         }
     }
-
-    // TODO include endRow or endCol to mark exact row/col spots where each
-    //  ship is located for attacks (?)
+    
     public void placeShip(String[][] board, Ship ship) {
 
         int shipLength = ship.getLength();
@@ -960,7 +958,7 @@ public class Menu {
         for (int i = 0; i < shipLength; i++) {
             if (isHorizontal) {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
-                
+
                 if (i == shipLength - 1) {
                     ship.setEndRow(startRow);
                     ship.setEndCol(startCol + i);
