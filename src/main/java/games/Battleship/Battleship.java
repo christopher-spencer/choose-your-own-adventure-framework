@@ -3,9 +3,7 @@ package games.Battleship;
 import games.Battleship.Ship.Ship;
 import games.Game;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Battleship extends Game {
 
@@ -15,9 +13,11 @@ public class Battleship extends Game {
     private static final String BOAT = "[]";
 
     private List<Ship> ships;
+    private Map<String, Ship> shipLocations;
 
     public Battleship() {
         ships = new ArrayList<>();
+        shipLocations = new HashMap<>();
         initializeShips();
     }
 
@@ -146,6 +146,10 @@ public class Battleship extends Game {
     public List<Ship> getShips() { return ships; }
 
     public void setShips(List<Ship> ships) { this.ships = ships; }
+
+    public Map<String, Ship> getShipLocations() { return shipLocations; }
+
+    public void setShipLocations(Map<String, Ship> shipLocations) { this.shipLocations = shipLocations; }
 
     public static String getHITMarker() {
         return HIT;
