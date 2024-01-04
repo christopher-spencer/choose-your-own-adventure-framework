@@ -947,7 +947,7 @@ public class Menu {
             whereWouldYouLikeToPlaceYourShip(ship, board);
         }
     }
-    
+
     public void placeShip(String[][] board, Ship ship) {
 
         int shipLength = ship.getLength();
@@ -974,6 +974,7 @@ public class Menu {
         }
     }
 
+    // TODO update postmanPlaceShip with endRow and endCol like in placeShip
     public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
         Random random = new Random();
         for (Ship ship : ships) {
