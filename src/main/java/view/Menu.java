@@ -959,12 +959,18 @@ public class Menu {
             if (isHorizontal) {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
 
+                String coordinate = battleshipGame.getCoordinate(startRow, startCol + i);
+                battleshipGame.updateShipLocation(coordinate, ship);
+
                 if (i == shipLength - 1) {
                     ship.setEndRow(startRow);
                     ship.setEndCol(startCol + i);
                 }
             } else {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
+
+                String coordinate = battleshipGame.getCoordinate(startRow + i, startCol);
+                battleshipGame.updateShipLocation(coordinate, ship);
 
                 if (i == shipLength - 1) {
                     ship.setEndRow(startRow + i);

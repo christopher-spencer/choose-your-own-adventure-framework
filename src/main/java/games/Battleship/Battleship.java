@@ -109,8 +109,12 @@ public class Battleship extends Game {
         return true;
     }
 
-    private String getCoordinate(int row, int col) {
-        return row + "-" + col; 
+    public String getCoordinate(int row, int col) {
+        return row + "-" + col;
+    }
+
+    public void updateShipLocation(String coordinate, Ship ship) {
+        shipLocations.put(coordinate, ship);
     }
 
     //TODO connect to Game class or are player moves too different per game (?)
