@@ -123,7 +123,6 @@ public class Battleship extends Game {
         postmanShipLocations.put(coordinate, ship);
     }
 
-    //TODO connect to Game class or are player moves too different per game (?)
     public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         String result = attack(postmanBoard, row, col);
