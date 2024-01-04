@@ -10,6 +10,8 @@ public class Ship {
     private boolean isHorizontal;
     private int startRow;
     private int startCol;
+    private int endRow;
+    private int endCol;
 
     public Ship(String whoseShipIsIt, String shipName, int length) {
         this.whoseShipIsIt = whoseShipIsIt;
@@ -17,6 +19,8 @@ public class Ship {
         this.length = length;
         this.hitPoints = length;
         this.isSunk = false;
+        this.endRow = -1;
+        this.endCol = -1;
     }
 
     public void hit() {
@@ -57,4 +61,6 @@ public class Ship {
     public int getStartCol() { return startCol; }
 
     public void setStartCol(int startCol) { this.startCol = startCol; }
+
+    
 }
