@@ -136,14 +136,15 @@ public class Battleship extends Game {
         postmanOpponentDisplay[row][col] = result;
         // Additional logic for checking if a ship is sunk (?)
     }
-
-    // TODO minus hitPoints from Ship class
-    //TODO if HP == 0, isShipSunk == true
+    
     private String attack(String[][] board, int row, int col) {
+
+        String coordinate = getShipCoordinate(row, col);
+        Ship ship = shipLocations.get(coordinate);
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
-            //TODO subtract HP from the correct ship (figure out how to get right ship)
+            ship.hit();
             return HIT;
         } else {
             board[row][col] = MISS;
