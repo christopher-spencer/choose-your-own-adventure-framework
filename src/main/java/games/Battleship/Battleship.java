@@ -120,7 +120,6 @@ public class Battleship extends Game {
     //TODO connect to Game class or are player moves too different per game (?)
     public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
-        // TODO override playerMove in Game class and move to Battleship class
         String result = attack(postmanBoard, row, col);
         playerOpponentDisplay[row][col] = result;
         // Additional logic for checking if a ship is sunk
@@ -136,7 +135,7 @@ public class Battleship extends Game {
         postmanOpponentDisplay[row][col] = result;
         // Additional logic for checking if a ship is sunk (?)
     }
-    
+
     private String attack(String[][] board, int row, int col) {
 
         String coordinate = getShipCoordinate(row, col);
