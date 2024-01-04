@@ -109,7 +109,7 @@ public class Battleship extends Game {
         return true;
     }
 
-    public String getCoordinate(int row, int col) {
+    public String getShipCoordinate(int row, int col) {
         return row + "-" + col;
     }
 

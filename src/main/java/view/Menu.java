@@ -959,7 +959,7 @@ public class Menu {
             if (isHorizontal) {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
 
-                String coordinate = battleshipGame.getCoordinate(startRow, startCol + i);
+                String coordinate = battleshipGame.getShipCoordinate(startRow, startCol + i);
                 battleshipGame.updateShipLocation(coordinate, ship);
 
                 // TODO no longer necessary since I've created shipLocations Map?
@@ -970,7 +970,7 @@ public class Menu {
             } else {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
 
-                String coordinate = battleshipGame.getCoordinate(startRow + i, startCol);
+                String coordinate = battleshipGame.getShipCoordinate(startRow + i, startCol);
                 battleshipGame.updateShipLocation(coordinate, ship);
 
                 if (i == shipLength - 1) {
