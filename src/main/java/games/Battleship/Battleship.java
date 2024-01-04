@@ -109,6 +109,10 @@ public class Battleship extends Game {
         return true;
     }
 
+    private String getCoordinate(int row, int col) {
+        return row + "-" + col; 
+    }
+
     //TODO connect to Game class or are player moves too different per game (?)
     public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
