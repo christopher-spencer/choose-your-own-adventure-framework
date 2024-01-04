@@ -14,10 +14,12 @@ public class Battleship extends Game {
 
     private List<Ship> ships;
     private Map<String, Ship> playerShipLocations;
+    private Map<String, Ship> postmanShipLocations;
 
     public Battleship() {
         ships = new ArrayList<>();
-        playerShipLocations = new HashMap<>();
+        playerShipLocations = new HashMap<String, Ship>();
+        postmanShipLocations = new HashMap<String, Ship>();
         initializeShips();
     }
 
@@ -117,6 +119,10 @@ public class Battleship extends Game {
         playerShipLocations.put(coordinate, ship);
     }
 
+    public void updatePostmanShipLocations(String coordinate, Ship ship) {
+        postmanShipLocations.put(coordinate, ship);
+    }
+
     //TODO connect to Game class or are player moves too different per game (?)
     public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
@@ -158,6 +164,10 @@ public class Battleship extends Game {
     public Map<String, Ship> getPlayerShipLocations() { return playerShipLocations; }
 
     public void setPlayerShipLocations(Map<String, Ship> playerShipLocations) { this.playerShipLocations = playerShipLocations; }
+
+    public Map<String, Ship> getPostmanShipLocations() { return postmanShipLocations; }
+
+    public void setPostmanShipLocations(Map<String, Ship> postmanShipLocations) { this.postmanShipLocations = postmanShipLocations; }
 
     public static String getHITMarker() {
         return HIT;
