@@ -981,7 +981,7 @@ public class Menu {
         }
     }
 
-    // TODO update postmanPlaceShip with endRow and endCol like in placeShip
+    // TODO update postmanPlaceShip with shiplocations map (also endRow and endCol??) like in placeShip
     public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
         Random random = new Random();
         for (Ship ship : ships) {
