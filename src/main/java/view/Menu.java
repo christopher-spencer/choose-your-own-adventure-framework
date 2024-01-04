@@ -962,13 +962,13 @@ public class Menu {
                 board[startRow][startCol + i] = Battleship.getBoatMarker();
 
                 String coordinate = battleshipGame.getShipCoordinate(startRow, startCol + i);
-                battleshipGame.updateShipLocation(coordinate, ship);
+                battleshipGame.updatePlayerShipLocation(coordinate, ship);
 
             } else {
                 board[startRow + i][startCol] = Battleship.getBoatMarker();
 
                 String coordinate = battleshipGame.getShipCoordinate(startRow + i, startCol);
-                battleshipGame.updateShipLocation(coordinate, ship);
+                battleshipGame.updatePlayerShipLocation(coordinate, ship);
 
             }
         }

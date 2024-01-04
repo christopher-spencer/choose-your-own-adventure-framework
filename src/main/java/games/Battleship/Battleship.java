@@ -13,11 +13,11 @@ public class Battleship extends Game {
     private static final String BOAT = "[]";
 
     private List<Ship> ships;
-    private Map<String, Ship> shipLocations;
+    private Map<String, Ship> playerShipLocations;
 
     public Battleship() {
         ships = new ArrayList<>();
-        shipLocations = new HashMap<>();
+        playerShipLocations = new HashMap<>();
         initializeShips();
     }
 
@@ -113,8 +113,8 @@ public class Battleship extends Game {
         return row + "-" + col;
     }
 
-    public void updateShipLocation(String coordinate, Ship ship) {
-        shipLocations.put(coordinate, ship);
+    public void updatePlayerShipLocation(String coordinate, Ship ship) {
+        playerShipLocations.put(coordinate, ship);
     }
 
     //TODO connect to Game class or are player moves too different per game (?)
@@ -139,7 +139,7 @@ public class Battleship extends Game {
     private String attack(String[][] board, int row, int col) {
 
         String coordinate = getShipCoordinate(row, col);
-        Ship ship = shipLocations.get(coordinate);
+        Ship ship = playerShipLocations.get(coordinate);
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
@@ -155,9 +155,9 @@ public class Battleship extends Game {
 
     public void setShips(List<Ship> ships) { this.ships = ships; }
 
-    public Map<String, Ship> getShipLocations() { return shipLocations; }
+    public Map<String, Ship> getPlayerShipLocations() { return playerShipLocations; }
 
-    public void setShipLocations(Map<String, Ship> shipLocations) { this.shipLocations = shipLocations; }
+    public void setPlayerShipLocations(Map<String, Ship> playerShipLocations) { this.playerShipLocations = playerShipLocations; }
 
     public static String getHITMarker() {
         return HIT;
