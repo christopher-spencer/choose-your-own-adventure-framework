@@ -135,7 +135,7 @@ public class Battleship extends Game {
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
-            //TODO subtract HP from the correct ship
+            //TODO subtract HP from the correct ship (figure out how to get right ship)
             return HIT;
         } else {
             board[row][col] = MISS;
