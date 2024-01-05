@@ -776,6 +776,11 @@ public class Menu {
 
         // TODO work on while loop logic
         while (!battleshipGame.isAWinner()) {
+
+            if (battleshipGame.isAWinner()) {
+                break;
+            }
+            
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
             battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
