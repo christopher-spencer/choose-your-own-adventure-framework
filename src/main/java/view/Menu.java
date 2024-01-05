@@ -1013,8 +1013,8 @@ public class Menu {
         }
     }
 
-    // TODO get both Row and Column then feed to attack or playerMove
-    public void whereWouldYouLikeToAttackRow() {
+    // TODO get both Row and Column then feed to playerMove in battleship game menu
+    public int whereWouldYouLikeToAttackRow() {
         boolean isValidSelection = false;
         int attackRow = -1;
 
@@ -1035,6 +1035,8 @@ public class Menu {
                 tellUserInvalidSelection();
             }
         }
+
+        return attackRow;
     }
 
     public String whereWouldYouLikeToAttackColumn() {
