@@ -777,11 +777,10 @@ public class Menu {
             if (battleshipGame.isAWinner()) {
                 break;
             }
+            itsYourTurn();
 
             opponentDisplayMarker();
             battleshipBoardDisplay(playerOpponentDisplay);
-
-            itsYourTurn();
 
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
@@ -1201,6 +1200,8 @@ public class Menu {
         System.out.println();
         System.out.println("    It's your turn!!!");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     public void itsThePostmansTurn() {
