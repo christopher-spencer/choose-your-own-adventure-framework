@@ -774,10 +774,12 @@ public class Menu {
         System.out.println("This is the postmanBoard");
         battleshipBoardDisplay(postmanBoard);
 
-        // TODO add to while loop till allShipsSunk && isAWinner
-        int attackRow = whereWouldYouLikeToAttackRow();
-        int attackCol = whereWouldYouLikeToAttackColumn();
-        battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
+        // TODO work on while loop logic
+        while (!battleshipGame.isAWinner()) {
+            int attackRow = whereWouldYouLikeToAttackRow();
+            int attackCol = whereWouldYouLikeToAttackColumn();
+            battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
+        }
 
         // TODO resetBattleshipGame method
     }
