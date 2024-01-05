@@ -804,7 +804,7 @@ public class Menu {
             }
 
             itsThePostmansTurn();
-            
+
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
 
             if (postmanMoveResult.equals(Battleship.getHITMarker())) {
@@ -1201,8 +1201,6 @@ public class Menu {
         System.out.println();
         System.out.println("    It's your turn!!!");
         System.out.println();
-        System.out.println("    When you're ready, press ENTER to continue:");
-        in.nextLine();
     }
 
     public void itsThePostmansTurn() {
