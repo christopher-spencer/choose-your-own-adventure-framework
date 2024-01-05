@@ -17,6 +17,9 @@ public class Ship {
         this.length = length;
         this.hitPoints = length;
         this.isSunk = false;
+        this.isHorizontal = false;
+        this.startRow = -1;
+        this.startCol = -1;
     }
 
     public void hit() {
@@ -24,6 +27,14 @@ public class Ship {
         if (hitPoints == 0) {
             isSunk = true;
         }
+    }
+
+    public void resetShip() {
+        this.hitPoints = this.length;
+        this.isSunk = false;
+        this.isHorizontal = false;
+        this.startRow = -1;
+        this.startCol = -1;
     }
 
     public String getWhoseShipIsIt() { return whoseShipIsIt; }

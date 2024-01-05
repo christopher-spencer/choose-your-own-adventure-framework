@@ -800,7 +800,7 @@ public class Menu {
             System.out.println("    The postman pulls a robin's egg out of his pocket and eats it whole. Without moving a muscle, he sheds a single tear. When it hits the ground, he hisses and it lights like a match. Outside, you suddenly hear tornado sirens, growing louder and louder as the mysterious flame dies, and dies, and dies again.");
         }
 
-        // TODO resetBattleshipGame method
+        battleshipGame.resetGame();
     }
 
     //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
@@ -1039,7 +1039,6 @@ public class Menu {
         }
     }
 
-    // TODO get both Row and Column then feed to playerMove in battleship game menu
     public int whereWouldYouLikeToAttackRow() {
         boolean isValidSelection = false;
         int attackRow = -1;
@@ -1083,12 +1082,6 @@ public class Menu {
         }
 
         return attackCol;
-    }
-
-    //TODO feed variables to hold attack column and row
-    public void whereWouldYouLikeToAttack() {
-        whereWouldYouLikeToAttackRow();
-        whereWouldYouLikeToAttackColumn();
     }
 
     /*
