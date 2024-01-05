@@ -1069,15 +1069,20 @@ public class Menu {
         int attackCol = -1;
 
         while (!isValidSelection) {
+            try {
+                System.out.println();
+                System.out.println("    Select a column (1-10):");
+                System.out.println();
 
-            System.out.println();
-            System.out.println("    Select a column (1-10):");
-            System.out.println();
+                attackCol = Integer.parseInt(in.nextLine());
 
-            attackCol = Integer.parseInt(in.nextLine());
-
-            if (attackCol >= 1 && attackCol <= 10) {
-                isValidSelection = true;
+                if (attackCol >= 1 && attackCol <= 10) {
+                    isValidSelection = true;
+                } else {
+                    tellUserInvalidSelection();
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
             }
         }
 
