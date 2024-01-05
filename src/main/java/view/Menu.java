@@ -787,9 +787,15 @@ public class Menu {
 
             if (playerMoveResult.equals(Battleship.getHITMarker())) {
                 System.out.println();
+                opponentDisplayMarker();
+                battleshipBoardDisplay(playerOpponentDisplay);
+                System.out.println();
                 System.out.println("    [XX] You hit a ship!");
                 System.out.println();
             } else if (playerMoveResult.equals(Battleship.getMissMarker())) {
+                System.out.println();
+                opponentDisplayMarker();
+                battleshipBoardDisplay(playerOpponentDisplay);
                 System.out.println();
                 System.out.println("    [()] Whoops! It's a miss!");
                 System.out.println();
@@ -802,9 +808,15 @@ public class Menu {
 
             if (postmanMoveResult.equals(Battleship.getHITMarker())) {
                 System.out.println();
+                mainDisplayMarker();
+                battleshipBoardDisplay(playerBoard);
+                System.out.println();
                 System.out.println("    [XX] The postman hit your ship!");
                 System.out.println();
             } else if (postmanMoveResult.equals(Battleship.getMissMarker())) {
+                System.out.println();
+                mainDisplayMarker();
+                battleshipBoardDisplay(playerBoard);
                 System.out.println();
                 System.out.println("    [()] Woohoo! The postman missed!");
                 System.out.println();
