@@ -781,6 +781,8 @@ public class Menu {
             opponentDisplayMarker();
             battleshipBoardDisplay(playerOpponentDisplay);
 
+            itsYourTurn();
+
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
             String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
@@ -801,9 +803,8 @@ public class Menu {
                 System.out.println();
             }
 
-            mainDisplayMarker();
-            battleshipBoardDisplay(playerBoard);
-
+            itsThePostmansTurn();
+            
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
 
             if (postmanMoveResult.equals(Battleship.getHITMarker())) {
@@ -1191,6 +1192,22 @@ public class Menu {
     public void letTheGamesBegin() {
         System.out.println();
         System.out.println("    Let the games begin!!!");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
+
+    public void itsYourTurn() {
+        System.out.println();
+        System.out.println("    It's your turn!!!");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
+
+    public void itsThePostmansTurn() {
+        System.out.println();
+        System.out.println("    Uh oh!!! It's the postman's turn!!!");
         System.out.println();
         System.out.println("    When you're ready, press ENTER to continue:");
         in.nextLine();
