@@ -68,6 +68,11 @@ public class Battleship extends Game {
                 && isShipSunk("User", "PatrolBoat");
     }
 
+    @Override
+    public void resetGame() {
+        // TODO resetGame logic
+    }
+
     public Ship getShipByOwnerAndShipName(String whoseShipIsIt, String shipName) {
         for (Ship ship : ships) {
             if (ship.getWhoseShipIsIt().equals(whoseShipIsIt) && ship.getShipName().equals(shipName)) {
