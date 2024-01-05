@@ -762,20 +762,13 @@ public class Menu {
 
         initializeBoards(playerBoard, playerOpponentDisplay, postmanBoard, postmanOpponentDisplay);
         welcomeToBattleShip();
-        // TODO postmanOpponentDisplay must update based on PlayerBoard
         whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
-        // TODO playerOpponentDisplay must update based on PostmanBoard
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
-
-        // TEST DISPLAYS
-//        System.out.println("This is the playerBoard");
-//        battleshipBoardDisplay(playerBoard);
-//        System.out.println();
-//        System.out.println("This is the postmanBoard");
-//        battleshipBoardDisplay(postmanBoard);
 
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
+        //  as well as MAP indicating HIT == XX, MISS == (), and BOAT == []
+
         while (!battleshipGame.isAWinner()) {
             System.out.println();
             System.out.println("                    **********************");

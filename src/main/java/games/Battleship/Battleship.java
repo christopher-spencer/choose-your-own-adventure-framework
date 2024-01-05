@@ -137,7 +137,6 @@ public class Battleship extends Game {
         // TODO Update postmanBoard and playerOpponentDisplay
         String result = attack(postmanBoard, row, col);
         playerOpponentDisplay[row][col] = result;
-        // Additional logic for checking if a ship is sunk
     }
 
         public void postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
@@ -148,7 +147,6 @@ public class Battleship extends Game {
 
         String result = attack(playerBoard, row, col);
         postmanOpponentDisplay[row][col] = result;
-        // Additional logic for checking if a ship is sunk (?)
     }
 
     private String attack(String[][] board, int row, int col) {
