@@ -149,13 +149,13 @@ public class Menu {
         } else if ( (userChoice.equals(rock) && postmanChoice.equals(scissors)) ||
                 (userChoice.equals(paper) && postmanChoice.equals(rock)) ||
                 (userChoice.equals(scissors) && postmanChoice.equals(paper)) ) {
-            System.out.println("You win!");
+            System.out.println("    You win!");
             System.out.println();
-            System.out.println("The Postman slaps a pie in your face.");
+            System.out.println("    The Postman slaps a pie in your face.");
         } else {
-            System.out.println("The Postman wins!");
+            System.out.println("    The Postman wins!");
             System.out.println();
-            System.out.println("The Postman catches your couch on fire.");
+            System.out.println("    The Postman catches your couch on fire.");
         }
 
         itGoesOnAndOnMyFriends();
@@ -216,26 +216,26 @@ public class Menu {
         List<Character> correctGuesses = hangmanGame.getCorrectGuesses();
         List<Character> previousGuesses = hangmanGame.getPreviousGuesses();
 
-        System.out.println("Your mystery word is " + mysteryWord.length() + " letters long!\n");
+        System.out.println("    Your mystery word is " + mysteryWord.length() + " letters long!\n");
 
         while(lives > 0 && youWin == false) {
-            System.out.println("You have " + lives + " lives left.\n");
+            System.out.println("    You have " + lives + " lives left.\n");
 
             displayHangmanStats(mysteryWord, previousGuesses, correctGuesses);
 
-            System.out.println("What letter would you like to guess?:");
+            System.out.println("    What letter would you like to guess?:");
             String guessedLetter = in.nextLine().toUpperCase();
 
             if (guessedLetter.length() == 1 && guessedLetter.matches("[A-Z]")) {
                 char letter = guessedLetter.charAt(0);
 
                 if (previousGuesses.contains(letter) ) {
-                    System.out.println("You already guessed that letter.\n");
+                    System.out.println("    You already guessed that letter.\n");
                     continue;
                 }
 
                 if (mysteryWord.contains(guessedLetter)) {
-                    System.out.println("'Congrats! You've guessed a correct letter!' the Postman says.\n");
+                    System.out.println("    'Congrats! You've guessed a correct letter!' the Postman says.\n");
                     correctGuesses.add(letter);
                     previousGuesses.add(letter);
                     
@@ -246,7 +246,7 @@ public class Menu {
                     }
 
                 } else {
-                    System.out.println("'Wrong guess bucko!' the Postman says.\n");
+                    System.out.println("    'Wrong guess bucko!' the Postman says.\n");
                     previousGuesses.add(letter);
                     lives--;
                 }
@@ -283,13 +283,13 @@ public class Menu {
     }
 
     private void displayHangmanStats(String mysteryWord, List<Character> previousGuesses, List<Character> correctGuesses) {
-        System.out.println("All Guesses So Far: ");
+        System.out.println("    All Guesses So Far: ");
         for (char guess : previousGuesses) {
             System.out.print(guess + " ");
         }
         System.out.println();
 
-        System.out.println("Correct Guesses: ");
+        System.out.println("    Correct Guesses: ");
         for (int i = 0; i < mysteryWord.length(); i++) {
             char wordChar = mysteryWord.charAt(i);
 
@@ -303,13 +303,13 @@ public class Menu {
     }
     private void displayHangmanGameResult(boolean youWin, String mysteryWord) {
         if (youWin) {
-            System.out.println("You win!! The word was: " + mysteryWord);
+            System.out.println("    You win!! The word was: " + mysteryWord);
             System.out.println();
-            System.out.println("The Postman cuts a 6 x 6 inch square out of the center of your living room carpet and eats it whole.\n");
+            System.out.println("    The Postman cuts a 6 x 6 inch square out of the center of your living room carpet and eats it whole.\n");
         } else {
-            System.out.println("You lose... The word was: " + mysteryWord);
+            System.out.println("    You lose... The word was: " + mysteryWord);
             System.out.println();
-            System.out.println("The Postman waters your plants with a liter of motor oil.\n");
+            System.out.println("    The Postman waters your plants with a liter of motor oil.\n");
         }
     }
 
