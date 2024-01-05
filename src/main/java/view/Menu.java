@@ -36,7 +36,7 @@ public class Menu {
         System.out.println();
     }
 
-    public void letTheGamesBegin() {
+    public void prologue() {
         System.out.println("    It's another beautiful day in Happy Town, a magical place where the trees sing a cappella,");
         System.out.println("white-tailed deer frolic through the streets, and the bluebirds crap buffalo nickels.");
         System.out.println();
@@ -766,6 +766,7 @@ public class Menu {
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
 
         battleshipBoardDisplay(playerBoard);
+        letTheGamesBegin();
 
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
@@ -923,17 +924,17 @@ public class Menu {
 
     public void opponentDisplayMarker() {
         System.out.println();
-        System.out.println("                            **********************");
-        System.out.println("                            ** OPPONENT DISPLAY **");
-        System.out.println("                            **********************");
+        System.out.println("                          **********************");
+        System.out.println("                          ** OPPONENT DISPLAY **");
+        System.out.println("                          **********************");
         System.out.println();
     }
 
     public void mainDisplayMarker() {
         System.out.println();
-        System.out.println("                            **********************");
-        System.out.println("                            **   MAIN DISPLAY   **");
-        System.out.println("                            **********************");
+        System.out.println("                          **********************");
+        System.out.println("                          **   MAIN DISPLAY   **");
+        System.out.println("                          **********************");
         System.out.println();
     }
 
@@ -1172,6 +1173,15 @@ public class Menu {
     public void tellUserInvalidSelection() {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
+    }
+
+    // Method to use for subtler menu transitions at opportune times after initial game setup
+    public void letTheGamesBegin() {
+        System.out.println();
+        System.out.println("    Let the games begin!!!");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     /*

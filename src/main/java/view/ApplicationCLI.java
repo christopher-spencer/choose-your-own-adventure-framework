@@ -12,7 +12,7 @@ public class ApplicationCLI {
 
     public void run() {
         menu.showWelcomeMessage();
-        menu.letTheGamesBegin();
+        menu.prologue();
         while (continuePlaying) {
             knockKnock();
         }
