@@ -768,16 +768,22 @@ public class Menu {
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
 
         // TEST DISPLAYS
-        System.out.println("This is the playerBoard");
-        battleshipBoardDisplay(playerBoard);
-        System.out.println();
-        System.out.println("This is the postmanBoard");
-        battleshipBoardDisplay(postmanBoard);
+//        System.out.println("This is the playerBoard");
+//        battleshipBoardDisplay(playerBoard);
+//        System.out.println();
+//        System.out.println("This is the postmanBoard");
+//        battleshipBoardDisplay(postmanBoard);
 
         // TODO work on while loop logic
         while (!battleshipGame.isAWinner()) {
-
+            System.out.println("    **********************");
+            System.out.println("    ** OPPONENT DISPLAY **");
+            System.out.println("    **********************");
             battleshipBoardDisplay(playerOpponentDisplay);
+            System.out.println();
+            System.out.println("    **********************");
+            System.out.println("    **   MAIN DISPLAY   **");
+            System.out.println("    **********************");
             battleshipBoardDisplay(playerBoard);
 
             if (battleshipGame.isAWinner()) {
@@ -791,10 +797,12 @@ public class Menu {
         }
 
         if (battleshipGame.isPlayerWin()) {
+            System.out.println();
             System.out.println("    You win!");
             System.out.println();
             System.out.println("    The postman farts on your snake plant, then kicks it over. He spreads the mulch around the floor in ominous shapes.");
         } else if (battleshipGame.isPostmanWin()) {
+            System.out.println();
             System.out.println("    The postman wins!");
             System.out.println();
             System.out.println("    The postman pulls a robin's egg out of his pocket and eats it whole. Without moving a muscle, he sheds a single tear. When it hits the ground, he hisses and it lights like a match. Outside, you suddenly hear tornado sirens, growing louder and louder as the mysterious flame dies, and dies, and dies again.");
