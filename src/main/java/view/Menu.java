@@ -774,6 +774,11 @@ public class Menu {
         System.out.println("This is the postmanBoard");
         battleshipBoardDisplay(postmanBoard);
 
+        // TODO add to while loop till allShipsSunk && isAWinner
+        int attackRow = whereWouldYouLikeToAttackRow();
+        int attackCol = whereWouldYouLikeToAttackColumn();
+        battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
+
         // TODO resetBattleshipGame method
     }
 
@@ -1039,12 +1044,24 @@ public class Menu {
         return attackRow;
     }
 
-    public String whereWouldYouLikeToAttackColumn() {
-        System.out.println();
-        System.out.println("    Select a column (1-10):");
-        System.out.println();
+    public int whereWouldYouLikeToAttackColumn() {
+        boolean isValidSelection = false;
+        int attackCol = -1;
 
-        return in.nextLine();
+        while (!isValidSelection) {
+
+            System.out.println();
+            System.out.println("    Select a column (1-10):");
+            System.out.println();
+
+            attackCol = Integer.parseInt(in.nextLine());
+
+            if (attackCol >= 1 && attackCol <= 10) {
+                isValidSelection = true;
+            }
+        }
+
+        return attackCol;
     }
 
     //TODO feed variables to hold attack column and row
