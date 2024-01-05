@@ -779,6 +779,7 @@ public class Menu {
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
             battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
+            battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
         }
 
         // TODO resetBattleshipGame method
