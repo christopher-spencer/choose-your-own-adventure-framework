@@ -133,13 +133,15 @@ public class Battleship extends Game {
         postmanShipLocations.put(coordinate, ship);
     }
 
-    public void playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
+    public String playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
         String result = attack(postmanBoard, row, col);
         playerOpponentDisplay[row][col] = result;
+
+        return result;
     }
 
-        public void postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
+        public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
         // TODO Update playerBoard and postmanOpponentDisplay
         Random random = new Random();
         int row = random.nextInt(9) + 1;
@@ -147,6 +149,8 @@ public class Battleship extends Game {
 
         String result = attack(playerBoard, row, col);
         postmanOpponentDisplay[row][col] = result;
+
+        return result;
     }
 
     private String attack(String[][] board, int row, int col) {

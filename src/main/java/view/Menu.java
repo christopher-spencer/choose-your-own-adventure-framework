@@ -772,7 +772,7 @@ public class Menu {
         while (!battleshipGame.isAWinner()) {
             opponentDisplayMarker();
             battleshipBoardDisplay(playerOpponentDisplay);
-            
+
             mainDisplayMarker();
             battleshipBoardDisplay(playerBoard);
 
@@ -782,8 +782,51 @@ public class Menu {
 
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
-            battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
-            battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
+            String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
+
+            if (playerMoveResult.equals(Battleship.getHITMarker())) {
+                System.out.println();
+                System.out.println("    [XX] You hit a ship!");
+                System.out.println();
+            } else if (playerMoveResult.equals(Battleship.getMissMarker())) {
+                System.out.println();
+                System.out.println("    [()] Whoops! It's a miss!");
+                System.out.println();
+            }
+
+            String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
+
+            if (postmanMoveResult.equals(Battleship.getHITMarker())) {
+                System.out.println();
+                System.out.println("    [XX] The postman hit your ship!");
+                System.out.println();
+            } else if (postmanMoveResult.equals(Battleship.getMissMarker())) {
+                System.out.println();
+                System.out.println("    [()] Woohoo! The postman missed!");
+                System.out.println();
+            }
+
+            if (userCarrier.isSunk()) {
+                System.out.println("    The postman sank your Carrier!");
+            } else if (userBattleship.isSunk()) {
+                System.out.println("    The postman sank your Battleship!");
+            } else if (userDestroyer.isSunk()) {
+                System.out.println("    The postman sank your Destroyer!");
+            } else if (userSubmarine.isSunk()) {
+                System.out.println("    The postman sank your Submarine!");
+            } else if (userPatrolBoat.isSunk()) {
+                System.out.println("    The postman sank your Patrol Boat!");
+            } else if (postmanCarrier.isSunk()) {
+                System.out.println("    You sank the postman's Carrier!");
+            } else if (postmanBattleship.isSunk()) {
+                System.out.println("    You sank the postman's Battleship!");
+            } else if (postmanDestroyer.isSunk()) {
+                System.out.println("    You sank the postman's Destroyer!");
+            } else if (postmanSubmarine.isSunk()) {
+                System.out.println("    You sank the postman's Submarine");
+            } else if (postmanPatrolBoat.isSunk()) {
+                System.out.println("    You sank the postman's Patrol Boat!");
+            }
         }
 
         if (battleshipGame.isPlayerWin()) {
