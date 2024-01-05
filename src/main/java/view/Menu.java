@@ -1013,14 +1013,28 @@ public class Menu {
         }
     }
 
-    public String whereWouldYouLikeToAttackRow() {
-        System.out.println();
-        System.out.println("    Where would you like to attack?");
-        System.out.println();
-        System.out.println("    Select a row (A-J):");
-        System.out.println();
+    // TODO get both Row and Column then feed to attack or playerMove
+    public void whereWouldYouLikeToAttackRow() {
+        boolean isValidSelection = false;
+        int attackRow = -1;
 
-        return in.nextLine();
+        while (!isValidSelection) {
+
+            System.out.println();
+            System.out.println("    Where would you like to attack?");
+            System.out.println();
+            System.out.println("    Select a row (A-J):");
+            System.out.println();
+
+            String attackRowString = in.nextLine().trim().toUpperCase();
+
+            if (attackRowString.length() == 1 && attackRowString.charAt(0) >= 'A' && attackRowString.charAt(0) <= 'J') {
+                attackRow = attackRowString.charAt(0) - 'A' + 1;
+                isValidSelection = true;
+            } else {
+                tellUserInvalidSelection();
+            }
+        }
     }
 
     public String whereWouldYouLikeToAttackColumn() {
