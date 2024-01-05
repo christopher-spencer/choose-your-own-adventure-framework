@@ -770,17 +770,10 @@ public class Menu {
         //  as well as MAP indicating HIT == XX, MISS == (), and BOAT == []
 
         while (!battleshipGame.isAWinner()) {
-            System.out.println();
-            System.out.println("                    **********************");
-            System.out.println("                    ** OPPONENT DISPLAY **");
-            System.out.println("                    **********************");
-            System.out.println();
+            opponentDisplayMarker();
             battleshipBoardDisplay(playerOpponentDisplay);
-            System.out.println();
-            System.out.println("                    **********************");
-            System.out.println("                    **   MAIN DISPLAY   **");
-            System.out.println("                    **********************");
-            System.out.println();
+            
+            mainDisplayMarker();
             battleshipBoardDisplay(playerBoard);
 
             if (battleshipGame.isAWinner()) {
@@ -875,6 +868,22 @@ public class Menu {
     public void battleshipBoardDisplay(String[][] board) {
 
         battleshipPrintBoard(board);
+    }
+
+    public void opponentDisplayMarker() {
+        System.out.println();
+        System.out.println("                    **********************");
+        System.out.println("                    ** OPPONENT DISPLAY **");
+        System.out.println("                    **********************");
+        System.out.println();
+    }
+
+    public void mainDisplayMarker() {
+        System.out.println();
+        System.out.println("                    **********************");
+        System.out.println("                    **   MAIN DISPLAY   **");
+        System.out.println("                    **********************");
+        System.out.println();
     }
 
     public void askUserForShipPlacementOrientation(Ship ship) {
