@@ -765,20 +765,20 @@ public class Menu {
         whereWouldYouLikeToPlaceYourShips(playerBoard, userCarrier, userBattleship, userDestroyer, userSubmarine, userPatrolBoat);
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
 
+        battleshipBoardDisplay(playerBoard);
+
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
         //  as well as MAP indicating HIT == XX, MISS == (), and BOAT == []
 
         while (!battleshipGame.isAWinner()) {
-            opponentDisplayMarker();
-            battleshipBoardDisplay(playerOpponentDisplay);
-
-            mainDisplayMarker();
-            battleshipBoardDisplay(playerBoard);
 
             if (battleshipGame.isAWinner()) {
                 break;
             }
+
+            opponentDisplayMarker();
+            battleshipBoardDisplay(playerOpponentDisplay);
 
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
@@ -793,6 +793,9 @@ public class Menu {
                 System.out.println("    [()] Whoops! It's a miss!");
                 System.out.println();
             }
+
+            mainDisplayMarker();
+            battleshipBoardDisplay(playerBoard);
 
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
 
@@ -828,6 +831,11 @@ public class Menu {
                 System.out.println("    You sank the postman's Patrol Boat!");
             }
         }
+
+        opponentDisplayMarker();
+        battleshipBoardDisplay(playerOpponentDisplay);
+        mainDisplayMarker();
+        battleshipBoardDisplay(playerBoard);
 
         if (battleshipGame.isPlayerWin()) {
             System.out.println();
@@ -915,17 +923,17 @@ public class Menu {
 
     public void opponentDisplayMarker() {
         System.out.println();
-        System.out.println("                    **********************");
-        System.out.println("                    ** OPPONENT DISPLAY **");
-        System.out.println("                    **********************");
+        System.out.println("                            **********************");
+        System.out.println("                            ** OPPONENT DISPLAY **");
+        System.out.println("                            **********************");
         System.out.println();
     }
 
     public void mainDisplayMarker() {
         System.out.println();
-        System.out.println("                    **********************");
-        System.out.println("                    **   MAIN DISPLAY   **");
-        System.out.println("                    **********************");
+        System.out.println("                            **********************");
+        System.out.println("                            **   MAIN DISPLAY   **");
+        System.out.println("                            **********************");
         System.out.println();
     }
 
