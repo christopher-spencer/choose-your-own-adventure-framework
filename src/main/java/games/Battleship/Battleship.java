@@ -70,7 +70,13 @@ public class Battleship extends Game {
 
     @Override
     public void resetGame() {
-        // TODO resetGame logic
+
+        for (Ship ship : ships) {
+            ship.resetShip();
+        }
+
+        playerShipLocations.clear();
+        postmanShipLocations.clear();
     }
 
     public Ship getShipByOwnerAndShipName(String whoseShipIsIt, String shipName) {
