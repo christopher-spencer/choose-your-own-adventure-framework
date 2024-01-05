@@ -774,16 +774,20 @@ public class Menu {
 //        System.out.println("This is the postmanBoard");
 //        battleshipBoardDisplay(postmanBoard);
 
-        // TODO work on while loop logic
+        // TODO rearrange the while loop and make sure to include printlns for misses && hits
+        //  for specific ships && when a ship has sunk
         while (!battleshipGame.isAWinner()) {
-            System.out.println("    **********************");
-            System.out.println("    ** OPPONENT DISPLAY **");
-            System.out.println("    **********************");
+            System.out.println();
+            System.out.println("                    **********************");
+            System.out.println("                    ** OPPONENT DISPLAY **");
+            System.out.println("                    **********************");
+            System.out.println();
             battleshipBoardDisplay(playerOpponentDisplay);
             System.out.println();
-            System.out.println("    **********************");
-            System.out.println("    **   MAIN DISPLAY   **");
-            System.out.println("    **********************");
+            System.out.println("                    **********************");
+            System.out.println("                    **   MAIN DISPLAY   **");
+            System.out.println("                    **********************");
+            System.out.println();
             battleshipBoardDisplay(playerBoard);
 
             if (battleshipGame.isAWinner()) {
