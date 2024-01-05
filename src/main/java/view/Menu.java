@@ -777,14 +777,27 @@ public class Menu {
         // TODO work on while loop logic
         while (!battleshipGame.isAWinner()) {
 
+            battleshipBoardDisplay(playerOpponentDisplay);
+            battleshipBoardDisplay(playerBoard);
+
             if (battleshipGame.isAWinner()) {
                 break;
             }
-            
+
             int attackRow = whereWouldYouLikeToAttackRow();
             int attackCol = whereWouldYouLikeToAttackColumn();
             battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
             battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
+        }
+
+        if (battleshipGame.isPlayerWin()) {
+            System.out.println("    You win!");
+            System.out.println();
+            System.out.println("    The postman farts on your snake plant, then kicks it over. He spreads the mulch around the floor in ominous shapes.");
+        } else if (battleshipGame.isPostmanWin()) {
+            System.out.println("    The postman wins!");
+            System.out.println();
+            System.out.println("    The postman pulls a robin's egg out of his pocket and eats it whole. Without moving a muscle, he sheds a single tear. When it hits the ground, he hisses and it lights like a match. Outside, you suddenly hear tornado sirens, growing louder and louder as the mysterious flame dies, and dies, and dies again.");
         }
 
         // TODO resetBattleshipGame method
