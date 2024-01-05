@@ -966,7 +966,7 @@ public class Menu {
                 if (ship.getWhoseShipIsIt().equals("User")) {
                     battleshipGame.updatePlayerShipLocation(coordinate, ship);
                 } else if (ship.getWhoseShipIsIt().equals("Postman")) {
-                    battleshipGame.updatePostmanShipLocations(coordinate, ship);
+                    battleshipGame.updatePostmanShipLocation(coordinate, ship);
                 }
 
             } else {
@@ -977,7 +977,7 @@ public class Menu {
                 if (ship.getWhoseShipIsIt().equals("User")) {
                     battleshipGame.updatePlayerShipLocation(coordinate, ship);
                 } else if (ship.getWhoseShipIsIt().equals("Postman")) {
-                    battleshipGame.updatePostmanShipLocations(coordinate, ship);
+                    battleshipGame.updatePostmanShipLocation(coordinate, ship);
                 }
             }
         }

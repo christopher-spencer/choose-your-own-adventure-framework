@@ -118,7 +118,7 @@ public class Battleship extends Game {
         playerShipLocations.put(coordinate, ship);
     }
 
-    public void updatePostmanShipLocations(String coordinate, Ship ship) {
+    public void updatePostmanShipLocation(String coordinate, Ship ship) {
         postmanShipLocations.put(coordinate, ship);
     }
 
