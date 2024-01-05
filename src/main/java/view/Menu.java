@@ -801,6 +801,8 @@ public class Menu {
         }
 
         battleshipGame.resetGame();
+
+        itGoesOnAndOnMyFriends();
     }
 
     //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
