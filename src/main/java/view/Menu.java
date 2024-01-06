@@ -785,7 +785,6 @@ public class Menu {
         placePostmanShipsRandomly(postmanBoard, postmanCarrier, postmanBattleship, postmanDestroyer, postmanSubmarine, postmanPatrolBoat);
 
         battleshipBoardDisplay(playerBoard);
-        //letTheGamesBegin();
 
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
@@ -800,6 +799,7 @@ public class Menu {
             if (battleshipGame.isAWinner()) {
                 break;
             }
+
             itsYourTurn();
 
             opponentDisplayMarker();
@@ -1188,6 +1188,11 @@ public class Menu {
         return attackCol;
     }
 
+    public boolean isSpotAlreadyAttacked(String[][] board, int row, int col) {
+        String spot = board[row][col];
+        return spot.equals(Battleship.getHITMarker()) || spot.equals(Battleship.getMissMarker());
+    }
+
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
@@ -1225,7 +1230,7 @@ public class Menu {
 
     public void itsThePostmansTurn() {
         System.out.println();
-        System.out.println("    Uh oh!!! It's the postman's turn!!!");
+        System.out.println("    It's the postman's turn!!!");
         System.out.println();
         System.out.println("    When you're ready, press ENTER to continue:");
         in.nextLine();
