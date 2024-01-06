@@ -115,7 +115,8 @@ public class Menu {
 //        }
 
         if (randomNumber == 3) {
-            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills it with water, hops in, and beckons you to join him.");
+            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
+                    "it with water, hops in, and beckons you to join him.");
             battleshipGame();
         }
     }
@@ -383,12 +384,14 @@ public class Menu {
                 System.out.println();
                 System.out.println("    You win!");
                 System.out.println();
-                System.out.println("    The postman goes to the kitchen and picks up all of your cereal boxes one by one. He dumps them in a mop bucket, then fills the bucket with whole milk. He kicks it over.");
+                System.out.println("    The postman goes to the kitchen and picks up all of your cereal boxes one by one. \n" +
+                        "He dumps them in a mop bucket, then fills the bucket with whole milk. He kicks it over.");
             } else if (ticTacToeGame.isPostmanWin()) {
                 System.out.println();
                 System.out.println("    The postman wins!");
                 System.out.println();
-                System.out.println("    The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes it against your forehead.");
+                System.out.println("    The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes \n" +
+                        "it against your forehead.");
             }
         } else {
             theGameIsATie();
@@ -893,12 +896,15 @@ public class Menu {
             System.out.println();
             System.out.println("    You win!");
             System.out.println();
-            System.out.println("    The postman farts on your snake plant, then kicks it over. He spreads the mulch around the floor in ominous shapes.");
+            System.out.println("    The postman farts on your snake plant, then kicks it over. He spreads the mulch around \n" +
+                    "the floor in ominous shapes.");
         } else if (battleshipGame.isPostmanWin()) {
             System.out.println();
             System.out.println("    The postman wins!");
             System.out.println();
-            System.out.println("    The postman pulls a robin's egg out of his pocket and eats it whole. Without moving a muscle, he sheds a single tear. When it hits the ground, he hisses and it lights like a match. Outside, you suddenly hear tornado sirens, growing louder and louder as the mysterious flame dies, and dies, and dies again.");
+            System.out.println("    The postman pulls a robin's egg out of his pocket and eats it whole. Without moving a muscle, \n" +
+                    "he sheds a single tear. When it hits the ground, he hisses and it lights like a match. Outside, you suddenly \n" +
+                    "hear tornado sirens, growing louder and louder as the mysterious flame dies, and dies, and dies again.");
         }
 
         battleshipGame.resetGame();

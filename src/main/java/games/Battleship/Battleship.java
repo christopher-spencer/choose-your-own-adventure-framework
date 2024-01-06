@@ -160,7 +160,7 @@ public class Battleship extends Game {
                 isValidMove = true;
             }
         }
-        
+
         return result;
     }
 
