@@ -805,8 +805,12 @@ public class Menu {
             opponentDisplayMarker();
             battleshipBoardDisplay(playerOpponentDisplay);
 
-            int attackRow = whereWouldYouLikeToAttackRow();
-            int attackCol = whereWouldYouLikeToAttackColumn();
+            int[] playerAttackCoordinates = selectAttackCoordinates(playerOpponentDisplay);
+            int attackRow = playerAttackCoordinates[0];
+            int attackCol = playerAttackCoordinates[1];
+
+//            int attackRow = whereWouldYouLikeToAttackRow();
+//            int attackCol = whereWouldYouLikeToAttackColumn();
             String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
 
             if (playerMoveResult.equals(Battleship.getHITMarker())) {
@@ -1199,6 +1203,7 @@ public class Menu {
         boolean isValidSelection = false;
 
         while (!isValidSelection) {
+            System.out.println();
             System.out.println("    Select the row and column for your attack.");
 
             // Select Row Logic
@@ -1209,6 +1214,7 @@ public class Menu {
             if (rowInput.length() == 1 && rowInput.charAt(0) >= 'A' && rowInput.charAt(0) <= 'J') {
                 attackRow = rowInput.charAt(0) - 'A' + 1;
             } else {
+                System.out.println();
                 System.out.println("    Invalid row. Please try again.");
                 continue;
             }
@@ -1219,16 +1225,19 @@ public class Menu {
             try {
                 attackCol = Integer.parseInt(in.nextLine());
                 if (attackCol < 1 || attackCol > 10) {
+                    System.out.println();
                     System.out.println("    Invalid column. Please try again.");
                     continue;
                 }
             } catch (NumberFormatException e) {
+                System.out.println();
                 System.out.println("    Invalid input. Please enter a number.");
                 continue;
             }
 
             // Check if spot is already taken
             if (isSpotAlreadyAttacked(playerOpponentDisplay, attackRow, attackCol)) {
+                System.out.println();
                 System.out.println("    You have already attacked this spot. Choose a different spot.");
             } else {
                 isValidSelection = true;
@@ -1250,6 +1259,7 @@ public class Menu {
     }
 
     // TODO create a wider selection of InvalidSelection responses based on the situation
+    //  (e.g. for use in BSGame selectAttackCoordinates method)
     public void tellUserInvalidSelection() {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
