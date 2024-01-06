@@ -768,6 +768,7 @@ public class Menu {
         battleshipBoardDisplay(playerBoard);
         letTheGamesBegin();
 
+        //TODO print these tests throughout game to make sure boards are updating correctly
         //TEST
         System.out.println("TESTING......");
         System.out.println("PLAYERBOARD");
