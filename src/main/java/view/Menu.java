@@ -1193,6 +1193,50 @@ public class Menu {
         return spot.equals(Battleship.getHITMarker()) || spot.equals(Battleship.getMissMarker());
     }
 
+    public int[] selectAttackCoordinates(String[][] playerOpponentDisplay) {
+        int attackRow = -1;
+        int attackCol = -1;
+        boolean isValidSelection = false;
+
+        while (!isValidSelection) {
+            System.out.println("    Select the row and column for your attack.");
+
+            // Select Row Logic
+            System.out.println();
+            System.out.println("    Select a row (A-J):");
+            System.out.println();
+            String rowInput = in.nextLine().trim().toUpperCase();
+            if (rowInput.length() == 1 && rowInput.charAt(0) >= 'A' && rowInput.charAt(0) <= 'J') {
+                attackRow = rowInput.charAt(0) - 'A' + 1;
+            } else {
+                System.out.println("    Invalid row. Please try again.");
+                continue;
+            }
+
+            // Select Column Logic
+            System.out.println("    Select a column (1-10):");
+            System.out.println();
+            try {
+                attackCol = Integer.parseInt(in.nextLine());
+                if (attackCol < 1 || attackCol > 10) {
+                    System.out.println("    Invalid column. Please try again.");
+                    continue;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("    Invalid input. Please enter a number.");
+                continue;
+            }
+
+            // Check if spot is already taken
+            if (isSpotAlreadyAttacked(playerOpponentDisplay, attackRow, attackCol)) {
+                System.out.println("    You have already attacked this spot. Choose a different spot.");
+            } else {
+                isValidSelection = true;
+            }
+        }
+
+        return new int[] {attackRow, attackCol};
+    }
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
