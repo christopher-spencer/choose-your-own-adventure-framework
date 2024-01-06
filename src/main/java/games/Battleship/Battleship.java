@@ -142,8 +142,7 @@ public class Battleship extends Game {
         return result;
     }
 
-        //TODO update with isSpotAlreadyAttacked
-        public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
+    public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
         String postmanMove = "postmanMove";
         Random random = new Random();
         boolean isValidMove = false;
