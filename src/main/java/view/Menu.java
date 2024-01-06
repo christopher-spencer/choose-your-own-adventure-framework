@@ -786,24 +786,7 @@ public class Menu {
 
         battleshipBoardDisplay(playerBoard);
         letTheGamesBegin();
-
-        //TODO print these tests throughout game to make sure boards are updating correctly
-        //TEST
-        System.out.println("TESTING......");
-        System.out.println("PLAYERBOARD");
-        battleshipBoardDisplay(playerBoard);
-        System.out.println("PLAYER OPPONENT DISPLAY");
-        battleshipBoardDisplay(playerOpponentDisplay);
-        System.out.println("POSTMAN BOARD");
-        battleshipBoardDisplay(postmanBoard);
-        System.out.println("POSTMAN OPPONENT DISPLAY");
-        battleshipBoardDisplay(postmanOpponentDisplay);
-
-        //TEST
-        Map<String,Ship> playerShipLocations = battleshipGame.getPlayerShipLocations();
-        Map<String, Ship> postmanShipLocations = battleshipGame.getPostmanShipLocations();
-
-
+        
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
         //  as well as MAP indicating HIT == XX, MISS == (), and BOAT == []
