@@ -158,7 +158,7 @@ public class Battleship extends Game {
         String coordinate = getShipCoordinate(row, col);
         Ship ship = playerShipLocations.get(coordinate);
 
-        if (board[row][col].equals(BOAT)) {
+        if (ship != null && board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
             ship.hit();
             return HIT;
