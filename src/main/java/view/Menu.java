@@ -1142,61 +1142,6 @@ public class Menu {
         }
     }
 
-    public int whereWouldYouLikeToAttackRow() {
-        boolean isValidSelection = false;
-        int attackRow = -1;
-
-        while (!isValidSelection) {
-
-            System.out.println();
-            System.out.println("    Where would you like to attack?");
-            System.out.println();
-            System.out.println("    Select a row (A-J):");
-            System.out.println();
-
-            String attackRowString = in.nextLine().trim().toUpperCase();
-
-            if (attackRowString.length() == 1 && attackRowString.charAt(0) >= 'A' && attackRowString.charAt(0) <= 'J') {
-                attackRow = attackRowString.charAt(0) - 'A' + 1;
-                isValidSelection = true;
-            } else {
-                tellUserInvalidSelection();
-            }
-        }
-
-        return attackRow;
-    }
-
-    public int whereWouldYouLikeToAttackColumn() {
-        boolean isValidSelection = false;
-        int attackCol = -1;
-
-        while (!isValidSelection) {
-            try {
-                System.out.println();
-                System.out.println("    Select a column (1-10):");
-                System.out.println();
-
-                attackCol = Integer.parseInt(in.nextLine());
-
-                if (attackCol >= 1 && attackCol <= 10) {
-                    isValidSelection = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number.");
-            }
-        }
-
-        return attackCol;
-    }
-
-    public boolean isSpotAlreadyAttacked(String[][] board, int row, int col) {
-        String spot = board[row][col];
-        return spot.equals(Battleship.getHITMarker()) || spot.equals(Battleship.getMissMarker());
-    }
-
     public int[] selectAttackCoordinates(String[][] playerOpponentDisplay) {
         int attackRow = -1;
         int attackCol = -1;
@@ -1246,6 +1191,12 @@ public class Menu {
 
         return new int[] {attackRow, attackCol};
     }
+
+    public boolean isSpotAlreadyAttacked(String[][] board, int row, int col) {
+        String spot = board[row][col];
+        return spot.equals(Battleship.getHITMarker()) || spot.equals(Battleship.getMissMarker());
+    }
+    
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
