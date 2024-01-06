@@ -152,7 +152,7 @@ public class Battleship extends Game {
 
         return result;
     }
-
+    // TODO postmanShipLocations isnt accounted for!!
     private String attack(String[][] board, int row, int col) {
 
         String coordinate = getShipCoordinate(row, col);
