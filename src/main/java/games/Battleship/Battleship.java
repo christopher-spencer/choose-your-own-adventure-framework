@@ -160,10 +160,12 @@ public class Battleship extends Game {
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
-
+            // TEST
             if (ship != null) {
                 ship.hit();
             } else {
+                // In a test, this line didn't display tho it said "MISS" when D9
+                // should have been a hit
                 System.out.println("No ship found at coordinate: " + coordinate);
             }
 

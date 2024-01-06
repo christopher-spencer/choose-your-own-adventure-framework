@@ -779,6 +779,7 @@ public class Menu {
         System.out.println("POSTMAN OPPONENT DISPLAY");
         battleshipBoardDisplay(postmanOpponentDisplay);
 
+        //TEST
         Map<String,Ship> playerShipLocations = battleshipGame.getPlayerShipLocations();
         Map<String, Ship> postmanShipLocations = battleshipGame.getPostmanShipLocations();
 
