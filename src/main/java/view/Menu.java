@@ -793,7 +793,7 @@ public class Menu {
 
         //TODO the game doesnt stop you from choosing the same place to attack
 
-        //TODO keeps displaying you sank whatever ship until you sink the next one
+        //TODO work on printing out exactly which spot each round you hit or miss
 
         while (!battleshipGame.isAWinner()) {
 
@@ -845,6 +845,7 @@ public class Menu {
                 System.out.println();
             }
 
+            //TODO keeps displaying you sank whatever ship until you sink the next one
             if (userCarrier.isSunk()) {
                 System.out.println("    The postman sank your Carrier!");
             } else if (userBattleship.isSunk()) {
