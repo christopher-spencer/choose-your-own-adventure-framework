@@ -179,6 +179,11 @@ public class Battleship extends Game {
         }
     }
 
+    public boolean isSpotAlreadyAttacked(String[][] board, int row, int col) {
+        String spot = board[row][col];
+        return spot.equals(HIT) || spot.equals(MISS);
+    }
+
     public List<Ship> getShips() { return ships; }
 
     public void setShips(List<Ship> ships) { this.ships = ships; }

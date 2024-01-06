@@ -1181,7 +1181,7 @@ public class Menu {
             }
 
             // Check if spot is already taken
-            if (isSpotAlreadyAttacked(playerOpponentDisplay, attackRow, attackCol)) {
+            if (battleshipGame.isSpotAlreadyAttacked(playerOpponentDisplay, attackRow, attackCol)) {
                 System.out.println();
                 System.out.println("    You have already attacked this spot. Choose a different spot.");
             } else {
@@ -1192,11 +1192,6 @@ public class Menu {
         return new int[] {attackRow, attackCol};
     }
 
-    public boolean isSpotAlreadyAttacked(String[][] board, int row, int col) {
-        String spot = board[row][col];
-        return spot.equals(Battleship.getHITMarker()) || spot.equals(Battleship.getMissMarker());
-    }
-    
     /*
      *********************************************************************************
                      * ~ * ~ * RANDOM GAME METHODS * ~ * ~ *
