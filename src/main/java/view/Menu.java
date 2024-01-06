@@ -786,7 +786,7 @@ public class Menu {
 
         battleshipBoardDisplay(playerBoard);
         letTheGamesBegin();
-        
+
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
         //  as well as MAP indicating HIT == XX, MISS == (), and BOAT == []

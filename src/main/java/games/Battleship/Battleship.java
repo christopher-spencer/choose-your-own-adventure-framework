@@ -134,7 +134,6 @@ public class Battleship extends Game {
     }
 
     public String playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
-        // TODO Update postmanBoard and playerOpponentDisplay
         String playerMove = "playerMove";
         String result = attack(postmanBoard, row, col, playerMove);
         playerOpponentDisplay[row][col] = result;
@@ -143,7 +142,6 @@ public class Battleship extends Game {
     }
 
         public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
-        // TODO Update playerBoard and postmanOpponentDisplay
         String postmanMove = "postmanMove";
         Random random = new Random();
         int row = random.nextInt(9) + 1;
