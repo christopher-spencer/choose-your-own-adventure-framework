@@ -37,6 +37,7 @@ public class Ship {
         this.isHorizontal = false;
         this.startRow = -1;
         this.startCol = -1;
+        this.sunkAnnounced = false;
     }
 
     public String getWhoseShipIsIt() { return whoseShipIsIt; }
