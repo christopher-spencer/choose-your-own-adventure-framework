@@ -790,13 +790,7 @@ public class Menu {
 
         //TODO the game doesnt stop you from choosing the same place to attack
 
-        //TODO getting nullpointerexception from shipLocations and/or attack method (?)
-
-        //TODO just tried to hit D9 where a i knew there was a ship but it said MISS
-        // while recording all my other hits
-
-        //TODO i should have sank all postman ships but the only message displaying
-        // was that postman sank my battleship even though that wasnt true
+        //TODO keeps displaying you sank whatever ship until you sink the next one
 
         while (!battleshipGame.isAWinner()) {
 
