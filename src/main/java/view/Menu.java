@@ -126,6 +126,35 @@ public class Menu {
      *********************************************************************************
      */
 
+    public void welcomeToRockPaperScissors() {
+        System.out.println("    *************************************************************************");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *                 *****   ****   *****  *    *                    *  *");
+        System.out.println("    *  *                 *   *  *    *  *      *   *                     *  *");
+        System.out.println("    *  *                 *  *  *      * *      * *                       *  *");
+        System.out.println("    *  *                 *   *  *    *  *      *  *                      *  *");
+        System.out.println("    *  *                 *    *  ****   *****  *    *                    *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *              *****    ***   *****   *****  *****                *  *");
+        System.out.println("    *  *              *    *  *   *  *    *  *      *   *                *  *");
+        System.out.println("    *  *              *****   *****  *****   *****  *  *                 *  *");
+        System.out.println("    *  *              *       *   *  *       *      *   *                *  *");
+        System.out.println("    *  *              *       *   *  *       *****  *    *               *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *   *****   *****  ***   *****   *****    ****    *****   *****   *  *");
+        System.out.println("    *  *  *        *       *   *       *        *    *   *   *  *        *  *");
+        System.out.println("    *  *    ****   *       *     ****    ****  *      *  *  *    ****    *  *");
+        System.out.println("    *  *        *  *       *         *       *  *    *   *   *        *  *  *");
+        System.out.println("    *  *   *****   *****  ***   *****   *****    ****    *    *  *****   *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *************************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
+
     public void rockPaperScissorsGame() {
         String rock = RockPaperScissorsGame.getROCK();
         String paper = RockPaperScissorsGame.getPAPER();
@@ -161,35 +190,6 @@ public class Menu {
         itGoesOnAndOnMyFriends();
     }
 
-    public void welcomeToRockPaperScissors() {
-        System.out.println("    *************************************************************************");
-        System.out.println("    *  *******************************************************************  *");
-        System.out.println("    *  *                                                                 *  *");
-        System.out.println("    *  *                 *****   ****   *****  *    *                    *  *");
-        System.out.println("    *  *                 *   *  *    *  *      *   *                     *  *");
-        System.out.println("    *  *                 *  *  *      * *      * *                       *  *");
-        System.out.println("    *  *                 *   *  *    *  *      *  *                      *  *");
-        System.out.println("    *  *                 *    *  ****   *****  *    *                    *  *");
-        System.out.println("    *  *                                                                 *  *");
-        System.out.println("    *  *              *****    ***   *****   *****  *****                *  *");
-        System.out.println("    *  *              *    *  *   *  *    *  *      *   *                *  *");
-        System.out.println("    *  *              *****   *****  *****   *****  *  *                 *  *");
-        System.out.println("    *  *              *       *   *  *       *      *   *                *  *");
-        System.out.println("    *  *              *       *   *  *       *****  *    *               *  *");
-        System.out.println("    *  *                                                                 *  *");
-        System.out.println("    *  *   *****   *****  ***   *****   *****    ****    *****   *****   *  *");
-        System.out.println("    *  *  *        *       *   *       *        *    *   *   *  *        *  *");
-        System.out.println("    *  *    ****   *       *     ****    ****  *      *  *  *    ****    *  *");
-        System.out.println("    *  *        *  *       *         *       *  *    *   *   *        *  *  *");
-        System.out.println("    *  *   *****   *****  ***   *****   *****    ****    *    *  *****   *  *");
-        System.out.println("    *  *                                                                 *  *");
-        System.out.println("    *  *******************************************************************  *");
-        System.out.println("    *************************************************************************");
-        System.out.println();
-        System.out.println("    When you're ready, press ENTER to continue:");
-        in.nextLine();
-    }
-
     public String playerRockPaperScissorsMove() {
         //TODO need INVALID SELECTION if not rock paper or scissors (if the player just clicks enter, goes on without user selection)
 
@@ -202,6 +202,23 @@ public class Menu {
                         * ~ * ~ * HANGMAN GAME SECTION * ~ * ~ *
      *********************************************************************************
      */
+
+    public void welcomeToHangman() {
+        System.out.println("    **************************************************************************");
+        System.out.println("    *  ********************************************************************  *");
+        System.out.println("    *  *                                                                  *  *");
+        System.out.println("    *  *  *    *     *     *     *  *****    **     **     *     *     *  *  *");
+        System.out.println("    *  *  *    *   *   *   * *   *  *        * *   * *   *   *   * *   *  *  *");
+        System.out.println("    *  *  ******  *******  *  *  *  *   ***  *   *   *  *******  *  *  *  *  *");
+        System.out.println("    *  *  *    *  *     *  *   * *  *    *   *       *  *     *  *   * *  *  *");
+        System.out.println("    *  *  *    *  *     *  *     *  *****    *       *  *     *  *     *  *  *");
+        System.out.println("    *  *                                                                  *  *");
+        System.out.println("    *  ********************************************************************  *");
+        System.out.println("    **************************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
 
     public void hangmanGame() {
 
@@ -265,23 +282,6 @@ public class Menu {
         itGoesOnAndOnMyFriends();
     }
 
-    public void welcomeToHangman() {
-        System.out.println("    **************************************************************************");
-        System.out.println("    *  ********************************************************************  *");
-        System.out.println("    *  *                                                                  *  *");
-        System.out.println("    *  *  *    *     *     *     *  *****    **     **     *     *     *  *  *");
-        System.out.println("    *  *  *    *   *   *   * *   *  *        * *   * *   *   *   * *   *  *  *");
-        System.out.println("    *  *  ******  *******  *  *  *  *   ***  *   *   *  *******  *  *  *  *  *");
-        System.out.println("    *  *  *    *  *     *  *   * *  *    *   *       *  *     *  *   * *  *  *");
-        System.out.println("    *  *  *    *  *     *  *     *  *****    *       *  *     *  *     *  *  *");
-        System.out.println("    *  *                                                                  *  *");
-        System.out.println("    *  ********************************************************************  *");
-        System.out.println("    **************************************************************************");
-        System.out.println();
-        System.out.println("    When you're ready, press ENTER to continue:");
-        in.nextLine();
-    }
-
     private void displayHangmanStats(String mysteryWord, List<Character> previousGuesses, List<Character> correctGuesses) {
         System.out.println("    All Guesses So Far: ");
         for (char guess : previousGuesses) {
@@ -328,6 +328,23 @@ public class Menu {
                     * ~ * ~ * TIC TAC TOE GAME SECTION * ~ * ~ *
      *********************************************************************************
      */
+
+    public void welcomeToTicTacToe() {
+        System.out.println("    *********************************************************************");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *  *****  *  *****  *****  *****  *****  *****  *****  *****  *  *");
+        System.out.println("    *  *    *    *  *        *    *   *  *        *    *   *  *      *  *");
+        System.out.println("    *  *    *    *  *        *    *****  *        *    *   *  *****  *  *");
+        System.out.println("    *  *    *    *  *        *    *   *  *        *    *   *  *      *  *");
+        System.out.println("    *  *    *    *  *****    *    *   *  *****    *    *****  *****  *  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *********************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
 
     // TODO think about how to refactor TTTGame based on how we did Battleship
     // TODO constants for EMPTY = ' ', X or O to check for each spot in the board array
@@ -381,23 +398,6 @@ public class Menu {
         spotTaken.clear();
 
         itGoesOnAndOnMyFriends();
-    }
-
-    public void welcomeToTicTacToe() {
-        System.out.println("    *********************************************************************");
-        System.out.println("    *  ***************************************************************  *");
-        System.out.println("    *  *                                                             *  *");
-        System.out.println("    *  *  *****  *  *****  *****  *****  *****  *****  *****  *****  *  *");
-        System.out.println("    *  *    *    *  *        *    *   *  *        *    *   *  *      *  *");
-        System.out.println("    *  *    *    *  *        *    *****  *        *    *   *  *****  *  *");
-        System.out.println("    *  *    *    *  *        *    *   *  *        *    *   *  *      *  *");
-        System.out.println("    *  *    *    *  *****    *    *   *  *****    *    *****  *****  *  *");
-        System.out.println("    *  *                                                             *  *");
-        System.out.println("    *  ***************************************************************  *");
-        System.out.println("    *********************************************************************");
-        System.out.println();
-        System.out.println("    When you're ready, press ENTER to continue:");
-        in.nextLine();
     }
 
     public void playerAndPostmanChooseXorO() {
@@ -743,6 +743,25 @@ public class Menu {
      *********************************************************************************
      */
 
+    //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
+    public void welcomeToBattleShip() {
+        System.out.println();
+        System.out.println("    ***************************************************************************");
+        System.out.println("    *  *********************************************************************  *");
+        System.out.println("    *  *                                                                   *  *");
+        System.out.println("    *  *  *****   *****  ***** *****  *     *****  *****  *   *  *  *****  *  *");
+        System.out.println("    *  *  *    *  *   *    *     *    *     *      *      *   *  *  *   *  *  *");
+        System.out.println("    *  *  *****   *****    *     *    *     *****  *****  *****  *  *****  *  *");
+        System.out.println("    *  *  *    *  *   *    *     *    *     *          *  *   *  *  *      *  *");
+        System.out.println("    *  *  *****   *   *    *     *    ***** *****  *****  *   *  *  *      *  *");
+        System.out.println("    *  *                                                                   *  *");
+        System.out.println("    *  *********************************************************************  *");
+        System.out.println("    ***************************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
+
     public void battleshipGame() {
         Ship userCarrier = battleshipGame.getShipByOwnerAndShipName("User", "Carrier");
         Ship userBattleship = battleshipGame.getShipByOwnerAndShipName("User", "Battleship");
@@ -886,25 +905,6 @@ public class Menu {
         battleshipGame.resetGame();
 
         itGoesOnAndOnMyFriends();
-    }
-
-    //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
-    public void welcomeToBattleShip() {
-        System.out.println();
-        System.out.println("    ***************************************************************************");
-        System.out.println("    *  *********************************************************************  *");
-        System.out.println("    *  *                                                                   *  *");
-        System.out.println("    *  *  *****   *****  ***** *****  *     *****  *****  *   *  *  *****  *  *");
-        System.out.println("    *  *  *    *  *   *    *     *    *     *      *      *   *  *  *   *  *  *");
-        System.out.println("    *  *  *****   *****    *     *    *     *****  *****  *****  *  *****  *  *");
-        System.out.println("    *  *  *    *  *   *    *     *    *     *          *  *   *  *  *      *  *");
-        System.out.println("    *  *  *****   *   *    *     *    ***** *****  *****  *   *  *  *      *  *");
-        System.out.println("    *  *                                                                   *  *");
-        System.out.println("    *  *********************************************************************  *");
-        System.out.println("    ***************************************************************************");
-        System.out.println();
-        System.out.println("    When you're ready, press ENTER to continue:");
-        in.nextLine();
     }
 
     public void initializeBoard(String[][] board) {
