@@ -1072,6 +1072,7 @@ public class Menu {
     public void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship... ships) {
 
         for (Ship ship : ships) {
+            mainDisplayMarker();
             battleshipBoardDisplay(board);
             whereWouldYouLikeToPlaceYourShip(ship, board);
         }
