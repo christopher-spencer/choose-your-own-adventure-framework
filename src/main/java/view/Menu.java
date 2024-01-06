@@ -768,9 +768,34 @@ public class Menu {
         battleshipBoardDisplay(playerBoard);
         letTheGamesBegin();
 
+        //TEST
+        System.out.println("TESTING......");
+        System.out.println("PLAYERBOARD");
+        battleshipBoardDisplay(playerBoard);
+        System.out.println("PLAYER OPPONENT DISPLAY");
+        battleshipBoardDisplay(playerOpponentDisplay);
+        System.out.println("POSTMAN BOARD");
+        battleshipBoardDisplay(postmanBoard);
+        System.out.println("POSTMAN OPPONENT DISPLAY");
+        battleshipBoardDisplay(postmanOpponentDisplay);
+
+        Map<String,Ship> playerShipLocations = battleshipGame.getPlayerShipLocations();
+        Map<String, Ship> postmanShipLocations = battleshipGame.getPostmanShipLocations();
+
+
         // TODO rearrange the while loop and make sure to include printlns for misses && hits
         //  for specific ships && when a ship has sunk
         //  as well as MAP indicating HIT == XX, MISS == (), and BOAT == []
+
+        //TODO the game doesnt stop you from choosing the same place to attack
+
+        //TODO getting nullpointerexception from shipLocations and/or attack method (?)
+
+        //TODO just tried to hit D9 where a i knew there was a ship but it said MISS
+        // while recording all my other hits
+
+        //TODO i should have sank all postman ships but the only message displaying
+        // was that postman sank my battleship even though that wasnt true
 
         while (!battleshipGame.isAWinner()) {
 

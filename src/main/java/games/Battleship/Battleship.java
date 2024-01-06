@@ -158,9 +158,16 @@ public class Battleship extends Game {
         String coordinate = getShipCoordinate(row, col);
         Ship ship = playerShipLocations.get(coordinate);
 
-        if (ship != null && board[row][col].equals(BOAT)) {
+        if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
-            ship.hit();
+
+            if (ship != null) {
+                ship.hit();
+            } else {
+                System.out.println("No ship found at coordinate: " + coordinate);
+            }
+
+            //ship.hit();
             return HIT;
         } else {
             board[row][col] = MISS;
