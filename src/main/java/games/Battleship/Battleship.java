@@ -146,12 +146,21 @@ public class Battleship extends Game {
         public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
         String postmanMove = "postmanMove";
         Random random = new Random();
-        int row = random.nextInt(9) + 1;
-        int col = random.nextInt(9) + 1;
+        boolean isValidMove = false;
+        String result = "";
 
-        String result = attack(playerBoard, row, col, postmanMove);
-        postmanOpponentDisplay[row][col] = result;
+        while (!isValidMove) {
+            int row = random.nextInt(9) + 1;
+            int col = random.nextInt(9) + 1;
+            boolean isSpotAlreadyAttacked = isSpotAlreadyAttacked(playerBoard, row, col);
 
+            if (!isSpotAlreadyAttacked) {
+                result = attack(playerBoard, row, col, postmanMove);
+                postmanOpponentDisplay[row][col] = result;
+                isValidMove = true;
+            }
+        }
+        
         return result;
     }
 
