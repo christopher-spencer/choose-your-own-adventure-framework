@@ -154,32 +154,25 @@ public class Battleship extends Game {
 
         return result;
     }
-    // TODO postmanShipLocations isnt accounted for!!
+
     private String attack(String[][] board, int row, int col, String attacker) {
 
         String coordinate = getShipCoordinate(row, col);
         Ship ship = null;
-        
+
         if (attacker.equals("playerMove")) {
             ship = postmanShipLocations.get(coordinate);
         } else if (attacker.equals("postmanMove")) {
             ship = playerShipLocations.get(coordinate);
         }
-//        String coordinate = getShipCoordinate(row, col);
-//        Ship ship = playerShipLocations.get(coordinate);
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
-            // TEST
             if (ship != null) {
                 ship.hit();
             } else {
-                // In a test, this line didn't display tho it said "MISS" when D9
-                // should have been a hit
                 System.out.println("No ship found at coordinate: " + coordinate);
             }
-
-            //ship.hit();
             return HIT;
         } else {
             board[row][col] = MISS;
