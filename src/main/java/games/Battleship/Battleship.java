@@ -135,7 +135,8 @@ public class Battleship extends Game {
 
     public String playerMove(String[][] postmanBoard, String[][] playerOpponentDisplay, int row, int col) {
         // TODO Update postmanBoard and playerOpponentDisplay
-        String result = attack(postmanBoard, row, col);
+        String playerMove = "playerMove";
+        String result = attack(postmanBoard, row, col, playerMove);
         playerOpponentDisplay[row][col] = result;
 
         return result;
@@ -143,20 +144,29 @@ public class Battleship extends Game {
 
         public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
         // TODO Update playerBoard and postmanOpponentDisplay
+        String postmanMove = "postmanMove";
         Random random = new Random();
         int row = random.nextInt(9) + 1;
         int col = random.nextInt(9) + 1;
 
-        String result = attack(playerBoard, row, col);
+        String result = attack(playerBoard, row, col, postmanMove);
         postmanOpponentDisplay[row][col] = result;
 
         return result;
     }
     // TODO postmanShipLocations isnt accounted for!!
-    private String attack(String[][] board, int row, int col) {
+    private String attack(String[][] board, int row, int col, String attacker) {
 
         String coordinate = getShipCoordinate(row, col);
-        Ship ship = playerShipLocations.get(coordinate);
+        Ship ship = null;
+        
+        if (attacker.equals("playerMove")) {
+            ship = postmanShipLocations.get(coordinate);
+        } else if (attacker.equals("postmanMove")) {
+            ship = playerShipLocations.get(coordinate);
+        }
+//        String coordinate = getShipCoordinate(row, col);
+//        Ship ship = playerShipLocations.get(coordinate);
 
         if (board[row][col].equals(BOAT)) {
             board[row][col] = HIT;
