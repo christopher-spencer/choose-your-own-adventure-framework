@@ -205,19 +205,11 @@ public class Battleship extends Game {
 
     public void setPostmanShipLocations(Map<String, Ship> postmanShipLocations) { this.postmanShipLocations = postmanShipLocations; }
 
-    public static String getHITMarker() {
-        return HIT;
-    }
+    public static String getHITMarker() { return HIT; }
 
-    public static String getMissMarker() {
-        return MISS;
-    }
+    public static String getMissMarker() { return MISS; }
 
-    public static String getEmptyMarker() {
-        return EMPTY;
-    }
+    public static String getEmptyMarker() { return EMPTY; }
 
-    public static String getBoatMarker() {
-        return BOAT;
-    }
+    public static String getBoatMarker() { return BOAT; }
 }
