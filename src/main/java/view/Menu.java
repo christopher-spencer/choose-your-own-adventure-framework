@@ -1197,7 +1197,34 @@ public class Menu {
      *********************************************************************************
      */
 
-
+    public void welcomeToEscapeThePostman() {
+        System.out.println("    *********************************************************************");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *          *****   *****  *****   ***   *****   *****         *  *");
+        System.out.println("    *  *          *      *       *      *   *  *    *  *             *  *");
+        System.out.println("    *  *          *****   ****   *      *****  *****   *****         *  *");
+        System.out.println("    *  *          *           *  *      *   *  *       *             *  *");
+        System.out.println("    *  *          *****  *****   *****  *   *  *       *****         *  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *                      *****  *   *  *****                    *  *");
+        System.out.println("    *  *                        *    *   *  *                        *  *");
+        System.out.println("    *  *                        *    *****  *****                    *  *");
+        System.out.println("    *  *                        *    *   *  *                        *  *");
+        System.out.println("    *  *                        *    *   *  *****                    *  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  *   *****   *****   *****  *****   **  **     ***    *    *   *  *");
+        System.out.println("    *  *   *    *  *   *  *         *     **  **    *   *   * *  *   *  *");
+        System.out.println("    *  *   *****   *   *   ****     *    *  **  *   *****   *  * *   *  *");
+        System.out.println("    *  *   *       *   *        *   *    *      *   *   *   *   **   *  *");
+        System.out.println("    *  *   *       *****   *****    *   **      **  *   *   *    *   *  *");
+        System.out.println("    *  *                                                             *  *");
+        System.out.println("    *  ***************************************************************  *");
+        System.out.println("    *********************************************************************");
+        System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
+    }
 
     /*
      *********************************************************************************
