@@ -790,7 +790,7 @@ public class Menu {
         battleshipBoardDisplay(playerBoard);
 
         //TODO work on improving GUI
-        //TODO work on printing out exactly which spot each round you hit or miss
+        //TODO work on printing out exactly which spot each round you hit or miss (in selectAttackCoordinates?)
 
         while (!battleshipGame.isAWinner()) {
 
