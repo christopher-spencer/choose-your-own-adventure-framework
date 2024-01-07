@@ -93,26 +93,28 @@ public class Menu {
         System.out.println();
         randomGameSelector();
     }
-        // TODO eventually add two player modes for each game
+
+    // TODO eventually add two player modes for each game
+    // TODO impove RANDOMSELECTOR so same game doesn't play over and over and over
     public void randomGameSelector() {
         Random random = new Random();
-        int randomNumber = random.nextInt(3);
+//        int randomNumber = random.nextInt(3);
         //TODO change bounds && uncomment selectors when Games are ready
-        //int randomNumber = 3;
+        int randomNumber = 3;
 
-        if (randomNumber == 0) {
-            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-            rockPaperScissorsGame();
-        }
-        if (randomNumber == 1) {
-            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-            hangmanGame();
-        }
-
-        if (randomNumber == 2) {
-            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-            ticTacToeGame();
-        }
+//        if (randomNumber == 0) {
+//            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+//            rockPaperScissorsGame();
+//        }
+//        if (randomNumber == 1) {
+//            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+//            hangmanGame();
+//        }
+//
+//        if (randomNumber == 2) {
+//            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//            ticTacToeGame();
+//        }
 
         if (randomNumber == 3) {
             System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +

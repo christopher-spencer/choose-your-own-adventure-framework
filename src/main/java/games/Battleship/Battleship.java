@@ -7,7 +7,6 @@ import java.util.*;
 
 public class Battleship extends Game {
 
-    //TODO change MISS display so it sticks out better on board
     private static final String HIT = "XX";
     private static final String MISS = "()";
     private static final String EMPTY = "  ";
