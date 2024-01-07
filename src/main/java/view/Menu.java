@@ -128,6 +128,7 @@ public class Menu {
      */
 
     public void welcomeToRockPaperScissors() {
+        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -205,6 +206,7 @@ public class Menu {
      */
 
     public void welcomeToHangman() {
+        System.out.println();
         System.out.println("    **************************************************************************");
         System.out.println("    *  ********************************************************************  *");
         System.out.println("    *  *                                                                  *  *");
@@ -225,7 +227,7 @@ public class Menu {
 
         //Todo split up this method into smaller containable methods
         //Todo create hangman GUI
-        
+
         //TODO on final word it doesn't fill in the last space, just tells you the word,
         // but last space would be satisfying
 
@@ -334,6 +336,7 @@ public class Menu {
      */
 
     public void welcomeToTicTacToe() {
+        System.out.println();
         System.out.println("    *********************************************************************");
         System.out.println("    *  ***************************************************************  *");
         System.out.println("    *  *                                                             *  *");
@@ -1201,6 +1204,7 @@ public class Menu {
      */
 
     public void welcomeToEscapeThePostman() {
+        System.out.println();
         System.out.println("    *********************************************************************");
         System.out.println("    *  ***************************************************************  *");
         System.out.println("    *  *                                                             *  *");
