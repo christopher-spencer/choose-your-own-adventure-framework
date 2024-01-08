@@ -196,9 +196,7 @@ public class Menu {
     }
 
     public String playerRockPaperScissorsMove() {
-        //TODO need INVALID SELECTION if not rock paper or scissors (if the player just clicks enter, goes on without user selection)
         boolean isValidSelection = false;
-
         String userInput = "";
 
         while (!isValidSelection) {
