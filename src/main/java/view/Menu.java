@@ -130,6 +130,7 @@ public class Menu {
      *********************************************************************************
      */
 
+    //TODO issue with tie game where the menu zooms down to this welcome sign again (put in logic so no sign for tie)
     public void welcomeToRockPaperScissors() {
         System.out.println();
         System.out.println("    *************************************************************************");
