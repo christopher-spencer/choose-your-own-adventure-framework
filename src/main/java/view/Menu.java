@@ -100,12 +100,13 @@ public class Menu {
         Random random = new Random();
 //        int randomNumber = random.nextInt(3);
         //TODO change bounds && uncomment selectors when Games are ready
-        int randomNumber = 3;
+        int randomNumber = 0;
 
-//        if (randomNumber == 0) {
-//            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-//            rockPaperScissorsGame();
-//        }
+        if (randomNumber == 0) {
+            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+            rockPaperScissorsGame();
+        }
+
 //        if (randomNumber == 1) {
 //            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
 //            hangmanGame();
@@ -116,11 +117,11 @@ public class Menu {
 //            ticTacToeGame();
 //        }
 
-        if (randomNumber == 3) {
-            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
-                    "it with water, hops in, and beckons you to join him.");
-            battleshipGame();
-        }
+//        if (randomNumber == 3) {
+//            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
+//                    "it with water, hops in, and beckons you to join him.");
+//            battleshipGame();
+//        }
     }
 
     /*
@@ -196,9 +197,25 @@ public class Menu {
 
     public String playerRockPaperScissorsMove() {
         //TODO need INVALID SELECTION if not rock paper or scissors (if the player just clicks enter, goes on without user selection)
+        boolean isValidSelection = false;
 
-        System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
-        return in.nextLine();
+        String userInput = "";
+
+        while (!isValidSelection) {
+            System.out.println("    Enter one of the following inputs: ROCK or PAPER or SCISSORS");
+
+            userInput = in.nextLine();
+
+            if (userInput.equals("ROCK") || userInput.equals("rock") || userInput.equals("Rock")
+                    || userInput.equals("SCISSORS") || userInput.equals("scissors") || userInput.equals("Scissors")
+                    || userInput.equals("PAPER") || userInput.equals("paper") || userInput.equals("Paper")) {
+                isValidSelection = true;
+            } else {
+                tellUserInvalidSelection();
+            }
+        }
+
+        return userInput;
     }
 
     /*
