@@ -1305,7 +1305,8 @@ public class Menu {
      */
 
     public void itGoesOnAndOnMyFriends() {
-        System.out.println("Once you have gathered your bearings, press ENTER to continue:");
+        System.out.println();
+        System.out.println("    Once you have gathered your bearings, press ENTER to continue:");
         in.nextLine();
         andJustLikeThatHeIsGone();
         theNextDayArrives();
