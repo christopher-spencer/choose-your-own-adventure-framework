@@ -261,7 +261,7 @@ public class Menu {
 
         System.out.println("    Your mystery word is " + mysteryWord.length() + " letters long!\n");
 
-        while(lives > 0 && youWin == false) {
+        while (lives > 0 && !youWin) {
             System.out.println("    You have " + lives + " lives left.\n");
 
             displayHangmanStats(mysteryWord, previousGuesses, correctGuesses);
@@ -277,6 +277,7 @@ public class Menu {
                     continue;
                 }
 
+                //TODO move guessed letters to HAngman Class (?)
                 if (mysteryWord.contains(guessedLetter)) {
                     System.out.println("    'Congrats! You've guessed a correct letter!' the Postman says.\n");
                     correctGuesses.add(letter);
