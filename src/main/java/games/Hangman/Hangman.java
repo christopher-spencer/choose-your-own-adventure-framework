@@ -37,11 +37,11 @@ public class Hangman extends Game {
         return mysteryWords.get(randomIndex);
     }
 
-//    @Override
-//    public void resetGame() {
-//        correctGuesses.clear();
-//        previousGuesses.clear();
-//    }
+    @Override
+    public void resetGame() {
+        correctGuesses.clear();
+        previousGuesses.clear();
+    }
 
     public List<String> getMysteryWords() {
         return mysteryWords;

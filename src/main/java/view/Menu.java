@@ -299,9 +299,7 @@ public class Menu {
 
         displayHangmanGameResult(youWin, mysteryWord);
 
-        //TODO switch to resetGame override (currently commented out in HM Class
-        correctGuesses.clear();
-        previousGuesses.clear();
+        hangmanGame.resetGame();
 
         itGoesOnAndOnMyFriends();
     }
