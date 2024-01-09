@@ -1264,6 +1264,8 @@ public class Menu {
         System.out.println();
         System.out.println("    It's a tie!");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to try again:");
+        in.nextLine();
     }
 
     // TODO create a wider selection of InvalidSelection responses based on the situation
