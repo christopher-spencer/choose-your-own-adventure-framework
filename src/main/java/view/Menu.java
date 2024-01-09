@@ -171,8 +171,9 @@ public class Menu {
         String userChoice = playerRockPaperScissorsMove().toUpperCase();
         String postmanChoice = rpsGame.getPostmanMove().toUpperCase();
 
-        System.out.println("You have chosen: " + userChoice);
-        System.out.println("The Postman chose: " + postmanChoice);
+        System.out.println("    You have chosen: " + userChoice);
+        System.out.println();
+        System.out.println("    The Postman chose: " + postmanChoice);
 
         //TODO switch up else if logic below to incorporate isYouWin and isATie from Game class (?)
 
@@ -184,10 +185,12 @@ public class Menu {
         } else if ( (userChoice.equals(rock) && postmanChoice.equals(scissors)) ||
                 (userChoice.equals(paper) && postmanChoice.equals(rock)) ||
                 (userChoice.equals(scissors) && postmanChoice.equals(paper)) ) {
+            System.out.println();
             System.out.println("    You win!");
             System.out.println();
             System.out.println("    The Postman slaps a pie in your face.");
         } else {
+            System.out.println();
             System.out.println("    The Postman wins!");
             System.out.println();
             System.out.println("    The Postman catches your couch on fire.");
