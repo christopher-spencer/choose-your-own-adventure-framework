@@ -384,6 +384,8 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     private void fiveLivesLeftHangmanDisplay() {
@@ -410,6 +412,8 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     private void fourLivesLeftHangmanDisplay() {
@@ -436,6 +440,8 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     private void threeLivesLeftHangmanDisplay() {
@@ -462,6 +468,8 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     private void twoLivesLeftHangmanDisplay() {
@@ -488,6 +496,8 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     private void oneLifeLeftHangmanDisplay() {
@@ -514,8 +524,11 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
+    //TODO need to fix hangman so tbis and final letter in for loop displays
     private void zeroLivesLeftHangmanDisplay() {
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
@@ -540,6 +553,8 @@ public class Menu {
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *************************************************************************");
         System.out.println();
+        System.out.println("    When you're ready, press ENTER to continue:");
+        in.nextLine();
     }
 
     /*
