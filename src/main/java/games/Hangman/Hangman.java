@@ -18,7 +18,7 @@ public class Hangman extends Game {
         initializeMysteryWords();
     }
 
-    //Todo: Mystery words is a possible opportunity to use file or database
+    //Todo: Mystery words is a possible opportunity to use file or api or database
     // (in any case, add MORE words)
 
     public void initializeMysteryWords() {
