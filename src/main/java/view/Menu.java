@@ -264,7 +264,7 @@ public class Menu {
             System.out.println("    You have " + lives + " lives left.\n");
 
             displayHangmanStats(mysteryWord, previousGuesses, correctGuesses);
-
+            System.out.println();
             System.out.println("    What letter would you like to guess?:");
             String guessedLetter = in.nextLine().toUpperCase();
 
@@ -313,6 +313,7 @@ public class Menu {
         System.out.println();
 
         System.out.println("    Correct Guesses: ");
+        System.out.print("    ");
         for (int i = 0; i < mysteryWord.length(); i++) {
             char wordChar = mysteryWord.charAt(i);
 
