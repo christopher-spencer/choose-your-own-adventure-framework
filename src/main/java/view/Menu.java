@@ -242,9 +242,7 @@ public class Menu {
     }
 
     public void hangmanGame() {
-
-        //Todo create hangman GUI
-
+        
         welcomeToHangman();
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
