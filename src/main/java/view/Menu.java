@@ -242,7 +242,7 @@ public class Menu {
     }
 
     public void hangmanGame() {
-        
+
         welcomeToHangman();
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
@@ -256,20 +256,44 @@ public class Menu {
         while (lives > 0 && !youWin) {
             System.out.println("    You have " + lives + " lives left.\n");
 
-            if (lives == 6) {
-                sixLivesLeftHangmanDisplay();
-            } else if (lives == 5) {
-                fiveLivesLeftHangmanDisplay();
-            } else if (lives == 4) {
-                fourLivesLeftHangmanDisplay();
-            } else if (lives == 3) {
-                threeLivesLeftHangmanDisplay();
-            } else if (lives == 2) {
-                twoLivesLeftHangmanDisplay();
-            } else if (lives == 1) {
-                oneLifeLeftHangmanDisplay();
-            } else {
-                zeroLivesLeftHangmanDisplay();
+//            if (lives == 6) {
+//                sixLivesLeftHangmanDisplay();
+//            } else if (lives == 5) {
+//                fiveLivesLeftHangmanDisplay();
+//            } else if (lives == 4) {
+//                fourLivesLeftHangmanDisplay();
+//            } else if (lives == 3) {
+//                threeLivesLeftHangmanDisplay();
+//            } else if (lives == 2) {
+//                twoLivesLeftHangmanDisplay();
+//            } else if (lives == 1) {
+//                oneLifeLeftHangmanDisplay();
+//            } else {
+//                zeroLivesLeftHangmanDisplay();
+//            }
+
+            switch (lives) {
+                case 6:
+                    sixLivesLeftHangmanDisplay();
+                    break;
+                case 5:
+                    fiveLivesLeftHangmanDisplay();
+                    break;
+                case 4:
+                    fourLivesLeftHangmanDisplay();
+                    break;
+                case 3:
+                    threeLivesLeftHangmanDisplay();
+                    break;
+                case 2:
+                    twoLivesLeftHangmanDisplay();
+                    break;
+                case 1:
+                    oneLifeLeftHangmanDisplay();
+                    break;
+                default:
+                    zeroLivesLeftHangmanDisplay();
+                    break;
             }
 
             displayHangmanStats(mysteryWord, previousGuesses, correctGuesses);
