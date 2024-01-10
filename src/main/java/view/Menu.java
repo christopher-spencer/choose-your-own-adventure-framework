@@ -243,7 +243,6 @@ public class Menu {
 
     public void hangmanGame() {
 
-        //Todo split up this method into smaller containable methods
         //Todo create hangman GUI
 
         //TODO on final word it doesn't fill in the last space, just tells you the word,
