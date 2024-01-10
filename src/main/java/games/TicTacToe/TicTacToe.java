@@ -7,6 +7,10 @@ import java.util.List;
 
 public class TicTacToe extends Game {
 
+    private static final char EMPTY = ' ';
+    private static final char X = 'X';
+    private static final char O = 'O';
+
     private char playerChoice = ' ';
     private char postmanChoice = ' ';
 
