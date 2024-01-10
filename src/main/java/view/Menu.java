@@ -283,7 +283,7 @@ public class Menu {
                     
                     youWin = hasGuessedMysteryWord(mysteryWord, correctGuesses);
 
-                    if (youWin == true) {
+                    if (youWin) {
                         break;
                     }
 
@@ -307,6 +307,7 @@ public class Menu {
 
     private void displayHangmanStats(String mysteryWord, List<Character> previousGuesses, List<Character> correctGuesses) {
         System.out.println("    All Guesses So Far: ");
+        System.out.print("      ");
         for (char guess : previousGuesses) {
             System.out.print(guess + " ");
         }
@@ -323,6 +324,7 @@ public class Menu {
                 System.out.print("_");
             }
         }
+        System.out.println();
         System.out.println();
     }
     private void displayHangmanGameResult(boolean youWin, String mysteryWord) {
