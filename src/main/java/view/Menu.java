@@ -591,6 +591,8 @@ public class Menu {
     // TODO constants for EMPTY = ' ', X or O to check for each spot in the board array
     // TODO check the array for isAWinner logic and so on instead of the booleans
 
+    //TODO hit an exception and some funky times when Postman didn't update a move, check this out
+
     public void ticTacToeGame() {
 
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
