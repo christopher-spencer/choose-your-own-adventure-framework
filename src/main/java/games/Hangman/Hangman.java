@@ -12,7 +12,7 @@ public class Hangman extends Game {
     private String guessedLetter;
     private List<Character> correctGuesses = new ArrayList<>();
     private List<Character> previousGuesses = new ArrayList<>();
-    private int playerLives = 5;
+    private int playerLives = 6;
 
     public Hangman() {
         initializeMysteryWords();

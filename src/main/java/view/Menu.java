@@ -258,6 +258,22 @@ public class Menu {
         while (lives > 0 && !youWin) {
             System.out.println("    You have " + lives + " lives left.\n");
 
+            if (lives == 6) {
+                sixLivesLeftHangmanDisplay();
+            } else if (lives == 5) {
+                fiveLivesLeftHangmanDisplay();
+            } else if (lives == 4) {
+                fourLivesLeftHangmanDisplay();
+            } else if (lives == 3) {
+                threeLivesLeftHangmanDisplay();
+            } else if (lives == 2) {
+                twoLivesLeftHangmanDisplay();
+            } else if (lives == 1) {
+                oneLifeLeftHangmanDisplay();
+            } else {
+                zeroLivesLeftHangmanDisplay();
+            }
+
             displayHangmanStats(mysteryWord, previousGuesses, correctGuesses);
             System.out.println();
             System.out.println("    What letter would you like to guess?:");
