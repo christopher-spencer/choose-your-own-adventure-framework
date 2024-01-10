@@ -245,11 +245,6 @@ public class Menu {
 
         //Todo create hangman GUI
 
-        //TODO on final word it doesn't fill in the last space, just tells you the word,
-        // but last space would be satisfying
-        // and Maybe the YOU WIN needs to stick out more,
-        // or don't need that final "You guessed a correct letter!" if YOU WIN (?)
-
         welcomeToHangman();
 
         String mysteryWord = hangmanGame.randomMysteryWord(hangmanGame.getMysteryWords());
