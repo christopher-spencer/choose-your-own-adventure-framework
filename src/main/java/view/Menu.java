@@ -123,7 +123,7 @@ public class Menu {
 //            battleshipGame();
 //        }
     }
-
+    // TODO change all menu methods to private void like in Hangman class
     /*
      *********************************************************************************
                   * ~ * ~ * ROCK PAPER SCISSORS GAME SECTION * ~ * ~ *
@@ -342,6 +342,57 @@ public class Menu {
             }
         }
         return true;
+    }
+
+    private void sixLivesLeftHangmanDisplay() {
+        System.out.println();
+        System.out.println("    *************************************************************************");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *                     *************************                   *  *");
+        System.out.println("    *  *                     **                    ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *   ***********************************************************   *  *");
+        System.out.println("    *  *   ***********************************************************   *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *************************************************************************");
+        System.out.println();
+    }
+
+    private void fiveLivesLeftHangmanDisplay() {
+
+    }
+
+    private void fourLivesLeftHangmanDisplay() {
+
+    }
+
+    private void threeLivesLeftHangmanDisplay() {
+
+    }
+
+    private void twoLivesLeftHangmanDisplay() {
+
+    }
+
+    private void oneLifeLeftHangmanDisplay() {
+
+    }
+
+    private void zeroLivesLeftHangmanDisplay() {
+
     }
 
     /*
