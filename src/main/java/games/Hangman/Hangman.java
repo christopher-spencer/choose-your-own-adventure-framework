@@ -29,6 +29,11 @@ public class Hangman extends Game {
         mysteryWords.add("HAMBURGER");
         mysteryWords.add("PHANTOM");
         mysteryWords.add("ANTELOPE");
+        mysteryWords.add("ATMOSPHERE");
+        mysteryWords.add("DANDELION");
+        mysteryWords.add("SOAP");
+        mysteryWords.add("MOUNTAIN");
+        mysteryWords.add("CYCLOPS");
     }
 
     public String randomMysteryWord(List<String> mysteryWords) {
