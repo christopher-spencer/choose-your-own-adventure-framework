@@ -277,7 +277,6 @@ public class Menu {
                     continue;
                 }
 
-                //TODO move guessed letters to HAngman Class (?)
                 if (mysteryWord.contains(guessedLetter)) {
                     System.out.println("    'Congrats! You've guessed a correct letter!' the Postman says.\n");
                     correctGuesses.add(letter);
