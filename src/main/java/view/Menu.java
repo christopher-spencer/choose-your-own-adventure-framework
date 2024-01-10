@@ -256,22 +256,6 @@ public class Menu {
         while (lives > 0 && !youWin) {
             System.out.println("    You have " + lives + " lives left.\n");
 
-//            if (lives == 6) {
-//                sixLivesLeftHangmanDisplay();
-//            } else if (lives == 5) {
-//                fiveLivesLeftHangmanDisplay();
-//            } else if (lives == 4) {
-//                fourLivesLeftHangmanDisplay();
-//            } else if (lives == 3) {
-//                threeLivesLeftHangmanDisplay();
-//            } else if (lives == 2) {
-//                twoLivesLeftHangmanDisplay();
-//            } else if (lives == 1) {
-//                oneLifeLeftHangmanDisplay();
-//            } else {
-//                zeroLivesLeftHangmanDisplay();
-//            }
-
             switch (lives) {
                 case 6:
                     sixLivesLeftHangmanDisplay();
@@ -366,6 +350,7 @@ public class Menu {
             System.out.println();
             System.out.println("    The Postman cuts a 6 x 6 inch square out of the center of your living room carpet and eats it whole.\n");
         } else {
+            zeroLivesLeftHangmanDisplay();
             System.out.println("    You lose... The word was: " + mysteryWord);
             System.out.println();
             System.out.println("    The Postman waters your plants with a liter of motor oil.\n");
@@ -550,7 +535,6 @@ public class Menu {
         in.nextLine();
     }
 
-    //TODO need to fix hangman so tbis and final letter in for loop displays
     private void zeroLivesLeftHangmanDisplay() {
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
