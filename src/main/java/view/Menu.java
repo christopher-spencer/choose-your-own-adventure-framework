@@ -507,7 +507,30 @@ public class Menu {
     }
 
     private void zeroLivesLeftHangmanDisplay() {
-
+        System.out.println();
+        System.out.println("    *************************************************************************");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *                     *************************                   *  *");
+        System.out.println("    *  *                     **                    ***                   *  *");
+        System.out.println("    *  *                   ******                  ***                   *  *");
+        System.out.println("    *  *                   *    *                  ***                   *  *");
+        System.out.println("    *  *                   ******                  ***                   *  *");
+        System.out.println("    *  *                     **                    ***                   *  *");
+        System.out.println("    *  *                 **********                ***                   *  *");
+        System.out.println("    *  *                *    **    *               ***                   *  *");
+        System.out.println("    *  *               *     **     *              ***                   *  *");
+        System.out.println("    *  *                   ******                  ***                   *  *");
+        System.out.println("    *  *                  *      *                 ***                   *  *");
+        System.out.println("    *  *                 *        *                ***                   *  *");
+        System.out.println("    *  *                *          *               ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *   ***********************************************************   *  *");
+        System.out.println("    *  *   ***********************************************************   *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *************************************************************************");
+        System.out.println();
     }
 
     /*
