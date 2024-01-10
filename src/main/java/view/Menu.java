@@ -361,7 +361,6 @@ public class Menu {
     }
 
     private void sixLivesLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -388,7 +387,6 @@ public class Menu {
     }
 
     private void fiveLivesLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -415,7 +413,6 @@ public class Menu {
     }
 
     private void fourLivesLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -442,7 +439,6 @@ public class Menu {
     }
 
     private void threeLivesLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -469,7 +465,6 @@ public class Menu {
     }
 
     private void twoLivesLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -496,7 +491,6 @@ public class Menu {
     }
 
     private void oneLifeLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
@@ -523,7 +517,6 @@ public class Menu {
     }
 
     private void zeroLivesLeftHangmanDisplay() {
-        System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
         System.out.println("    *  *                                                                 *  *");
