@@ -426,7 +426,30 @@ public class Menu {
     }
 
     private void threeLivesLeftHangmanDisplay() {
-
+        System.out.println();
+        System.out.println("    *************************************************************************");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *                     *************************                   *  *");
+        System.out.println("    *  *                     **                    ***                   *  *");
+        System.out.println("    *  *                   ******                  ***                   *  *");
+        System.out.println("    *  *                   *    *                  ***                   *  *");
+        System.out.println("    *  *                   ******                  ***                   *  *");
+        System.out.println("    *  *                     **                    ***                   *  *");
+        System.out.println("    *  *                 ******                    ***                   *  *");
+        System.out.println("    *  *                *    **                    ***                   *  *");
+        System.out.println("    *  *               *     **                    ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *                                           ***                   *  *");
+        System.out.println("    *  *   ***********************************************************   *  *");
+        System.out.println("    *  *   ***********************************************************   *  *");
+        System.out.println("    *  *                                                                 *  *");
+        System.out.println("    *  *******************************************************************  *");
+        System.out.println("    *************************************************************************");
+        System.out.println();
     }
 
     private void twoLivesLeftHangmanDisplay() {
