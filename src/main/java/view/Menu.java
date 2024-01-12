@@ -595,7 +595,8 @@ public class Menu {
 
     //TODO hit an exception and some funky times when Postman didn't update a move, check this out
 
-    //TODO game still doesn't stop you from making same selection over and over again
+    //TODO one instance when game still didn't stop you from making same selection
+    // over and over again but works most of time (?)
 
     public void ticTacToeGame() {
 
