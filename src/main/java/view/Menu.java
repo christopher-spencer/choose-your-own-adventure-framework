@@ -963,37 +963,37 @@ public class Menu {
         if (ticTacToeGame.isMiddleLeftO()) {
             board[1][0] = O;
         } else if (ticTacToeGame.isMiddleLeftX()) {
-            board[1][0] = 'X';
+            board[1][0] = X;
         }
 
         if (ticTacToeGame.isMiddleMiddleO()) {
-            board[1][1] = 'O';
+            board[1][1] = O;
         } else if (ticTacToeGame.isMiddleMiddleX()) {
-            board[1][1] = 'X';
+            board[1][1] = X;
         }
 
         if (ticTacToeGame.isMiddleRightO()) {
-            board[1][2] = 'O';
+            board[1][2] = O;
         } else if (ticTacToeGame.isMiddleRightX()) {
-            board[1][2] = 'X';
+            board[1][2] = X;
         }
 
         if (ticTacToeGame.isBottomLeftO()) {
-            board[2][0] = 'O';
+            board[2][0] = O;
         } else if (ticTacToeGame.isBottomLeftX()) {
-            board[2][0] = 'X';
+            board[2][0] = X;
         }
 
         if (ticTacToeGame.isBottomMiddleO()) {
-            board[2][1] = 'O';
+            board[2][1] = O;
         } else if (ticTacToeGame.isBottomMiddleX()) {
-            board[2][1] = 'X';
+            board[2][1] = X;
         }
 
         if (ticTacToeGame.isBottomRightO()) {
-            board[2][2] = 'O';
+            board[2][2] = O;
         } else if (ticTacToeGame.isBottomRightX()) {
-            board[2][2] = 'X';
+            board[2][2] = X;
         }
 
         return board;
