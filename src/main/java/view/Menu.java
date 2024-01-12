@@ -652,6 +652,9 @@ public class Menu {
 
     public void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
+        char X = TicTacToe.getXMarker();
+        char O = TicTacToe.getOMarker();
+
         boolean isValidSelection = false;
 
         System.out.println();
@@ -667,14 +670,14 @@ public class Menu {
 
             if (chooseXorO.equals("X")) {
                 isValidSelection = true;
-                ticTacToeGame.setPlayerChoice('X');
-                ticTacToeGame.setPostmanChoice('O');
+                ticTacToeGame.setPlayerChoice(X);
+                ticTacToeGame.setPostmanChoice(O);
                 System.out.println("    You have chosen to play as X's!");
                 System.out.println();
             } else if (chooseXorO.equals("O")) {
                 isValidSelection = true;
-                ticTacToeGame.setPlayerChoice('O');
-                ticTacToeGame.setPostmanChoice('X');
+                ticTacToeGame.setPlayerChoice(O);
+                ticTacToeGame.setPostmanChoice(X);
                 System.out.println("    You have chosen to play as O's!");
                 System.out.println();
             } else {
@@ -687,8 +690,11 @@ public class Menu {
 
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
-        boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == 'X';
-        boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == 'O';
+        char X = TicTacToe.getXMarker();
+        char O = TicTacToe.getOMarker();
+
+        boolean isPlayerXs = ticTacToeGame.getPlayerChoice() == X;
+        boolean isPlayerOs = ticTacToeGame.getPlayerChoice() == O;
         boolean isValidMove = false;
         int topLeft = 1;
         int topMiddle = 2;
@@ -860,8 +866,11 @@ public class Menu {
 
     public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
-        boolean isPostmanXs = ticTacToeGame.getPostmanChoice() == 'X';
-        boolean isPostmanOs = ticTacToeGame.getPostmanChoice() == 'O';
+        char X = TicTacToe.getXMarker();
+        char O = TicTacToe.getOMarker();
+
+        boolean isPostmanXs = ticTacToeGame.getPostmanChoice() == X;
+        boolean isPostmanOs = ticTacToeGame.getPostmanChoice() == O;
 
         if (postmanMove == 1 && isPostmanXs) {
             ticTacToeGame.setTopLeftX(true);
@@ -903,7 +912,6 @@ public class Menu {
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
-
     }
 
     public void printTicTacToeBoard() {
@@ -931,27 +939,29 @@ public class Menu {
     }
 
     public char[][] getXsAndOsPositions(char[][] board) {
+        char X = TicTacToe.getXMarker();
+        char O = TicTacToe.getOMarker();
 
         if (ticTacToeGame.isTopLeftO()) {
-            board[0][0] = 'O';
+            board[0][0] = O;
         } else if (ticTacToeGame.isTopLeftX()) {
-            board[0][0] = 'X';
+            board[0][0] = X;
         }
 
         if (ticTacToeGame.isTopMiddleO()) {
-            board[0][1] = '0';
+            board[0][1] = O;
         } else if (ticTacToeGame.isTopMiddleX()) {
-            board[0][1] = 'X';
+            board[0][1] = X;
         }
 
         if (ticTacToeGame.isTopRightO()) {
-            board[0][2] = 'O';
+            board[0][2] = O;
         } else if (ticTacToeGame.isTopRightX()) {
-            board[0][2] = 'X';
+            board[0][2] = X;
         }
 
         if (ticTacToeGame.isMiddleLeftO()) {
-            board[1][0] = 'O';
+            board[1][0] = O;
         } else if (ticTacToeGame.isMiddleLeftX()) {
             board[1][0] = 'X';
         }
