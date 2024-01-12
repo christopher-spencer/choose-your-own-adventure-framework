@@ -675,6 +675,8 @@ public class Menu {
                 System.out.println("    You have chosen to play as O's!");
                 System.out.println();
             } else {
+                //TODO updated invalidSelection message that still asks
+                // "Do you want to play as Xs (X) or Os (O) for readability
                 tellUserInvalidSelection();
             }
         }
