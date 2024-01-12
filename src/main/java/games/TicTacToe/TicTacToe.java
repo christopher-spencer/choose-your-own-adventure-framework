@@ -7,7 +7,6 @@ import java.util.List;
 
 public class TicTacToe extends Game {
 
-    private static final char EMPTY = ' ';
     private static final char X = 'X';
     private static final char O = 'O';
 
@@ -54,15 +53,15 @@ public class TicTacToe extends Game {
     @Override
     public boolean isPlayerWin() {
 
-        return isAWinner() && playerChoice == 'X' && isThreeXsInARow()
-                || isAWinner() && playerChoice == 'O' && isThreeOsInARow();
+        return isAWinner() && playerChoice == X && isThreeXsInARow()
+                || isAWinner() && playerChoice == O && isThreeOsInARow();
     }
 
     @Override
     public boolean isPostmanWin() {
 
-       return isAWinner() && postmanChoice == 'X' && isThreeXsInARow()
-                || isAWinner() && postmanChoice == 'O' && isThreeOsInARow();
+       return isAWinner() && postmanChoice == X && isThreeXsInARow()
+                || isAWinner() && postmanChoice == O && isThreeOsInARow();
     }
 
     @Override
@@ -248,8 +247,6 @@ public class TicTacToe extends Game {
     public List<Integer> getSpotTaken() { return spotTaken; }
 
     public void setSpotTaken(List<Integer> spotTaken) { this.spotTaken = spotTaken; }
-
-    public static char getEMPTYMarker() { return EMPTY; }
 
     public static char getXMarker() { return X; }
 
