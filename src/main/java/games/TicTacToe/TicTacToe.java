@@ -248,4 +248,10 @@ public class TicTacToe extends Game {
     public List<Integer> getSpotTaken() { return spotTaken; }
 
     public void setSpotTaken(List<Integer> spotTaken) { this.spotTaken = spotTaken; }
+
+    public static char getEMPTYMarker() { return EMPTY; }
+
+    public static char getXMarker() { return X; }
+
+    public static char getOMarker() { return O; }
 }
