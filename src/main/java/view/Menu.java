@@ -101,6 +101,11 @@ public class Menu {
 //        int randomNumber = random.nextInt(3);
         //TODO change bounds && uncomment selectors when Games are ready
         int randomNumber = 2;
+        
+        int rockPaperScissorsCounter = 0;
+        int hangmanCounter = 0;
+        int ticTacToeCounter = 0;
+        int battleshipCounter = 0;
 
 //        if (randomNumber == 0) {
 //            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
