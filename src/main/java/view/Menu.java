@@ -102,10 +102,10 @@ public class Menu {
         //TODO change bounds && uncomment selectors when Games are ready
         int randomNumber = 2;
 
-        int rockPaperScissorsCounter = 0;
-        int hangmanCounter = 0;
-        int ticTacToeCounter = 0;
-        int battleshipCounter = 0;
+        boolean isRockPaperScissorsPlayed = false;
+        boolean isHangmanPlayed = false;
+        boolean isTicTacToePlayed = false;
+        boolean isBattleshipPlayed = false;
 
 //        if (randomNumber == 0) {
 //            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
