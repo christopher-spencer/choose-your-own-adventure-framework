@@ -101,7 +101,7 @@ public class Menu {
 //        int randomNumber = random.nextInt(3);
         //TODO change bounds && uncomment selectors when Games are ready
         int randomNumber = 2;
-        
+
         int rockPaperScissorsCounter = 0;
         int hangmanCounter = 0;
         int ticTacToeCounter = 0;
@@ -595,6 +595,8 @@ public class Menu {
     // TODO think about how to refactor TTTGame based on how we did Battleship
 
     // TODO check the array for isAWinner logic and so on instead of the booleans
+
+    // TODO issue where game says its a tie before postman made its final winning move
 
     public void ticTacToeGame() {
 
