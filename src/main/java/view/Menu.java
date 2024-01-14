@@ -128,7 +128,7 @@ public class Menu {
 //            battleshipGame();
 //        }
     }
-    // TODO change all menu methods to private void like in Hangman class
+    // TODO change all menu methods to private void like in Hangman class (?)
     /*
      *********************************************************************************
                   * ~ * ~ * ROCK PAPER SCISSORS GAME SECTION * ~ * ~ *
