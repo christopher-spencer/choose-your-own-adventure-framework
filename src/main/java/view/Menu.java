@@ -106,6 +106,7 @@ public class Menu {
         boolean isHangmanPlayed = false;
         boolean isTicTacToePlayed = false;
         boolean isBattleshipPlayed = false;
+        boolean isAllGamesPlayed = false;
 
         if (randomNumber == 0 && !isRockPaperScissorsPlayed) {
             System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
@@ -130,6 +131,17 @@ public class Menu {
                     "it with water, hops in, and beckons you to join him.");
             battleshipGame();
             isBattleshipPlayed = true;
+        }
+
+        if (isRockPaperScissorsPlayed && isHangmanPlayed && isTicTacToePlayed && isBattleshipPlayed) {
+            isAllGamesPlayed = true;
+        }
+        
+        if (isAllGamesPlayed) {
+            isRockPaperScissorsPlayed = false;
+            isHangmanPlayed = false;
+            isTicTacToePlayed = false;
+            isBattleshipPlayed = false;
         }
     }
     // TODO change all menu methods to private void like in Hangman class (?)
