@@ -107,26 +107,30 @@ public class Menu {
         boolean isTicTacToePlayed = false;
         boolean isBattleshipPlayed = false;
 
-//        if (randomNumber == 0) {
-//            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-//            rockPaperScissorsGame();
-//        }
-
-//        if (randomNumber == 1) {
-//            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-//            hangmanGame();
-//        }
-
-        if (randomNumber == 2) {
-            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-            ticTacToeGame();
+        if (randomNumber == 0 && !isRockPaperScissorsPlayed) {
+            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+            rockPaperScissorsGame();
+            isRockPaperScissorsPlayed = true;
         }
 
-//        if (randomNumber == 3) {
-//            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
-//                    "it with water, hops in, and beckons you to join him.");
-//            battleshipGame();
-//        }
+        if (randomNumber == 1 && !isHangmanPlayed) {
+            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+            hangmanGame();
+            isHangmanPlayed = true;
+        }
+
+        if (randomNumber == 2 && !isTicTacToePlayed) {
+            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+            ticTacToeGame();
+            isTicTacToePlayed = true;
+        }
+
+        if (randomNumber == 3 && !isBattleshipPlayed) {
+            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
+                    "it with water, hops in, and beckons you to join him.");
+            battleshipGame();
+            isBattleshipPlayed = true;
+        }
     }
     // TODO change all menu methods to private void like in Hangman class (?)
     /*
