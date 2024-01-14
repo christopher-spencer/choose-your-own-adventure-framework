@@ -588,13 +588,8 @@ public class Menu {
     }
 
     // TODO think about how to refactor TTTGame based on how we did Battleship
-    
+
     // TODO check the array for isAWinner logic and so on instead of the booleans
-
-    //TODO hit an exception and some funky times when Postman didn't update a move, check this out
-
-    //TODO one instance when game still didn't stop you from making same selection
-    // over and over again but works most of time (?)
 
     public void ticTacToeGame() {
 
