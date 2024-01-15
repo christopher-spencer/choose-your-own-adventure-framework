@@ -136,7 +136,7 @@ public class Menu {
         if (isRockPaperScissorsPlayed && isHangmanPlayed && isTicTacToePlayed && isBattleshipPlayed) {
             isAllGamesPlayed = true;
         }
-        
+
         if (isAllGamesPlayed) {
             isRockPaperScissorsPlayed = false;
             isHangmanPlayed = false;
