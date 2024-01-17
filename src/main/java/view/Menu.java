@@ -144,6 +144,43 @@ public class Menu {
             isBattleshipPlayed = false;
         }
     }
+
+    //TODO possible randomGameSelector method replacement
+//    public void randomGameSelector() {
+//        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3)); // 0: RockPaperScissors, 1: Hangman, 2: TicTacToe, 3: Battleship
+//        Random random = new Random();
+//
+//        while (!availableGames.isEmpty()) {
+//            int gameIndex = random.nextInt(availableGames.size());
+//            int selectedGame = availableGames.get(gameIndex);
+//
+//            switch (selectedGame) {
+//                case 0:
+//                    System.out.println("    'ROCK! PAPER! SCISSORS!' he screams...");
+//                    rockPaperScissorsGame();
+//                    break;
+//                case 1:
+//                    System.out.println("    'HANGMAN!' he screams...");
+//                    hangmanGame();
+//                    break;
+//                case 2:
+//                    System.out.println("    'TIC TAC TOE!' he screams...");
+//                    ticTacToeGame();
+//                    break;
+//                case 3:
+//                    System.out.println("    'BATTLESHIP!' he screams...");
+//                    battleshipGame();
+//                    break;
+//            }
+//
+//            availableGames.remove(Integer.valueOf(selectedGame));
+//
+//            // Reset the list of games once all have been played
+//            if (availableGames.isEmpty()) {
+//                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+//            }
+//        }
+//    }
     // TODO change all menu methods to private void like in Hangman class (?)
     /*
      *********************************************************************************
