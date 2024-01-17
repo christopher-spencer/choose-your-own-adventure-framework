@@ -1489,8 +1489,7 @@ public class Menu {
             if (rowInput.length() == 1 && rowInput.charAt(0) >= 'A' && rowInput.charAt(0) <= 'J') {
                 attackRow = rowInput.charAt(0) - 'A' + 1;
             } else {
-                System.out.println();
-                System.out.println("    Invalid row. Please try again.");
+                tellUserInvalidRowSelection();
                 continue;
             }
 
@@ -1500,8 +1499,7 @@ public class Menu {
             try {
                 attackCol = Integer.parseInt(in.nextLine());
                 if (attackCol < 1 || attackCol > 10) {
-                    System.out.println();
-                    System.out.println("    Invalid column. Please try again.");
+                    tellUserInvalidColumnSelection();
                     continue;
                 }
             } catch (NumberFormatException e) {
