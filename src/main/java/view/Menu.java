@@ -911,9 +911,11 @@ public class Menu {
                         tellUserInvalidSelection();
                     }
                 } else {
+                    System.out.println();
                     System.out.println("    Invalid input. Please enter a number between 1 and 9.");
                 }
             } else {
+                System.out.println();
                 System.out.println("    Invalid input. Please enter a number.");
             }
         }
@@ -1575,6 +1577,26 @@ public class Menu {
     public void tellUserInvalidSelection() {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
+    }
+
+    public void tellUserInvalidNumberSelection() {
+        System.out.println();
+        System.out.println("    Invalid input. Please enter a number.");
+    }
+
+    public void tellUserInvalidNumberSelectOneThroughNine() {
+        System.out.println();
+        System.out.println("    Invalid input. Please enter a number between 1 and 9.");
+    }
+
+    public void tellUserInvalidColumnSelection() {
+        System.out.println();
+        System.out.println("    Invalid column. Please try again.");
+    }
+
+    public void tellUserInvalidRowSelection() {
+        System.out.println();
+        System.out.println("    Invalid row. Please try again.");
     }
 
     // Method to use for subtler menu transitions at opportune times after initial game setup
