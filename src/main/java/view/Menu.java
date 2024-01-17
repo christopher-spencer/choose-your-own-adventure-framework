@@ -1661,6 +1661,5 @@ public class Menu {
         System.out.println();
         System.out.println("    But wait! What's that sound?!");
         System.out.println();
-//        doYouAnswerTheDoor();
     }
 }
