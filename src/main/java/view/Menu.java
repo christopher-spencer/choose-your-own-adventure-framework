@@ -764,7 +764,6 @@ public class Menu {
         int bottomRight = 9;
 
         while (!isValidMove) {
-
             System.out.println("    What position do you choose?");
             System.out.println();
             System.out.println("    Enter one of the following number inputs:");
@@ -772,138 +771,292 @@ public class Menu {
             printTicTacToeBoard();
             System.out.println();
 
-            playerMove = Integer.parseInt(in.nextLine());
+            String input = in.nextLine().trim();
 
-            if (playerMove == topLeft && isPlayerXs) {
-                if (!spotTaken.contains(topLeft)) {
-                    ticTacToeGame.setTopLeftX(true);
-                    isValidMove = true;
+            // Check if the input is a number
+            if (!input.isEmpty() && input.matches("^[1-9]$")) {
+                playerMove = Integer.parseInt(input);
+
+                // Check if the number is within the valid range
+                if (playerMove >= 1 && playerMove <= 9) {
+                    if (playerMove == topLeft && isPlayerXs) {
+                        if (!spotTaken.contains(topLeft)) {
+                            ticTacToeGame.setTopLeftX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == topLeft && isPlayerOs) {
+                        if (!spotTaken.contains(topLeft)) {
+                            ticTacToeGame.setTopLeftO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == topMiddle && isPlayerXs) {
+                        if (!spotTaken.contains(topMiddle)) {
+                            ticTacToeGame.setTopMiddleX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == topMiddle && isPlayerOs) {
+                        if (!spotTaken.contains(topMiddle)) {
+                            ticTacToeGame.setTopMiddleO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == topRight && isPlayerXs) {
+                        if (!spotTaken.contains(topRight)) {
+                            ticTacToeGame.setTopRightX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == topRight && isPlayerOs) {
+                        if (!spotTaken.contains(topRight)) {
+                            ticTacToeGame.setTopRightO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == middleLeft && isPlayerXs) {
+                        if (!spotTaken.contains(middleLeft)) {
+                            ticTacToeGame.setMiddleLeftX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == middleLeft && isPlayerOs) {
+                        if (!spotTaken.contains(middleLeft)) {
+                            ticTacToeGame.setMiddleLeftO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == middleMiddle && isPlayerXs) {
+                        if (!spotTaken.contains(middleMiddle)) {
+                            ticTacToeGame.setMiddleMiddleX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == middleMiddle && isPlayerOs) {
+                        if (!spotTaken.contains(middleMiddle)) {
+                            ticTacToeGame.setMiddleMiddleO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == middleRight && isPlayerXs) {
+                        if (!spotTaken.contains(middleRight)) {
+                            ticTacToeGame.setMiddleRightX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == middleRight && isPlayerOs) {
+                        if (!spotTaken.contains(middleRight)) {
+                            ticTacToeGame.setMiddleRightO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == bottomLeft && isPlayerXs) {
+                        if (!spotTaken.contains(bottomLeft)) {
+                            ticTacToeGame.setBottomLeftX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == bottomLeft && isPlayerOs) {
+                        if (!spotTaken.contains(bottomLeft)) {
+                            ticTacToeGame.setBottomLeftO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == bottomMiddle && isPlayerXs) {
+                        if (!spotTaken.contains(bottomMiddle)) {
+                            ticTacToeGame.setBottomMiddleX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == bottomMiddle && isPlayerOs) {
+                        if (!spotTaken.contains(bottomMiddle)) {
+                            ticTacToeGame.setBottomMiddleO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == bottomRight && isPlayerXs) {
+                        if (!spotTaken.contains(bottomRight)) {
+                            ticTacToeGame.setBottomRightX(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else if (playerMove == bottomRight && isPlayerOs) {
+                        if (!spotTaken.contains(bottomRight)) {
+                            ticTacToeGame.setBottomRightO(true);
+                            isValidMove = true;
+                        } else {
+                            tellUserInvalidSelection();
+                        }
+                    } else {
+                        tellUserInvalidSelection();
+                    }
                 } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == topLeft && isPlayerOs) {
-                if (!spotTaken.contains(topLeft)) {
-                    ticTacToeGame.setTopLeftO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == topMiddle && isPlayerXs) {
-                if (!spotTaken.contains(topMiddle)) {
-                    ticTacToeGame.setTopMiddleX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == topMiddle && isPlayerOs) {
-                if (!spotTaken.contains(topMiddle)) {
-                    ticTacToeGame.setTopMiddleO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == topRight && isPlayerXs) {
-                if (!spotTaken.contains(topRight)) {
-                    ticTacToeGame.setTopRightX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == topRight && isPlayerOs) {
-                if (!spotTaken.contains(topRight)) {
-                    ticTacToeGame.setTopRightO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == middleLeft && isPlayerXs) {
-                if (!spotTaken.contains(middleLeft)) {
-                    ticTacToeGame.setMiddleLeftX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == middleLeft && isPlayerOs) {
-                if (!spotTaken.contains(middleLeft)) {
-                    ticTacToeGame.setMiddleLeftO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == middleMiddle && isPlayerXs) {
-                if (!spotTaken.contains(middleMiddle)) {
-                    ticTacToeGame.setMiddleMiddleX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == middleMiddle && isPlayerOs) {
-                if (!spotTaken.contains(middleMiddle)) {
-                    ticTacToeGame.setMiddleMiddleO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == middleRight && isPlayerXs) {
-                if (!spotTaken.contains(middleRight)) {
-                    ticTacToeGame.setMiddleRightX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == middleRight && isPlayerOs) {
-                if (!spotTaken.contains(middleRight)) {
-                    ticTacToeGame.setMiddleRightO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == bottomLeft && isPlayerXs) {
-                if (!spotTaken.contains(bottomLeft)) {
-                    ticTacToeGame.setBottomLeftX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == bottomLeft && isPlayerOs) {
-                if (!spotTaken.contains(bottomLeft)) {
-                    ticTacToeGame.setBottomLeftO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == bottomMiddle && isPlayerXs) {
-                if (!spotTaken.contains(bottomMiddle)) {
-                    ticTacToeGame.setBottomMiddleX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == bottomMiddle && isPlayerOs) {
-                if (!spotTaken.contains(bottomMiddle)) {
-                    ticTacToeGame.setBottomMiddleO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == bottomRight && isPlayerXs) {
-                if (!spotTaken.contains(bottomRight)) {
-                    ticTacToeGame.setBottomRightX(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
-                }
-            } else if (playerMove == bottomRight && isPlayerOs) {
-                if (!spotTaken.contains(bottomRight)) {
-                    ticTacToeGame.setBottomRightO(true);
-                    isValidMove = true;
-                } else {
-                    tellUserInvalidSelection();
+                    System.out.println("    Invalid input. Please enter a number between 1 and 9.");
                 }
             } else {
-                tellUserInvalidSelection();
+                System.out.println("    Invalid input. Please enter a number.");
             }
         }
+
+//        while (!isValidMove) {
+//
+//            System.out.println("    What position do you choose?");
+//            System.out.println();
+//            System.out.println("    Enter one of the following number inputs:");
+//            System.out.println();
+//            printTicTacToeBoard();
+//            System.out.println();
+//
+//            playerMove = Integer.parseInt(in.nextLine());
+//
+//            if (playerMove == topLeft && isPlayerXs) {
+//                if (!spotTaken.contains(topLeft)) {
+//                    ticTacToeGame.setTopLeftX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == topLeft && isPlayerOs) {
+//                if (!spotTaken.contains(topLeft)) {
+//                    ticTacToeGame.setTopLeftO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == topMiddle && isPlayerXs) {
+//                if (!spotTaken.contains(topMiddle)) {
+//                    ticTacToeGame.setTopMiddleX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == topMiddle && isPlayerOs) {
+//                if (!spotTaken.contains(topMiddle)) {
+//                    ticTacToeGame.setTopMiddleO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == topRight && isPlayerXs) {
+//                if (!spotTaken.contains(topRight)) {
+//                    ticTacToeGame.setTopRightX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == topRight && isPlayerOs) {
+//                if (!spotTaken.contains(topRight)) {
+//                    ticTacToeGame.setTopRightO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == middleLeft && isPlayerXs) {
+//                if (!spotTaken.contains(middleLeft)) {
+//                    ticTacToeGame.setMiddleLeftX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == middleLeft && isPlayerOs) {
+//                if (!spotTaken.contains(middleLeft)) {
+//                    ticTacToeGame.setMiddleLeftO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == middleMiddle && isPlayerXs) {
+//                if (!spotTaken.contains(middleMiddle)) {
+//                    ticTacToeGame.setMiddleMiddleX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == middleMiddle && isPlayerOs) {
+//                if (!spotTaken.contains(middleMiddle)) {
+//                    ticTacToeGame.setMiddleMiddleO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == middleRight && isPlayerXs) {
+//                if (!spotTaken.contains(middleRight)) {
+//                    ticTacToeGame.setMiddleRightX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == middleRight && isPlayerOs) {
+//                if (!spotTaken.contains(middleRight)) {
+//                    ticTacToeGame.setMiddleRightO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == bottomLeft && isPlayerXs) {
+//                if (!spotTaken.contains(bottomLeft)) {
+//                    ticTacToeGame.setBottomLeftX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == bottomLeft && isPlayerOs) {
+//                if (!spotTaken.contains(bottomLeft)) {
+//                    ticTacToeGame.setBottomLeftO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == bottomMiddle && isPlayerXs) {
+//                if (!spotTaken.contains(bottomMiddle)) {
+//                    ticTacToeGame.setBottomMiddleX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == bottomMiddle && isPlayerOs) {
+//                if (!spotTaken.contains(bottomMiddle)) {
+//                    ticTacToeGame.setBottomMiddleO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == bottomRight && isPlayerXs) {
+//                if (!spotTaken.contains(bottomRight)) {
+//                    ticTacToeGame.setBottomRightX(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else if (playerMove == bottomRight && isPlayerOs) {
+//                if (!spotTaken.contains(bottomRight)) {
+//                    ticTacToeGame.setBottomRightO(true);
+//                    isValidMove = true;
+//                } else {
+//                    tellUserInvalidSelection();
+//                }
+//            } else {
+//                tellUserInvalidSelection();
+//            }
+//        }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
