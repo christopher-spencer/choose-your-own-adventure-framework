@@ -745,6 +745,8 @@ public class Menu {
         }
     }
 
+    // TODO definitely need to get more invalidSelection methods
+    // TODO this method is HUGE, work on this
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
         char X = TicTacToe.getXMarker();
@@ -773,7 +775,7 @@ public class Menu {
 
             String input = in.nextLine().trim();
 
-            // Check if the input is a number
+            // Check if the input is a number to avoid exception when just clicking "Enter"
             if (!input.isEmpty() && input.matches("^[1-9]$")) {
                 playerMove = Integer.parseInt(input);
 
