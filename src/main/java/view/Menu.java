@@ -95,57 +95,36 @@ public class Menu {
     }
 
     // TODO eventually add two player modes for each game
-    // TODO impove RANDOMSELECTOR so same game doesn't play over and over and over
     public void randomGameSelector() {
         Random random = new Random();
 //        int randomNumber = random.nextInt(3);
         //TODO change bounds && uncomment selectors when Games are ready
         int randomNumber = 2;
 
-        boolean isRockPaperScissorsPlayed = false;
-        boolean isHangmanPlayed = false;
-        boolean isTicTacToePlayed = false;
-        boolean isBattleshipPlayed = false;
-        boolean isAllGamesPlayed = false;
-
-        if (randomNumber == 0 && !isRockPaperScissorsPlayed) {
+        if (randomNumber == 0) {
             System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
             rockPaperScissorsGame();
-            isRockPaperScissorsPlayed = true;
         }
 
-        if (randomNumber == 1 && !isHangmanPlayed) {
+        if (randomNumber == 1) {
             System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
             hangmanGame();
-            isHangmanPlayed = true;
         }
 
-        if (randomNumber == 2 && !isTicTacToePlayed) {
+        if (randomNumber == 2) {
             System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
             ticTacToeGame();
-            isTicTacToePlayed = true;
         }
 
-        if (randomNumber == 3 && !isBattleshipPlayed) {
+        if (randomNumber == 3) {
             System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
                     "it with water, hops in, and beckons you to join him.");
             battleshipGame();
-            isBattleshipPlayed = true;
-        }
-
-        if (isRockPaperScissorsPlayed && isHangmanPlayed && isTicTacToePlayed && isBattleshipPlayed) {
-            isAllGamesPlayed = true;
-        }
-
-        if (isAllGamesPlayed) {
-            isRockPaperScissorsPlayed = false;
-            isHangmanPlayed = false;
-            isTicTacToePlayed = false;
-            isBattleshipPlayed = false;
         }
     }
 
-    //TODO possible randomGameSelector method replacement
+    // TODO improve randomSelector method so same game doesn't play over and over and over
+    //  (below is possible randomGameSelector method replacement)
 //    public void randomGameSelector() {
 //        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3)); // 0: RockPaperScissors, 1: Hangman, 2: TicTacToe, 3: Battleship
 //        Random random = new Random();
