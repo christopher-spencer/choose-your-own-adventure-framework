@@ -31,7 +31,8 @@ public class TicTacToe extends Game {
     private boolean isBottomMiddleO = false;
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
-    
+
+    // Not highlighting even though they are being used (?)
     private boolean isThreeXsInARow = false;
     private boolean isThreeOsInARow = false;
 
