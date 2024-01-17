@@ -723,7 +723,6 @@ public class Menu {
         }
     }
 
-    // TODO definitely need to get more invalidSelection methods
     // TODO this method is HUGE, work on this
     public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
