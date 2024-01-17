@@ -1503,15 +1503,13 @@ public class Menu {
                     continue;
                 }
             } catch (NumberFormatException e) {
-                System.out.println();
-                System.out.println("    Invalid input. Please enter a number.");
+                tellUserInvalidInputPleaseEnterANumber();
                 continue;
             }
 
             // Check if spot is already taken
             if (battleshipGame.isSpotAlreadyAttacked(playerOpponentDisplay, attackRow, attackCol)) {
-                System.out.println();
-                System.out.println("    You have already attacked this spot. Choose a different spot.");
+                tellUserInvalidAttackSpot();
             } else {
                 isValidSelection = true;
             }
@@ -1577,12 +1575,12 @@ public class Menu {
         System.out.println();
     }
 
-    public void tellUserInvalidNumberSelection() {
+    public void tellUserInvalidInputPleaseEnterANumber() {
         System.out.println();
         System.out.println("    Invalid input. Please enter a number.");
     }
 
-    public void tellUserInvalidNumberSelectOneThroughNine() {
+    public void tellUserInvalidInputPleaseEnterANumberOneThroughNine() {
         System.out.println();
         System.out.println("    Invalid input. Please enter a number between 1 and 9.");
     }
@@ -1595,6 +1593,11 @@ public class Menu {
     public void tellUserInvalidRowSelection() {
         System.out.println();
         System.out.println("    Invalid row. Please try again.");
+    }
+
+    public void tellUserInvalidAttackSpot() {
+        System.out.println();
+        System.out.println("    You have already attacked this spot. Choose a different spot.");
     }
 
     // Method to use for subtler menu transitions at opportune times after initial game setup
