@@ -911,12 +911,10 @@ public class Menu {
                         tellUserInvalidSelection();
                     }
                 } else {
-                    System.out.println();
-                    System.out.println("    Invalid input. Please enter a number between 1 and 9.");
+                    tellUserInvalidInputPleaseEnterANumberOneThroughNine();
                 }
             } else {
-                System.out.println();
-                System.out.println("    Invalid input. Please enter a number.");
+                tellUserInvalidInputPleaseEnterANumber();
             }
         }
 
@@ -1392,7 +1390,7 @@ public class Menu {
                     tellUserInvalidSelection();
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number.");
+                tellUserInvalidInputPleaseEnterANumber();
             } catch (Exception e) {
                 System.out.println("Unexpected error. Please try again.");
             }
