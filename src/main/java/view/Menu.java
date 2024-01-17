@@ -88,14 +88,14 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void thePostmanWantsToPlayAGame() {
+    private void thePostmanWantsToPlayAGame() {
         System.out.println("    The Postman wants to play a game!");
         System.out.println();
         randomGameSelector();
     }
 
     // TODO eventually add two player modes for each game
-    public void randomGameSelector() {
+    private void randomGameSelector() {
         Random random = new Random();
 //        int randomNumber = random.nextInt(3);
         //TODO change bounds && uncomment selectors when Games are ready
@@ -125,7 +125,7 @@ public class Menu {
 
     // TODO improve randomSelector method so same game doesn't play over and over and over
     //  (below is possible randomGameSelector method replacement)
-//    public void randomGameSelector() {
+//    private void randomGameSelector() {
 //        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3)); // 0: RockPaperScissors, 1: Hangman, 2: TicTacToe, 3: Battleship
 //        Random random = new Random();
 //
@@ -167,7 +167,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void welcomeToRockPaperScissors() {
+    private void welcomeToRockPaperScissors() {
         System.out.println();
         System.out.println("    *************************************************************************");
         System.out.println("    *  *******************************************************************  *");
@@ -197,7 +197,7 @@ public class Menu {
         in.nextLine();
     }
 
-    public void rockPaperScissorsGame() {
+    private void rockPaperScissorsGame() {
         String rock = RockPaperScissorsGame.getROCK();
         String paper = RockPaperScissorsGame.getPAPER();
         String scissors = RockPaperScissorsGame.getSCISSORS();
@@ -233,7 +233,7 @@ public class Menu {
         itGoesOnAndOnMyFriends();
     }
 
-    public String playerRockPaperScissorsMove() {
+    private String playerRockPaperScissorsMove() {
         boolean isValidSelection = false;
         String userInput = "";
 
@@ -260,7 +260,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void welcomeToHangman() {
+    private void welcomeToHangman() {
         System.out.println();
         System.out.println("    **************************************************************************");
         System.out.println("    *  ********************************************************************  *");
@@ -278,7 +278,7 @@ public class Menu {
         in.nextLine();
     }
 
-    public void hangmanGame() {
+    private void hangmanGame() {
 
         welcomeToHangman();
 
@@ -606,7 +606,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void welcomeToTicTacToe() {
+    private void welcomeToTicTacToe() {
         System.out.println();
         System.out.println("    *********************************************************************");
         System.out.println("    *  ***************************************************************  *");
@@ -634,7 +634,7 @@ public class Menu {
     //  loop. If the check for a tie is happening before the postman's move, it might
     //  incorrectly conclude the game as a tie.)
 
-    public void ticTacToeGame() {
+    private void ticTacToeGame() {
 
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
 
@@ -686,7 +686,7 @@ public class Menu {
         itGoesOnAndOnMyFriends();
     }
 
-    public void playerAndPostmanChooseXorO() {
+    private void playerAndPostmanChooseXorO() {
         String chooseXorO = "";
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
@@ -724,7 +724,7 @@ public class Menu {
     }
 
     // TODO this method is HUGE, work on this
-    public void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
+    private void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
         int playerMove;
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
@@ -900,7 +900,7 @@ public class Menu {
 
     }
 
-    public int postmanTicTacToeMove(List<Integer> spotTaken) {
+    private int postmanTicTacToeMove(List<Integer> spotTaken) {
         Random random = new Random();
         int postmanMove = random.nextInt(9) + 1;
 
@@ -911,7 +911,7 @@ public class Menu {
         return postmanMove;
     }
 
-    public void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
+    private void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
@@ -961,7 +961,7 @@ public class Menu {
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
     }
 
-    public void printTicTacToeBoard() {
+    private void printTicTacToeBoard() {
         char[][] board = {
                 {'1', '2', '3'},
                 {'4', '5', '6'},
@@ -985,7 +985,7 @@ public class Menu {
         }
     }
 
-    public char[][] getXsAndOsPositions(char[][] board) {
+    private char[][] getXsAndOsPositions(char[][] board) {
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
 
@@ -1053,7 +1053,7 @@ public class Menu {
      */
 
     //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
-    public void welcomeToBattleShip() {
+    private void welcomeToBattleShip() {
         System.out.println();
         System.out.println("    ***************************************************************************");
         System.out.println("    *  *********************************************************************  *");
@@ -1071,7 +1071,7 @@ public class Menu {
         in.nextLine();
     }
 
-    public void battleshipGame() {
+    private void battleshipGame() {
         Ship userCarrier = battleshipGame.getShipByOwnerAndShipName("User", "Carrier");
         Ship userBattleship = battleshipGame.getShipByOwnerAndShipName("User", "Battleship");
         Ship userDestroyer = battleshipGame.getShipByOwnerAndShipName("User", "Destroyer");
@@ -1213,7 +1213,7 @@ public class Menu {
         itGoesOnAndOnMyFriends();
     }
 
-    public void initializeBoard(String[][] board) {
+    private void initializeBoard(String[][] board) {
 
         // Column Headers
         board[0] = new String[]{" ", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10"};
@@ -1232,14 +1232,14 @@ public class Menu {
         }
     }
 
-    public void initializeBoards(String[][] playerBoard, String[][] playerOpponentDisplay, String[][] postmanBoard, String[][] postmanOpponentDisplay) {
+    private void initializeBoards(String[][] playerBoard, String[][] playerOpponentDisplay, String[][] postmanBoard, String[][] postmanOpponentDisplay) {
         initializeBoard(playerBoard);
         initializeBoard(playerOpponentDisplay);
         initializeBoard(postmanBoard);
         initializeBoard(postmanOpponentDisplay);
     }
 
-    public void battleshipPrintBoard(String[][] board) {
+    private void battleshipPrintBoard(String[][] board) {
 
         for (int row = 0; row < board.length; row++) {
             System.out.print("          ");
@@ -1256,12 +1256,12 @@ public class Menu {
         }
     }
 
-    public void battleshipBoardDisplay(String[][] board) {
+    private void battleshipBoardDisplay(String[][] board) {
 
         battleshipPrintBoard(board);
     }
 
-    public void opponentDisplayMarker() {
+    private void opponentDisplayMarker() {
         System.out.println();
         System.out.println("                          **********************");
         System.out.println("                          ** OPPONENT DISPLAY **");
@@ -1269,7 +1269,7 @@ public class Menu {
         System.out.println();
     }
 
-    public void mainDisplayMarker() {
+    private void mainDisplayMarker() {
         System.out.println();
         System.out.println("                          **********************");
         System.out.println("                          **   MAIN DISPLAY   **");
@@ -1277,7 +1277,7 @@ public class Menu {
         System.out.println();
     }
 
-    public void askUserForShipPlacementOrientation(Ship ship) {
+    private void askUserForShipPlacementOrientation(Ship ship) {
         boolean isValidSelection = false;
         String userSelection = "";
 
@@ -1304,7 +1304,7 @@ public class Menu {
         }
     }
 
-    public void askUserForShipPlacementRow(Ship ship, String[][] board) {
+    private void askUserForShipPlacementRow(Ship ship, String[][] board) {
         boolean isValidSelection = false;
 
         while (!isValidSelection) {
@@ -1327,7 +1327,7 @@ public class Menu {
         }
     }
 
-    public void askUserForShipPlacementColumn(Ship ship, String[][] board) {
+    private void askUserForShipPlacementColumn(Ship ship, String[][] board) {
         boolean isValidSelection = false;
         int startCol = 0;
 
@@ -1354,7 +1354,7 @@ public class Menu {
         }
     }
     //TODO try catch necessary? Keep seeing if there are exceptions left to handle
-    public void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
+    private void whereWouldYouLikeToPlaceYourShip(Ship ship, String[][] board) {
 
         boolean isValidPlacement = false;
         while (!isValidPlacement) {
@@ -1375,7 +1375,7 @@ public class Menu {
         placeShip(board, ship);
     }
 
-    public void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship... ships) {
+    private void whereWouldYouLikeToPlaceYourShips(String[][] board, Ship... ships) {
 
         for (Ship ship : ships) {
             mainDisplayMarker();
@@ -1384,7 +1384,7 @@ public class Menu {
         }
     }
 
-    public void placeShip(String[][] board, Ship ship) {
+    private void placeShip(String[][] board, Ship ship) {
 
         int shipLength = ship.getLength();
         int startRow = ship.getStartRow();
@@ -1417,7 +1417,7 @@ public class Menu {
         }
     }
 
-    public void placePostmanShipsRandomly(String[][] board, Ship... ships) {
+    private void placePostmanShipsRandomly(String[][] board, Ship... ships) {
         Random random = new Random();
         for (Ship ship : ships) {
             boolean isValidPlacement = false;
@@ -1447,7 +1447,7 @@ public class Menu {
         }
     }
 
-    public int[] selectAttackCoordinates(String[][] playerOpponentDisplay) {
+    private int[] selectAttackCoordinates(String[][] playerOpponentDisplay) {
         int attackRow = -1;
         int attackCol = -1;
         boolean isValidSelection = false;
@@ -1499,7 +1499,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void welcomeToEscapeThePostman() {
+    private void welcomeToEscapeThePostman() {
         System.out.println();
         System.out.println("    *********************************************************************");
         System.out.println("    *  ***************************************************************  *");
@@ -1535,7 +1535,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void theGameIsATie() {
+    private void theGameIsATie() {
         System.out.println();
         System.out.println("    It's a tie!");
         System.out.println();
@@ -1548,33 +1548,33 @@ public class Menu {
         System.out.println();
     }
 
-    public void tellUserInvalidInputPleaseEnterANumber() {
+    private void tellUserInvalidInputPleaseEnterANumber() {
         System.out.println();
         System.out.println("    Invalid input. Please enter a number.");
     }
 
-    public void tellUserInvalidInputPleaseEnterANumberOneThroughNine() {
+    private void tellUserInvalidInputPleaseEnterANumberOneThroughNine() {
         System.out.println();
         System.out.println("    Invalid input. Please enter a number between 1 and 9.");
     }
 
-    public void tellUserInvalidColumnSelection() {
+    private void tellUserInvalidColumnSelection() {
         System.out.println();
         System.out.println("    Invalid column. Please try again.");
     }
 
-    public void tellUserInvalidRowSelection() {
+    private void tellUserInvalidRowSelection() {
         System.out.println();
         System.out.println("    Invalid row. Please try again.");
     }
 
-    public void tellUserInvalidAttackSpot() {
+    private void tellUserInvalidAttackSpot() {
         System.out.println();
         System.out.println("    You have already attacked this spot. Choose a different spot.");
     }
 
     // Method to use for subtler menu transitions at opportune times after initial game setup
-    public void letTheGamesBegin() {
+    private void letTheGamesBegin() {
         System.out.println();
         System.out.println("    Let the games begin!!!");
         System.out.println();
@@ -1582,7 +1582,7 @@ public class Menu {
         in.nextLine();
     }
 
-    public void itsYourTurn() {
+    private void itsYourTurn() {
         System.out.println();
         System.out.println("    It's your turn!!!");
         System.out.println();
@@ -1590,7 +1590,7 @@ public class Menu {
         in.nextLine();
     }
 
-    public void itsThePostmansTurn() {
+    private void itsThePostmansTurn() {
         System.out.println();
         System.out.println("    It's the postman's turn!!!");
         System.out.println();
@@ -1604,7 +1604,7 @@ public class Menu {
      *********************************************************************************
      */
 
-    public void itGoesOnAndOnMyFriends() {
+    private void itGoesOnAndOnMyFriends() {
         System.out.println();
         System.out.println("    Once you have gathered your bearings, press ENTER to continue:");
         in.nextLine();
@@ -1614,7 +1614,7 @@ public class Menu {
 
     //TODO sometimes goes through andJustLikeThaHeIsGone && theNextDayArrives twice...?
 
-    public void andJustLikeThatHeIsGone() {
+    private void andJustLikeThatHeIsGone() {
         System.out.println();
         System.out.println("    *******************************************************************");
         System.out.println("        ************************************************************");
@@ -1650,7 +1650,7 @@ public class Menu {
         in.nextLine();
     }
 
-    public void theNextDayArrives() {
+    private void theNextDayArrives() {
         System.out.println("******************************************************************************************************");
         System.out.println("                zzzZZZZZZZZZZZzzzzzZZZZZZZZZZzzzzzzzzZZZZZZZZZzzzzzzzzzZZZZZZZZZZzzzzz");
         System.out.println("******************************************************************************************************");
