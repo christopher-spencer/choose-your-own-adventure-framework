@@ -1543,8 +1543,6 @@ public class Menu {
         in.nextLine();
     }
 
-    // TODO create a wider selection of InvalidSelection responses based on the situation
-    //  (e.g. for use in BSGame selectAttackCoordinates method)
     public void tellUserInvalidSelection() {
         System.out.println("    Invalid Selection. Please try again.");
         System.out.println();
