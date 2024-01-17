@@ -31,11 +31,9 @@ public class TicTacToe extends Game {
     private boolean isBottomMiddleO = false;
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
-
-    //TODO check into this just for curiosity's sake (used in setter but not getter)?
-
-    private boolean threeXsInARow = false;
-    private boolean threeOsInARow = false;
+    
+    private boolean isThreeXsInARow = false;
+    private boolean isThreeOsInARow = false;
 
     List<Integer> spotTaken = new ArrayList<>();
 
@@ -229,7 +227,7 @@ public class TicTacToe extends Game {
                 || isTopRightX() && isMiddleMiddleX() && isBottomLeftX();
     }
 
-    public void setThreeXsInARow(boolean threeXsInARow) { this.threeXsInARow = threeXsInARow; }
+    public void setThreeXsInARow(boolean isThreeXsInARow) { this.isThreeXsInARow = isThreeXsInARow; }
 
     public boolean isThreeOsInARow() {
         return isTopLeftO() && isTopMiddleO() && isTopRightO()
@@ -242,7 +240,7 @@ public class TicTacToe extends Game {
                 || isTopRightO() && isMiddleMiddleO() && isBottomLeftO();
     }
 
-    public void setThreeOsInARow(boolean threeOsInARow) { this.threeOsInARow = threeOsInARow; }
+    public void setThreeOsInARow(boolean isThreeOsInARow) { this.isThreeOsInARow = isThreeOsInARow; }
 
     public List<Integer> getSpotTaken() { return spotTaken; }
 
