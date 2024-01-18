@@ -660,16 +660,18 @@ public class Menu {
             }
         }
 
-        printTicTacToeBoard();
-
         if (ticTacToeGame.isAWinner()) {
             if (ticTacToeGame.isPlayerWin()) {
+                System.out.println();
+                printTicTacToeBoard();
                 System.out.println();
                 System.out.println("    You win!");
                 System.out.println();
                 System.out.println("    The postman goes to the kitchen and picks up all of your cereal boxes one by one. \n" +
                         "He dumps them in a mop bucket, then fills the bucket with whole milk. He kicks it over.");
             } else if (ticTacToeGame.isPostmanWin()) {
+                System.out.println();
+                printTicTacToeBoard();
                 System.out.println();
                 System.out.println("    The postman wins!");
                 System.out.println();
