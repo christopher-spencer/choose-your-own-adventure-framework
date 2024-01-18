@@ -963,6 +963,8 @@ public class Menu {
         }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
+
+        // TODO not currently being utilized in any way?
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
     }
 
