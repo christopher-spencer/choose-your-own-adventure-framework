@@ -124,7 +124,7 @@ public class Menu {
     }
 
     // TODO improve randomSelector method so same game doesn't play over and over and over
-    //  (below is possible randomGameSelector method replacement)
+    //  (below is possible randomGameSelector method replacement to implement when finished testing)
 //    private void randomGameSelector() {
 //        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3)); // 0: RockPaperScissors, 1: Hangman, 2: TicTacToe, 3: Battleship
 //        Random random = new Random();
