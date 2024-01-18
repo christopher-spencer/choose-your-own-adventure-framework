@@ -659,7 +659,7 @@ public class Menu {
 
             }
         }
-
+        //TODO move printTTTBoard back out here instead of in each if statement
         if (ticTacToeGame.isAWinner()) {
             if (ticTacToeGame.isPlayerWin()) {
                 System.out.println();
@@ -679,6 +679,9 @@ public class Menu {
                         "it against your forehead.");
             }
         } else {
+            System.out.println();
+            printTicTacToeBoard();
+            System.out.println();
             theGameIsATie();
         }
 
