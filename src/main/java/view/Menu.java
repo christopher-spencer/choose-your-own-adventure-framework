@@ -653,14 +653,10 @@ public class Menu {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken);
 
-                if (ticTacToeGame.isAWinner()) {
+                if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                     break;
                 }
 
-            }
-
-            if (ticTacToeGame.isATie()) {
-                break;
             }
         }
 
