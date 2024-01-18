@@ -80,7 +80,7 @@ public class TicTacToe extends Game {
     }
 
     //TODO better in SETTER for SpotTaken?
-    public List<Integer> eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
+    public void eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
 
         spotTaken = getSpotTaken();
 
@@ -103,8 +103,6 @@ public class TicTacToe extends Game {
         } else if (isBottomRightX() || isBottomRightO()) {
             spotTaken.add(9);
         }
-
-        return spotTaken;
     }
 
     @Override
