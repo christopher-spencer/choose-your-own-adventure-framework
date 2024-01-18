@@ -643,7 +643,7 @@ public class Menu {
         while (!ticTacToeGame.isAWinner() && !ticTacToeGame.isATie()) {
 
             playerTicTacToeMoveLogic(spotTaken);
-            
+
             //TEST
             System.out.println(spotTaken);
 
