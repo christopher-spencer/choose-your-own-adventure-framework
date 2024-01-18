@@ -643,6 +643,8 @@ public class Menu {
         while (!ticTacToeGame.isAWinner() && !ticTacToeGame.isATie()) {
 
             playerTicTacToeMoveLogic(spotTaken);
+            
+            //TEST
             System.out.println(spotTaken);
 
             if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
@@ -653,6 +655,8 @@ public class Menu {
             if (!ticTacToeGame.isNoMoreMovesPossible()) {
                 postmanTicTacToeMove(spotTaken);
                 postmanTicTacToeMoveLogic(spotTaken);
+
+                //TEST
                 System.out.println(spotTaken);
 
 
