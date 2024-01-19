@@ -32,7 +32,7 @@ public class TicTacToe extends Game {
     private boolean isBottomRightX = false;
     private boolean isBottomRightO = false;
 
-    // Not highlighting even though they are being used (?)
+    // TODO Not highlighting even though they are being used (?)
     private boolean isThreeXsInARow = false;
     private boolean isThreeOsInARow = false;
 
@@ -81,7 +81,7 @@ public class TicTacToe extends Game {
 
     //TODO better in SETTER for SpotTaken?
     public void eitherXOrOMarksTheSpot(List<Integer> spotTaken, int move) {
-        
+
         if ((isTopLeftX() || isTopLeftO()) && move == 1) {
             if (!spotTaken.contains(1)) {
                 spotTaken.add(1);
