@@ -912,7 +912,6 @@ public class Menu {
                     tellUserInvalidInputPleaseEnterANumberOneThroughNine();
                 }
 
-                // TODO Moved up from bottom to keep in Scope after adding move parameter
                 // Check if a spot is taken where player wants to move
                 ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, playerMove);
 
