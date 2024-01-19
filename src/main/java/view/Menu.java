@@ -654,7 +654,7 @@ public class Menu {
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!ticTacToeGame.isNoMoreMovesPossible()) {
                 postmanTicTacToeMove(spotTaken);
-                postmanTicTacToeMoveLogic(spotTaken, board);
+                postmanTicTacToeMoveLogic(spotTaken);
 
                 if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                     break;
@@ -934,7 +934,7 @@ public class Menu {
         return postmanMove;
     }
 
-    private void postmanTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
+    private void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
