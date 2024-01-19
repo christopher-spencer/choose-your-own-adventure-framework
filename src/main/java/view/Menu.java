@@ -630,6 +630,12 @@ public class Menu {
 
     private void ticTacToeGame() {
 
+        char[][] board = {
+            {'1', '2', '3'},
+            {'4', '5', '6'},
+            {'7', '8', '9'}
+        };
+
         // Get empty spotTaken ArrayList and initialize it to start keeping track of spots taken
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
 
@@ -638,7 +644,7 @@ public class Menu {
 
         while (!ticTacToeGame.isAWinner() && !ticTacToeGame.isATie()) {
 
-            playerTicTacToeMoveLogic(spotTaken);
+            playerTicTacToeMoveLogic(spotTaken, board);
 
             if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                 break;
@@ -655,7 +661,7 @@ public class Menu {
             }
         }
 
-        printTicTacToeBoard();
+        printTicTacToeBoard(board);
 
         if (ticTacToeGame.isAWinner()) {
             if (ticTacToeGame.isPlayerWin()) {
@@ -720,7 +726,7 @@ public class Menu {
     }
 
     // TODO this method is HUGE, work on this
-    private void playerTicTacToeMoveLogic(List<Integer> spotTaken) {
+    private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int playerMove;
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
@@ -743,7 +749,7 @@ public class Menu {
             System.out.println();
             System.out.println("    Enter one of the following number inputs:");
             System.out.println();
-            printTicTacToeBoard();
+            printTicTacToeBoard(board);
             System.out.println();
 
             String input = in.nextLine().trim();
@@ -961,12 +967,7 @@ public class Menu {
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, postmanMove);
     }
 
-    private void printTicTacToeBoard() {
-        char[][] board = {
-                {'1', '2', '3'},
-                {'4', '5', '6'},
-                {'7', '8', '9'}
-        };
+    private void printTicTacToeBoard(char[][] board) {
 
         board = getXsAndOsPositions(board);
 
