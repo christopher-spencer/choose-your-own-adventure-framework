@@ -652,14 +652,13 @@ public class Menu {
                 if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                     break;
                 }
-
             }
         }
-        //TODO move printTTTBoard back out here instead of in each if statement
+
+        printTicTacToeBoard();
+        
         if (ticTacToeGame.isAWinner()) {
             if (ticTacToeGame.isPlayerWin()) {
-                System.out.println();
-                printTicTacToeBoard();
                 System.out.println();
                 System.out.println("    You win!");
                 System.out.println();
@@ -667,16 +666,12 @@ public class Menu {
                         "He dumps them in a mop bucket, then fills the bucket with whole milk. He kicks it over.");
             } else if (ticTacToeGame.isPostmanWin()) {
                 System.out.println();
-                printTicTacToeBoard();
-                System.out.println();
                 System.out.println("    The postman wins!");
                 System.out.println();
                 System.out.println("    The postman pulls a whoopie cushion out of his satchel, blows it up, then squishes \n" +
                         "it against your forehead.");
             }
         } else {
-            System.out.println();
-            printTicTacToeBoard();
             System.out.println();
             theGameIsATie();
         }
