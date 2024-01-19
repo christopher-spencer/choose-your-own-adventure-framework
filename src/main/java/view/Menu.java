@@ -656,7 +656,7 @@ public class Menu {
         }
 
         printTicTacToeBoard();
-        
+
         if (ticTacToeGame.isAWinner()) {
             if (ticTacToeGame.isPlayerWin()) {
                 System.out.println();
