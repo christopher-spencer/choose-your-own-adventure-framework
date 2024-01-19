@@ -630,6 +630,7 @@ public class Menu {
 
     private void ticTacToeGame() {
 
+        // Initializes a TicTacToe 2D char array Board to print via for loops
         char[][] board = {
             {'1', '2', '3'},
             {'4', '5', '6'},
@@ -894,6 +895,7 @@ public class Menu {
                 }
 
                 // TODO Moved up from bottom to keep in Scope after adding move parameter
+                // Check if a spot is taken where player wants to move
                 ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, playerMove);
 
             } else {
@@ -902,7 +904,6 @@ public class Menu {
         }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
-
     }
 
     private int postmanTicTacToeMove(List<Integer> spotTaken) {
@@ -962,9 +963,9 @@ public class Menu {
             ticTacToeGame.setBottomRightO(true);
         }
 
-        ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
-
+        // Check if a spot is taken where Postman wants to move
         ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, postmanMove);
+        ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
     }
 
     private void printTicTacToeBoard(char[][] board) {
