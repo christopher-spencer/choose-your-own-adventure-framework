@@ -902,13 +902,16 @@ public class Menu {
                 } else {
                     tellUserInvalidInputPleaseEnterANumberOneThroughNine();
                 }
+
+                // TODO Moved up from bottom to keep in Scope after adding move parameter
+                ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, playerMove);
+
             } else {
                 tellUserInvalidInputPleaseEnterANumber();
             }
         }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
-        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
 
     }
 
@@ -971,7 +974,7 @@ public class Menu {
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
 
-        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken);
+        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, postmanMove);
     }
 
     private void printTicTacToeBoard() {

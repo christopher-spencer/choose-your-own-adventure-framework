@@ -80,43 +80,43 @@ public class TicTacToe extends Game {
     }
 
     //TODO better in SETTER for SpotTaken?
-    public void eitherXOrOMarksTheSpot(List<Integer> spotTaken) {
+    public void eitherXOrOMarksTheSpot(List<Integer> spotTaken, int move) {
 
         //TODO I think this first if statement is always calculating TRUE once 1 is filled
         // b/c I'm not correctly adding the specific int move to the method (?)
-        if (isTopLeftX() || isTopLeftO()) {
+        if ((isTopLeftX() || isTopLeftO()) && move == 1) {
             if (!spotTaken.contains(1)) {
                 spotTaken.add(1);
             }
-        } else if (isTopMiddleX() || isTopMiddleO()) {
+        } else if ((isTopMiddleX() || isTopMiddleO()) && move == 2) {
             if (!spotTaken.contains(2)) {
                 spotTaken.add(2);
             }
-        } else if (isTopRightX() || isTopRightO()) {
+        } else if ((isTopRightX() || isTopRightO()) && move == 3) {
             if (!spotTaken.contains(3)) {
                 spotTaken.add(3);
             }
-        } else if (isMiddleLeftX() || isMiddleLeftO()) {
+        } else if ((isMiddleLeftX() || isMiddleLeftO()) && move == 4) {
             if (!spotTaken.contains(4)) {
                 spotTaken.add(4);
             }
-        } else if (isMiddleMiddleX() || isMiddleMiddleO()) {
+        } else if ((isMiddleMiddleX() || isMiddleMiddleO()) && move == 5) {
             if (!spotTaken.contains(5)) {
                 spotTaken.add(5);
             }
-        } else if (isMiddleRightX() || isMiddleRightO()) {
+        } else if ((isMiddleRightX() || isMiddleRightO()) && move == 6) {
             if (!spotTaken.contains(6)) {
                 spotTaken.add(6);
             }
-        } else if (isBottomLeftX() || isBottomLeftO()) {
+        } else if ((isBottomLeftX() || isBottomLeftO()) && move == 7) {
             if (!spotTaken.contains(7)) {
                 spotTaken.add(7);
             }
-        } else if (isBottomMiddleX() || isBottomMiddleO()) {
+        } else if ((isBottomMiddleX() || isBottomMiddleO()) && move == 8) {
             if (!spotTaken.contains(8)) {
                 spotTaken.add(8);
             }
-        } else if (isBottomRightX() || isBottomRightO()) {
+        } else if ((isBottomRightX() || isBottomRightO()) && move == 9) {
             if (!spotTaken.contains(9)) {
                 spotTaken.add(9);
             }
