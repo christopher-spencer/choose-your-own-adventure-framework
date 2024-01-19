@@ -654,7 +654,7 @@ public class Menu {
             //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
             if (!ticTacToeGame.isNoMoreMovesPossible()) {
                 postmanTicTacToeMove(spotTaken);
-                postmanTicTacToeMoveLogic(spotTaken);
+                postmanTicTacToeMoveLogic(spotTaken, board);
 
                 if (ticTacToeGame.isAWinner() || ticTacToeGame.isATie()) {
                     break;
@@ -896,7 +896,7 @@ public class Menu {
 
                 // TODO Moved up from bottom to keep in Scope after adding move parameter
                 // Check if a spot is taken where player wants to move
-                ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, playerMove);
+                ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, playerMove, board);
 
             } else {
                 tellUserInvalidInputPleaseEnterANumber();
@@ -917,7 +917,7 @@ public class Menu {
         return postmanMove;
     }
 
-    private void postmanTicTacToeMoveLogic(List<Integer> spotTaken) {
+    private void postmanTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
@@ -964,7 +964,7 @@ public class Menu {
         }
 
         // Check if a spot is taken where Postman wants to move
-        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, postmanMove);
+        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, postmanMove, board);
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
     }
 

@@ -80,7 +80,7 @@ public class TicTacToe extends Game {
     }
 
     //TODO better in SETTER for SpotTaken?
-    public void eitherXOrOMarksTheSpot(List<Integer> spotTaken, int move) {
+    public void eitherXOrOMarksTheSpot(List<Integer> spotTaken, int move, char[][] board) {
 
         if ((isTopLeftX() || isTopLeftO()) && move == 1) {
             if (!spotTaken.contains(1)) {
