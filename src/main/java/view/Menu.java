@@ -630,8 +630,10 @@ public class Menu {
 
     private void ticTacToeGame() {
 
+        // Get empty spotTaken ArrayList and initialize it to start keeping track of spots taken
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
 
+        // Pick if you want to play as X's or O's
         playerAndPostmanChooseXorO();
 
         while (!ticTacToeGame.isAWinner() && !ticTacToeGame.isATie()) {
