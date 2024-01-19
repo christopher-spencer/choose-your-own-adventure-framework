@@ -81,9 +81,7 @@ public class TicTacToe extends Game {
 
     //TODO better in SETTER for SpotTaken?
     public void eitherXOrOMarksTheSpot(List<Integer> spotTaken, int move) {
-
-        //TODO I think this first if statement is always calculating TRUE once 1 is filled
-        // b/c I'm not correctly adding the specific int move to the method (?)
+        
         if ((isTopLeftX() || isTopLeftO()) && move == 1) {
             if (!spotTaken.contains(1)) {
                 spotTaken.add(1);
