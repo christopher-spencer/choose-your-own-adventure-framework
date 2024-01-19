@@ -628,12 +628,6 @@ public class Menu {
 
     // TODO check the array for isAWinner logic and so on instead of the booleans
 
-    // TODO issue where game says its a tie before postman made its final winning move
-    //  (Make sure that the check for a winner (isAWinner()) and a tie (isATie()) is done
-    //  after both the player and the postman have made their moves in each cycle of the game
-    //  loop. If the check for a tie is happening before the postman's move, it might
-    //  incorrectly conclude the game as a tie.)
-
     private void ticTacToeGame() {
 
         List<Integer> spotTaken = ticTacToeGame.getSpotTaken();
