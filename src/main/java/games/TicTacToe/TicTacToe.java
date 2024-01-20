@@ -83,7 +83,7 @@ public class TicTacToe extends Game {
     //TODO board parameter added thats not currently being used
     public void eitherXOrOMarksTheSpot(List<Integer> spotTaken, int move) {
 
-        if ( (isTopLeftX || isTopLeftO) && move == 1) {
+        if ((isTopLeftX() || isTopLeftO()) && move == 1) {
             if (!spotTaken.contains(1)) {
                 spotTaken.add(1);
             }
