@@ -936,7 +936,7 @@ public class Menu {
                 }
 
                 // Check if a spot is taken where player wants to move
-                ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, playerMove);
+                ticTacToeGame.checkIfSpotIsTaken(spotTaken, playerMove);
 
             } else {
                 tellUserInvalidInputPleaseEnterANumber();
@@ -1004,7 +1004,7 @@ public class Menu {
         }
 
         // Check if a spot is taken where Postman wants to move
-        ticTacToeGame.eitherXOrOMarksTheSpot(spotTaken, postmanMove);
+        ticTacToeGame.checkIfSpotIsTaken(spotTaken, postmanMove);
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
     }
 
