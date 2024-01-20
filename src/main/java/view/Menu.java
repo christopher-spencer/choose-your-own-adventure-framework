@@ -749,6 +749,20 @@ public class Menu {
         return playerMove;
     }
 
+    private boolean isSpotAvailable(List<Integer> spotTaken, int playerMove) {
+        int topLeft = 1;
+        int topMiddle = 2;
+        int topRight = 3;
+        int middleLeft = 4;
+        int middleMiddle = 5;
+        int middleRight = 6;
+        int bottomLeft = 7;
+        int bottomMiddle = 8;
+        int bottomRight = 9;
+        
+        return false;
+    }
+
     // TODO this method is HUGE, work on this
     private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int playerMove;
