@@ -851,7 +851,6 @@ public class Menu {
                     if (playerMove == topLeft && isPlayerXs) {
                         if (!spotTaken.contains(topLeft)) {
                             ticTacToeGame.setTopLeftX(true);
-                            //board[0][0] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -859,7 +858,6 @@ public class Menu {
                     } else if (playerMove == topLeft && isPlayerOs) {
                         if (!spotTaken.contains(topLeft)) {
                             ticTacToeGame.setTopLeftO(true);
-                            //board[0][0] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -867,7 +865,6 @@ public class Menu {
                     } else if (playerMove == topMiddle && isPlayerXs) {
                         if (!spotTaken.contains(topMiddle)) {
                             ticTacToeGame.setTopMiddleX(true);
-                            //board[0][1] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -875,7 +872,6 @@ public class Menu {
                     } else if (playerMove == topMiddle && isPlayerOs) {
                         if (!spotTaken.contains(topMiddle)) {
                             ticTacToeGame.setTopMiddleO(true);
-                            //board[0][1] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -883,7 +879,6 @@ public class Menu {
                     } else if (playerMove == topRight && isPlayerXs) {
                         if (!spotTaken.contains(topRight)) {
                             ticTacToeGame.setTopRightX(true);
-                            //board[0][2] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -891,7 +886,6 @@ public class Menu {
                     } else if (playerMove == topRight && isPlayerOs) {
                         if (!spotTaken.contains(topRight)) {
                             ticTacToeGame.setTopRightO(true);
-                            //board[0][2] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -899,7 +893,6 @@ public class Menu {
                     } else if (playerMove == middleLeft && isPlayerXs) {
                         if (!spotTaken.contains(middleLeft)) {
                             ticTacToeGame.setMiddleLeftX(true);
-                            //board[1][0] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -907,7 +900,6 @@ public class Menu {
                     } else if (playerMove == middleLeft && isPlayerOs) {
                         if (!spotTaken.contains(middleLeft)) {
                             ticTacToeGame.setMiddleLeftO(true);
-                            //board[1][0] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -915,7 +907,6 @@ public class Menu {
                     } else if (playerMove == middleMiddle && isPlayerXs) {
                         if (!spotTaken.contains(middleMiddle)) {
                             ticTacToeGame.setMiddleMiddleX(true);
-                            //board[1][1] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -923,7 +914,6 @@ public class Menu {
                     } else if (playerMove == middleMiddle && isPlayerOs) {
                         if (!spotTaken.contains(middleMiddle)) {
                             ticTacToeGame.setMiddleMiddleO(true);
-                            //board[1][1] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -931,7 +921,6 @@ public class Menu {
                     } else if (playerMove == middleRight && isPlayerXs) {
                         if (!spotTaken.contains(middleRight)) {
                             ticTacToeGame.setMiddleRightX(true);
-                            //board[1][2] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -939,7 +928,6 @@ public class Menu {
                     } else if (playerMove == middleRight && isPlayerOs) {
                         if (!spotTaken.contains(middleRight)) {
                             ticTacToeGame.setMiddleRightO(true);
-                            //board[1][2] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -947,7 +935,6 @@ public class Menu {
                     } else if (playerMove == bottomLeft && isPlayerXs) {
                         if (!spotTaken.contains(bottomLeft)) {
                             ticTacToeGame.setBottomLeftX(true);
-                            //board[2][0] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -955,7 +942,6 @@ public class Menu {
                     } else if (playerMove == bottomLeft && isPlayerOs) {
                         if (!spotTaken.contains(bottomLeft)) {
                             ticTacToeGame.setBottomLeftO(true);
-                            //board[2][0] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -963,7 +949,6 @@ public class Menu {
                     } else if (playerMove == bottomMiddle && isPlayerXs) {
                         if (!spotTaken.contains(bottomMiddle)) {
                             ticTacToeGame.setBottomMiddleX(true);
-                            //board[2][1] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -971,7 +956,6 @@ public class Menu {
                     } else if (playerMove == bottomMiddle && isPlayerOs) {
                         if (!spotTaken.contains(bottomMiddle)) {
                             ticTacToeGame.setBottomMiddleO(true);
-                            //board[2][1] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -979,7 +963,6 @@ public class Menu {
                     } else if (playerMove == bottomRight && isPlayerXs) {
                         if (!spotTaken.contains(bottomRight)) {
                             ticTacToeGame.setBottomRightX(true);
-                            //board[2][2] = X;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
@@ -987,7 +970,6 @@ public class Menu {
                     } else if (playerMove == bottomRight && isPlayerOs) {
                         if (!spotTaken.contains(bottomRight)) {
                             ticTacToeGame.setBottomRightO(true);
-                            //board[2][2] = O;
                             isValidMove = true;
                         } else {
                             tellUserInvalidSelection();
