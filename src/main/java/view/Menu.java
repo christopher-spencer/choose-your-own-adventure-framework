@@ -739,6 +739,7 @@ public class Menu {
 
             String input = in.nextLine().trim();
 
+            // Check if the input is a number to avoid exception when just clicking "Enter"
             if (!input.isEmpty() && input.matches("^[1-9]$")) {
                 playerMove = Integer.parseInt(input);
                 isValidMove = true;
@@ -825,7 +826,7 @@ public class Menu {
 
     // TODO this method is HUGE, work on this
     private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
-        int playerMove;
+        int playerMove = -1;
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
 
@@ -843,18 +844,7 @@ public class Menu {
         int bottomRight = 9;
 
         while (!isValidMove) {
-            System.out.println("    What position do you choose?");
-            System.out.println();
-            System.out.println("    Enter one of the following number inputs:");
-            System.out.println();
-            printTicTacToeBoard(board);
-            System.out.println();
-
-            String input = in.nextLine().trim();
-
-            // Check if the input is a number to avoid exception when just clicking "Enter"
-            if (!input.isEmpty() && input.matches("^[1-9]$")) {
-                playerMove = Integer.parseInt(input);
+            playerMove = getPlayerInput(board, playerMove);
 
                 // Check if the number is within the valid range
                 if (playerMove >= 1 && playerMove <= 9) {
@@ -1011,10 +1001,6 @@ public class Menu {
 
                 // Check if a spot is taken where player wants to move
                 ticTacToeGame.checkIfSpotIsTaken(spotTaken, playerMove);
-
-            } else {
-                tellUserInvalidInputPleaseEnterANumber();
-            }
         }
 
         ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
