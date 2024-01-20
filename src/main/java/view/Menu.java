@@ -726,6 +726,29 @@ public class Menu {
         }
     }
 
+    private int getPlayerInput(char[][] board, int playerMove) {
+        boolean isValidMove = false;
+
+        while (!isValidMove) {
+            System.out.println("    What position do you choose?");
+            System.out.println();
+            System.out.println("    Enter one of the following number inputs:");
+            System.out.println();
+            printTicTacToeBoard(board);
+            System.out.println();
+
+            String input = in.nextLine().trim();
+
+            if (!input.isEmpty() && input.matches("^[1-9]$")) {
+                playerMove = Integer.parseInt(input);
+                isValidMove = true;
+            } else {
+                tellUserInvalidInputPleaseEnterANumber();
+            }
+        }
+        return playerMove;
+    }
+
     // TODO this method is HUGE, work on this
     private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int playerMove;
