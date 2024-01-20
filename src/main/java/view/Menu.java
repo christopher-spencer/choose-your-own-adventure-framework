@@ -750,17 +750,77 @@ public class Menu {
     }
 
     private boolean isSpotAvailable(List<Integer> spotTaken, int playerMove) {
-        int topLeft = 1;
-        int topMiddle = 2;
-        int topRight = 3;
-        int middleLeft = 4;
-        int middleMiddle = 5;
-        int middleRight = 6;
-        int bottomLeft = 7;
-        int bottomMiddle = 8;
-        int bottomRight = 9;
-        
-        return false;
+        return (!spotTaken.contains(playerMove));
+    }
+
+    private void updateTicTacToeBoard(int playerMove, boolean isPlayerXs) {
+        if (isPlayerXs) {
+            switch(playerMove) {
+                case 1:
+                    ticTacToeGame.setTopLeftX(true);
+                    break;
+                case 2:
+                    ticTacToeGame.setTopMiddleX(true);
+                    break;
+                case 3:
+                    ticTacToeGame.setTopRightX(true);
+                    break;
+                case 4:
+                    ticTacToeGame.setMiddleLeftX(true);
+                    break;
+                case 5:
+                    ticTacToeGame.setMiddleMiddleX(true);
+                    break;
+                case 6:
+                    ticTacToeGame.setMiddleRightX(true);
+                    break;
+                case 7:
+                    ticTacToeGame.setBottomLeftX(true);
+                    break;
+                case 8:
+                    ticTacToeGame.setBottomMiddleX(true);
+                    break;
+                case 9:
+                    ticTacToeGame.setBottomRightX(true);
+                    break;
+                default:
+                    tellUserInvalidSelection();
+                    break;
+            }
+        } else {
+            switch (playerMove) {
+                case 1:
+                    ticTacToeGame.setTopLeftO(true);
+                    break;
+                case 2:
+                    ticTacToeGame.setTopMiddleO(true);
+                    break;
+                case 3:
+                    ticTacToeGame.setTopRightO(true);
+                    break;
+                case 4:
+                    ticTacToeGame.setMiddleLeftO(true);
+                    break;
+                case 5:
+                    ticTacToeGame.setMiddleMiddleO(true);
+                    break;
+                case 6:
+                    ticTacToeGame.setMiddleRightO(true);
+                    break;
+                case 7:
+                    ticTacToeGame.setBottomLeftO(true);
+                    break;
+                case 8:
+                    ticTacToeGame.setBottomMiddleO(true);
+                    break;
+                case 9:
+                    ticTacToeGame.setBottomRightO(true);
+                    break;
+                default:
+                    tellUserInvalidSelection();
+                    break;
+            }
+        }
     }
 
     // TODO this method is HUGE, work on this
