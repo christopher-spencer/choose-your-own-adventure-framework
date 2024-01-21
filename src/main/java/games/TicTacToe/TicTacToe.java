@@ -67,6 +67,7 @@ public class TicTacToe extends Game {
         setThreeXsInARow(false);
         setThreeOsInARow(false);
         setNumberOfMovesTillGameOver(9);
+        spotTaken.clear();
     }
 
     public char getPlayerChoice() { return playerChoice; }
@@ -104,7 +105,7 @@ public class TicTacToe extends Game {
     public void setThreeOsInARow(boolean isThreeOsInARow) { this.isThreeOsInARow = isThreeOsInARow; }
 
     public List<Integer> getSpotTaken() { return spotTaken; }
-    
+
     public static char getXMarker() { return X; }
 
     public static char getOMarker() { return O; }

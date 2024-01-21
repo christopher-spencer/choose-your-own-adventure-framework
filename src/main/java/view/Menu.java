@@ -684,7 +684,6 @@ public class Menu {
         }
 
         ticTacToeGame.resetGame();
-        spotTaken.clear();
 
         itGoesOnAndOnMyFriends();
     }
