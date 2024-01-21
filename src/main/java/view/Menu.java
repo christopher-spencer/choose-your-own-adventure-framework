@@ -624,10 +624,6 @@ public class Menu {
         in.nextLine();
     }
 
-    // TODO think about how to refactor TTTGame based on how we did Battleship
-
-    // TODO check the array for isAWinner logic and so on instead of the booleans
-
     //TODO game currently allows postman to keep making moves if player chooses occupied spot
     // even though it DOES tell player invalidSelection
 
