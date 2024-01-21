@@ -662,7 +662,8 @@ public class Menu {
                 }
             }
         }
-
+        //TODO rather than declaring a winner or a tie, the game is skipping that part
+        // and going to itGoesOnAndOnMyFriends();
         printTicTacToeBoard(board);
 
         if (ticTacToeGame.isAWinner(board)) {
