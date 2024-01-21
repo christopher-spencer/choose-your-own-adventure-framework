@@ -643,20 +643,22 @@ public class Menu {
         playerAndPostmanChooseXorO();
 
         while (!ticTacToeGame.isAWinner(board) && !ticTacToeGame.isATie()) {
+            boolean validPlayerMove = playerTicTacToeMoveLogic(spotTaken, board);
 
-            playerTicTacToeMoveLogic(spotTaken, board);
-
-            if (ticTacToeGame.isAWinner(board) || ticTacToeGame.isATie()) {
-                break;
-            }
-
-            //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
-            if (!ticTacToeGame.isNoMoreMovesPossible()) {
-                postmanTicTacToeMove(spotTaken);
-                postmanTicTacToeMoveLogic(spotTaken, board);
+            if (validPlayerMove) {
 
                 if (ticTacToeGame.isAWinner(board) || ticTacToeGame.isATie()) {
                     break;
+                }
+
+                //PostmanTTTMove in IF statement to avoid while loop in PostmanTTTMove going on forever
+                if (!ticTacToeGame.isNoMoreMovesPossible()) {
+                    postmanTicTacToeMove(spotTaken);
+                    postmanTicTacToeMoveLogic(spotTaken, board);
+
+                    if (ticTacToeGame.isAWinner(board) || ticTacToeGame.isATie()) {
+                        break;
+                    }
                 }
             }
         }
@@ -766,20 +768,18 @@ public class Menu {
         board[row][col] = marker;
     }
 
-    private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
+    private boolean playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int playerMove = getPlayerInput(board);
-        boolean isValidMove = false;
 
-        while (!isValidMove) {
             if (isSpotAvailable(playerMove, spotTaken)) {
                 updatePlayerGameState(playerMove, board);
                 spotTaken.add(playerMove);
                 ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
-                isValidMove = true;
+                return true;
             } else {
                 tellUserInvalidSelection();
+                return false;
             }
-        }
     }
 
     private int postmanTicTacToeMove(List<Integer> spotTaken) {
