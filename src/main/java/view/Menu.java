@@ -755,7 +755,7 @@ public class Menu {
         return move >= 1 && move <= 9 && !spotTaken.contains(move);
     }
 
-    private void updateGameState(int move, char[][] board) {
+    private void updatePlayerGameState(int move, char[][] board) {
         char marker = ticTacToeGame.getPlayerChoice();
         int row = (move - 1) / 3;
         int col = (move - 1) % 3;
@@ -766,7 +766,7 @@ public class Menu {
         int playerMove = getPlayerInput(board);
 
         if (isValidMove(playerMove, spotTaken)) {
-            updateGameState(playerMove, board);
+            updatePlayerGameState(playerMove, board);
             spotTaken.add(playerMove);
             ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
         } else {
