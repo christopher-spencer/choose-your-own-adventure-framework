@@ -726,7 +726,8 @@ public class Menu {
         }
     }
 
-    private int getPlayerInput(char[][] board, int playerMove) {
+    private int getPlayerInput(char[][] board) {
+        int playerMove = -1;
         boolean isValidMove = false;
 
         while (!isValidMove) {
@@ -752,7 +753,6 @@ public class Menu {
 
     // TODO this method is HUGE, work on this
     private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
-        int playerMove = -1;
         char X = TicTacToe.getXMarker();
         char O = TicTacToe.getOMarker();
 
@@ -770,7 +770,7 @@ public class Menu {
         int bottomRight = 9;
 
         while (!isValidMove) {
-            playerMove = getPlayerInput(board, playerMove);
+            int playerMove = getPlayerInput(board);
 
                 // Check if the number is within the valid range
                 if (playerMove >= 1 && playerMove <= 9) {
