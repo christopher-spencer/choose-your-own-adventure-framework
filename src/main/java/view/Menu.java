@@ -755,10 +755,10 @@ public class Menu {
         return move >= 1 && move <= 9 && !spotTaken.contains(move);
     }
 
-    private void updatePlayerGameState(int move, char[][] board) {
+    private void updatePlayerGameState(int playerMove, char[][] board) {
         char marker = ticTacToeGame.getPlayerChoice();
-        int row = (move - 1) / 3;
-        int col = (move - 1) % 3;
+        int row = (playerMove - 1) / 3;
+        int col = (playerMove - 1) % 3;
         board[row][col] = marker;
     }
 
