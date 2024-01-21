@@ -628,6 +628,9 @@ public class Menu {
 
     // TODO check the array for isAWinner logic and so on instead of the booleans
 
+    //TODO game currently allows postman to keep making moves if player chooses occupied spot
+    // even though it DOES tell player invalidSelection
+
     private void ticTacToeGame() {
 
         // Initializes a TicTacToe 2D char array Board to print via for loops
