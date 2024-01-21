@@ -801,8 +801,6 @@ public class Menu {
 
     private void printTicTacToeBoard(char[][] board) {
 
-       // board = getXsAndOsPositions(board);
-
         for (int row = 0; row < 3; row++) {
             System.out.print("          ");
             for (int column = 0; column < 3; column++) {
@@ -817,67 +815,6 @@ public class Menu {
             }
         }
     }
-
-//    private char[][] getXsAndOsPositions(char[][] board) {
-//        char X = TicTacToe.getXMarker();
-//        char O = TicTacToe.getOMarker();
-//
-//        if (ticTacToeGame.isTopLeftO()) {
-//            board[0][0] = O;
-//        } else if (ticTacToeGame.isTopLeftX()) {
-//            board[0][0] = X;
-//        }
-//
-//        if (ticTacToeGame.isTopMiddleO()) {
-//            board[0][1] = O;
-//        } else if (ticTacToeGame.isTopMiddleX()) {
-//            board[0][1] = X;
-//        }
-//
-//        if (ticTacToeGame.isTopRightO()) {
-//            board[0][2] = O;
-//        } else if (ticTacToeGame.isTopRightX()) {
-//            board[0][2] = X;
-//        }
-//
-//        if (ticTacToeGame.isMiddleLeftO()) {
-//            board[1][0] = O;
-//        } else if (ticTacToeGame.isMiddleLeftX()) {
-//            board[1][0] = X;
-//        }
-//
-//        if (ticTacToeGame.isMiddleMiddleO()) {
-//            board[1][1] = O;
-//        } else if (ticTacToeGame.isMiddleMiddleX()) {
-//            board[1][1] = X;
-//        }
-//
-//        if (ticTacToeGame.isMiddleRightO()) {
-//            board[1][2] = O;
-//        } else if (ticTacToeGame.isMiddleRightX()) {
-//            board[1][2] = X;
-//        }
-//
-//        if (ticTacToeGame.isBottomLeftO()) {
-//            board[2][0] = O;
-//        } else if (ticTacToeGame.isBottomLeftX()) {
-//            board[2][0] = X;
-//        }
-//
-//        if (ticTacToeGame.isBottomMiddleO()) {
-//            board[2][1] = O;
-//        } else if (ticTacToeGame.isBottomMiddleX()) {
-//            board[2][1] = X;
-//        }
-//
-//        if (ticTacToeGame.isBottomRightO()) {
-//            board[2][2] = O;
-//        } else if (ticTacToeGame.isBottomRightX()) {
-//            board[2][2] = X;
-//        }
-//
-//        return board;
-//    }
 
     /*
      *********************************************************************************
