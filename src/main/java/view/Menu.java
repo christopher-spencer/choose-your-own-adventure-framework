@@ -757,6 +757,9 @@ public class Menu {
 
     private void updatePlayerGameState(int playerMove, char[][] board) {
         char marker = ticTacToeGame.getPlayerChoice();
+        //Moves 1, 2, 3 (first row in Tic Tac Toe) = row index 0
+        //Moves 4, 5, 6 (second row in Tic Tac Toe) = row index 1
+        //Moves 7, 8, 9 (third row in Tic Tac Toe) = row index 2
         int row = (playerMove - 1) / 3;
         //0 % 3 = 0 && 3 % 3 = 0 && 6 % 3 = 0 point to column index 0.
         //1 % 3 = 1 && 4 % 3 = 1 && 7 % 3 = 1 point to column index 1.
@@ -791,7 +794,9 @@ public class Menu {
     private void postmanTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int postmanMove = postmanTicTacToeMove(spotTaken);
         char postmanMarker = ticTacToeGame.getPostmanChoice();
-
+        //Moves 1, 2, 3 (first row in Tic Tac Toe) = row index 0
+        //Moves 4, 5, 6 (second row in Tic Tac Toe) = row index 1
+        //Moves 7, 8, 9 (third row in Tic Tac Toe) = row index 2
         int row = (postmanMove - 1) / 3;
         //0 % 3 = 0 && 3 % 3 = 0 && 6 % 3 = 0 point to column index 0.
         //1 % 3 = 1 && 4 % 3 = 1 && 7 % 3 = 1 point to column index 1.
