@@ -104,9 +104,7 @@ public class TicTacToe extends Game {
     public void setThreeOsInARow(boolean isThreeOsInARow) { this.isThreeOsInARow = isThreeOsInARow; }
 
     public List<Integer> getSpotTaken() { return spotTaken; }
-
-    public void setSpotTaken(List<Integer> spotTaken) { this.spotTaken = spotTaken; }
-
+    
     public static char getXMarker() { return X; }
 
     public static char getOMarker() { return O; }
