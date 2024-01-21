@@ -768,13 +768,17 @@ public class Menu {
 
     private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int playerMove = getPlayerInput(board);
+        boolean isValidMove = false;
 
-        if (isSpotAvailable(playerMove, spotTaken)) {
-            updatePlayerGameState(playerMove, board);
-            spotTaken.add(playerMove);
-            ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
-        } else {
-            tellUserInvalidSelection();
+        while (!isValidMove) {
+            if (isSpotAvailable(playerMove, spotTaken)) {
+                updatePlayerGameState(playerMove, board);
+                spotTaken.add(playerMove);
+                ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
+                isValidMove = true;
+            } else {
+                tellUserInvalidSelection();
+            }
         }
     }
 
