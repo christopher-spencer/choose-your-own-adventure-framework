@@ -749,7 +749,7 @@ public class Menu {
         return playerMove;
     }
 
-    private boolean isValidMove(int move, List<Integer> spotTaken) {
+    private boolean isSpotAvailable(int move, List<Integer> spotTaken) {
         return move >= 1 && move <= 9 && !spotTaken.contains(move);
     }
 
@@ -769,7 +769,7 @@ public class Menu {
     private void playerTicTacToeMoveLogic(List<Integer> spotTaken, char[][] board) {
         int playerMove = getPlayerInput(board);
 
-        if (isValidMove(playerMove, spotTaken)) {
+        if (isSpotAvailable(playerMove, spotTaken)) {
             updatePlayerGameState(playerMove, board);
             spotTaken.add(playerMove);
             ticTacToeGame.subtractFromNumberOfMovesTillGameOver();
