@@ -758,6 +758,9 @@ public class Menu {
     private void updatePlayerGameState(int playerMove, char[][] board) {
         char marker = ticTacToeGame.getPlayerChoice();
         int row = (playerMove - 1) / 3;
+        //0 % 3 = 0 && 3 % 3 = 0 && 6 % 3 = 0 point to column index 0.
+        //1 % 3 = 1 && 4 % 3 = 1 && 7 % 3 = 1 point to column index 1.
+        //2 % 3 = 2 && 5 % 3 = 2 && 8 % 3 = 2 point to column index 2.
         int col = (playerMove - 1) % 3;
         board[row][col] = marker;
     }
@@ -790,6 +793,9 @@ public class Menu {
         char postmanMarker = ticTacToeGame.getPostmanChoice();
 
         int row = (postmanMove - 1) / 3;
+        //0 % 3 = 0 && 3 % 3 = 0 && 6 % 3 = 0 point to column index 0.
+        //1 % 3 = 1 && 4 % 3 = 1 && 7 % 3 = 1 point to column index 1.
+        //2 % 3 = 2 && 5 % 3 = 2 && 8 % 3 = 2 point to column index 2.
         int col = (postmanMove - 1) % 3;
 
         if (!spotTaken.contains(postmanMove)) {
