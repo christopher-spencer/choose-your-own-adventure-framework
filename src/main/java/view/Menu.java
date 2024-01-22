@@ -864,8 +864,12 @@ public class Menu {
             battleshipBoardDisplay(playerOpponentDisplay);
 
             int[] playerAttackCoordinates = selectAttackCoordinates(playerOpponentDisplay);
+            String attackCoordinatesString = attackCoordinateString(playerAttackCoordinates);
             int attackRow = playerAttackCoordinates[0];
             int attackCol = playerAttackCoordinates[1];
+
+            //TEST
+            System.out.println(attackCoordinatesString);
 
             String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
 
@@ -1255,7 +1259,34 @@ public class Menu {
             case 2:
                 attackCoordinatesString += "B";
                 break;
+            case 3:
+                attackCoordinatesString += "C";
+                break;
+            case 4:
+                attackCoordinatesString += "D";
+                break;
+            case 5:
+                attackCoordinatesString += "E";
+                break;
+            case 6:
+                attackCoordinatesString += "F";
+                break;
+            case 7:
+                attackCoordinatesString += "G";
+                break;
+            case 8:
+                attackCoordinatesString += "H";
+                break;
+            case 9:
+                attackCoordinatesString += "I";
+                break;
+            case 10:
+                attackCoordinatesString += "J";
+                break;
         }
+
+        attackCoordinatesString += attackCoordinates[1];
+
         return attackCoordinatesString;
     }
 
