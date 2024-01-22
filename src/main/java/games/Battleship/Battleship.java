@@ -15,6 +15,8 @@ public class Battleship extends Game {
     private List<Ship> ships;
     private Map<String, Ship> playerShipLocations;
     private Map<String, Ship> postmanShipLocations;
+
+    private int[] attackCoordinates;
     private String attackCoordinatesString;
 
     public Battleship() {
@@ -145,12 +147,14 @@ public class Battleship extends Game {
     public String postmanMove(String[][] playerBoard, String[][] postmanOpponentDisplay) {
         String postmanMove = "postmanMove";
         Random random = new Random();
+        int row = -1;
+        int col = -1;
         boolean isValidMove = false;
         String result = "";
 
         while (!isValidMove) {
-            int row = random.nextInt(9) + 1;
-            int col = random.nextInt(9) + 1;
+            row = random.nextInt(9) + 1;
+            col = random.nextInt(9) + 1;
             boolean isSpotAlreadyAttacked = isSpotAlreadyAttacked(playerBoard, row, col);
 
             if (!isSpotAlreadyAttacked) {
@@ -159,6 +163,10 @@ public class Battleship extends Game {
                 isValidMove = true;
             }
         }
+
+        // Get postman attack coordinates to create String of their move for println in BSGame Menu
+        int[] postmanAttackCoordinates = new int[] {row, col};
+        setAttackCoordinates(postmanAttackCoordinates);
 
         return result;
     }
@@ -204,6 +212,14 @@ public class Battleship extends Game {
     public Map<String, Ship> getPostmanShipLocations() { return postmanShipLocations; }
 
     public void setPostmanShipLocations(Map<String, Ship> postmanShipLocations) { this.postmanShipLocations = postmanShipLocations; }
+
+    public int[] getAttackCoordinates() {
+        return attackCoordinates;
+    }
+
+    public void setAttackCoordinates(int[] attackCoordinates) {
+        this.attackCoordinates = attackCoordinates;
+    }
 
     public String getAttackCoordinatesString(int[] attackCoordinates) {
         String attackCoordinatesString = "";

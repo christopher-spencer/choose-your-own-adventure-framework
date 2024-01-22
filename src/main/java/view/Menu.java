@@ -914,6 +914,15 @@ public class Menu {
             // to create attackCoordinatesString
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
 
+            //Snag a Sting version of postman attack coordinates to print out where they moved
+            int[] postmanAttackCoordinates = battleshipGame.getAttackCoordinates();
+            String postmanAttackCoordinatesString = battleshipGame.getAttackCoordinatesString(postmanAttackCoordinates);
+            System.out.println(     "The postman chose " + postmanAttackCoordinatesString + "!");
+            System.out.println();
+
+            //Reset attack coordinates string after printing
+            battleshipGame.setAttackCoordinatesString("");
+
             if (postmanMoveResult.equals(Battleship.getHITMarker())) {
                 System.out.println();
                 mainDisplayMarker();
