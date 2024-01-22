@@ -807,7 +807,6 @@ public class Menu {
      *********************************************************************************
      */
 
-    //TODO possibly switch WELCOME SIGNS with Postman opening game lines for better menu flow
     private void welcomeToBattleShip() {
         System.out.println();
         System.out.println("    ***************************************************************************");
