@@ -15,6 +15,7 @@ public class Battleship extends Game {
     private List<Ship> ships;
     private Map<String, Ship> playerShipLocations;
     private Map<String, Ship> postmanShipLocations;
+    private String attackCoordinatesString;
 
     public Battleship() {
         ships = new ArrayList<>();
@@ -203,6 +204,51 @@ public class Battleship extends Game {
     public Map<String, Ship> getPostmanShipLocations() { return postmanShipLocations; }
 
     public void setPostmanShipLocations(Map<String, Ship> postmanShipLocations) { this.postmanShipLocations = postmanShipLocations; }
+
+    public String getAttackCoordinatesString(int[] attackCoordinates) {
+        String attackCoordinatesString = "";
+
+        switch (attackCoordinates[0]) {
+            case 1:
+                attackCoordinatesString += "A";
+                break;
+            case 2:
+                attackCoordinatesString += "B";
+                break;
+            case 3:
+                attackCoordinatesString += "C";
+                break;
+            case 4:
+                attackCoordinatesString += "D";
+                break;
+            case 5:
+                attackCoordinatesString += "E";
+                break;
+            case 6:
+                attackCoordinatesString += "F";
+                break;
+            case 7:
+                attackCoordinatesString += "G";
+                break;
+            case 8:
+                attackCoordinatesString += "H";
+                break;
+            case 9:
+                attackCoordinatesString += "I";
+                break;
+            case 10:
+                attackCoordinatesString += "J";
+                break;
+        }
+
+        attackCoordinatesString += attackCoordinates[1];
+
+        return attackCoordinatesString;
+    }
+
+    public void setAttackCoordinatesString(String attackCoordinatesString) {
+        this.attackCoordinatesString = attackCoordinatesString;
+    }
 
     public static String getHITMarker() { return HIT; }
 

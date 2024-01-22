@@ -864,7 +864,7 @@ public class Menu {
             battleshipBoardDisplay(playerOpponentDisplay);
 
             int[] playerAttackCoordinates = selectAttackCoordinates(playerOpponentDisplay);
-            String attackCoordinatesString = attackCoordinateString(playerAttackCoordinates);
+            String attackCoordinatesString = battleshipGame.getAttackCoordinatesString(playerAttackCoordinates);
             int attackRow = playerAttackCoordinates[0];
             int attackCol = playerAttackCoordinates[1];
 
@@ -1249,46 +1249,46 @@ public class Menu {
         return new int[] {attackRow, attackCol};
     }
 
-    private String attackCoordinateString(int[] attackCoordinates) {
-        String attackCoordinatesString = "";
-
-        switch (attackCoordinates[0]) {
-            case 1:
-                attackCoordinatesString += "A";
-                break;
-            case 2:
-                attackCoordinatesString += "B";
-                break;
-            case 3:
-                attackCoordinatesString += "C";
-                break;
-            case 4:
-                attackCoordinatesString += "D";
-                break;
-            case 5:
-                attackCoordinatesString += "E";
-                break;
-            case 6:
-                attackCoordinatesString += "F";
-                break;
-            case 7:
-                attackCoordinatesString += "G";
-                break;
-            case 8:
-                attackCoordinatesString += "H";
-                break;
-            case 9:
-                attackCoordinatesString += "I";
-                break;
-            case 10:
-                attackCoordinatesString += "J";
-                break;
-        }
-
-        attackCoordinatesString += attackCoordinates[1];
-
-        return attackCoordinatesString;
-    }
+//    private String attackCoordinateString(int[] attackCoordinates) {
+//        String attackCoordinatesString = "";
+//
+//        switch (attackCoordinates[0]) {
+//            case 1:
+//                attackCoordinatesString += "A";
+//                break;
+//            case 2:
+//                attackCoordinatesString += "B";
+//                break;
+//            case 3:
+//                attackCoordinatesString += "C";
+//                break;
+//            case 4:
+//                attackCoordinatesString += "D";
+//                break;
+//            case 5:
+//                attackCoordinatesString += "E";
+//                break;
+//            case 6:
+//                attackCoordinatesString += "F";
+//                break;
+//            case 7:
+//                attackCoordinatesString += "G";
+//                break;
+//            case 8:
+//                attackCoordinatesString += "H";
+//                break;
+//            case 9:
+//                attackCoordinatesString += "I";
+//                break;
+//            case 10:
+//                attackCoordinatesString += "J";
+//                break;
+//        }
+//
+//        attackCoordinatesString += attackCoordinates[1];
+//
+//        return attackCoordinatesString;
+//    }
 
     /*
      *********************************************************************************
