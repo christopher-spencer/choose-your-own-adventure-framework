@@ -109,6 +109,7 @@ public class Menu {
         if (randomNumber == 1) {
             System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
             hangmanGame();
+
         }
 
         if (randomNumber == 2) {
@@ -121,6 +122,8 @@ public class Menu {
                     "it with water, hops in, and beckons you to join him.");
             battleshipGame();
         }
+
+        itGoesOnAndOnMyFriends();
     }
 
     // TODO improve randomSelector method so same game doesn't play over and over and over
@@ -229,8 +232,6 @@ public class Menu {
             System.out.println();
             System.out.println("    The Postman catches your couch on fire.");
         }
-
-        itGoesOnAndOnMyFriends();
     }
 
     private String playerRockPaperScissorsMove() {
@@ -355,8 +356,6 @@ public class Menu {
         displayHangmanGameResult(youWin, mysteryWord);
 
         hangmanGame.resetGame();
-
-        itGoesOnAndOnMyFriends();
     }
 
     private void displayHangmanStats(String mysteryWord, List<Character> previousGuesses, List<Character> correctGuesses) {
@@ -682,8 +681,6 @@ public class Menu {
         }
 
         ticTacToeGame.resetGame();
-
-        itGoesOnAndOnMyFriends();
     }
 
     private void playerAndPostmanChooseXorO() {
@@ -989,8 +986,6 @@ public class Menu {
         }
 
         battleshipGame.resetGame();
-
-        itGoesOnAndOnMyFriends();
     }
 
     private void initializeBoard(String[][] board) {
