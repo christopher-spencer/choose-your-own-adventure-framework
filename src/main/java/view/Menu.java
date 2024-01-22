@@ -870,9 +870,6 @@ public class Menu {
             // Grabbing player attack coordinates string to print out which spot they chose to attack
             String attackCoordinatesString = battleshipGame.getAttackCoordinatesString(playerAttackCoordinates);
 
-            //TEST (make sure to setAttackCoordinates to "" after println for both player and postman)
-            System.out.println(attackCoordinatesString);
-
             //Returns Hit Marker vs Miss Marker string
             String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
 
@@ -919,9 +916,7 @@ public class Menu {
 
             itsThePostmansTurn();
 
-            // Currently this is returning MISS or HIT MARKERS
-            //TODO Somehow, also need to get attack row and col from postman out of here
-            // to create attackCoordinatesString
+            // Returning MISS or HIT MARKERS
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
 
             //Snag a Sting version of postman attack coordinates to print out where they moved
