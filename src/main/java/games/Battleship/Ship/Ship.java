@@ -50,8 +50,6 @@ public class Ship {
 
     public int getLength() { return length; }
 
-    public void setLength(int size) { this.length = length; }
-
     public int getHitPoints() { return hitPoints; }
 
     public void setHitPoints(int hitPoints) { this.hitPoints = hitPoints; }

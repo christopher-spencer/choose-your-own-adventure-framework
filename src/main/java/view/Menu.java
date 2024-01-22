@@ -1245,6 +1245,20 @@ public class Menu {
         return new int[] {attackRow, attackCol};
     }
 
+    private String attackCoordinateString(int[] attackCoordinates) {
+        String attackCoordinatesString = "";
+
+        switch (attackCoordinates[0]) {
+            case 1:
+                attackCoordinatesString += "A";
+                break;
+            case 2:
+                attackCoordinatesString += "B";
+                break;
+        }
+        return attackCoordinatesString;
+    }
+
     /*
      *********************************************************************************
                      * ~ * ~ * CHOOSE YOUR OWN ADVENTURE * ~ * ~ *
