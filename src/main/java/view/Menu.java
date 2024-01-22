@@ -95,71 +95,71 @@ public class Menu {
     }
 
     // TODO eventually add two player modes for each game
-    private void randomGameSelector() {
-        Random random = new Random();
-//        int randomNumber = random.nextInt(3);
-        //TODO change bounds && uncomment selectors when Games are ready
-        int randomNumber = 2;
-
-        if (randomNumber == 0) {
-            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-            rockPaperScissorsGame();
-        }
-
-        if (randomNumber == 1) {
-            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-            hangmanGame();
-        }
-
-        if (randomNumber == 2) {
-            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-            ticTacToeGame();
-        }
-
-        if (randomNumber == 3) {
-            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
-                    "it with water, hops in, and beckons you to join him.");
-            battleshipGame();
-        }
-    }
+//    private void randomGameSelector() {
+//        Random random = new Random();
+////        int randomNumber = random.nextInt(3);
+//        //TODO change bounds && uncomment selectors when Games are ready
+//        int randomNumber = 2;
+//
+//        if (randomNumber == 0) {
+//            System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+//            rockPaperScissorsGame();
+//        }
+//
+//        if (randomNumber == 1) {
+//            System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+//            hangmanGame();
+//        }
+//
+//        if (randomNumber == 2) {
+//            System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//            ticTacToeGame();
+//        }
+//
+//        if (randomNumber == 3) {
+//            System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
+//                    "it with water, hops in, and beckons you to join him.");
+//            battleshipGame();
+//        }
+//    }
 
     // TODO improve randomSelector method so same game doesn't play over and over and over
     //  (below is possible randomGameSelector method replacement to implement when finished testing)
-//    private void randomGameSelector() {
-//        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3)); // 0: RockPaperScissors, 1: Hangman, 2: TicTacToe, 3: Battleship
-//        Random random = new Random();
-//
-//        while (!availableGames.isEmpty()) {
-//            int gameIndex = random.nextInt(availableGames.size());
-//            int selectedGame = availableGames.get(gameIndex);
-//
-//            switch (selectedGame) {
-//                case 0:
-//                    System.out.println("    'ROCK! PAPER! SCISSORS!' he screams...");
-//                    rockPaperScissorsGame();
-//                    break;
-//                case 1:
-//                    System.out.println("    'HANGMAN!' he screams...");
-//                    hangmanGame();
-//                    break;
-//                case 2:
-//                    System.out.println("    'TIC TAC TOE!' he screams...");
-//                    ticTacToeGame();
-//                    break;
-//                case 3:
-//                    System.out.println("    'BATTLESHIP!' he screams...");
-//                    battleshipGame();
-//                    break;
-//            }
-//
-//            availableGames.remove(Integer.valueOf(selectedGame));
-//
-//            // Reset the list of games once all have been played
-//            if (availableGames.isEmpty()) {
-//                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-//            }
-//        }
-//    }
+    private void randomGameSelector() {
+        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+        Random random = new Random();
+
+        while (!availableGames.isEmpty()) {
+            int gameIndex = random.nextInt(availableGames.size());
+            int selectedGame = availableGames.get(gameIndex);
+
+            switch (selectedGame) {
+                case 0:
+                    System.out.println("    'ROCK! PAPER! SCISSORS!' he screams...");
+                    rockPaperScissorsGame();
+                    break;
+                case 1:
+                    System.out.println("    'HANGMAN!' he screams...");
+                    hangmanGame();
+                    break;
+                case 2:
+                    System.out.println("    'TIC TAC TOE!' he screams...");
+                    ticTacToeGame();
+                    break;
+                case 3:
+                    System.out.println("    'BATTLESHIP!' he screams...");
+                    battleshipGame();
+                    break;
+            }
+            // Removes the selected game from the list available in next round
+            availableGames.remove(Integer.valueOf(selectedGame));
+
+            // Reset the list of games once all have been played
+            if (availableGames.isEmpty()) {
+                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+            }
+        }
+    }
     
     /*
      *********************************************************************************
@@ -659,7 +659,7 @@ public class Menu {
                 }
             }
         }
-        
+
         printTicTacToeBoard(board);
 
         if (ticTacToeGame.isAWinner(board)) {
