@@ -1252,6 +1252,9 @@ public class Menu {
      *********************************************************************************
      */
 
+    // TODO section for a more traditional choose your own adventure option a player can take to escape
+    //  the game loop postman trap
+
     private void welcomeToEscapeThePostman() {
         System.out.println();
         System.out.println("    *********************************************************************");
