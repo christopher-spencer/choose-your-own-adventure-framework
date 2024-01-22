@@ -933,7 +933,7 @@ public class Menu {
                 mainDisplayMarker();
                 battleshipBoardDisplay(playerBoard);
                 System.out.println();
-                System.out.println(     "The postman chose " + postmanAttackCoordinatesString + "!");
+                System.out.println("    The postman chose " + postmanAttackCoordinatesString + "!");
                 System.out.println();
                 System.out.println("    [XX] The postman hit your ship!");
                 System.out.println();
@@ -960,7 +960,7 @@ public class Menu {
                 mainDisplayMarker();
                 battleshipBoardDisplay(playerBoard);
                 System.out.println();
-                System.out.println(     "The postman chose " + postmanAttackCoordinatesString + "!");
+                System.out.println("    The postman chose " + postmanAttackCoordinatesString + "!");
                 System.out.println();
                 System.out.println("    [()] Woohoo! The postman missed!");
                 System.out.println();
