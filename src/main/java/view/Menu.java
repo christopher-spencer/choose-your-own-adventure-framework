@@ -909,7 +909,7 @@ public class Menu {
 
             itsThePostmansTurn();
 
-            // Currently this is returning MISS or HIT
+            // Currently this is returning MISS or HIT MARKERS
             //TODO Somehow, also need to get attack row and col from postman out of here
             // to create attackCoordinatesString
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
@@ -1251,47 +1251,6 @@ public class Menu {
 
         return new int[] {attackRow, attackCol};
     }
-
-//    private String attackCoordinateString(int[] attackCoordinates) {
-//        String attackCoordinatesString = "";
-//
-//        switch (attackCoordinates[0]) {
-//            case 1:
-//                attackCoordinatesString += "A";
-//                break;
-//            case 2:
-//                attackCoordinatesString += "B";
-//                break;
-//            case 3:
-//                attackCoordinatesString += "C";
-//                break;
-//            case 4:
-//                attackCoordinatesString += "D";
-//                break;
-//            case 5:
-//                attackCoordinatesString += "E";
-//                break;
-//            case 6:
-//                attackCoordinatesString += "F";
-//                break;
-//            case 7:
-//                attackCoordinatesString += "G";
-//                break;
-//            case 8:
-//                attackCoordinatesString += "H";
-//                break;
-//            case 9:
-//                attackCoordinatesString += "I";
-//                break;
-//            case 10:
-//                attackCoordinatesString += "J";
-//                break;
-//        }
-//
-//        attackCoordinatesString += attackCoordinates[1];
-//
-//        return attackCoordinatesString;
-//    }
 
     /*
      *********************************************************************************
