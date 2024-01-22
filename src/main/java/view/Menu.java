@@ -909,6 +909,9 @@ public class Menu {
 
             itsThePostmansTurn();
 
+            // Currently this is returning MISS or HIT
+            //TODO Somehow, also need to get attack row and col from postman out of here
+            // to create attackCoordinatesString
             String postmanMoveResult = battleshipGame.postmanMove(playerBoard, postmanOpponentDisplay);
 
             if (postmanMoveResult.equals(Battleship.getHITMarker())) {
