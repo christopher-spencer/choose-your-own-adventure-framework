@@ -864,19 +864,24 @@ public class Menu {
             battleshipBoardDisplay(playerOpponentDisplay);
 
             int[] playerAttackCoordinates = selectAttackCoordinates(playerOpponentDisplay);
-            String attackCoordinatesString = battleshipGame.getAttackCoordinatesString(playerAttackCoordinates);
             int attackRow = playerAttackCoordinates[0];
             int attackCol = playerAttackCoordinates[1];
+
+            // Grabbing player attack coordinates string to print out which spot they chose to attack
+            String attackCoordinatesString = battleshipGame.getAttackCoordinatesString(playerAttackCoordinates);
 
             //TEST (make sure to setAttackCoordinates to "" after println for both player and postman)
             System.out.println(attackCoordinatesString);
 
+            //Returns Hit Marker vs Miss Marker string
             String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
 
             if (playerMoveResult.equals(Battleship.getHITMarker())) {
                 System.out.println();
                 opponentDisplayMarker();
                 battleshipBoardDisplay(playerOpponentDisplay);
+                System.out.println();
+                System.out.println("    You chose " + attackCoordinatesString + "!");
                 System.out.println();
                 System.out.println("    [XX] You hit a ship!");
                 System.out.println();
@@ -903,9 +908,14 @@ public class Menu {
                 opponentDisplayMarker();
                 battleshipBoardDisplay(playerOpponentDisplay);
                 System.out.println();
+                System.out.println("    You chose " + attackCoordinatesString + "!");
+                System.out.println();
                 System.out.println("    [()] Whoops! It's a miss!");
                 System.out.println();
             }
+
+            //Reset attack coordinates string after printing
+            battleshipGame.setAttackCoordinatesString("");
 
             itsThePostmansTurn();
 
@@ -917,16 +927,13 @@ public class Menu {
             //Snag a Sting version of postman attack coordinates to print out where they moved
             int[] postmanAttackCoordinates = battleshipGame.getAttackCoordinates();
             String postmanAttackCoordinatesString = battleshipGame.getAttackCoordinatesString(postmanAttackCoordinates);
-            System.out.println(     "The postman chose " + postmanAttackCoordinatesString + "!");
-            System.out.println();
-
-            //Reset attack coordinates string after printing
-            battleshipGame.setAttackCoordinatesString("");
 
             if (postmanMoveResult.equals(Battleship.getHITMarker())) {
                 System.out.println();
                 mainDisplayMarker();
                 battleshipBoardDisplay(playerBoard);
+                System.out.println();
+                System.out.println(     "The postman chose " + postmanAttackCoordinatesString + "!");
                 System.out.println();
                 System.out.println("    [XX] The postman hit your ship!");
                 System.out.println();
@@ -953,9 +960,14 @@ public class Menu {
                 mainDisplayMarker();
                 battleshipBoardDisplay(playerBoard);
                 System.out.println();
+                System.out.println(     "The postman chose " + postmanAttackCoordinatesString + "!");
+                System.out.println();
                 System.out.println("    [()] Woohoo! The postman missed!");
                 System.out.println();
             }
+
+            //Reset attack coordinates string after printing
+            battleshipGame.setAttackCoordinatesString("");
         }
 
         opponentDisplayMarker();
