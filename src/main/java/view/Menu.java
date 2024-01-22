@@ -868,7 +868,7 @@ public class Menu {
             int attackRow = playerAttackCoordinates[0];
             int attackCol = playerAttackCoordinates[1];
 
-            //TEST
+            //TEST (make sure to setAttackCoordinates to "" after println for both player and postman)
             System.out.println(attackCoordinatesString);
 
             String playerMoveResult = battleshipGame.playerMove(postmanBoard, playerOpponentDisplay, attackRow, attackCol);
