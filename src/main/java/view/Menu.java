@@ -1389,7 +1389,7 @@ public class Menu {
         theNextDayArrives();
     }
 
-    //TODO sometimes goes through andJustLikeThaHeIsGone && theNextDayArrives twice...?
+    //TODO sometimes goes through andJustLikeThaHeIsGone && theNextDayArrives twice... ? (Possibly fixed, double check)
 
     private void andJustLikeThatHeIsGone() {
         System.out.println();
