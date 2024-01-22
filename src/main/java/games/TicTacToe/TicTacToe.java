@@ -33,14 +33,14 @@ public class TicTacToe extends Game {
 
     public boolean isPlayerWin(char[][] board) {
 
-        return isAWinner() && playerChoice == X && isThreeXsInARow(board)
-                || isAWinner() && playerChoice == O && isThreeOsInARow(board);
+        return playerChoice == X && isThreeXsInARow(board)
+                || playerChoice == O && isThreeOsInARow(board);
     }
 
     public boolean isPostmanWin(char[][] board) {
 
-       return isAWinner() && postmanChoice == X && isThreeXsInARow(board)
-                || isAWinner() && postmanChoice == O && isThreeOsInARow(board);
+       return postmanChoice == X && isThreeXsInARow(board)
+                || postmanChoice == O && isThreeOsInARow(board);
     }
 
     @Override
