@@ -95,9 +95,6 @@ public class Menu {
     }
 
     // TODO eventually add two player modes for each game
-
-    // TODO improve randomSelector method so same game doesn't play over and over and over
-    //  (below is possible randomGameSelector method replacement to implement when finished testing)
     private void randomGameSelector() {
 //        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
         Random random = new Random();
