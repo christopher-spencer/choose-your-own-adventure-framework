@@ -659,16 +659,7 @@ public class Menu {
                 }
             }
         }
-
-        boolean winner = ticTacToeGame.isAWinner(board);
-        boolean playerWin = ticTacToeGame.isPlayerWin(board);
-        boolean postmanWin = ticTacToeGame.isPostmanWin(board);
-
-        System.out.println(winner);
-        System.out.println(playerWin);
-        System.out.println(postmanWin);
-        //TODO rather than declaring a winner or a tie, the game is skipping that part
-        // and going to itGoesOnAndOnMyFriends();
+        
         printTicTacToeBoard(board);
 
         if (ticTacToeGame.isAWinner(board)) {
