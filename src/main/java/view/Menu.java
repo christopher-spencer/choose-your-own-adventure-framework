@@ -108,6 +108,9 @@ public class Menu {
 //        }
 
         //TODO using the current switch case, the game moves straight to next game without itGoesOnAndOnMyFriends inbetween
+        // (if you add it to while loop, it works, but just realized what is also missing is the knock knock of the door
+        // from day to day to day)
+
         while (!availableGames.isEmpty()) {
             int gameIndex = random.nextInt(availableGames.size());
             int selectedGame = availableGames.get(gameIndex);
@@ -138,9 +141,9 @@ public class Menu {
             if (availableGames.isEmpty()) {
                 availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
             }
+            itGoesOnAndOnMyFriends();
         }
 
-        itGoesOnAndOnMyFriends();
     }
     
     /*
