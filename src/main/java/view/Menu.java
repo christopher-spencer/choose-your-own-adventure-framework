@@ -96,54 +96,54 @@ public class Menu {
 
     // TODO eventually add two player modes for each game
     private void randomGameSelector() {
-        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+        //List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
         Random random = new Random();
         //TODO delete test randomNumber and game assignment
         // && uncomment availableGames list and while loop when finished testing
-//        int randomNumber = 2;
-//
-//        if (randomNumber == 2) {
-//            System.out.println("    'BATTLESHIP!' he screams....");
-//            battleshipGame();
-//        }
+        int randomNumber = 2;
+
+        if (randomNumber == 2) {
+            System.out.println("    'BATTLESHIP!' he screams....");
+            battleshipGame();
+        }
 
         //TODO using the current switch case, the game moves straight to next game without itGoesOnAndOnMyFriends inbetween
         // (if you add it to while loop, it works, but just realized what is also missing is the knock knock of the door
         // from day to day to day)
 
-        while (!availableGames.isEmpty()) {
-            int gameIndex = random.nextInt(availableGames.size());
-            int selectedGame = availableGames.get(gameIndex);
+//        while (!availableGames.isEmpty()) {
+//            int gameIndex = random.nextInt(availableGames.size());
+//            int selectedGame = availableGames.get(gameIndex);
+//
+//            switch (selectedGame) {
+//                case 0:
+//                    System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+//                    rockPaperScissorsGame();
+//                    break;
+//                case 1:
+//                    System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+//                    hangmanGame();
+//                    break;
+//                case 2:
+//                    System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//                    ticTacToeGame();
+//                    break;
+//                case 3:
+//                    System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
+//                    "it with water, hops in, and beckons you to join him.");
+//                    battleshipGame();
+//                    break;
+//            }
+//            // Removes the selected game from the list available in next round
+//            availableGames.remove(Integer.valueOf(selectedGame));
+//
+//            // Reset the list of games once all have been played
+//            if (availableGames.isEmpty()) {
+//                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+//            }
+//        }
 
-            switch (selectedGame) {
-                case 0:
-                    System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-                    rockPaperScissorsGame();
-                    break;
-                case 1:
-                    System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-                    hangmanGame();
-                    break;
-                case 2:
-                    System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-                    ticTacToeGame();
-                    break;
-                case 3:
-                    System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
-                    "it with water, hops in, and beckons you to join him.");
-                    battleshipGame();
-                    break;
-            }
-            // Removes the selected game from the list available in next round
-            availableGames.remove(Integer.valueOf(selectedGame));
-
-            // Reset the list of games once all have been played
-            if (availableGames.isEmpty()) {
-                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-            }
-            itGoesOnAndOnMyFriends();
-        }
-
+        itGoesOnAndOnMyFriends();
     }
     
     /*
