@@ -104,7 +104,8 @@ public class Menu {
 
         if (randomNumber == 2) {
             System.out.println("    'BATTLESHIP!' he screams....");
-            battleshipGame();
+            //battleshipGame();
+            ticTacToeGame();
         }
 
         //TODO using the current switch case, the game moves straight to next game without itGoesOnAndOnMyFriends inbetween
@@ -144,6 +145,7 @@ public class Menu {
 //        }
 
         itGoesOnAndOnMyFriends();
+        // Add doYouAnswerTheDoor() here ???
     }
     
     /*
