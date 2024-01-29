@@ -144,8 +144,17 @@ public class Menu {
             }
             itGoesOnAndOnMyFriends();
             doYouAnswerTheDoor();
+
+//            String userChoice = doYouAnswerTheDoor();
+//
+//            if ("Y".equalsIgnoreCase(userChoice)) {
+//                answerTheDoor();
+//            } else if ("N".equalsIgnoreCase(userChoice)) {
+//                dontAnswerTheDoor();
+//            } else if ("Q".equalsIgnoreCase(userChoice)) {
+//                break;
+//            }
         }
-        // Add doYouAnswerTheDoor() here ???
     }
     
     /*
