@@ -138,7 +138,7 @@ public class Menu {
 
             // Removes the selected game from the list available in next round
             availableGames.remove(gameIndex);
-            
+
             itGoesOnAndOnMyFriends();
             String userChoice = doYouAnswerTheDoor();
 
