@@ -143,7 +143,7 @@ public class Menu {
 
             // Reset the list of games once all have been played
             if (availableGames.isEmpty()) {
-                availableGames.addAll(playedGames);
+                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
                 playedGames.clear();
             }
             itGoesOnAndOnMyFriends();
