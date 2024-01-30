@@ -139,11 +139,11 @@ public class Menu {
 
             playedGames.add(selectedGame);
             // Removes the selected game from the list available in next round
-            availableGames.remove(Integer.valueOf(selectedGame));
+            availableGames.remove(gameIndex);
 
             // Reset the list of games once all have been played
             if (availableGames.isEmpty()) {
-                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+                availableGames.addAll(playedGames);
                 playedGames.clear();
             }
             itGoesOnAndOnMyFriends();
