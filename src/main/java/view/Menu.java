@@ -97,7 +97,6 @@ public class Menu {
     // TODO eventually add two player modes for each game
     private void randomGameSelector() {
         List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-        List<Integer> playedGames = new ArrayList<>();
         Random random = new Random();
         //TODO delete test randomNumber and game assignment
         // && uncomment availableGames list and while loop when finished testing
@@ -137,15 +136,14 @@ public class Menu {
                     break;
             }
 
-            playedGames.add(selectedGame);
             // Removes the selected game from the list available in next round
             availableGames.remove(gameIndex);
 
             // Reset the list of games once all have been played
             if (availableGames.isEmpty()) {
                 availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-                playedGames.clear();
             }
+
             itGoesOnAndOnMyFriends();
             String userChoice = doYouAnswerTheDoor();
 
