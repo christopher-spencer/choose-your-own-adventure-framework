@@ -138,12 +138,7 @@ public class Menu {
 
             // Removes the selected game from the list available in next round
             availableGames.remove(gameIndex);
-
-            // Reset the list of games once all have been played
-            if (availableGames.isEmpty()) {
-                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-            }
-
+            
             itGoesOnAndOnMyFriends();
             String userChoice = doYouAnswerTheDoor();
 
@@ -153,6 +148,11 @@ public class Menu {
                 dontAnswerTheDoor();
             } else if ("Q".equalsIgnoreCase(userChoice)) {
                 break;
+            }
+
+            // Reset the list of games once all have been played
+            if (availableGames.isEmpty()) {
+                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
             }
         }
     }
