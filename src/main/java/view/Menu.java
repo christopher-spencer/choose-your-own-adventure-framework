@@ -109,8 +109,6 @@ public class Menu {
 //            ticTacToeGame();
 //        }
 
-        while (!availableGames.isEmpty()) {
-            //int gameIndex = random.nextInt(availableGames.size());
             int gameIndex = new Random().nextInt(availableGames.size());
             int selectedGame = availableGames.get(gameIndex);
 
@@ -134,27 +132,7 @@ public class Menu {
                     break;
             }
 
-            // Removes the selected game from the list available in next round
-            availableGames.remove(gameIndex);
-
             itGoesOnAndOnMyFriends();
-            String userChoice = doYouAnswerTheDoor();
-
-            if ("Y".equalsIgnoreCase(userChoice)) {
-                answerTheDoor();
-            } else if ("N".equalsIgnoreCase(userChoice)) {
-                dontAnswerTheDoor();
-            } else if ("Q".equalsIgnoreCase(userChoice)) {
-                break;
-            }
-
-            // Reset the list of games once all have been played
-            if (availableGames.isEmpty()) {
-                availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-            }
-
-        }
-        
 
     }
     
