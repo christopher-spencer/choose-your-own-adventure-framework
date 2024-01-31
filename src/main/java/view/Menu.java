@@ -95,6 +95,7 @@ public class Menu {
     }
 
     // TODO eventually add two player modes for each game
+    //TODO want randomGameSelector to play all games once before randomly selecting again
     private void randomGameSelector() {
         List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
         Random random = new Random();
@@ -107,10 +108,6 @@ public class Menu {
 //            //battleshipGame();
 //            ticTacToeGame();
 //        }
-
-        //TODO using the current switch case, the game moves straight to next game without itGoesOnAndOnMyFriends inbetween
-        // (if you add it to while loop, it works, but just realized what is also missing is the knock knock of the door
-        // from day to day to day)
 
         while (!availableGames.isEmpty()) {
             int gameIndex = random.nextInt(availableGames.size());
