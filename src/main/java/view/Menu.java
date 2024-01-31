@@ -105,6 +105,7 @@ public class Menu {
 //        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
 //        Random random = new Random();
 //        //TODO delete test randomNumber and game assignment
+          //TODO keep randomSelectorMethod up here in for commented out for testing one game at a time w/o do while
 //        // && uncomment availableGames list and while loop when finished testing
 ////        int randomNumber = 2;
 ////
