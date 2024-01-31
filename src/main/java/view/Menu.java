@@ -18,6 +18,7 @@ public class Menu {
     private Battleship battleshipGame = new Battleship();
 
     // Variables for randomGameSelector
+    // TODO move these to the Games Class
     private List<Integer> playedGames = new ArrayList<>();
     private List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
 
