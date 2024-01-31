@@ -101,88 +101,59 @@ public class Menu {
     }
 
     // TODO eventually add two player modes for each game
-    //TODO want randomGameSelector to play all games once before randomly selecting again
-//    private void randomGameSelector() {
-//        List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-//        Random random = new Random();
-//        //TODO delete test randomNumber and game assignment
-          //TODO keep randomSelectorMethod up here in for commented out for testing one game at a time w/o do while
-//        // && uncomment availableGames list and while loop when finished testing
-////        int randomNumber = 2;
-////
-////        if (randomNumber == 2) {
-////            System.out.println("    'BATTLESHIP!' he screams....");
-////            //battleshipGame();
-////            ticTacToeGame();
-////        }
-//
-//            int gameIndex = random.nextInt(availableGames.size());
-//            int selectedGame = availableGames.get(gameIndex);
-//
-//            switch (selectedGame) {
-//                case 0:
-//                    System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-//                    rockPaperScissorsGame();
-//                    break;
-//                case 1:
-//                    System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-//                    hangmanGame();
-//                    break;
-//                case 2:
-//                    System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-//                    ticTacToeGame();
-//                    break;
-//                case 3:
-//                    System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
-//                    "it with water, hops in, and beckons you to join him.");
-//                    battleshipGame();
-//                    break;
-//            }
-//
-//            itGoesOnAndOnMyFriends();
-//
-//    }
-
+    //TODO keep randomSelectorMethod up here in for commented out for testing one game at a time w/o do while
     private void randomGameSelector() {
-        if (playedGames.size() == availableGames.size()) {
-            // All games have been played, reset the playedGames list
-            playedGames.clear();
-        }
 
-        Random random = new Random();
-        int gameIndex;
+            System.out.println("    'TESTING THE GAME!' he screams....");
+            battleshipGame();
+            //ticTacToeGame();
+            //hangmanGame();
+            //rockPaperScissorsGame();
 
-        //Do While Loop ensures that a game is selected randomly until an unplayed game is found.
-        do {
-            gameIndex = random.nextInt(availableGames.size());
-        } while (playedGames.contains(gameIndex));
+            itGoesOnAndOnMyFriends();
 
-        playedGames.add(gameIndex);
-
-        int selectedGame = availableGames.get(gameIndex);
-
-        switch (selectedGame) {
-            case 0:
-                System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
-                rockPaperScissorsGame();
-                break;
-            case 1:
-                System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
-                hangmanGame();
-                break;
-            case 2:
-                System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
-                ticTacToeGame();
-                break;
-            case 3:
-                System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
-                        "it with water, hops in, and beckons you to join him.");
-                battleshipGame();
-                break;
-        }
-
-        itGoesOnAndOnMyFriends();
     }
+
+//    private void randomGameSelector() {
+//        if (playedGames.size() == availableGames.size()) {
+//            // All games have been played, reset the playedGames list
+//            playedGames.clear();
+//        }
+//
+//        Random random = new Random();
+//        int gameIndex;
+//
+//        //Do While Loop ensures that a game is selected randomly until an unplayed game is found.
+//        do {
+//            gameIndex = random.nextInt(availableGames.size());
+//        } while (playedGames.contains(gameIndex));
+//
+//        playedGames.add(gameIndex);
+//
+//        int selectedGame = availableGames.get(gameIndex);
+//
+//        switch (selectedGame) {
+//            case 0:
+//                System.out.println("    'ROCK! PAPER! SCISSORS!' he screams as he bounces his fist on the palm of his hand.");
+//                rockPaperScissorsGame();
+//                break;
+//            case 1:
+//                System.out.println("    'HANGMAN!' he screams as he quickly assembles a gallows in the living room.");
+//                hangmanGame();
+//                break;
+//            case 2:
+//                System.out.println("    'TIC TAC TOE!' he screams as he shakes a can of spray paint and sprays a 3 x 3 grid on the living room wall.");
+//                ticTacToeGame();
+//                break;
+//            case 3:
+//                System.out.println("    'BATTLESHIP!' he screams as he blows up an inflatable pool in the living room, fills \n" +
+//                        "it with water, hops in, and beckons you to join him.");
+//                battleshipGame();
+//                break;
+//        }
+//
+//        itGoesOnAndOnMyFriends();
+//    }
     
     /*
      *********************************************************************************
