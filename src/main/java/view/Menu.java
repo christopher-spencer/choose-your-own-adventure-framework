@@ -98,7 +98,7 @@ public class Menu {
     //TODO want randomGameSelector to play all games once before randomly selecting again
     private void randomGameSelector() {
         List<Integer> availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
-        Random random = new Random();
+        //Random random = new Random();
         //TODO delete test randomNumber and game assignment
         // && uncomment availableGames list and while loop when finished testing
 //        int randomNumber = 2;
@@ -110,7 +110,8 @@ public class Menu {
 //        }
 
         while (!availableGames.isEmpty()) {
-            int gameIndex = random.nextInt(availableGames.size());
+            //int gameIndex = random.nextInt(availableGames.size());
+            int gameIndex = new Random().nextInt(availableGames.size());
             int selectedGame = availableGames.get(gameIndex);
 
             switch (selectedGame) {
@@ -151,7 +152,9 @@ public class Menu {
             if (availableGames.isEmpty()) {
                 availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
             }
+
         }
+
 
     }
     
