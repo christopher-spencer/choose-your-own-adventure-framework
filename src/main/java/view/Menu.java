@@ -152,6 +152,7 @@ public class Menu {
                 availableGames = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
             }
         }
+
     }
     
     /*

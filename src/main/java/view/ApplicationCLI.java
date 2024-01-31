@@ -19,17 +19,18 @@ public class ApplicationCLI {
     }
     
     public void knockKnock() {
-        String userSelection = menu.doYouAnswerTheDoor();
+        while (continuePlaying) {
+            String userSelection = menu.doYouAnswerTheDoor();
 
-        if (userSelection.equalsIgnoreCase("Y") || userSelection.equalsIgnoreCase("YES")) {
-           menu.answerTheDoor();
-        } else if (userSelection.equalsIgnoreCase("N") || (userSelection.equalsIgnoreCase("NO"))) {
-           menu.dontAnswerTheDoor();
-        } else if (userSelection.equalsIgnoreCase("Q") || (userSelection.equalsIgnoreCase("QUIT"))) {
-            continuePlaying = false;
-        } else {
-            menu.tellUserInvalidSelection();
-            knockKnock();
+            if (userSelection.equalsIgnoreCase("Y") || userSelection.equalsIgnoreCase("YES")) {
+                menu.answerTheDoor();
+            } else if (userSelection.equalsIgnoreCase("N") || (userSelection.equalsIgnoreCase("NO"))) {
+                menu.dontAnswerTheDoor();
+            } else if (userSelection.equalsIgnoreCase("Q") || (userSelection.equalsIgnoreCase("QUIT"))) {
+                continuePlaying = false;
+            } else {
+                menu.tellUserInvalidSelection();
+            }
         }
     }
 
