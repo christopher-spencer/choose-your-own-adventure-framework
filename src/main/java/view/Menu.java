@@ -849,6 +849,7 @@ public class Menu {
      *********************************************************************************
      */
 
+    //TODO keep list tracking all ships player has sunk to make it better UI to remember whats left on the board
     private void welcomeToBattleShip() {
         System.out.println();
         System.out.println("    ***************************************************************************");
