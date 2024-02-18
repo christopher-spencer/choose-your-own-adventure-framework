@@ -54,6 +54,8 @@ public class BattleshipTest {
         assertNotNull(battleship.getShipByOwnerAndShipName("Postman", "Carrier")); // Should return a ship object
     }
 
+    // TODO check out some of these tests that aren't passing correctly
+    
     @Test
     public void isPlacementValid() {
         String[][] board = new String[10][10]; // Initialize an empty game board
